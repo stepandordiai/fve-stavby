@@ -1,0 +1,15 @@
+@mixin grid-center {
+    display: grid;
+    place-content: center;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin glass-effect($px) {
+    -webkit-backdrop-filter: blur($px);
+    backdrop-filter: blur($px);
+}
