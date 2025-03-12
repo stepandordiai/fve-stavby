@@ -22,6 +22,7 @@
 .header-top__logo-container {
     height: 50px;
     @include flex-center;
+    color: #fff;
     column-gap: 5px;
     border-radius: 25px;
     background: var(--bg-dark-clr);

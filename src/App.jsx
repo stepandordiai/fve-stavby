@@ -3,15 +3,18 @@ import Menu from "./components/Menu/Menu";
 import "./App.scss";
 import Home from "./pages/Home/Home";
 import Building from "./components/Building/Building";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
     return (
-        <>
+        <Router>
             <Building />
             <Header />
             <Menu />
-            <Home />
-        </>
+            <Routes>
+                <Route path="/" element={<Home />} />
+            </Routes>
+        </Router>
     );
 }
 

@@ -1,7 +1,7 @@
 @use "reset";
 @use "fonts";
 @use "variables";
-
+@use "mixins" as *;
 body {
     padding: 25px;
     font-family: "Quicksand", sans-serif;
@@ -29,7 +29,7 @@ body {
     background-position: center;
     background-size: cover;
     scale: 2;
-    filter: brightness(0.8);
+    filter: brightness(0.7);
     animation: animateImg 2s forwards;
     animation-timing-function: cubic-bezier(0.75, 0.5, 0.25, 1);
 }
@@ -48,8 +48,14 @@ body {
     color: #fff;
     font-size: 3rem;
     font-weight: 500;
-    // opacity: 0;
+    @include flex-center;
+    column-gap: 5px;
+    opacity: 0;
     animation: animateHomeTitle 2s forwards;
+}
+
+.loading__title-icon {
+    height: 50px;
 }
 
 @keyframes animateHomeTop {

@@ -1,6 +1,12 @@
 import { useEffect } from "react";
 import BurgerBtn from "../BurgerBtn/BurgerBtn";
+import { NavLink } from "react-router-dom";
 import logo from "./../../assets/logo/fvestavby-cz.png";
+import logo1 from "./../../assets/logo/fvestavby-cz-1.png";
+import logo2 from "./../../assets/logo/fvestavby-cz-2.png";
+import logo3 from "./../../assets/logo/solar-panel.png";
+import logo4 from "./../../assets/logo/solar.png";
+
 import "./Header.scss";
 
 const Header = () => {
@@ -20,10 +26,10 @@ const Header = () => {
         <>
             <header className="header">
                 <div className="header-top">
-                    <div className="header-top__logo-container">
-                        <img src={logo} alt="Logo" />
-                        <span>FveStavby</span>
-                    </div>
+                    <NavLink to={"/"} className="header-top__logo-container">
+                        <img src={logo2} alt="Logo" />
+                        <span>FVE STAVBY</span>
+                    </NavLink>
                     {/* <a href="tel:+420773802166" className="header-top__number">
                         +420 773 802 166
                     </a> */}
