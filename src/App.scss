@@ -44,12 +44,14 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 100%;
     transform: translate(-50%, -50%);
     color: #fff;
-    font-size: 3rem;
+    font-size: clamp(1.5rem, 4vw, 4rem);
     font-weight: 500;
     @include flex-center;
     column-gap: 5px;
+    padding: 0 25px;
     opacity: 0;
     animation: animateHomeTitle 2s forwards;
 }
@@ -81,5 +83,11 @@ body {
 
     .home-top {
         height: calc(100svh - 20px);
+    }
+
+    .home-loading__title {
+        padding: 0 10px;
+        // opacity: 0;
+        // animation: animateHomeTitle 2s forwards;
     }
 }
