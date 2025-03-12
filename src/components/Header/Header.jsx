@@ -4,17 +4,17 @@ import logo from "./../../assets/logo/fvestavby-cz.png";
 import "./Header.scss";
 
 const Header = () => {
-    useEffect(() => {
-        const header = document.querySelector(".header");
+    // useEffect(() => {
+    //     const header = document.querySelector(".header");
 
-        addEventListener("scroll", () => {
-            if (window.scrollY > window.innerHeight) {
-                header.classList.add("header--hide");
-            } else {
-                header.classList.remove("header--hide");
-            }
-        });
-    }, []);
+    //     addEventListener("scroll", () => {
+    //         if (window.scrollY > window.innerHeight) {
+    //             header.classList.add("header--hide");
+    //         } else {
+    //             header.classList.remove("header--hide");
+    //         }
+    //     });
+    // }, []);
 
     return (
         <>
@@ -24,13 +24,14 @@ const Header = () => {
                         <img src={logo} alt="Logo" />
                         <span>FveStavby</span>
                     </div>
-                    <a href="tel:+420773802166" className="header-top__number">
+                    {/* <a href="tel:+420773802166" className="header-top__number">
                         +420 773 802 166
-                    </a>
+                    </a> */}
                     <BurgerBtn />
                 </div>
-                <div className="header-bottom">
+                {/* <div className="header-bottom">
                     <nav className="nav">
+                        <div className="filter"></div>
                         <p className="link">Ceník</p>
                         <div className="dd-container">
                             <p className="link">Fotovoltaika</p>
@@ -46,7 +47,7 @@ const Header = () => {
                         <p className="link">O nás</p>
                         <p className="link">Přihlášení</p>
                     </nav>
-                </div>
+                </div> */}
             </header>
         </>
     );

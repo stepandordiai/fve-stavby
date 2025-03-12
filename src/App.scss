@@ -10,36 +10,37 @@ body {
 
 .home-top {
     position: relative;
-    z-index: -10;
     height: calc(100svh - 50px);
     border-radius: 25px;
     overflow: hidden;
     scale: 0.25;
     animation: animateHomeTop 2s forwards;
-    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation-timing-function: cubic-bezier(0.75, 0.5, 0.25, 1);
+}
 
-    div {
-        height: 100%;
-        width: 100%;
-        background: url("./assets/img/1.jpg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        scale: 1.5;
-        // filter: brightness(0.8);
-        animation: animateImg 2s forwards;
-        animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-    }
+.home-top::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -10;
+    background: url("./assets/img/1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    scale: 2;
+    filter: brightness(0.8);
+    animation: animateImg 2s forwards;
+    animation-timing-function: cubic-bezier(0.75, 0.5, 0.25, 1);
 }
 
 @keyframes animateImg {
     100% {
         scale: 1;
-        // background-size: 100%;
     }
 }
 
-.home__title {
+.home-loading__title {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -47,8 +48,8 @@ body {
     color: #fff;
     font-size: 3rem;
     font-weight: 500;
-    opacity: 0;
-    animation: animateHomeTitle 1s 1s forwards;
+    // opacity: 0;
+    animation: animateHomeTitle 2s forwards;
 }
 
 @keyframes animateHomeTop {
@@ -58,8 +59,12 @@ body {
 }
 
 @keyframes animateHomeTitle {
-    100% {
+    50% {
         opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        pointer-events: none;
     }
 }
 

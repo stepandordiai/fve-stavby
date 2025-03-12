@@ -7,6 +7,14 @@
     aspect-ratio: 1/1;
     border-radius: 25px;
     @include grid-center;
+    opacity: 0;
+    animation: animateHeader 1s 2s forwards;
+}
+
+@keyframes animateHeader {
+    to {
+        opacity: 1;
+    }
 }
 
 .burger-btn {

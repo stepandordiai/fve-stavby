@@ -5,8 +5,7 @@
     top: 50px;
     right: 50px;
     left: 50px;
-    z-index: 1;
-    transition: top 0.3s;
+    z-index: 11;
 }
 
 .header--hide {
@@ -26,8 +25,10 @@
     column-gap: 5px;
     border-radius: 25px;
     background: var(--bg-dark-clr);
-    @include glass-effect(20px);
     padding: 0 12.5px;
+    @include glass-effect(20px);
+    opacity: 0;
+    animation: animateHeader 1s 2s forwards;
 
     &:hover {
         background: rgba(0, 0, 0, 0.5);
@@ -42,6 +43,14 @@
     }
 }
 
+// When i apply animation for header blur dissapears so i apply it to children
+
+@keyframes animateHeader {
+    to {
+        opacity: 1;
+    }
+}
+
 .header-top__number {
     height: 50px;
     background: var(--bg-dark-clr);
@@ -52,6 +61,8 @@
     margin-left: auto;
     margin-right: 25px;
     color: #fff;
+    opacity: 0;
+    animation: animateHeader 1s 2s forwards;
 
     &:hover {
         background: rgba(0, 0, 0, 0.5);
@@ -60,12 +71,12 @@
 
 .header-bottom {
     position: relative;
-    height: 50px;
+    min-height: 50px;
     background: var(--bg-dark-clr);
     border-radius: 25px;
     color: white;
     display: flex;
-    justify-content: center;
+    align-items: center;
 }
 
 .nav {
@@ -75,17 +86,12 @@
     justify-content: space-evenly;
     gap: 10px;
     width: 100%;
+    border-radius: 25px;
     overflow-x: scroll;
 }
 
-.nav::before {
-    content: "";
-    position: absolute;
-    @include glass-effect(20px);
-    border-radius: 25px;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+.nav::-webkit-scrollbar {
+    display: none;
 }
 
 .link {
@@ -94,11 +100,8 @@
     @include grid-center;
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
-
 .dd-container {
+    position: relative;
     &:hover .dd {
         opacity: 1;
         pointer-events: all;
@@ -106,11 +109,10 @@
 }
 
 .dd {
-    position: fixed;
+    position: absolute;
     left: 50px;
-    z-index: 100;
+    z-index: 1000;
     background: var(--bg-dark-clr);
-    @include glass-effect(20px);
     border-radius: 25px;
     padding: 12.5px;
     width: calc(100% - 100px);
@@ -137,7 +139,6 @@
         left: 20px;
         z-index: 100;
         background: var(--bg-dark-clr);
-        @include glass-effect(20px);
         border-radius: 25px;
         padding: 12.5px;
         width: calc(100% - 40px);

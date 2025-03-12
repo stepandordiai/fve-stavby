@@ -1,0 +1,76 @@
+@use "./../../mixins" as *;
+
+.home__title {
+    color: #fff;
+    font-size: clamp(2rem, 6vw, 4rem);
+    font-weight: 500;
+    opacity: 0;
+    animation: animateTitle 1s 2s forwards;
+}
+
+.home__secondary-title {
+    border-radius: 25px;
+    padding: 12.5px;
+    background: rgba(255, 255, 255, 0.5);
+    @include glass-effect(20px);
+    justify-self: flex-start;
+    color: #fff;
+    font-size: clamp(1rem, 4vw, 2rem);
+    font-weight: 100;
+    opacity: 0;
+    animation: animateTitle 1s 2s forwards;
+}
+
+.home-details {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    left: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 25px;
+}
+
+.home-details__btn {
+    position: relative;
+    @include flex-center;
+    column-gap: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+    @include glass-effect(20px);
+    border-radius: 25px;
+    padding: 0 12.5px;
+    height: 50px;
+    flex-shrink: 0;
+    cursor: pointer;
+    opacity: 0;
+    animation: animateTitle 1s 2s forwards;
+}
+
+.home-details__btn-icon {
+    width: 25px;
+    flex-shrink: 0;
+    transition: all 0.3s;
+}
+
+.home-details__btn:hover .home-details__btn-icon {
+    transform: rotate(45deg);
+}
+
+@keyframes animateTitle {
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .home-details {
+        right: 10px;
+        bottom: 10px;
+        left: 10px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column-reverse;
+    }
+}
