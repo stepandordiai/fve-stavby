@@ -80,46 +80,46 @@
     align-items: center;
 }
 
-.nav {
-    position: relative;
-    padding: 0 12.5px;
-    display: flex;
-    justify-content: space-evenly;
-    gap: 10px;
-    width: 100%;
-    border-radius: 25px;
-    overflow-x: scroll;
-}
+// .nav {
+//     position: relative;
+//     padding: 0 12.5px;
+//     display: flex;
+//     justify-content: space-evenly;
+//     gap: 10px;
+//     width: 100%;
+//     border-radius: 25px;
+//     overflow-x: scroll;
+// }
 
-.nav::-webkit-scrollbar {
-    display: none;
-}
+// .nav::-webkit-scrollbar {
+//     display: none;
+// }
 
-.link {
-    white-space: nowrap;
-    height: 100%;
-    @include grid-center;
-}
+// .link {
+//     white-space: nowrap;
+//     height: 100%;
+//     @include grid-center;
+// }
 
-.dd-container {
-    position: relative;
-    &:hover .dd {
-        opacity: 1;
-        pointer-events: all;
-    }
-}
+// .dd-container {
+//     position: relative;
+//     &:hover .dd {
+//         opacity: 1;
+//         pointer-events: all;
+//     }
+// }
 
-.dd {
-    position: absolute;
-    left: 50px;
-    z-index: 1000;
-    background: var(--bg-dark-clr);
-    border-radius: 25px;
-    padding: 12.5px;
-    width: calc(100% - 100px);
-    opacity: 0;
-    pointer-events: none;
-}
+// .dd {
+//     position: absolute;
+//     left: 50px;
+//     z-index: 1000;
+//     background: var(--bg-dark-clr);
+//     border-radius: 25px;
+//     padding: 12.5px;
+//     width: calc(100% - 100px);
+//     opacity: 0;
+//     pointer-events: none;
+// }
 
 @media screen and (max-width: 800px) {
     .header {
@@ -136,12 +136,12 @@
         margin-right: 10px;
     }
 
-    .dd {
-        left: 20px;
-        z-index: 100;
-        background: var(--bg-dark-clr);
-        border-radius: 25px;
-        padding: 12.5px;
-        width: calc(100% - 40px);
-    }
+    // .dd {
+    //     left: 20px;
+    //     z-index: 100;
+    //     background: var(--bg-dark-clr);
+    //     border-radius: 25px;
+    //     padding: 12.5px;
+    //     width: calc(100% - 40px);
+    // }
 }

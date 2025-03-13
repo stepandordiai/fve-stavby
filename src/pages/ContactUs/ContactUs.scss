@@ -1,0 +1,25 @@
+.page-title {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background: url("./../../assets/img/2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 25px;
+}
+
+.page-title__title {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    color: #fff;
+    font-size: 3rem;
+}
+
+@media screen and (max-width: 800px) {
+    .page-title__title {
+        bottom: 10px;
+        left: 10px;
+    }
+}

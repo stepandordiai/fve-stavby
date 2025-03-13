@@ -10,6 +10,9 @@ const BurgerBtn = () => {
             .classList.toggle("burger-btn__center-line--active");
 
         document.querySelector(".menu").classList.toggle("menu--active");
+        document
+            .querySelector(".menu-wrapper")
+            .classList.toggle("menu-wrapper--active");
     }
     return (
         <div className="burger-btn-wrapper">

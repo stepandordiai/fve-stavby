@@ -4,6 +4,7 @@ import "./App.scss";
 import Home from "./pages/Home/Home";
 import Building from "./components/Building/Building";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ContactUs from "./pages/ContactUs/ContactUs";
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
             <Menu />
             <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/contact-us" element={<ContactUs />} />
             </Routes>
         </Router>
     );
