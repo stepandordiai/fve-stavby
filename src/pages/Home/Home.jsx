@@ -24,6 +24,9 @@ const Home = () => {
 
     let started = false;
     function closureYears(param, quantity) {
+        const text = document.getElementById("year");
+        const width = text.offsetWidth;
+
         if (!started) {
             let score = 0;
             let id = setInterval(closureInner, 100);
@@ -33,6 +36,7 @@ const Home = () => {
                 } else {
                     score++;
                     document.getElementById(param).innerHTML = score;
+                    text.style.width = `${width}px`;
                 }
             }
         }
@@ -43,6 +47,9 @@ const Home = () => {
     let started1 = false;
 
     function closureYears1(param, quantity) {
+        const text1 = document.getElementById("client");
+        const width1 = text1.offsetWidth;
+
         if (!started1) {
             let score = 0;
             let id = setInterval(closureInner, 10);
@@ -52,6 +59,7 @@ const Home = () => {
                 } else {
                     score++;
                     document.getElementById(param).innerHTML = score;
+                    text1.style.width = `${width1}px`;
                 }
             }
         }
@@ -62,6 +70,9 @@ const Home = () => {
     let started2 = false;
 
     function closureYears2(param, quantity) {
+        const text2 = document.getElementById("work");
+        const width2 = text2.offsetWidth;
+
         if (!started2) {
             let score = 0;
             let id = setInterval(closureInner, 50);
@@ -71,6 +82,7 @@ const Home = () => {
                 } else {
                     score++;
                     document.getElementById(param).innerHTML = score;
+                    text2.style.width = `${width2}px`;
                 }
             }
         }
@@ -78,9 +90,6 @@ const Home = () => {
         started2 = true;
     }
 
-    // useEffect(() => {
-
-    // })
     return (
         <>
             <div className="home-top">
@@ -139,6 +148,31 @@ const Home = () => {
                         src={arrow}
                         alt=""
                     />
+                </div>
+                <p>We work with</p>
+                <div className="img-box-container">
+                    <div className="img-box">
+                        House
+                        <div className="img-box-btn">
+                            <img
+                                className="img-box-btn-icon"
+                                src={arrow}
+                                alt=""
+                            />
+                        </div>
+                        <div className="white-box"></div>
+                    </div>
+                    <div className="img-box1">
+                        Commercial
+                        <div className="img-box-btn">
+                            <img
+                                className="img-box-btn-icon"
+                                src={arrow}
+                                alt=""
+                            />
+                        </div>
+                        <div className="white-box"></div>
+                    </div>
                 </div>
             </div>
         </>
