@@ -8,6 +8,7 @@ import logo4 from "./../../assets/logo/solar.png";
 import "./Home.scss";
 import Process from "../../components/Process/Process";
 import Advantages from "../../components/Advantages/Advantages";
+import Partners from "../../components/Partners/Partners";
 
 const Home = () => {
     useEffect(() => {
@@ -180,6 +181,7 @@ const Home = () => {
                 </div>
                 <Process />
                 <Advantages />
+                <Partners />
             </div>
         </>
     );
