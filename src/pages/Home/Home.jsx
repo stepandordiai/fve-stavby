@@ -6,6 +6,8 @@ import logo2 from "./../../assets/logo/fvestavby-cz-2.png";
 import logo3 from "./../../assets/logo/solar-panel.png";
 import logo4 from "./../../assets/logo/solar.png";
 import "./Home.scss";
+import Process from "../../components/Process/Process";
+import Advantages from "../../components/Advantages/Advantages";
 
 const Home = () => {
     useEffect(() => {
@@ -158,6 +160,7 @@ const Home = () => {
                                 className="img-box-btn-icon"
                                 src={arrow}
                                 alt=""
+                                loading="lazy"
                             />
                         </div>
                         <div className="white-box"></div>
@@ -169,11 +172,14 @@ const Home = () => {
                                 className="img-box-btn-icon"
                                 src={arrow}
                                 alt=""
+                                loading="lazy"
                             />
                         </div>
                         <div className="white-box"></div>
                     </div>
                 </div>
+                <Process />
+                <Advantages />
             </div>
         </>
     );

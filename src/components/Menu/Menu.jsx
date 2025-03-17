@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
-import "./Menu.scss";
 import { useEffect } from "react";
+import "./Menu.scss";
+
 const Menu = () => {
     useEffect(() => {
         document.querySelectorAll(".js-link").forEach((link) => {
@@ -22,17 +23,35 @@ const Menu = () => {
         });
     });
 
+    const inactiveLink = "link js-link";
+    const activeLink = "link js-link link--active";
+
     return (
         <section className="menu">
             <div className="menu-wrapper">
                 <nav className="nav">
-                    <NavLink className={"link js-link"} to="/">
+                    <NavLink
+                        className={({ isActive }) =>
+                            isActive ? activeLink : inactiveLink
+                        }
+                        to="/"
+                    >
                         Home
                     </NavLink>
-                    <NavLink className={"link js-link"} to="/about-us">
+                    <NavLink
+                        className={({ isActive }) =>
+                            isActive ? activeLink : inactiveLink
+                        }
+                        to="/about-us"
+                    >
                         About us
                     </NavLink>
-                    <NavLink className={"link js-link"} to="/contact-us">
+                    <NavLink
+                        className={({ isActive }) =>
+                            isActive ? activeLink : inactiveLink
+                        }
+                        to="/contact-us"
+                    >
                         Contacts
                     </NavLink>
                 </nav>

@@ -9,6 +9,12 @@
     align-items: center;
 }
 
+@mixin flex-between-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 @mixin glass-effect($px) {
     -webkit-backdrop-filter: blur($px);
     backdrop-filter: blur($px);

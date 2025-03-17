@@ -46,8 +46,30 @@
 }
 
 .link {
+    position: relative;
     color: #fff;
     font-size: 3rem;
+}
+
+.link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    width: 25%;
+    height: 2.5px;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s;
+}
+
+.link:hover::before {
+    transform: scaleX(1);
+}
+
+.link--active::before {
+    transform: scaleX(1) !important;
 }
 
 .menu__contacts-details {
