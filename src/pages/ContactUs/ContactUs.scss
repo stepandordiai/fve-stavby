@@ -112,6 +112,10 @@ textarea {
     height: 140px;
     resize: none;
     font-size: 1rem;
+
+    &:focus {
+        outline: none;
+    }
 }
 
 .form-btn {

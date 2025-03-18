@@ -70,6 +70,52 @@
     }
 }
 
+.header-top__nav {
+    height: 50px;
+    background: var(--bg-dark-clr);
+    // @include grid-center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    @include glass-effect(20px);
+    padding: 0 12.5px;
+    border-radius: 25px;
+    margin-left: 25px;
+    opacity: 0;
+    // margin-right: auto;
+    animation: animateHeader 1s 2s forwards;
+
+    &:hover {
+        background: rgba(0, 0, 0, 0.5);
+    }
+}
+
+.header-link {
+    position: relative;
+    color: #fff;
+}
+
+.header-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 25%;
+    height: 1.25px;
+    background: #fff;
+    transition: all 0.3s;
+}
+
+.header-link--active::before {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.header-link:hover::before {
+    transform: translateX(-50%) scaleX(1);
+}
+
 .header-bottom {
     position: relative;
     min-height: 50px;

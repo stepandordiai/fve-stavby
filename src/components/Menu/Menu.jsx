@@ -50,6 +50,22 @@ const Menu = () => {
                         className={({ isActive }) =>
                             isActive ? activeLink : inactiveLink
                         }
+                        to="/about-us"
+                    >
+                        Dům
+                    </NavLink>
+                    <NavLink
+                        className={({ isActive }) =>
+                            isActive ? activeLink : inactiveLink
+                        }
+                        to="/about-us"
+                    >
+                        Firemní instalace
+                    </NavLink>
+                    <NavLink
+                        className={({ isActive }) =>
+                            isActive ? activeLink : inactiveLink
+                        }
                         to="/contact-us"
                     >
                         Contacts

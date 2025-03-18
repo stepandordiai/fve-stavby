@@ -163,7 +163,7 @@ const Home = () => {
                 <p>We work with</p>
                 <div className="img-box-container">
                     <div className="img-box">
-                        House
+                        Dům
                         <div className="img-box-btn">
                             <img
                                 className="img-box-btn-icon"
@@ -175,7 +175,7 @@ const Home = () => {
                         <div className="white-box"></div>
                     </div>
                     <div className="img-box1">
-                        Commercial
+                        Firemní instalace
                         <div className="img-box-btn">
                             <img
                                 className="img-box-btn-icon"

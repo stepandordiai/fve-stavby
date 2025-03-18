@@ -30,9 +30,15 @@ const Header = () => {
                         <img src={logo2} alt="Logo" />
                         <span>FVE STAVBY</span>
                     </NavLink>
-                    {/* <a href="tel:+420773802166" className="header-top__number">
-                        +420 773 802 166
-                    </a> */}
+                    <div className="header-top__nav">
+                        <NavLink className={"header-link"}>Dům</NavLink>
+                        <NavLink className={"header-link header-link--active"}>
+                            Firemní instalace
+                        </NavLink>
+                    </div>
+                    <a href="tel:+420773802166" className="header-top__number">
+                        +420 722 001 016
+                    </a>
                     <BurgerBtn />
                 </div>
                 {/* <div className="header-bottom">
