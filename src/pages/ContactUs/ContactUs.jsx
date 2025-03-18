@@ -49,7 +49,7 @@ const ContactUs = () => {
                         </button>
                     </form>
                     <div className="contacts-details">
-                        <div>
+                        <div className="contacts-link-container">
                             <p className="contacts-link-title">
                                 <img src={phoneIcon} alt="" />
                                 <span>Phone number</span>
@@ -58,7 +58,7 @@ const ContactUs = () => {
                                 +420722001016
                             </a>
                         </div>
-                        <div>
+                        <div className="contacts-link-container">
                             <p className="contacts-link-title">
                                 <img src={mailIcon} alt="" />
                                 <span>E-mail</span>
@@ -70,7 +70,7 @@ const ContactUs = () => {
                                 tomas.maliga@fvestavby.cz
                             </a>
                         </div>
-                        <div>
+                        <div className="contacts-link-container">
                             <p className="contacts-link-title">
                                 <img src={addressIcon} alt="" />
                                 <span>Address</span>

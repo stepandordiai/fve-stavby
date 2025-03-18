@@ -54,11 +54,16 @@
     padding: 25px;
 }
 
+.contacts-link-container {
+    display: flex;
+    flex-direction: column;
+}
+
 .contacts-link-title {
     background: #fff;
     @include flex-center;
     column-gap: 5px;
-    justify-self: flex-start;
+    align-self: flex-start;
     padding: 12.5px;
     border-radius: 12.5px;
     margin-bottom: 6.25px;

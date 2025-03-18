@@ -152,14 +152,14 @@ const Home = () => {
                         <p>workers</p>
                     </div>
                 </div>
-                <div className="home__about-us-btn">
+                <button className="home__about-us-btn">
                     <span>More about us</span>
                     <img
                         className="home__about-us-btn-icon"
                         src={arrow}
                         alt=""
                     />
-                </div>
+                </button>
                 <p>We work with</p>
                 <div className="img-box-container">
                     <div className="img-box">

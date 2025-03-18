@@ -76,6 +76,8 @@
 }
 
 .home__about-us {
+    display: flex;
+    flex-direction: column;
     padding: 25px;
 }
 
@@ -115,7 +117,7 @@
 }
 
 .home__about-us-btn {
-    justify-self: flex-end;
+    align-self: flex-end;
     position: relative;
     @include flex-center;
     column-gap: 5px;
