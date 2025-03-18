@@ -15,8 +15,8 @@ const BurgerBtn = () => {
             .classList.toggle("menu-wrapper--active");
     }
     return (
-        <div className="burger-btn-wrapper">
-            <div onClick={toggleBurgerBtn} className="burger-btn">
+        <div onClick={toggleBurgerBtn} className="burger-btn-wrapper">
+            <div className="burger-btn">
                 <span className="burger-btn__center-line"></span>
             </div>
         </div>

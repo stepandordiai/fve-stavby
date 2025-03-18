@@ -108,3 +108,7 @@ label {
 legend {
     display: block;
 }
+
+::placeholder {
+    opacity: 0.5;
+}

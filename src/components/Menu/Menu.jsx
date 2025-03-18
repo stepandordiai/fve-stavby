@@ -58,15 +58,21 @@ const Menu = () => {
                 <div className="menu__contacts-details">
                     <div>
                         <p>Phone number</p>
-                        <a href="tel:+420722001016">+420 722 001 016</a>
+                        <a className="menu-link" href="tel:+420722001016">
+                            +420 722 001 016
+                        </a>
                     </div>
                     <div>
                         <p>E-mail</p>
-                        <a href="mailto:">Viktor.tomyschynec@fvestavby.cz</a>
+                        <a className="menu-link" href="mailto:">
+                            Viktor.tomyschynec@fvestavby.cz
+                        </a>
                     </div>
                     <div>
                         <p>Address</p>
-                        <a href="">Prddddddddddddda sadsa sad</a>
+                        <a className="menu-link" href="">
+                            Nad Kamínkou 1563, Zbraslav, 156 00 Praha 5
+                        </a>
                     </div>
                 </div>
             </div>

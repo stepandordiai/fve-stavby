@@ -12,15 +12,23 @@ import Partners from "../../components/Partners/Partners";
 
 const Home = () => {
     useEffect(() => {
+        // FIXME:
+
         addEventListener("scroll", () => {
-            if (
-                document
-                    .querySelector(".home__about-us-card-container")
-                    .getBoundingClientRect().top < window.innerHeight
-            ) {
-                closureYears("year", 14);
-                closureYears1("client", 380);
-                closureYears2("work", 50);
+            const homeAboutContainer = document.querySelector(
+                ".home__about-us-card-container"
+            );
+
+            if (homeAboutContainer) {
+                if (
+                    document
+                        .querySelector(".home__about-us-card-container")
+                        .getBoundingClientRect().top < window.innerHeight
+                ) {
+                    closureYears("year", 14);
+                    closureYears1("client", 380);
+                    closureYears2("work", 50);
+                }
             }
         });
     }, []);

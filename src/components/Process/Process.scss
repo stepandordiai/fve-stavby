@@ -2,12 +2,10 @@
     font-size: 1.5rem;
     font-weight: 500;
     padding: 125px 0 25px;
-    // color: #44609a;
 }
 
 .process-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     gap: 25px;
 }
 
@@ -15,26 +13,50 @@
     background: var(--bg-light-clr);
     padding: 25px;
     border-radius: 25px;
+    flex-basis: 100px;
+    overflow: hidden;
+    height: 400px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.process-card:hover {
+    background: var(--bg-light-darker-clr);
+}
+
+.process-card--active {
+    flex-grow: 1;
+}
+
+.details-wrapper {
+    opacity: 0;
+    pointer-events: none;
 
     p:nth-child(1) {
-        width: max-content;
-        padding: 12.5px;
-        background: #fff;
-        // color: #44609a;
-        margin-bottom: 25px;
-        font-weight: 500;
-        border-radius: 12.5px;
-    }
-
-    p:nth-child(2) {
         font-weight: 500;
         font-size: 1.5rem;
-        margin-bottom: 12.5px;
     }
 
-    p:nth-of-type(3) {
+    p:nth-of-type(2) {
         text-align: justify;
     }
+}
+
+.details-number {
+    width: 50px;
+    aspect-ratio: 1/1;
+    display: grid;
+    place-content: center;
+    background: #fff;
+    margin-bottom: 25px;
+    font-weight: 500;
+    border-radius: 12.5px;
+}
+
+.details-wrapper--active {
+    opacity: 1;
+    pointer-events: all;
+    transition: all 0.3s 0.3s;
 }
 
 .process-divider {
@@ -56,13 +78,33 @@
     }
 }
 
+// 1125 + (10px of scrollbar width)
+
+@media screen and (max-width: 1135px) {
+    .process-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .process-card {
+        background: var(--bg-light-clr);
+        padding: 25px;
+        border-radius: 25px;
+        flex-basis: 100px;
+        overflow: hidden;
+        height: 400px;
+        transition: all 0.3s;
+    }
+
+    .process-card--active {
+        flex-grow: 1;
+        flex-basis: 400px;
+    }
+}
+
 @media screen and (max-width: 800px) {
     .process__title {
         padding: 80px 0 10px;
-        // color: #44609a;
-    }
-
-    .process-grid {
-        grid-template-columns: repeat(1, 1fr);
     }
 }

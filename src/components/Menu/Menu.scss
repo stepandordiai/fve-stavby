@@ -13,7 +13,7 @@
     align-items: center;
     width: 50px;
     height: 50px;
-    background: var(--bg-dark-clr);
+    background: var(--bg-light-clr);
     @include glass-effect(20px);
     border-radius: 25px;
     opacity: 0;
@@ -47,8 +47,9 @@
 
 .link {
     position: relative;
-    color: #fff;
+    color: #000;
     font-size: 3rem;
+    align-self: flex-start;
 }
 
 .link::before {
@@ -56,7 +57,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    background: #fff;
+    background: #000;
     width: 25%;
     height: 2.5px;
     transform: scaleX(0);
@@ -79,11 +80,29 @@
     left: 25px;
     display: flex;
     justify-content: space-between;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(0, 0, 0, 0.5);
+}
 
-    a {
-        color: #fff;
-    }
+.menu-link {
+    position: relative;
+    color: #000;
+}
+
+.menu-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 25%;
+    height: 1.25px;
+    background: #000;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: all 0.3s;
+}
+
+.menu-link:hover::before {
+    transform: scaleX(1);
 }
 
 @media screen and (max-width: 800px) {
