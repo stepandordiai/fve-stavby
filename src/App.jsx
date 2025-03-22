@@ -3,7 +3,7 @@ import Menu from "./components/Menu/Menu";
 import Home from "./pages/Home/Home";
 import Building from "./components/Building/Building";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ContactUs from "./pages/ContactUs/ContactUs";
+import Contacts from "./pages/Contacts/Contacts";
 import "./App.scss";
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
             <Menu />
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/contact-us" element={<ContactUs />} />
+                <Route path="/contacts" element={<Contacts />} />
             </Routes>
         </Router>
     );

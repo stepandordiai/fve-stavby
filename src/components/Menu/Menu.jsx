@@ -66,7 +66,7 @@ const Menu = () => {
                         className={({ isActive }) =>
                             isActive ? activeLink : inactiveLink
                         }
-                        to="/contact-us"
+                        to="/contacts"
                     >
                         Contacts
                     </NavLink>
@@ -80,14 +80,19 @@ const Menu = () => {
                     </div>
                     <div>
                         <p>E-mail</p>
-                        <a className="menu-link" href="mailto:">
-                            Viktor.tomyschynec@fvestavby.cz
+                        <a
+                            className="menu-link"
+                            href="mailto:obchod@fvestavby.cz"
+                        >
+                            obchod@fvestavby.cz
                         </a>
                     </div>
                     <div>
                         <p>Address</p>
                         <a className="menu-link" href="">
-                            Nad Kamínkou 1563, Zbraslav, 156 00 Praha 5
+                            <mark>
+                                Nad Kamínkou 1563, Zbraslav, 156 00 Praha 5
+                            </mark>
                         </a>
                     </div>
                 </div>

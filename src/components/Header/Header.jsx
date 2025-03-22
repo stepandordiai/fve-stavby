@@ -31,8 +31,10 @@ const Header = () => {
                         <span>FVE STAVBY</span>
                     </NavLink>
                     <div className="header-top__nav">
-                        <NavLink className={"header-link"}>Dům</NavLink>
-                        <NavLink className={"header-link header-link--active"}>
+                        <NavLink className={"header-link"} to={"/"}>
+                            Dům
+                        </NavLink>
+                        <NavLink className={"header-link"}>
                             Firemní instalace
                         </NavLink>
                     </div>
@@ -41,25 +43,6 @@ const Header = () => {
                     </a>
                     <BurgerBtn />
                 </div>
-                {/* <div className="header-bottom">
-                    <nav className="nav">
-                        <div className="filter"></div>
-                        <p className="link">Ceník</p>
-                        <div className="dd-container">
-                            <p className="link">Fotovoltaika</p>
-                            <div className="dd">
-                                <p>Reference</p>
-                                <p>Dotace</p>
-                                <p>O nás</p>
-                                <p>Přihlášení</p>
-                            </div>
-                        </div>
-                        <p className="link">Reference</p>
-                        <p className="link">Dotace</p>
-                        <p className="link">O nás</p>
-                        <p className="link">Přihlášení</p>
-                    </nav>
-                </div> */}
             </header>
         </>
     );

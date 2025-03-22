@@ -1,0 +1,197 @@
+@use "./../../mixins" as *;
+
+.page-title {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background: url("./../../assets/img/2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 25px;
+}
+
+.page-title__title {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    color: #fff;
+    font-size: 3rem;
+}
+
+.contact-us {
+    padding: 25px;
+}
+
+.contacts-details-wrapper {
+    display: flex;
+    gap: 25px;
+}
+
+.form {
+    width: 50%;
+    background: var(--bg-light-clr);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12.5px;
+    border-radius: 25px;
+}
+
+.input-container {
+    // width: 100%;
+    display: flex;
+    gap: 12.5px;
+}
+
+.contacts-details {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 12.5px;
+    background: var(--bg-light-clr);
+    border-radius: 25px;
+    padding: 25px;
+}
+
+.contacts-link-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contacts-link-title {
+    background: #fff;
+    @include flex-center;
+    column-gap: 5px;
+    padding: 12.5px;
+    border-radius: 12.5px;
+    margin-bottom: 6.25px;
+    height: 50px;
+
+    img {
+        height: 100%;
+    }
+}
+
+.contacts-link {
+    position: relative;
+    color: #000;
+}
+
+.contacts-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 25%;
+    height: 1.25px;
+    background: #000;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: all 0.3s;
+}
+
+.contacts-link:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+input {
+    background: #fff !important;
+    width: 100%;
+    padding: 25px;
+    border-radius: 25px;
+    font-size: 1rem;
+}
+
+textarea {
+    background: #fff !important;
+    padding: 25px;
+    border-radius: 25px;
+    height: 140px;
+    resize: none;
+    font-size: 1rem;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.form-btn {
+    @include flex-center;
+    column-gap: 5px;
+    height: 50px;
+    background: var(--bg-dark-clr);
+    border-radius: 25px;
+    align-self: flex-end;
+    padding: 12.5px;
+    color: #fff;
+    //
+    font-weight: inherit;
+    //
+
+    &:hover {
+        background: var(--bg-dark-darker-clr);
+    }
+
+    img {
+        height: 100%;
+        transition: all 0.3s;
+    }
+}
+
+.form-btn:hover .form-btn-icon {
+    transform: rotate(45deg);
+}
+
+.home-details__btn {
+    border-radius: 25px;
+    padding: 12.5px;
+    height: 50px;
+    flex-shrink: 0;
+    cursor: pointer;
+    opacity: 0;
+    animation: animateTitle 1s 2s forwards;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.5);
+    }
+}
+
+.home-details__btn-icon {
+    height: 100%;
+    flex-shrink: 0;
+    transition: all 0.3s;
+}
+
+@media screen and (max-width: 1000px) {
+    .contacts-details-wrapper {
+        flex-direction: column-reverse;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .contacts-details {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .contact-us {
+        padding: 10px;
+    }
+
+    .page-title__title {
+        bottom: 10px;
+        left: 10px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .input-container {
+        flex-direction: column;
+    }
+}

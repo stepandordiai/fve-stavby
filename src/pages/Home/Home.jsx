@@ -5,10 +5,13 @@ import logo1 from "./../../assets/logo/fvestavby-cz-1.png";
 import logo2 from "./../../assets/logo/fvestavby-cz-2.png";
 import logo3 from "./../../assets/logo/solar-panel.png";
 import logo4 from "./../../assets/logo/solar.png";
-import "./Home.scss";
 import Process from "../../components/Process/Process";
 import Advantages from "../../components/Advantages/Advantages";
 import Partners from "../../components/Partners/Partners";
+import { NavLink } from "react-router-dom";
+import pdf from "./../../pdf/fve-stavby-price-quote-v1-low-quality.pdf";
+import downloadIcon from "./../../assets/icons/download.png";
+import "./Home.scss";
 
 const Home = () => {
     useEffect(() => {
@@ -121,14 +124,24 @@ const Home = () => {
                             energy
                         </p>
                     </div>
-
-                    <div className="home-details__btn">
-                        <span>Order installation</span>
-                        <img
-                            className="home-details__btn-icon"
-                            src={arrow}
-                            alt=""
-                        />
+                    <div className="home__btn-wrapper">
+                        <div className="home__pdf" href={pdf} target="_blank">
+                            <a href={pdf} target="_blank">
+                                Cenovou nabídku
+                            </a>
+                            <span></span>
+                            <a href={pdf} download={true}>
+                                <img src={downloadIcon} alt="" />
+                            </a>
+                        </div>
+                        <NavLink className="home-details__btn" to={"/contacts"}>
+                            <span>Order installation</span>
+                            <img
+                                className="home-details__btn-icon"
+                                src={arrow}
+                                alt=""
+                            />
+                        </NavLink>
                     </div>
                 </div>
             </div>
