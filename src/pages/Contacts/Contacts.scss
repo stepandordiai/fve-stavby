@@ -5,8 +5,9 @@
     width: 100%;
     height: 250px;
     overflow: hidden;
-    background: url("./../../assets/img/2.jpg");
+    background: url("./../../assets/img/6.jpg");
     background-size: cover;
+    background-position: center center;
     background-repeat: no-repeat;
     border-radius: 25px;
 }
@@ -28,8 +29,24 @@
     gap: 25px;
 }
 
-.form {
+.contacts__left-container {
     width: 50%;
+}
+
+.contacts__right-container {
+    width: 50%;
+    height: inherit;
+}
+
+.title {
+    //
+    text-transform: uppercase;
+    //
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.form {
     background: var(--bg-light-clr);
     padding: 25px;
     display: flex;
@@ -39,19 +56,18 @@
 }
 
 .input-container {
-    // width: 100%;
     display: flex;
     gap: 12.5px;
 }
 
 .contacts-details {
-    width: 50%;
     display: flex;
     flex-direction: column;
     row-gap: 12.5px;
     background: var(--bg-light-clr);
     border-radius: 25px;
     padding: 25px;
+    height: calc(100% - 30px);
 }
 
 .contacts-link-container {
@@ -61,17 +77,18 @@
 }
 
 .contacts-link-title {
-    background: #fff;
-    @include flex-center;
-    column-gap: 5px;
-    padding: 12.5px;
-    border-radius: 12.5px;
+    // background: #fff;
+    opacity: 0.5;
+    // @include flex-center;
+    // column-gap: 5px;
+    // padding: 12.5px;
+    // border-radius: 25px;
     margin-bottom: 6.25px;
-    height: 50px;
+    // height: 50px;
 
-    img {
-        height: 100%;
-    }
+    // img {
+    //     height: 100%;
+    // }
 }
 
 .contacts-link {
@@ -95,6 +112,35 @@
 .contacts-link:hover::before {
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+
+.business-hours__list {
+    width: 100%;
+    li {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.business-hours__item {
+    position: relative;
+}
+
+.business-hours__item::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 25%;
+    height: 1.25px;
+    background: #000;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s;
+}
+
+.business-hours__item--active::before {
+    transform: scale(1);
 }
 
 input {
@@ -130,6 +176,8 @@ textarea {
     //
     font-weight: inherit;
     //
+    margin-top: auto;
+    transition: background-color 0.3s;
 
     &:hover {
         background: var(--bg-dark-darker-clr);
@@ -168,13 +216,14 @@ textarea {
 @media screen and (max-width: 1000px) {
     .contacts-details-wrapper {
         flex-direction: column-reverse;
+        gap: 10px;
     }
 
-    .form {
+    .contacts__left-container {
         width: 100%;
     }
 
-    .contacts-details {
+    .contacts__right-container {
         width: 100%;
     }
 }
@@ -187,6 +236,15 @@ textarea {
     .page-title__title {
         bottom: 10px;
         left: 10px;
+    }
+
+    .contacts-details {
+        padding: var(--padding-half);
+        // padding: 10px;
+    }
+
+    .form {
+        padding: var(--padding-half);
     }
 }
 

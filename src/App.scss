@@ -43,12 +43,11 @@ body {
     height: 100%;
     width: 100%;
     z-index: -10;
-    background: url("./assets/img/1.jpg");
+    background: url("./assets/img/8.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     scale: 2;
-    filter: brightness(0.7);
     animation: animateImg 2s forwards;
     animation-timing-function: cubic-bezier(0.75, 0.5, 0.25, 1);
 }
