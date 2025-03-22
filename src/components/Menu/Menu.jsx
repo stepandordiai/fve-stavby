@@ -74,8 +74,8 @@ const Menu = () => {
                 <div className="menu__contacts-details">
                     <div>
                         <p>Phone number</p>
-                        <a className="menu-link" href="tel:+420722001016">
-                            +420 722 001 016
+                        <a className="menu-link" href="tel:+420728803703">
+                            +420 728 803 703
                         </a>
                     </div>
                     <div>

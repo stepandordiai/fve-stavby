@@ -36,8 +36,8 @@ const Header = () => {
                             Firemní instalace
                         </NavLink>
                     </div>
-                    <a href="tel:+420773802166" className="header-top__number">
-                        +420 722 001 016
+                    <a href="tel:+420728803703" className="header-top__number">
+                        +420 728 803 703
                     </a>
                     <BurgerBtn />
                 </div>

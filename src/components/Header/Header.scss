@@ -16,7 +16,6 @@
     display: flex;
     justify-content: space-between;
     color: #fff;
-    // margin-bottom: 10px;
 }
 
 .header-top__logo-container {
@@ -73,17 +72,13 @@
 .header-top__nav {
     height: 50px;
     background: var(--bg-dark-clr);
-    // @include grid-center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     gap: 25px;
     @include glass-effect(20px);
     padding: 0 12.5px;
     border-radius: 25px;
     margin-left: 25px;
     opacity: 0;
-    // margin-right: auto;
     animation: animateHeader 1s 2s forwards;
 
     &:hover {
@@ -121,51 +116,10 @@
     min-height: 50px;
     background: var(--bg-dark-clr);
     border-radius: 25px;
-    color: white;
+    color: #fff;
     display: flex;
     align-items: center;
 }
-
-// .nav {
-//     position: relative;
-//     padding: 0 12.5px;
-//     display: flex;
-//     justify-content: space-evenly;
-//     gap: 10px;
-//     width: 100%;
-//     border-radius: 25px;
-//     overflow-x: scroll;
-// }
-
-// .nav::-webkit-scrollbar {
-//     display: none;
-// }
-
-// .link {
-//     white-space: nowrap;
-//     height: 100%;
-//     @include grid-center;
-// }
-
-// .dd-container {
-//     position: relative;
-//     &:hover .dd {
-//         opacity: 1;
-//         pointer-events: all;
-//     }
-// }
-
-// .dd {
-//     position: absolute;
-//     left: 50px;
-//     z-index: 1000;
-//     background: var(--bg-dark-clr);
-//     border-radius: 25px;
-//     padding: 12.5px;
-//     width: calc(100% - 100px);
-//     opacity: 0;
-//     pointer-events: none;
-// }
 
 @media screen and (max-width: 800px) {
     .header {
@@ -182,12 +136,19 @@
         margin-right: 10px;
     }
 
-    // .dd {
-    //     left: 20px;
-    //     z-index: 100;
-    //     background: var(--bg-dark-clr);
-    //     border-radius: 25px;
-    //     padding: 12.5px;
-    //     width: calc(100% - 40px);
-    // }
+    .header-top__nav {
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .header-top__nav {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .header-top__number {
+        display: none;
+    }
 }

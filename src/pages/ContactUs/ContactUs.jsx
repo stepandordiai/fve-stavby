@@ -54,8 +54,11 @@ const ContactUs = () => {
                                 <img src={phoneIcon} alt="" />
                                 <span>Phone number</span>
                             </p>
-                            <a className="contacts-link" href="tel:">
-                                +420722001016
+                            <a
+                                className="contacts-link"
+                                href="tel:+420728803703"
+                            >
+                                +420 728 803 703
                             </a>
                         </div>
                         <div className="contacts-link-container">

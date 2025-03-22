@@ -10,6 +10,7 @@
 }
 
 .process-card {
+    position: relative;
     background: var(--bg-light-clr);
     padding: 25px;
     border-radius: 25px;
@@ -70,6 +71,17 @@
     height: 2.5px;
     background: var(--bg-light-clr);
     margin-top: 25px;
+}
+
+.process__icon {
+    position: absolute;
+    bottom: 35px;
+    right: 35px;
+    transition: all 0.3s;
+}
+
+.process__icon--active {
+    transform: rotate(45deg);
 }
 
 @media screen and (max-width: 1200px) {
