@@ -12,6 +12,7 @@ import { NavLink } from "react-router-dom";
 import pdf from "./../../pdf/fve-stavby-price-quote-v1-low-quality.pdf";
 import downloadIcon from "./../../assets/icons/download.png";
 import "./Home.scss";
+import Stats from "../../components/Stats/Stats";
 
 const Home = () => {
     useEffect(() => {
@@ -203,6 +204,7 @@ const Home = () => {
                 <Process />
                 <Advantages />
                 <Partners />
+                <Stats />
             </div>
         </>
     );
