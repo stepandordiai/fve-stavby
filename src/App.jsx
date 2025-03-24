@@ -5,6 +5,7 @@ import Building from "./components/Building/Building";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Contacts from "./pages/Contacts/Contacts";
 import "./App.scss";
+import Footer from "./components/Footer/Footer";
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/contacts" element={<Contacts />} />
             </Routes>
+            <Footer />
         </Router>
     );
 }

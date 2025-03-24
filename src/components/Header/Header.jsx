@@ -26,7 +26,7 @@ const Header = () => {
         <>
             <header className="header">
                 <div className="header-top">
-                    <NavLink to={"/"} className="header-top__logo-container">
+                    <NavLink to={"/"} className="header-top__logo">
                         <img src={logo2} alt="Logo" />
                         <span>FVE STAVBY</span>
                     </NavLink>
