@@ -4,6 +4,9 @@ import "./Footer.scss";
 import "./../../global/LinkEffect.scss";
 
 const Footer = () => {
+    const inactiveFooterLink = "footer__link";
+    const activeFooterLink = "footer__link footer__link--active";
+
     return (
         <>
             <div className="footer-divider"></div>
@@ -16,64 +19,116 @@ const Footer = () => {
                         </NavLink>
                         <p>Fotovoltaika, která dává smysl</p>
                     </div>
-                    <div className="footer-top__right-container">
-                        <div className="footer-top__nav">
-                            <p>Navigation</p>
-                            <ul className="footer-top__nav-list">
-                                <li className="link-effect">Úvod</li>
-                                <li className="link-effect">O nás</li>
-                                <li className="link-effect">Dům</li>
-                                <li className="link-effect">
+                    <div className="footer-top__nav">
+                        <p>Navigace</p>
+                        <ul className="footer-top__nav-list">
+                            <li>
+                                <NavLink
+                                    to={"/"}
+                                    className={({ isActive }) =>
+                                        isActive
+                                            ? activeFooterLink
+                                            : inactiveFooterLink
+                                    }
+                                >
+                                    Úvod
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink
+                                    to={"/about-us"}
+                                    className={({ isActive }) =>
+                                        isActive
+                                            ? activeFooterLink
+                                            : inactiveFooterLink
+                                    }
+                                >
+                                    O nás
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink
+                                    to={"/home"}
+                                    className={({ isActive }) =>
+                                        isActive
+                                            ? activeFooterLink
+                                            : inactiveFooterLink
+                                    }
+                                >
+                                    Dům
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink
+                                    to={"/company"}
+                                    className={({ isActive }) =>
+                                        isActive
+                                            ? activeFooterLink
+                                            : inactiveFooterLink
+                                    }
+                                >
                                     Firemní instalace
-                                </li>
-                                <li className="link-effect">Kontakty</li>
-                            </ul>
-                        </div>
-                        <ul className="footer-top__contact-details">
-                            <li>
-                                <span>Phone number</span>
-                                <a
-                                    className="link-effect"
-                                    href="tel:+420728803703"
-                                >
-                                    +420 728 803 703
-                                </a>
+                                </NavLink>
                             </li>
                             <li>
-                                <span>E-mail</span>
-                                <a
-                                    className="link-effect"
-                                    href="mailto:obchod@fvestavby.com"
+                                <NavLink
+                                    to={"/contacts"}
+                                    className={({ isActive }) =>
+                                        isActive
+                                            ? activeFooterLink
+                                            : inactiveFooterLink
+                                    }
                                 >
-                                    obchod@fvestavby.com
-                                </a>
-                            </li>
-                            <li>
-                                <span>Address</span>
-                                <a
-                                    className="link-effect"
-                                    href="mailto:obchod@fvestavby.com"
-                                >
-                                    Nad Kamínkou 1563, Zbraslav, 156 00 Praha 5
-                                </a>
+                                    Kontakty
+                                </NavLink>
                             </li>
                         </ul>
                     </div>
+                    <ul className="footer-top__contact-details">
+                        <li>
+                            <span>Telefonní číslo</span>
+                            <a
+                                className="footer__link"
+                                href="tel:+420728803703"
+                            >
+                                +420 728 803 703
+                            </a>
+                        </li>
+                        <li>
+                            <span>E-mail</span>
+                            <a
+                                className="footer__link"
+                                href="mailto:obchod@fvestavby.com"
+                            >
+                                obchod@fvestavby.com
+                            </a>
+                        </li>
+                        <li>
+                            <span>Adresa</span>
+                            <a
+                                className="footer__link"
+                                href="mailto:obchod@fvestavby.com"
+                            >
+                                Nad Kamínkou 1563, Zbraslav, 156 00 Praha 5
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-
                 <div className="footer-bottom">
-                    <p>&copy; FVE STAVBY 2025. All rights reserved</p>
-                    <div>
-                        <span>Site by </span>
+                    <p>&copy; 2025 FVE STAVBY. Všechna práva vyhrazena.</p>
+                    <div className="creator">
+                        <span>Site by</span>
                         <a
-                            className="creator-link link-effect"
+                            className="creator-link footer__link"
                             href="https://heeeyooo-studio.netlify.app/"
+                            target="_blank"
                         >
                             heeeyooo.studio
                         </a>
                     </div>
                 </div>
             </footer>
+            <p className="footer-bottom__logo">FVE STAVBY</p>
         </>
     );
 };
