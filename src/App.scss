@@ -2,6 +2,15 @@
 @use "fonts";
 @use "variables";
 @use "mixins" as *;
+
+// Prevent scaling size when rotating on mobile
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
 body {
     padding: 25px;
     font-family: "Quicksand", sans-serif;
@@ -94,7 +103,7 @@ body {
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     body {
         padding: 10px;
     }
