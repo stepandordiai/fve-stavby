@@ -19,10 +19,10 @@
     height: 400px;
     cursor: pointer;
     transition: all 0.3s;
-}
 
-.process-card:hover {
-    background: var(--bg-light-darker-clr);
+    &:hover {
+        background: var(--bg-light-darker-clr);
+    }
 }
 
 .process-card--active {

@@ -51,6 +51,7 @@
     border-radius: 25px;
     opacity: 0;
     animation: animateTitle 1s 2s forwards;
+    transition: background-color 0.3s;
 
     &:hover {
         background: var(--bg-light-lighter-clr);
@@ -85,6 +86,7 @@
     cursor: pointer;
     opacity: 0;
     animation: animateTitle 1s 2s forwards;
+    transition: background-color 0.3s;
 
     &:hover {
         background: var(--bg-light-lighter-clr);
@@ -170,6 +172,7 @@
     cursor: pointer;
     opacity: 0;
     animation: animateTitle 1s 2s forwards;
+    transition: background-color 0.3s;
 
     &:hover {
         background: rgba(0, 0, 0, 0.5);
@@ -259,6 +262,7 @@
     width: 90px;
     aspect-ratio: 1/1;
     cursor: pointer;
+    transition: background-color 0.3s;
 
     &:hover {
         background: rgba(0, 0, 0, 0.5);

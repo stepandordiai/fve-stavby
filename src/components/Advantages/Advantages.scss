@@ -6,7 +6,6 @@
 
 .advantages-title-container {
     width: 50%;
-    // @include grid-center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,12 +39,16 @@
     display: grid;
     place-content: center;
     background-color: var(--bg-light-clr);
-    color: #000;
     width: 40px;
     aspect-ratio: 1/1;
     padding: 10px;
     border-radius: 20px;
     font-size: 2rem;
+    transition: background-color 0.3s;
+}
+
+.advantages-btn:hover .advantages-btn-icon-container {
+    background-color: var(--bg-light-darker-clr);
 }
 
 .advantages-btn-icon {

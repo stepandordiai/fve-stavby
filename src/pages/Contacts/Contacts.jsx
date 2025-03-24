@@ -1,5 +1,6 @@
 import arrow from "./../../assets/icons/arrow-upper-right-white.png";
 import { Helmet } from "react-helmet";
+import "./../../global/LinkEffect.scss";
 import "./Contacts.scss";
 
 const ContactUs = () => {
@@ -86,7 +87,7 @@ const ContactUs = () => {
                                 Phone number
                             </p>
                             <a
-                                className="contact-details__link"
+                                className="contact-details__link link-effect"
                                 href="tel:+420728803703"
                             >
                                 +420 728 803 703
@@ -95,7 +96,7 @@ const ContactUs = () => {
                         <div className="contact-details">
                             <p className="contact-details__title">E-mail</p>
                             <a
-                                className="contact-details__link"
+                                className="contact-details__link link-effect"
                                 href="mailto:obchod@fvestavby.cz"
                             >
                                 obchod@fvestavby.cz
@@ -104,7 +105,7 @@ const ContactUs = () => {
                         <div className="contact-details">
                             <p className="contact-details__title">Address</p>
                             <a
-                                className="contact-details__link"
+                                className="contact-details__link link-effect"
                                 href="mailto:obchod@fvestavby.cz"
                             >
                                 Nad Kamínkou 1563, Zbraslav, 156 00 Praha 5

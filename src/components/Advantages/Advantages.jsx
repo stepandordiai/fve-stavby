@@ -20,7 +20,7 @@ const Advantages = () => {
     return (
         <section className="advantages">
             <div className="advantages-title-container">
-                <p>Why us</p>
+                <p>Why us?</p>
             </div>
             <ul className="advantages-list">
                 <li className="advantages-item">

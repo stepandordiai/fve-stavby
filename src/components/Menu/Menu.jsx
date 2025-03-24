@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
+import "./../../global/LinkEffect.scss";
 import "./Menu.scss";
 
 const Menu = () => {
@@ -23,8 +24,8 @@ const Menu = () => {
         });
     });
 
-    const inactiveLink = "link js-link";
-    const activeLink = "link js-link link--active";
+    const inactiveLink = "link js-link link-effect";
+    const activeLink = "link js-link link-effect link-effect--active";
 
     return (
         <section className="menu">
@@ -71,31 +72,32 @@ const Menu = () => {
                         Contacts
                     </NavLink>
                 </nav>
-                <div className="menu__contacts-details">
-                    <div>
+                <ul className="menu__contacts-details">
+                    <li>
                         <p>Phone number</p>
-                        <a className="menu-link" href="tel:+420728803703">
+                        <a
+                            className="menu-link link-effect"
+                            href="tel:+420728803703"
+                        >
                             +420 728 803 703
                         </a>
-                    </div>
-                    <div>
+                    </li>
+                    <li>
                         <p>E-mail</p>
                         <a
-                            className="menu-link"
+                            className="menu-link link-effect"
                             href="mailto:obchod@fvestavby.cz"
                         >
                             obchod@fvestavby.cz
                         </a>
-                    </div>
-                    <div>
+                    </li>
+                    <li>
                         <p>Address</p>
-                        <a className="menu-link" href="">
-                            <mark>
-                                Nad Kamínkou 1563, Zbraslav, 156 00 Praha 5
-                            </mark>
+                        <a className="menu-link link-effect" href="">
+                            Nad Kamínkou 1563, Zbraslav, 156 00 Praha 5
                         </a>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
         </section>
     );

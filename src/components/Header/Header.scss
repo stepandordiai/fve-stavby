@@ -29,6 +29,7 @@
     @include glass-effect(20px);
     opacity: 0;
     animation: animateHeader 1s 2s forwards;
+    transition: background-color 0.3s;
 
     &:hover {
         background: rgba(0, 0, 0, 0.5);
@@ -63,6 +64,7 @@
     color: #fff;
     opacity: 0;
     animation: animateHeader 1s 2s forwards;
+    transition: background-color 0.3s;
 
     &:hover {
         background: rgba(0, 0, 0, 0.5);

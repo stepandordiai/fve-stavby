@@ -1,5 +1,10 @@
+.footer-divider {
+    height: 2.5px;
+    background: var(--bg-light-clr);
+    margin: 0 25px;
+}
+
 .footer {
-    // min-height: 100vh;
     min-height: 500px;
     padding: 25px;
     display: flex;
@@ -82,26 +87,9 @@
 }
 
 .creator-link {
-    position: relative;
+    // position: relative;
     color: #000;
-    opacity: 1;
-}
-
-.creator-link::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 25%;
-    height: 1.25px;
-    background: #000;
-    transform: scaleX(0);
-    transform-origin: bottom left;
-    transition: transform 0.3s;
-}
-
-.creator-link:hover::before {
-    transform: scaleX(1);
+    // opacity: 1;
 }
 
 @media screen and (max-width: 850px) {
