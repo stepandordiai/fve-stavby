@@ -1,7 +1,6 @@
 @use "reset";
 @use "fonts";
 @use "variables";
-@use "mixins" as *;
 
 // Prevent scaling size when rotating on mobile
 
@@ -33,73 +32,6 @@ body {
     &:hover {
         background: rgba(0, 0, 0, 0.5);
         background-clip: content-box;
-    }
-}
-
-.home-top {
-    position: relative;
-    height: calc(100svh - 50px);
-    border-radius: 25px;
-    overflow: hidden;
-    scale: 0.25;
-    animation: animateHomeTop 2s forwards;
-    animation-timing-function: cubic-bezier(0.75, 0.5, 0.25, 1);
-}
-
-.home-top::before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    z-index: -10;
-    background: url("./assets/img/8.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    scale: 2;
-    animation: animateImg 2s forwards;
-    animation-timing-function: cubic-bezier(0.75, 0.5, 0.25, 1);
-}
-
-@keyframes animateImg {
-    100% {
-        scale: 1;
-    }
-}
-
-.home-loading__title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    font-size: clamp(1.5rem, 4vw, 4rem);
-    font-weight: 500;
-    @include flex-center;
-    column-gap: 5px;
-    padding: 0 25px;
-    opacity: 0;
-    animation: animateHomeTitle 2s forwards;
-}
-
-.loading__title-icon {
-    height: 50px;
-}
-
-@keyframes animateHomeTop {
-    100% {
-        scale: 1;
-    }
-}
-
-@keyframes animateHomeTitle {
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        pointer-events: none;
     }
 }
 
