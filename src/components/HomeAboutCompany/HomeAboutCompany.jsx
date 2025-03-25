@@ -6,51 +6,109 @@ import "./HomeAboutCompany.scss";
 import { NavLink } from "react-router-dom";
 
 const HomeAboutCompany = () => {
+    // useEffect(() => {
+    // let isClosureUsed = false;
+
+    // document.addEventListener("scroll", () => {
+    // const counterContainer = document.querySelector(
+    //     ".about-company__counter-container"
+    // );
+
+    // const counters = document.querySelectorAll(".counter");
+
+    // if (counters) {
+    //     counters.forEach((counter) => {
+    //         let counterRect = counter.getBoundingClientRect().top;
+    //         let counterInner = counter.querySelector("p");
+    //         let counterText = counterInner.textContent;
+
+    //         if (counterRect < window.innerHeight) {
+    //             if (!isClosureUsed) {
+    //                 closureCounterOuter(counterInner, counterText, 100);
+    //                 // closureCounterOuter("client", 380, 10);
+    //                 // closureCounterOuter("work", 50, 50);
+    //                 isClosureUsed = true;
+    //             }
+    //         }
+    //     });
+    // const counterContainerRect =
+    //     counterContainer.getBoundingClientRect().top;
+    // if (counterContainerRect < window.innerHeight) {
+    //     if (!isClosureUsed) {
+    //         closureCounterOuter("year", 14, 100);
+    //         closureCounterOuter("client", 380, 10);
+    //         closureCounterOuter("work", 50, 50);
+    //         isClosureUsed = true;
+    //     }
+    //             // }
+    //         }
+    //     });
+    // }, []);
+
+    // function closureCounterOuter(id, qty, speed) {
+    //     let isCounting = false;
+    //     const text = id;
+    //     const width = text.offsetWidth;
+    //     if (!isCounting) {
+    //         let initQty = 0;
+    //         let customInterval = setInterval(closureCounterInner, speed);
+    //         function closureCounterInner() {
+    //             if (initQty === qty) {
+    //                 clearInterval(customInterval);
+    //             } else {
+    //                 initQty++;
+    //                 id.innerHTML = initQty;
+    //                 text.style.width = `${width}px`;
+    //             }
+    //         }
+    //     }
+    //     isCounting = true;
+    // }
+
     useEffect(() => {
-        let isClosureUsed = false;
+        let valueDisplays = document.querySelectorAll(".counter-wrapper");
+        let interval = 1000;
 
-        document.addEventListener("scroll", () => {
-            const counterContainer = document.querySelector(
-                ".about-company__counter-container"
-            );
+        valueDisplays.forEach((valueDisplay) => {
+            let isUsed = false;
+            addEventListener("scroll", () => {
+                const valueDisplayRect =
+                    valueDisplay.getBoundingClientRect().top;
+                const valueText = valueDisplay.offsetWidth;
+                if (valueDisplayRect < window.innerHeight - 100) {
+                    if (!isUsed) {
+                        let startValue = 0;
+                        let endValue = parseInt(
+                            valueDisplay.getAttribute("data-val")
+                        );
 
-            const counters = document.querySelectorAll(".counter");
+                        let duration = Math.floor(interval / endValue);
+                        // let duration = 10;
 
-            if (counterContainer) {
-                // counters.forEach((counter))
-                const counterContainerRect =
-                    counterContainer.getBoundingClientRect().top;
-                if (counterContainerRect < window.innerHeight) {
-                    if (!isClosureUsed) {
-                        closureCounterOuter("year", 14, 100);
-                        closureCounterOuter("client", 380, 10);
-                        closureCounterOuter("work", 50, 50);
-                        isClosureUsed = true;
+                        // let durationCounter = setInterval(() => {
+                        // FIXME: Create smth to lower duration each time it gets higher
+                        // duration -= 10;
+                        function start() {
+                            let counter = setTimeout(() => {
+                                startValue += 1;
+                                valueDisplay.style.width = `${valueText}px`;
+                                valueDisplay.textContent = startValue;
+                                duration += 5 / 30;
+                                if (startValue == endValue) {
+                                    clearTimeout(counter);
+                                } else {
+                                    start();
+                                }
+                            }, duration);
+                        }
+
+                        start();
                     }
+                    isUsed = true;
                 }
-            }
+            });
         });
     }, []);
-
-    function closureCounterOuter(id, qty, speed) {
-        let isCounting = false;
-        const text = document.getElementById(id);
-        const width = text.offsetWidth;
-        if (!isCounting) {
-            let initQty = 0;
-            let customInterval = setInterval(closureCounterInner, speed);
-            function closureCounterInner() {
-                if (initQty === qty) {
-                    clearInterval(customInterval);
-                } else {
-                    initQty++;
-                    document.getElementById(id).innerHTML = initQty;
-                    text.style.width = `${width}px`;
-                }
-            }
-        }
-        isCounting = true;
-    }
 
     return (
         <div className="home-about-company">
@@ -61,15 +119,21 @@ const HomeAboutCompany = () => {
             </p>
             <div className="about-company__counter-container">
                 <div className="counter">
-                    <p id="year">14</p>
+                    <p className="counter-wrapper" data-val="14">
+                        00
+                    </p>
                     <p>years of work</p>
                 </div>
                 <div className="counter">
-                    <p id="client">380</p>
+                    <p className="counter-wrapper" data-val="380">
+                        000
+                    </p>
                     <p>clients</p>
                 </div>
                 <div className="counter">
-                    <p id="work">30</p>
+                    <p className="counter-wrapper" data-val="30">
+                        00
+                    </p>
                     <p>workers</p>
                 </div>
             </div>
