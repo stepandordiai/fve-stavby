@@ -6,11 +6,13 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Contacts from "./pages/Contacts/Contacts";
 import "./App.scss";
 import Footer from "./components/Footer/Footer";
+import ScrollToTop from "./utils/ScrollToTop";
 
 function App() {
     return (
         <Router>
             {/* <Building /> */}
+            <ScrollToTop />
             <Header />
             <Menu />
             <Routes>
