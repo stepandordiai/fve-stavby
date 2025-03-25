@@ -1,0 +1,34 @@
+.page-title {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.page-title__title {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.page-title__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media screen and (max-width: 900px) {
+    .page-title__title {
+        bottom: 10px;
+        left: 10px;
+    }
+}

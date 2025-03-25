@@ -48,7 +48,7 @@ const Footer = () => {
                             </li>
                             <li>
                                 <NavLink
-                                    to={"/home"}
+                                    to={"/house"}
                                     className={({ isActive }) =>
                                         isActive
                                             ? activeFooterLink

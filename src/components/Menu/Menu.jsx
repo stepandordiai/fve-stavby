@@ -51,7 +51,7 @@ const Menu = () => {
                         className={({ isActive }) =>
                             isActive ? activeLink : inactiveLink
                         }
-                        to="/about-us"
+                        to="/house"
                     >
                         Dům
                     </NavLink>
@@ -59,7 +59,7 @@ const Menu = () => {
                         className={({ isActive }) =>
                             isActive ? activeLink : inactiveLink
                         }
-                        to="/about-us"
+                        to="/company"
                     >
                         Firemní instalace
                     </NavLink>

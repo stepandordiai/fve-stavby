@@ -7,6 +7,9 @@ import Contacts from "./pages/Contacts/Contacts";
 import "./App.scss";
 import Footer from "./components/Footer/Footer";
 import ScrollToTop from "./utils/ScrollToTop";
+import Company from "./pages/Company/Company";
+import House from "./pages/House/House";
+import AboutUs from "./pages/AboutUs/AboutUs";
 
 function App() {
     return (
@@ -17,6 +20,9 @@ function App() {
             <Menu />
             <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/about-us" element={<AboutUs />} />
+                <Route path="/house" element={<House />} />
+                <Route path="/company" element={<Company />} />
                 <Route path="/contacts" element={<Contacts />} />
             </Routes>
             <Footer />

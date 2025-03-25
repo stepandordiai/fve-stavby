@@ -1,7 +1,9 @@
 import arrow from "./../../assets/icons/arrow-upper-right-white.png";
 import { Helmet } from "react-helmet";
+import img from "./../../assets/img/6.jpg";
 import "./../../global/LinkEffect.scss";
 import "./Contacts.scss";
+import PageTitle from "../../components/PageTitle/PageTitle";
 
 const ContactUs = () => {
     const date = new Date();
@@ -15,9 +17,7 @@ const ContactUs = () => {
             <Helmet>
                 <title>Contacts</title>
             </Helmet>
-            <div className="page-title">
-                <p className="page-title__title">Contacts</p>
-            </div>
+            <PageTitle title={"Contacts"} img={img} />
             <div className="contacts">
                 <div className="contacts-left-container">
                     <p className="contacts-left-container__title">Contact us</p>

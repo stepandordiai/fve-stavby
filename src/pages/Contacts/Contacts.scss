@@ -1,26 +1,5 @@
 @use "./../../mixins" as *;
 
-.page-title {
-    position: relative;
-    width: 100%;
-    height: 250px;
-    overflow: hidden;
-    background: url("./../../assets/img/6.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    border-radius: 25px;
-}
-
-.page-title__title {
-    position: absolute;
-    bottom: 25px;
-    left: 25px;
-    color: #fff;
-    font-size: 3rem;
-    font-weight: 600;
-}
-
 .contacts {
     display: flex;
     padding: 25px;

@@ -41,7 +41,7 @@
 
     span {
         font-size: 1.5rem;
-        font-weight: 600;
+        font-weight: 500;
     }
 }
 
@@ -85,12 +85,12 @@
     animation: animateHeader 1s 2s forwards;
 }
 
-.header-link {
+.header__link {
     position: relative;
     color: #fff;
 }
 
-.header-link::before {
+.header__link::before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -102,11 +102,11 @@
     transition: all 0.3s;
 }
 
-.header-link--active::before {
+.header__link--active::before {
     transform: translateX(-50%) scaleX(1);
 }
 
-.header-link:hover::before {
+.header__link:hover::before {
     transform: translateX(-50%) scaleX(1);
 }
 

@@ -14,10 +14,12 @@ const HomeAboutCompany = () => {
                 ".about-company__counter-container"
             );
 
-            const counterContainerRect =
-                counterContainer.getBoundingClientRect().top;
+            const counters = document.querySelectorAll(".counter");
 
             if (counterContainer) {
+                // counters.forEach((counter))
+                const counterContainerRect =
+                    counterContainer.getBoundingClientRect().top;
                 if (counterContainerRect < window.innerHeight) {
                     if (!isClosureUsed) {
                         closureCounterOuter("year", 14, 100);
@@ -83,8 +85,13 @@ const HomeAboutCompany = () => {
             <div className="cards-container">
                 <div className="card">
                     <p className="card__title">Dům</p>
-                    <img className="card__img" src={img1} alt="" />
-                    <NavLink to={"/home"} className="card__link">
+                    <img
+                        className="card__img"
+                        src={img1}
+                        alt=""
+                        loading="lazy"
+                    />
+                    <NavLink to={"/house"} className="card__link">
                         <img
                             className="card__link-icon"
                             src={arrow}
@@ -96,7 +103,12 @@ const HomeAboutCompany = () => {
                 </div>
                 <div className="card">
                     <p className="card__title">Firemní instalace</p>
-                    <img className="card__img" src={img2} alt="" />
+                    <img
+                        className="card__img"
+                        src={img2}
+                        alt=""
+                        loading="lazy"
+                    />
                     <NavLink to={"/company"} className="card__link">
                         <img
                             className="card__link-icon"
