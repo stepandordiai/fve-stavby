@@ -43,8 +43,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    font-size: clamp(1.5rem, 4vw, 4rem);
-    font-weight: 500;
     @include flex-center;
     column-gap: 5px;
     pointer-events: none;
@@ -56,6 +54,8 @@
     }
 
     span {
+        font-size: clamp(1.5rem, 4vw, 4rem);
+        font-weight: 600;
         color: #fff;
     }
 }

@@ -46,7 +46,7 @@
     justify-content: flex-end;
 }
 
-.about-company__btn {
+.about-company__link {
     align-self: flex-end;
     position: relative;
     @include flex-center;
@@ -60,58 +60,40 @@
     transition: background-color 0.3s;
 
     &:hover {
-        background: rgba(0, 0, 0, 0.5);
+        background: var(--bg-dark-darker-clr);
     }
 }
 
-.about-company__btn-icon {
+.about-company__link-icon {
     width: 25px;
     transition: all 0.3s;
 }
 
-.about-company__btn:hover .about-company__btn-icon {
+.about-company__link:hover .about-company__link-icon {
     transform: rotate(45deg);
 }
 
-//
+.we-work-with__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 120px 0 25px;
+}
 
-.img-box-container {
+.cards-container {
     display: flex;
     gap: 25px;
 }
 
-.img-box {
+.card {
     position: relative;
     width: 100%;
-    background: url("./../../assets/img/4.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    overflow: hidden;
     height: 400px;
-    color: #fff;
-    font-size: 3rem;
-    font-weight: 500;
     border-radius: 25px;
     padding: 25px;
 }
 
-.img-box1 {
-    position: relative;
-    width: 100%;
-    background: url("./../../assets/img/1.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 400px;
-    color: #fff;
-    font-size: 3rem;
-    font-weight: 500;
-    border-radius: 25px;
-    padding: 25px;
-}
-
-.img-box::before,
-.img-box1::before {
+.card::before {
     content: "";
     position: absolute;
     right: 100px;
@@ -120,10 +102,10 @@
     aspect-ratio: 1/1;
     background: transparent;
     border-radius: 0 0 25px 0;
-    box-shadow: 25px 25px rgb(255, 255, 255);
+    box-shadow: 25px 25px #fff;
 }
-.img-box::after,
-.img-box1::after {
+
+.card::after {
     content: "";
     position: absolute;
     right: 0px;
@@ -132,10 +114,27 @@
     aspect-ratio: 1/1;
     background: transparent;
     border-radius: 0 0 25px 0;
-    box-shadow: 25px 25px rgb(255, 255, 255);
+    box-shadow: 25px 25px #fff;
 }
 
-.img-box-btn {
+.card__title {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.card__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card__link {
     position: absolute;
     z-index: 1;
     right: 0;
@@ -146,25 +145,24 @@
     border-radius: 25px;
     width: 90px;
     aspect-ratio: 1/1;
-    cursor: pointer;
     transition: background-color 0.3s;
 
     &:hover {
-        background: rgba(0, 0, 0, 0.5);
+        background: var(--bg-dark-darker-clr);
     }
 }
 
-.img-box-btn-icon {
+.card__link-icon {
     width: 50%;
     flex-shrink: 0;
-    transition: all 0.3s;
+    transition: transform 0.3s;
 }
 
-.img-box-btn:hover .img-box-btn-icon {
+.card__link:hover .card__link-icon {
     transform: rotate(45deg);
 }
 
-.white-box {
+.card__white-element {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -187,81 +185,51 @@
         justify-content: center;
     }
 
-    .img-box-container {
+    .cards-container {
         display: flex;
         gap: 25px;
         flex-direction: column;
     }
 
-    .img-box {
+    .card {
         height: 300px;
     }
 
-    .img-box1 {
-        height: 300px;
-    }
-
-    .img-box::before,
-    .img-box1::before {
-        content: "";
-        position: absolute;
+    .card::before {
         right: 80px;
-        bottom: 0;
         width: 80px;
-        aspect-ratio: 1/1;
-        background: transparent;
-        border-radius: 0 0 25px 0;
-        box-shadow: 25px 25px rgb(255, 255, 255);
     }
-    .img-box::after,
-    .img-box1::after {
-        content: "";
-        position: absolute;
-        right: 0px;
+
+    .card::after {
         bottom: 80px;
         width: 80px;
-        aspect-ratio: 1/1;
-        background: transparent;
-        border-radius: 0 0 25px 0;
-        box-shadow: 25px 25px rgb(255, 255, 255);
     }
 
-    .white-box {
+    .card__white-element {
         width: 80px;
-        aspect-ratio: 1/1;
-        background: #fff;
-        border-radius: 25px 0 0 0;
     }
 
-    .img-box-btn {
-        position: absolute;
-        z-index: 1;
-        right: 0;
-        bottom: 0;
-        @include flex-center;
-        background: var(--bg-dark-clr);
-        @include glass-effect(20px);
-        border-radius: 25px;
+    .card__link {
         width: 70px;
-        aspect-ratio: 1/1;
-        cursor: pointer;
-
-        &:hover {
-            background: rgba(0, 0, 0, 0.5);
-        }
     }
 }
 
 @media screen and (max-width: 900px) {
     .about-company__title {
         padding: 80px 0 10px;
-        font-size: 1.5rem;
-        font-weight: 500;
     }
 
     .counter {
         p:nth-child(2) {
             padding-bottom: 30px;
         }
+    }
+
+    .we-work-with__title {
+        padding: 80px 0 10px;
+    }
+
+    .card {
+        padding: 10px;
     }
 }

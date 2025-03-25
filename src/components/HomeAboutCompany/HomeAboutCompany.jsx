@@ -1,6 +1,9 @@
 import { useEffect } from "react";
+import img1 from "./../../assets/img/4.png";
+import img2 from "./../../assets/img/1.jpg";
 import arrow from "./../../assets/icons/arrow-upper-right-white.png";
 import "./HomeAboutCompany.scss";
+import { NavLink } from "react-router-dom";
 
 const HomeAboutCompany = () => {
     useEffect(() => {
@@ -68,40 +71,41 @@ const HomeAboutCompany = () => {
                     <p>workers</p>
                 </div>
             </div>
-            <button className="about-company__btn">
+            <NavLink to={"/about-us"} className="about-company__link">
                 <span>More about us</span>
                 <img
-                    className="about-company__btn-icon"
+                    className="about-company__link-icon"
                     src={arrow}
                     alt="Arrow"
                 />
-            </button>
-            {/*  */}
-            <p>We work with</p>
-            <div className="img-box-container">
-                <div className="img-box">
-                    Dům
-                    <div className="img-box-btn">
+            </NavLink>
+            <p className="we-work-with__title">We work with</p>
+            <div className="cards-container">
+                <div className="card">
+                    <p className="card__title">Dům</p>
+                    <img className="card__img" src={img1} alt="" />
+                    <NavLink to={"/home"} className="card__link">
                         <img
-                            className="img-box-btn-icon"
+                            className="card__link-icon"
                             src={arrow}
                             alt="Arrow"
                             loading="lazy"
                         />
-                    </div>
-                    <div className="white-box"></div>
+                    </NavLink>
+                    <div className="card__white-element"></div>
                 </div>
-                <div className="img-box1">
-                    Firemní instalace
-                    <div className="img-box-btn">
+                <div className="card">
+                    <p className="card__title">Firemní instalace</p>
+                    <img className="card__img" src={img2} alt="" />
+                    <NavLink to={"/company"} className="card__link">
                         <img
-                            className="img-box-btn-icon"
+                            className="card__link-icon"
                             src={arrow}
-                            alt=""
+                            alt="Arrow"
                             loading="lazy"
                         />
-                    </div>
-                    <div className="white-box"></div>
+                    </NavLink>
+                    <div className="card__white-element"></div>
                 </div>
             </div>
         </div>
