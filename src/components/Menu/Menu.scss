@@ -15,8 +15,15 @@
     @include glass-effect(20px);
     border-radius: 25px;
     opacity: 0;
-    transition: all 1s, opacity 0s 1s;
+    transition: all 1s;
     overflow: hidden;
+    animation: animateHeader 1s 2s forwards;
+}
+
+@keyframes animateHeader {
+    to {
+        opacity: 1;
+    }
 }
 
 .menu--active {
@@ -24,8 +31,7 @@
     right: 25px;
     width: calc(100% - 50px);
     height: calc(100% - 50px);
-    opacity: 1;
-    transition: all 1s, opacity 0s;
+    transition: all 1s;
 }
 
 .menu-wrapper {
