@@ -15,9 +15,9 @@ const ContactUs = () => {
     return (
         <>
             <Helmet>
-                <title>Contacts</title>
+                <title>Kontakty</title>
             </Helmet>
-            <PageTitle title={"Contacts"} img={img} />
+            <PageTitle title={"Kontakty"} img={img} />
             <div className="contacts">
                 <div className="contacts-left-container">
                     <p className="contacts-left-container__title">Contact us</p>
@@ -31,12 +31,12 @@ const ContactUs = () => {
                             <input
                                 name="First name"
                                 type="text"
-                                placeholder="First name"
+                                placeholder="Jméno"
                             />
                             <input
                                 name="Last name"
                                 type="text"
-                                placeholder="Last name"
+                                placeholder="Příjmení"
                             />
                         </div>
                         <div className="input-container">
@@ -48,7 +48,7 @@ const ContactUs = () => {
                             <input
                                 name="Phone number"
                                 type="tel"
-                                placeholder="Phone number"
+                                placeholder="Telefonní číslo"
                             />
                         </div>
                         {/* <div>
@@ -79,12 +79,12 @@ const ContactUs = () => {
                 </div>
                 <div className="contacts-right-container">
                     <p className="contacts-right-container__title">
-                        Contact details
+                        Kontaktní údaje
                     </p>
                     <div className="contact-details-container">
                         <div className="contact-details">
                             <p className="contact-details__title">
-                                Phone number
+                                Telefonní číslo
                             </p>
                             <a
                                 className="contact-details__link link-effect"
@@ -103,17 +103,17 @@ const ContactUs = () => {
                             </a>
                         </div>
                         <div className="contact-details">
-                            <p className="contact-details__title">Address</p>
+                            <p className="contact-details__title">Adresa</p>
                             <a
                                 className="contact-details__link link-effect"
                                 href="mailto:obchod@fvestavby.cz"
                             >
-                                Nad Kamínkou 1563, Zbraslav, 156 00 Praha 5
+                                Pod Hroby 271 Kolín IV
                             </a>
                         </div>
                         <div className="contact-details">
                             <p className="contact-details__title">
-                                Business hours
+                                Pracovní doba
                             </p>
                             <ul className="business-hours__list">
                                 <li

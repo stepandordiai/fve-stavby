@@ -18,6 +18,7 @@ const Stats = () => {
 
     return (
         <>
+            <p className="stats__title">Odhadovaná energie za měsíc</p>
             <div className="stats">
                 <div className="candles-wrapper">
                     <div

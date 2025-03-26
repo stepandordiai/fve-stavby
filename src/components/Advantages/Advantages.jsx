@@ -22,13 +22,13 @@ const Advantages = () => {
             <div className="divider"></div>
             <section className="advantages">
                 <div className="advantages-title-container">
-                    <p>Why us?</p>
+                    <p>Proč my?</p>
                 </div>
                 <ul className="advantages-list">
                     <li className="advantages-item">
                         <button className="advantages-btn">
                             <span className="advantages-btn-title">
-                                Online monitoring
+                                Online sledování
                             </span>
                             <div className="advantages-btn-icon-container">
                                 <img

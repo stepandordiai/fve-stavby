@@ -110,7 +110,7 @@ const Footer = () => {
                                 className="footer__link"
                                 href="mailto:obchod@fvestavby.com"
                             >
-                                Nad Kamínkou 1563, Zbraslav, 156 00 Praha 5
+                                Pod Hroby 271 Kolín IV
                             </a>
                         </li>
                     </ul>

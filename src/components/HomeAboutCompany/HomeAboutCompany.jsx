@@ -111,40 +111,40 @@ const HomeAboutCompany = () => {
 
     return (
         <div className="home-about-company">
-            <p className="about-company__title">About company</p>
+            <p className="about-company__title">O společnosti</p>
             <p className="about-company__sec-title">
-                Our company dedicated to harnessing the power of the sun to
-                provide sustainable and eco-friendly energy solutions
+                Naše společnost se věnuje využití síly slunce poskytovat
+                udržitelná a ekologická energetická řešení
             </p>
             <div className="about-company__counter-container">
                 <div className="counter">
                     <p className="counter-wrapper" data-val="14">
                         00
                     </p>
-                    <p>years of work</p>
+                    <p>roky práce</p>
                 </div>
                 <div className="counter">
                     <p className="counter-wrapper" data-val="380">
                         000
                     </p>
-                    <p>clients</p>
+                    <p>klientů</p>
                 </div>
                 <div className="counter">
                     <p className="counter-wrapper" data-val="30">
                         00
                     </p>
-                    <p>workers</p>
+                    <p>pracovníků</p>
                 </div>
             </div>
             <NavLink to={"/about-us"} className="about-company__link">
-                <span>More about us</span>
+                <span>Více o nás</span>
                 <img
                     className="about-company__link-icon"
                     src={arrow}
                     alt="Arrow"
                 />
             </NavLink>
-            <p className="we-work-with__title">We work with</p>
+            <p className="we-work-with__title">Pracujeme s</p>
             <div className="cards-container">
                 <div className="card">
                     <p className="card__title">Dům</p>

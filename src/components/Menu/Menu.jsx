@@ -37,7 +37,7 @@ const Menu = () => {
                         }
                         to="/"
                     >
-                        Home
+                        Úvod
                     </NavLink>
                     <NavLink
                         className={({ isActive }) =>
@@ -45,7 +45,7 @@ const Menu = () => {
                         }
                         to="/about-us"
                     >
-                        About us
+                        O nás
                     </NavLink>
                     <NavLink
                         className={({ isActive }) =>
@@ -69,12 +69,12 @@ const Menu = () => {
                         }
                         to="/contacts"
                     >
-                        Contacts
+                        Kontakty
                     </NavLink>
                 </nav>
                 <ul className="menu__contacts-details">
                     <li>
-                        <p>Phone number</p>
+                        <p>Telefonní číslo</p>
                         <a
                             className="menu-link link-effect"
                             href="tel:+420728803703"
@@ -92,9 +92,12 @@ const Menu = () => {
                         </a>
                     </li>
                     <li>
-                        <p>Address</p>
-                        <a className="menu-link link-effect" href="">
-                            Nad Kamínkou 1563, Zbraslav, 156 00 Praha 5
+                        <p>Adresa</p>
+                        <a
+                            className="menu-link link-effect"
+                            href="mailto:obchod@fvestavby.cz"
+                        >
+                            Pod Hroby 271 Kolín IV
                         </a>
                     </li>
                 </ul>
