@@ -7,12 +7,13 @@
 
 .about-company__title {
     padding: 125px 0 25px;
-    font-size: 1.5rem;
-    font-weight: 600;
-}
 
-.about-company__sec-title {
-    font-size: 1.5rem;
+    font: {
+        size: 1.5rem;
+        weight: 500;
+    }
+
+    text-transform: uppercase;
 }
 
 .about-company__counter-container {
@@ -28,13 +29,16 @@
 
     p:nth-child(1) {
         font-size: clamp(8rem, 20vw, 12rem);
-        font-weight: 600;
+        font-weight: 500;
     }
 
     p:nth-child(2) {
         font-size: clamp(1rem, 2vw, 1.25rem);
         padding-bottom: 40px;
-        opacity: 0.5;
+
+        // Semi transparent color
+
+        color: var(--bg-dark-darker-clr);
     }
 }
 
@@ -74,8 +78,12 @@
 }
 
 .we-work-with__title {
-    font-size: 1.5rem;
-    font-weight: 600;
+    font: {
+        size: 1.5rem;
+        weight: 500;
+    }
+
+    text-transform: uppercase;
     padding: 120px 0 25px;
 }
 
@@ -119,8 +127,11 @@
 
 .card__title {
     color: #fff;
-    font-size: 3rem;
-    font-weight: 600;
+
+    font: {
+        size: 3rem;
+        weight: 500;
+    }
 }
 
 .card__img {

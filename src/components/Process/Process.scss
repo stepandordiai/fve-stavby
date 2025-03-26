@@ -1,6 +1,7 @@
 .process__title {
     font-size: 1.5rem;
     font-weight: 500;
+    text-transform: uppercase;
     padding: 125px 0 25px;
 }
 
@@ -34,13 +35,21 @@
     pointer-events: none;
 
     p:nth-child(1) {
-        font-weight: 500;
-        font-size: 1.5rem;
+        font: {
+            size: 1.25rem;
+            weight: 500;
+        }
     }
 
     p:nth-of-type(2) {
         text-align: justify;
     }
+}
+
+.details-wrapper--active {
+    opacity: 1;
+    pointer-events: all;
+    transition: all 0.3s 0.3s;
 }
 
 .details-number {
@@ -54,23 +63,11 @@
     border-radius: 12.5px;
 }
 
-.details-wrapper--active {
-    opacity: 1;
-    pointer-events: all;
-    transition: all 0.3s 0.3s;
-}
-
 .process-divider {
     height: 2.5px;
     width: 25%;
-    background: var(--bg-dark-clr);
+    background: #000;
     margin: 10px 0;
-}
-
-.divider {
-    height: 2.5px;
-    background: var(--bg-light-clr);
-    margin-top: 25px;
 }
 
 .process__icon {

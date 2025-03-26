@@ -34,11 +34,9 @@ const Process = () => {
                         <p>Technický audit</p>
                         <div className="process-divider"></div>
                         <p>
-                            <mark>
-                                Zjistime zakladni informace o vasich planech,
-                                predstavach a moznostech - a navrhneme idealni
-                                reseni
-                            </mark>
+                            Zjistime zakladni informace o vasich planech,
+                            predstavach a moznostech - a navrhneme idealni
+                            reseni
                         </p>
                     </div>
                     <img
@@ -90,11 +88,7 @@ const Process = () => {
                         <p> Podpis smlouvy</p>
                         <div className="process-divider"></div>
 
-                        <p>
-                            <mark>
-                                Na zaklade vsech podkladu zpracujeme nabidku
-                            </mark>
-                        </p>
+                        <p>Na zaklade vsech podkladu zpracujeme nabidku</p>
                     </div>
                     <img
                         className="process__icon"
@@ -175,7 +169,6 @@ const Process = () => {
                     />
                 </div>
             </div>
-            <div className="divider"></div>
         </>
     );
 };

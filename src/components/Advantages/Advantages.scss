@@ -1,22 +1,31 @@
 @use "./../../mixins" as *;
 
+.divider {
+    height: 2.5px;
+    background: var(--bg-light-clr);
+    margin-top: 125px;
+}
+
 .advantages {
     display: flex;
 }
 
 .advantages-title-container {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    @include flex-center;
 
     p {
-        font-size: 2rem;
+        font: {
+            size: 1.5rem;
+            weight: 500;
+        }
+
+        text-transform: uppercase;
     }
 }
 
 .advantages-list {
-    width: 50%;
+    width: 100%;
 }
 
 .advantages-item {
@@ -31,19 +40,18 @@
 }
 
 .advantages-btn-title {
-    font-size: 1.25rem;
-    font-weight: 500;
+    font: {
+        size: 1.25rem;
+        weight: 500;
+    }
 }
 
 .advantages-btn-icon-container {
-    display: grid;
-    place-content: center;
     background-color: var(--bg-light-clr);
     width: 40px;
     aspect-ratio: 1/1;
     padding: 10px;
     border-radius: 20px;
-    font-size: 2rem;
     transition: background-color 0.3s;
 }
 
@@ -77,21 +85,18 @@
 }
 
 @media screen and (max-width: 900px) {
+    .divider {
+        height: 2.5px;
+        background: var(--bg-light-clr);
+        margin-top: 80px;
+    }
+
     .advantages {
         flex-direction: column;
     }
 
     .advantages-title-container {
-        width: 100%;
         justify-content: flex-start;
-        padding: 80px 0 10px;
-
-        p {
-            font-size: 1.5rem;
-        }
-    }
-
-    .advantages-list {
-        width: 100%;
+        margin: 10px 0;
     }
 }

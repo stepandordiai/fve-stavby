@@ -30,30 +30,6 @@ const Partners = () => {
                             <img src={logo1} alt="" />
                         </a>
                     </div>
-                    {/* <div className="item" style={{ "--position": "3" }}>
-                    <img src={logo1} alt="" />
-                </div>
-                <div className="item" style={{ "--position": "4" }}>
-                    <img src={logo1} alt="" />
-                </div>
-                <div className="item" style={{ "--position": "5" }}>
-                    <img src={logo1} alt="" />
-                </div>
-                <div className="item" style={{ "--position": "6" }}>
-                    <img src={logo1} alt="" />
-                </div>
-                <div className="item" style={{ "--position": "7" }}>
-                    <img src={logo1} alt="" />
-                </div>
-                <div className="item" style={{ "--position": "8" }}>
-                    <img src={logo1} alt="" />
-                </div>
-                <div className="item" style={{ "--position": "9" }}>
-                    <img src={logo1} alt="" />
-                </div>
-                <div className="item" style={{ "--position": "10" }}>
-                    <img src={logo1} alt="" />
-                </div> */}
                 </div>
             </div>
         </>

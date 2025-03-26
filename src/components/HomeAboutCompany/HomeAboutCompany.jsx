@@ -83,17 +83,16 @@ const HomeAboutCompany = () => {
                         );
 
                         let duration = Math.floor(interval / endValue);
-                        // let duration = 10;
 
-                        // let durationCounter = setInterval(() => {
-                        // FIXME: Create smth to lower duration each time it gets higher
-                        // duration -= 10;
                         function start() {
                             let counter = setTimeout(() => {
                                 startValue += 1;
                                 valueDisplay.style.width = `${valueText}px`;
                                 valueDisplay.textContent = startValue;
-                                duration += 5 / 30;
+
+                                // I tried to increase duration every loop so counter end up smoothly
+
+                                duration += 0.1;
                                 if (startValue == endValue) {
                                     clearTimeout(counter);
                                 } else {

@@ -110,6 +110,5 @@ legend {
 }
 
 ::placeholder {
-    opacity: 0.5;
-    color: #000;
+    color: var(--bg-dark-darker-clr);
 }

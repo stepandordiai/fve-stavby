@@ -32,7 +32,7 @@
     transition: background-color 0.3s;
 
     &:hover {
-        background: rgba(0, 0, 0, 0.5);
+        background: var(--bg-dark-darker-clr);
     }
 
     img {
@@ -68,7 +68,7 @@
     transition: background-color 0.3s;
 
     &:hover {
-        background: rgba(0, 0, 0, 0.5);
+        background: var(--bg-dark-darker-clr);
     }
 }
 

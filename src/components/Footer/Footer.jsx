@@ -1,7 +1,8 @@
 import { NavLink } from "react-router-dom";
 import logo from "./../../assets/logo/fve-stavby-black.png";
-import "./Footer.scss";
+import footerBottomLogo from "./../../assets/fve-stavby-footer-logo.png";
 import "./../../global/LinkEffect.scss";
+import "./Footer.scss";
 
 const Footer = () => {
     const inactiveFooterLink = "footer__link";
@@ -128,7 +129,12 @@ const Footer = () => {
                     </div>
                 </div>
             </footer>
-            <p className="footer-bottom__logo">FVE STAVBY</p>
+            {/* <p className="footer-bottom__logo">FVE STAVBY</p> */}
+            <img
+                className="footer-bottom__logo-img"
+                src={footerBottomLogo}
+                alt="Logo"
+            />
         </>
     );
 };

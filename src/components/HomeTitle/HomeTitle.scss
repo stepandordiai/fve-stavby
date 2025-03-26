@@ -55,7 +55,7 @@
 
     span {
         font-size: clamp(1.5rem, 4vw, 4rem);
-        font-weight: 600;
+        font-weight: 500;
         color: #fff;
     }
 }
@@ -93,7 +93,7 @@
     justify-self: flex-start;
     color: #fff;
     font-size: clamp(1rem, 4vw, 2rem);
-    font-weight: 600;
+    font-weight: 500;
     opacity: 0;
     animation: animateTitle 1s 2s forwards;
 }
@@ -113,7 +113,7 @@
 .home-title__info {
     color: #fff;
     font-size: clamp(2rem, 6vw, 4rem);
-    font-weight: 600;
+    font-weight: 500;
     opacity: 0;
     animation: animateTitle 1s 2s forwards;
 }
