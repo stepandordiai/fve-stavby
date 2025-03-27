@@ -4,7 +4,7 @@ const PageTitle = ({ title, img }) => {
     return (
         <>
             <div className="page-title">
-                <p className="page-title__title">{title}</p>
+                <h1 className="page-title__title">{title}</h1>
                 <img
                     className="page-title__img"
                     src={img}

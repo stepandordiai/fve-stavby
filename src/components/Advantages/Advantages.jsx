@@ -22,7 +22,7 @@ const Advantages = () => {
             <div className="divider"></div>
             <section className="advantages">
                 <div className="advantages-title-container">
-                    <p>Proč my?</p>
+                    <h2>Proč my?</h2>
                 </div>
                 <ul className="advantages-list">
                     <li className="advantages-item">

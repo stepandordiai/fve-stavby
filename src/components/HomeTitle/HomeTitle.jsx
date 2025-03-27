@@ -20,14 +20,14 @@ const HomeTitle = () => {
                 <div className="home-title__details-container">
                     <div className="home-title__details">
                         <h1 className="home-title__title">FVE STAVBY s.r.o.</h1>
-                        <p className="home-title__sec-title">
+                        <h2 className="home-title__sec-title">
                             Fotovoltaika, která dává smysl
-                        </p>
-                        <p className="home-title__info">
+                        </h2>
+                        <h2 className="home-title__info">
                             Light up your home or business
                             <br />
                             with solar energy
-                        </p>
+                        </h2>
                     </div>
                     <div className="home-title__links-container">
                         <div

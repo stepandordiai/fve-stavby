@@ -1,38 +1,23 @@
 @use "./../../mixins" as *;
 
-.lng-select__dd-wrapper {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: -1;
+.lng-select__btn {
+    width: 50px;
+    aspect-ratio: 1/1;
     display: grid;
-    grid-template-columns: 0fr;
-    grid-template-rows: 0fr;
-    overflow: hidden;
-    min-width: 50px;
-    min-height: 50px;
-    width: max-content;
-    height: max-content;
-    @include glass-effect(20px);
-    background: var(--bg-light-clr);
-    min-height: 50px;
+    place-content: center;
     border-radius: 25px;
+    font-weight: 500;
     transition: all 0.5s;
-}
-
-.lng-select__dd-wrapper--active {
-    padding: 62.5px 12.5px 12.5px;
-
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-}
-
-.lng-select {
     position: relative;
     margin-left: auto;
+    z-index: 1;
     margin-right: 25px;
     opacity: 0;
     animation: animateHeader 1s 2s forwards;
+}
+
+.lng-select__btn--active {
+    background: var(--bg-light-darker-clr);
 }
 
 @keyframes animateHeader {
@@ -41,19 +26,33 @@
     }
 }
 
-.lng-select__btn {
-    width: 50px;
-    aspect-ratio: 1/1;
-    display: grid;
-    place-content: center;
+.lng-select {
+    position: fixed;
+    top: 50px;
+    right: 125px;
+    z-index: -1;
     border-radius: 25px;
-    cursor: pointer;
-    font-weight: 500;
+    @include glass-effect(20px);
+    opacity: 0;
+    animation: animateHeader 1s 2s forwards;
+    display: grid;
+    grid-template-columns: 0fr;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    min-width: 50px;
+    min-height: 50px;
+    width: max-content;
+    height: max-content;
+    background: var(--bg-light-clr);
+    min-height: 50px;
+    border-radius: 25px;
     transition: all 0.5s;
 }
 
-.lng-select__btn--active {
-    background: var(--bg-light-darker-clr);
+.lng-select--active {
+    padding: 62.5px 12.5px 12.5px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
 }
 
 .lng-select__dd {
@@ -85,7 +84,12 @@
 }
 
 @media screen and (max-width: 900px) {
-    .lng-select {
+    .lng-select__btn {
         margin-right: 12.5px;
+    }
+
+    .lng-select {
+        top: 20px;
+        right: 82.5px;
     }
 }

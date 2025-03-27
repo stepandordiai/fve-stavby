@@ -33,10 +33,10 @@ const Header = () => {
                         Firemní instalace
                     </NavLink>
                 </div>
-                <LngSelect />
                 <a href="tel:+420728803703" className="header-top__number">
                     +420 728 803 703
                 </a>
+                <LngSelect />
                 <BurgerBtn />
             </div>
         </header>

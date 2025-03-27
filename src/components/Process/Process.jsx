@@ -26,7 +26,7 @@ const Process = () => {
 
     return (
         <>
-            <p className="process__title">Náš proces</p>
+            <h2 className="process__title">Náš proces</h2>
             <div className="process-grid">
                 <div className="process-card process-card--active">
                     <p className="details-number">01</p>

@@ -20,7 +20,9 @@ const ContactUs = () => {
             <PageTitle title={"Kontakty"} img={img} />
             <div className="contacts">
                 <div className="contacts-left-container">
-                    <p className="contacts-left-container__title">Contact us</p>
+                    <h2 className="contacts-left-container__title">
+                        Contact us
+                    </h2>
                     <form
                         className="form"
                         action="mailto:obchod@fvestavby.cz"
@@ -78,9 +80,9 @@ const ContactUs = () => {
                     </form>
                 </div>
                 <div className="contacts-right-container">
-                    <p className="contacts-right-container__title">
+                    <h2 className="contacts-right-container__title">
                         Kontaktní údaje
-                    </p>
+                    </h2>
                     <div className="contact-details-container">
                         <div className="contact-details">
                             <p className="contact-details__title">

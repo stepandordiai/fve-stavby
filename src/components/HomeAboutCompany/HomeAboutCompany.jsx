@@ -111,7 +111,7 @@ const HomeAboutCompany = () => {
 
     return (
         <div className="home-about-company">
-            <p className="about-company__title">O společnosti</p>
+            <h2 className="about-company__title">O společnosti</h2>
             <p className="about-company__sec-title">
                 Naše společnost se věnuje využití síly slunce poskytovat
                 udržitelná a ekologická energetická řešení
@@ -144,7 +144,7 @@ const HomeAboutCompany = () => {
                     alt="Arrow"
                 />
             </NavLink>
-            <p className="we-work-with__title">Pracujeme s</p>
+            <h2 className="we-work-with__title">Pracujeme s</h2>
             <div className="cards-container">
                 <div className="card">
                     <p className="card__title">Dům</p>
