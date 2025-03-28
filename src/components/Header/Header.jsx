@@ -22,7 +22,7 @@ const Header = () => {
                         }
                         to={"/house"}
                     >
-                        Dům
+                        Fotovoltaika pro rodinne domy
                     </NavLink>
                     <NavLink
                         className={({ isActive }) =>

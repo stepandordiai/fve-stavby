@@ -24,13 +24,13 @@ const HomeTitle = () => {
                             Fotovoltaika, která dává smysl
                         </h2>
                         <h2 className="home-title__info">
-                            Light up your home or business
+                            Rozsviťte svůj domov, nebo firmu
                             <br />
-                            with solar energy
+                            se solární energií
                         </h2>
                     </div>
                     <div className="home-title__links-container">
-                        <div
+                        {/* <div
                             className="home-title__pdf"
                             href={pdf}
                             target="_blank"
@@ -42,9 +42,9 @@ const HomeTitle = () => {
                             <a href={pdf} download={true}>
                                 <img src={downloadIcon} alt="Download" />
                             </a>
-                        </div>
+                        </div> */}
                         <NavLink className="home-title__link" to={"/contacts"}>
-                            <span>Order installation</span>
+                            <span>Domvluvte si nezavaznu sluzku</span>
                             <img
                                 className="home-title__link-icon"
                                 src={arrow}

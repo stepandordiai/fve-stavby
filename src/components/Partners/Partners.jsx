@@ -5,7 +5,7 @@ import "./Partners.scss";
 const Partners = () => {
     return (
         <>
-            <h2 className="partners-title">V dobré společnosti</h2>
+            <h2 className="partners-title">Nasi partneri</h2>
             <p>
                 Spolupracujeme s prvotřídními výrobci, dodavateli, firmami a
                 institucemi z České republiky a zahraničí.

@@ -21,7 +21,7 @@ const ContactUs = () => {
             <div className="contacts">
                 <div className="contacts-left-container">
                     <h2 className="contacts-left-container__title">
-                        Contact us
+                        Kontaktujte nas
                     </h2>
                     <form
                         className="form"
@@ -67,7 +67,7 @@ const ContactUs = () => {
                             name="Message"
                             // cols="30"
                             // rows="10"
-                            placeholder="Message"
+                            placeholder="Zprava"
                         ></textarea>
                         <button className="form-btn" type="submit">
                             <span>Odeslat</span>
@@ -124,7 +124,7 @@ const ContactUs = () => {
                                     }
                                 >
                                     <span>Pondělí:</span>
-                                    <span>7:00 - 17:00</span>
+                                    <span>8:00 - 17:00</span>
                                 </li>
                                 <li
                                     className={
@@ -132,7 +132,7 @@ const ContactUs = () => {
                                     }
                                 >
                                     <span>Úterý:</span>
-                                    <span>7:00 - 17:00</span>
+                                    <span>8:00 - 17:00</span>
                                 </li>
                                 <li
                                     className={
@@ -140,7 +140,7 @@ const ContactUs = () => {
                                     }
                                 >
                                     <span>Středa:</span>
-                                    <span>7:00 - 17:00</span>
+                                    <span>8:00 - 17:00</span>
                                 </li>
                                 <li
                                     className={
@@ -148,7 +148,7 @@ const ContactUs = () => {
                                     }
                                 >
                                     <span>Čtvrtek:</span>
-                                    <span>7:00 - 17:00</span>
+                                    <span>8:00 - 17:00</span>
                                 </li>
                                 <li
                                     className={
@@ -156,7 +156,7 @@ const ContactUs = () => {
                                     }
                                 >
                                     <span>Pátek:</span>
-                                    <span>7:00 - 17:00</span>
+                                    <span>8:00 - 17:00</span>
                                 </li>
                                 <li
                                     className={

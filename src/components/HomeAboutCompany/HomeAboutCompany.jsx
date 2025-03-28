@@ -118,19 +118,23 @@ const HomeAboutCompany = () => {
             </p>
             <div className="about-company__counter-container">
                 <div className="counter">
-                    <p className="counter-wrapper" data-val="14">
+                    <p className="counter-wrapper" data-val="5">
                         00
                     </p>
-                    <p>roky práce</p>
+                    <p>let praxe</p>
                 </div>
                 <div className="counter">
-                    <p className="counter-wrapper" data-val="380">
-                        000
-                    </p>
+                    <div>
+                        <p className="counter-wrapper" data-val="100">
+                            000
+                        </p>
+                        <span>+</span>
+                    </div>
+
                     <p>klientů</p>
                 </div>
                 <div className="counter">
-                    <p className="counter-wrapper" data-val="30">
+                    <p className="counter-wrapper" data-val="14">
                         00
                     </p>
                     <p>pracovníků</p>
@@ -147,7 +151,7 @@ const HomeAboutCompany = () => {
             <h2 className="we-work-with__title">Pracujeme s</h2>
             <div className="cards-container">
                 <div className="card">
-                    <p className="card__title">Dům</p>
+                    <p className="card__title">Fotovoltaika pro rodinne domy</p>
                     <img
                         className="card__img"
                         src={img1}

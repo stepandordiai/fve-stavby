@@ -34,9 +34,11 @@ const Process = () => {
                         <p>Technický audit</p>
                         <div className="process-divider"></div>
                         <p>
-                            Zjistime zakladni informace o vasich planech,
-                            predstavach a moznostech - a navrhneme idealni
-                            reseni
+                            Po podpisy smoulvi Vas navstivi nas technicki
+                            specialista, a dopodrobna s vami projedna nejlepsi
+                            mozne technologicki postup instalace vasi
+                            fotovoltacke elektrarni
+                            <mark>Zdarma pro nasi klienty</mark>
                         </p>
                     </div>
                     <img
