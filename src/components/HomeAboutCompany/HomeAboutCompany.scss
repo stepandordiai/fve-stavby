@@ -16,6 +16,10 @@
     text-transform: uppercase;
 }
 
+.about-company__sec-title {
+    text-align: justify;
+}
+
 .about-company__counter-container {
     display: flex;
     justify-content: space-between;
@@ -48,6 +52,12 @@
 
 .counter:nth-child(3) {
     justify-content: flex-end;
+}
+
+.counter-plus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-company__link {

@@ -67,15 +67,16 @@ const HomeAboutCompany = () => {
 
     useEffect(() => {
         let valueDisplays = document.querySelectorAll(".counter-wrapper");
+        const valueWrappers = document.querySelectorAll(".value-wrapper");
         let interval = 1000;
 
-        valueDisplays.forEach((valueDisplay) => {
+        valueDisplays.forEach((valueDisplay, index) => {
             let isUsed = false;
             addEventListener("scroll", () => {
                 const valueDisplayRect =
                     valueDisplay.getBoundingClientRect().top;
-                const valueText = valueDisplay.offsetWidth;
-                if (valueDisplayRect < window.innerHeight - 100) {
+                const valueText = valueWrappers[index].offsetWidth;
+                if (valueDisplayRect < window.innerHeight) {
                     if (!isUsed) {
                         let startValue = 0;
                         let endValue = parseInt(
@@ -87,12 +88,14 @@ const HomeAboutCompany = () => {
                         function start() {
                             let counter = setTimeout(() => {
                                 startValue += 1;
-                                valueDisplay.style.width = `${valueText}px`;
+                                valueWrappers[
+                                    index
+                                ].style.width = `${valueText}px`;
                                 valueDisplay.textContent = startValue;
 
                                 // I tried to increase duration every loop so counter end up smoothly
 
-                                duration += 0.1;
+                                duration += 0.5;
                                 if (startValue == endValue) {
                                     clearTimeout(counter);
                                 } else {
@@ -111,30 +114,61 @@ const HomeAboutCompany = () => {
 
     return (
         <div className="home-about-company">
-            <h2 className="about-company__title">O společnosti</h2>
+            <h2 className="about-company__title">O naší společnosti</h2>
             <p className="about-company__sec-title">
-                Naše společnost se věnuje využití síly slunce poskytovat
-                udržitelná a ekologická energetická řešení
+                V dnešní době, kdy roste důraz na udržitelnost a energetickou
+                soběstačnost, se fotovoltaika stává klíčovým řešením pro
+                domácnosti i firmy. Výběr správného partnera pro realizaci
+                fotovoltaického systému je zásadní. Jsme tým zkušených
+                profesionálů. Každý z nás se v energetice pohybuje již dlouhá
+                léta a nabízíme komplexní služby, které zaručují maximální
+                spokojenost zákazníků.
+                <br />
+                <br />
+                Především klademe důraz na individuální přístup. Každý projekt
+                je pro nás jedinečný a věnujeme mu maximální péči od prvotní
+                konzultace, přes projekt, až po samotnou instalaci a následný
+                servis. Naši odborníci Vám pomohou vybrat optimální řešení,
+                které bude odpovídat Vašim potřebám, finančním možnostem a
+                charakteru Vaší nemovitosti.
+                <br />
+                <br />
+                Dbáme na kvalitu použitých materiálů a technologií.
+                Spolupracujeme s předními světovými výrobci, což zajišťuje
+                dlouhou životnost a vysokou efektivitu našich systémů. Kromě
+                toho Vám pomůžeme s administrativou a získáním dotací, abyste
+                měli celý proces co nejjednodušší.
+                <br />
+                <br />
+                Naší prioritou je transparentnost, spolehlivost a budování
+                dlouhodobých vztahů. S námi získáte nejen kvalitní produkt, ale
+                také jistotu, že se o Vás postaráme i po dokončení instalace.
+                Věříme, že investice do fotovoltaiky má smysl, a rádi Vás na
+                této cestě podpoříme. Vyberte si nás a získejte spolehlivého
+                partnera pro vaši energetickou budoucnost.
             </p>
             <div className="about-company__counter-container">
                 <div className="counter">
-                    <p className="counter-wrapper" data-val="5">
-                        00
+                    <p className="counter-wrapper value-wrapper" data-val="5">
+                        0
                     </p>
                     <p>let praxe</p>
                 </div>
                 <div className="counter">
-                    <div>
-                        <p className="counter-wrapper" data-val="100">
+                    <p>
+                        <span
+                            className="counter-wrapper value-wrapper"
+                            data-val="100"
+                        >
                             000
-                        </p>
+                        </span>
                         <span>+</span>
-                    </div>
+                    </p>
 
                     <p>klientů</p>
                 </div>
                 <div className="counter">
-                    <p className="counter-wrapper" data-val="14">
+                    <p className="counter-wrapper value-wrapper" data-val="14">
                         00
                     </p>
                     <p>pracovníků</p>
