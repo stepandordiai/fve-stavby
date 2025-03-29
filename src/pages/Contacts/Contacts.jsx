@@ -15,7 +15,7 @@ const ContactUs = () => {
     return (
         <>
             <Helmet>
-                <title>Kontakty</title>
+                <title>Kontakty | FVE STAVBY</title>
             </Helmet>
             <PageTitle title={"Kontakty"} img={img} />
             <div className="contacts">

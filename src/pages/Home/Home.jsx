@@ -11,7 +11,7 @@ const Home = () => {
     return (
         <>
             <Helmet>
-                <title>FVE STAVBY | Fotovoltaika, která dává smysl</title>
+                <title>Fotovoltaika, která dává smysl | FVE STAVBY</title>
             </Helmet>
             <HomeTitle />
             <section className="home">

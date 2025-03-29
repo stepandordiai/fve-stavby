@@ -7,7 +7,7 @@ const Company = () => {
     return (
         <>
             <Helmet>
-                <title>Firemní instalace</title>
+                <title>Firemní instalace | FVE STAVBY</title>
             </Helmet>
             <PageTitle title={"Firemní instalace"} img={img} />
         </>

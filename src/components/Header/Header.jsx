@@ -93,12 +93,12 @@ const Header = () => {
                         Produkty
                     </NavLink>
                     <NavLink
-                        to={"/reference"}
+                        to={"/references"}
                         className={({ isActive }) =>
                             isActive ? activeHeaderLink : inactiveHeaderLink
                         }
                     >
-                        Reference
+                        References
                     </NavLink>
                     <NavLink
                         to={"/contacts"}

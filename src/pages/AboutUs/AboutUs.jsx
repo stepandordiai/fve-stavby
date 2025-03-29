@@ -7,7 +7,7 @@ const AboutUs = () => {
     return (
         <>
             <Helmet>
-                <title>O nás</title>
+                <title>O nás | FVE STAVBY</title>
             </Helmet>
             <PageTitle title={"O nás"} img={img} />
         </>

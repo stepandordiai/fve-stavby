@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import img1 from "./../../assets/img/4.png";
+import img1 from "./../../assets/img/9.jpg";
 import img2 from "./../../assets/img/1.jpg";
 import arrow from "./../../assets/icons/arrow-upper-right-white.png";
 import "./HomeAboutCompany.scss";
