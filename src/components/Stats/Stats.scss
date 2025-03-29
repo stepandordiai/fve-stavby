@@ -41,6 +41,15 @@
     transform: translateX(-50%);
 }
 
+.candle::after {
+    content: attr(data-value);
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
 @keyframes animateCandle {
     100% {
         height: var(--candle-height);
@@ -88,5 +97,17 @@
         bottom: -20px;
         left: 50%;
         transform: translateX(-50%);
+    }
+
+    .candle::after {
+        content: attr(data-value);
+        position: absolute;
+        top: 0;
+        left: 50%;
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+        transform: translate(-50%, -100%);
+        font-size: clamp(0.8rem, 2vw, 1rem);
+        font-weight: 500;
     }
 }

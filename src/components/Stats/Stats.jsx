@@ -3,18 +3,40 @@ import "./Stats.scss";
 
 const Stats = () => {
     useEffect(() => {
-        addEventListener("scroll", () => {
-            const candlesWrapper = document.querySelector(".candles-wrapper");
-            const candlesWrapperRect =
-                candlesWrapper.getBoundingClientRect().bottom;
-            if (candlesWrapperRect < window.innerHeight) {
-                document.querySelectorAll(".candle").forEach((el) => {
+        let interval = 1000;
+
+        document.querySelectorAll(".candle").forEach((el) => {
+            let isActivated = false;
+            document.addEventListener("scroll", () => {
+                const candlesWrapper =
+                    document.querySelector(".candles-wrapper");
+                const candlesWrapperRect =
+                    candlesWrapper.getBoundingClientRect().bottom;
+                if (candlesWrapperRect < window.innerHeight) {
                     el.style.animation =
-                        "animateCandle 2s ease-in-out forwards";
-                });
-            }
+                        "animateCandle 4s ease-in-out forwards";
+                    if (!isActivated) {
+                        let startValue = 0;
+                        let duration = Math.floor(interval / el.dataset.stats);
+                        function start() {
+                            let counter = setTimeout(() => {
+                                startValue += 1;
+                                el.dataset.value = startValue + "kW";
+                                // duration += 0.5;
+                                if (startValue == el.dataset.stats) {
+                                    clearTimeout(counter);
+                                } else {
+                                    start();
+                                }
+                            }, duration);
+                        }
+                        start();
+                    }
+                    isActivated = true;
+                }
+            });
         });
-    });
+    }, []);
 
     return (
         <>
@@ -29,6 +51,8 @@ const Stats = () => {
                         style={{
                             "--candle-height": "50px",
                         }}
+                        data-value="420kW"
+                        data-stats="420"
                     ></div>
                     <div
                         className="candle"
@@ -38,6 +62,8 @@ const Stats = () => {
                         style={{
                             "--candle-height": "100px",
                         }}
+                        data-value="610kW"
+                        data-stats="610"
                     ></div>
                     <div
                         className="candle"
@@ -47,6 +73,8 @@ const Stats = () => {
                         style={{
                             "--candle-height": "150px",
                         }}
+                        data-value="980kW"
+                        data-stats="980"
                     ></div>
                     <div
                         className="candle"
@@ -56,6 +84,8 @@ const Stats = () => {
                         style={{
                             "--candle-height": "200px",
                         }}
+                        data-value="1220kW"
+                        data-stats="1220"
                     ></div>
                     <div
                         className="candle"
@@ -65,6 +95,8 @@ const Stats = () => {
                         style={{
                             "--candle-height": "300px",
                         }}
+                        data-value="1480kW"
+                        data-stats="1480"
                     ></div>
                     <div
                         className="candle"
@@ -74,6 +106,8 @@ const Stats = () => {
                         style={{
                             "--candle-height": "325px",
                         }}
+                        data-value="1380kW"
+                        data-stats="1380"
                     ></div>
                     <div
                         className="candle"
@@ -83,6 +117,8 @@ const Stats = () => {
                         style={{
                             "--candle-height": "225px",
                         }}
+                        data-value="1570kW"
+                        data-stats="1570"
                     ></div>
                     <div
                         className="candle"
@@ -92,6 +128,8 @@ const Stats = () => {
                         style={{
                             "--candle-height": "150px",
                         }}
+                        data-value="1440kW"
+                        data-stats="1440"
                     ></div>
                     <div
                         className="candle"
@@ -101,6 +139,8 @@ const Stats = () => {
                         style={{
                             "--candle-height": "125px",
                         }}
+                        data-value="1080kW"
+                        data-stats="1080"
                     ></div>
                     <div
                         className="candle"
@@ -110,6 +150,8 @@ const Stats = () => {
                         style={{
                             "--candle-height": "100px",
                         }}
+                        data-value="890kW"
+                        data-stats="890"
                     ></div>
                     <div
                         className="candle"
@@ -119,6 +161,8 @@ const Stats = () => {
                         style={{
                             "--candle-height": "50px",
                         }}
+                        data-value="390kW"
+                        data-stats="390"
                     ></div>
                     <div
                         className="candle"
@@ -128,6 +172,8 @@ const Stats = () => {
                         style={{
                             "--candle-height": "25px",
                         }}
+                        data-value="310kW"
+                        data-stats="310"
                     ></div>
                 </div>
             </div>
