@@ -22,7 +22,7 @@ const Advantages = () => {
             <div className="divider"></div>
             <section className="advantages">
                 <div className="advantages-title-container">
-                    <h2>Proč vybrat?</h2>
+                    <h2>Proč si vybrat naši firmu?</h2>
                 </div>
                 <ul className="advantages-list">
                     <li className="advantages-item">
@@ -32,13 +32,13 @@ const Advantages = () => {
                             </span>
                             <div className="advantages-btn-icon-container">
                                 <img
-                                    className="advantages-btn-icon"
+                                    className="advantages-btn-icon advantages-btn-icon--active"
                                     src={plusIcon}
                                     alt=""
                                 />
                             </div>
                         </button>
-                        <div className="dd-wrapper">
+                        <div className="dd-wrapper dd-wrapper--active">
                             <p className="dd-details">
                                 Na zaklade vasich potreb a pozadavku doporucime
                                 vhodne reseni, se kterym usetrite a budete
@@ -74,17 +74,17 @@ const Advantages = () => {
                             </span>
                             <div className="advantages-btn-icon-container">
                                 <img
-                                    className="advantages-btn-icon advantages-btn-icon--active"
+                                    className="advantages-btn-icon"
                                     src={plusIcon}
                                     alt=""
                                 />
                             </div>
                         </button>
-                        <div className="dd-wrapper dd-wrapper--active">
+                        <div className="dd-wrapper">
                             <p className="dd-details">
-                                Na dalku kontrolujeme stav Vasi fotovoltaicke
-                                elektrarni a pokud nastane problem, ihned o tom
-                                vime. Rychle a efektivne zaridime opravu.
+                                Dálkově sledujeme stav vaší fotovoltaické
+                                elektrárny a pokud se vyskytne problém, okamžitě
+                                o něm víme. Opravu zajistíme rychle a efektivně.
                             </p>
                         </div>
                     </li>
