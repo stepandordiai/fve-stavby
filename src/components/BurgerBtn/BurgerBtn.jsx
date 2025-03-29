@@ -13,6 +13,9 @@ const BurgerBtn = () => {
         document
             .querySelector(".menu-wrapper")
             .classList.toggle("menu-wrapper--active");
+        document
+            .querySelector(".header-bottom")
+            .classList.toggle("header-bottom--active");
     }
     return (
         <div onClick={toggleBurgerBtn} className="burger-btn-wrapper">

@@ -10,6 +10,7 @@ import ScrollToTop from "./utils/ScrollToTop";
 import Company from "./pages/Company/Company";
 import House from "./pages/House/House";
 import AboutUs from "./pages/AboutUs/AboutUs";
+import Products from "./pages/Products/Products";
 
 function App() {
     return (
@@ -24,6 +25,7 @@ function App() {
                 <Route path="/house" element={<House />} />
                 <Route path="/company" element={<Company />} />
                 <Route path="/contacts" element={<Contacts />} />
+                <Route path="/products" element={<Products />} />
             </Routes>
             <Footer />
         </Router>

@@ -11,7 +11,7 @@
     bottom: 25px;
     left: 25px;
     color: #fff;
-    font-size: 3rem;
+    font-size: clamp(1.5rem, 4vw, 3rem);
     font-weight: 500;
 }
 

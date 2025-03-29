@@ -20,6 +20,9 @@ const Menu = () => {
                 document
                     .querySelector(".menu-wrapper")
                     .classList.remove("menu-wrapper--active");
+                document
+                    .querySelector(".header-bottom")
+                    .classList.remove("header-bottom--active");
             });
         });
     });
@@ -62,6 +65,14 @@ const Menu = () => {
                         to="/company"
                     >
                         Firemní instalace
+                    </NavLink>
+                    <NavLink
+                        className={({ isActive }) =>
+                            isActive ? activeLink : inactiveLink
+                        }
+                        to="/products"
+                    >
+                        Produkty
                     </NavLink>
                     <NavLink
                         className={({ isActive }) =>

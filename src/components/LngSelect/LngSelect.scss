@@ -10,7 +10,7 @@
     transition: all 0.5s;
     position: relative;
     margin-left: auto;
-    z-index: 1;
+    z-index: 2;
     margin-right: 25px;
     opacity: 0;
     animation: animateHeader 1s 2s forwards;
@@ -30,7 +30,7 @@
     position: fixed;
     top: 50px;
     right: 125px;
-    z-index: -1;
+    z-index: 1;
     border-radius: 25px;
     @include glass-effect(20px);
     opacity: 0;

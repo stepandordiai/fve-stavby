@@ -7,9 +7,9 @@ const House = () => {
     return (
         <>
             <Helmet>
-                <title>Dům</title>
+                <title>Fotovoltaika pro rodinné domy</title>
             </Helmet>
-            <PageTitle title={"Dům"} img={img} />
+            <PageTitle title={"Fotovoltaika pro rodinné domy"} img={img} />
         </>
     );
 };
