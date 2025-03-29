@@ -31,14 +31,17 @@ const Process = () => {
                 <div className="process-card process-card--active">
                     <p className="details-number">01</p>
                     <div className="details-wrapper details-wrapper--active">
-                        <p>Technický audit</p>
+                        <p>Osobni konzultace a zajisteni podkladu</p>
                         <div className="process-divider"></div>
+
                         <p>
-                            Po podpisy smoulvi Vas navstivi nas technicki
-                            specialista, a dopodrobna s vami projedna nejlepsi
-                            mozne technologicki postup instalace vasi
-                            fotovoltacke elektrarni
-                            <mark>Zdarma pro nasi klienty</mark>
+                            Nas technicky konzultant primo na miste zhodnoti
+                            moznosti realizace
+                        </p>
+                        <p>
+                            Zjistime zakladni informace o vasich planech,
+                            predstavach a moznostech - a navrhneme idealni
+                            reseni
                         </p>
                     </div>
                     <img
@@ -50,57 +53,6 @@ const Process = () => {
                 </div>
                 <div className="process-card">
                     <p className="details-number">02</p>
-                    <div className="details-wrapper">
-                        <p>Zajisteni podkladu</p>
-                        <div className="process-divider"></div>
-                        <p>
-                            Zjistime zakladni informace o vasich planech,
-                            predstavach a moznostech - a navrhneme idealni
-                            reseni
-                        </p>
-                    </div>
-                    <img
-                        className="process__icon"
-                        width={30}
-                        src={plusIcon}
-                        alt=""
-                    />
-                </div>
-                <div className="process-card">
-                    <p className="details-number">03</p>
-                    <div className="details-wrapper">
-                        <p>Osobni konzultace</p>
-                        <div className="process-divider"></div>
-
-                        <p>
-                            Nas technicky konzultant primo na miste zhodnoti
-                            moznosti realizace
-                        </p>
-                    </div>
-                    <img
-                        className="process__icon"
-                        width={30}
-                        src={plusIcon}
-                        alt=""
-                    />
-                </div>
-                <div className="process-card">
-                    <p className="details-number">04</p>
-                    <div className="details-wrapper">
-                        <p> Podpis smlouvy</p>
-                        <div className="process-divider"></div>
-
-                        <p>Na zaklade vsech podkladu zpracujeme nabidku</p>
-                    </div>
-                    <img
-                        className="process__icon"
-                        width={30}
-                        src={plusIcon}
-                        alt=""
-                    />
-                </div>
-                <div className="process-card">
-                    <p className="details-number">05</p>
                     <div className="details-wrapper">
                         <p>Priprava nabidky</p>
                         <div className="process-divider"></div>
@@ -117,8 +69,65 @@ const Process = () => {
                         alt=""
                     />
                 </div>
+                {/* <div className="process-card">
+                    <p className="details-number">02</p>
+                    <div className="details-wrapper">
+                        <p>Zajisteni podkladu</p>
+                        <div className="process-divider"></div>
+                        <p>
+                            Zjistime zakladni informace o vasich planech,
+                            predstavach a moznostech - a navrhneme idealni
+                            reseni
+                        </p>
+                    </div>
+                    <img
+                        className="process__icon"
+                        width={30}
+                        src={plusIcon}
+                        alt=""
+                    />
+                </div> */}
+
                 <div className="process-card">
-                    <p className="details-number">06</p>
+                    <p className="details-number">03</p>
+                    <div className="details-wrapper">
+                        <p> Podpis smlouvy</p>
+                        <div className="process-divider"></div>
+
+                        <p>Na zaklade vsech podkladu zpracujeme nabidku</p>
+                    </div>
+                    <img
+                        className="process__icon"
+                        width={30}
+                        src={plusIcon}
+                        alt=""
+                    />
+                </div>
+                <div className="process-card">
+                    <p className="details-number">04</p>
+                    <div className="details-wrapper">
+                        <p>Technický audit</p>
+                        <div className="process-divider"></div>
+                        <p>
+                            Po podpisy smoulvi Vas navstivi nas technicki
+                            specialista, a dopodrobna s vami projedna nejlepsi
+                            mozne technologicki postup instalace vasi
+                            fotovoltacke elektrarni
+                        </p>
+                        <div className="process-card__price">
+                            Zdarma pro naše klienty
+                        </div>
+                    </div>
+                    <img
+                        className="process__icon"
+                        width={30}
+                        src={plusIcon}
+                        alt=""
+                    />
+                </div>
+
+                <div className="process-card">
+                    <p className="details-number">05</p>
                     <div className="details-wrapper">
                         <p>Vyrizeni administrativy</p>
                         <div className="process-divider"></div>
@@ -136,7 +145,7 @@ const Process = () => {
                     />
                 </div>
                 <div className="process-card">
-                    <p className="details-number">07</p>
+                    <p className="details-number">06</p>
                     <div className="details-wrapper">
                         <p>Realizace projektu</p>
                         <div className="process-divider"></div>
@@ -154,7 +163,7 @@ const Process = () => {
                     />
                 </div>
                 <div className="process-card">
-                    <p className="details-number">08</p>
+                    <p className="details-number">07</p>
                     <div className="details-wrapper">
                         <p>Servis a monitoring</p>
                         <div className="process-divider"></div>

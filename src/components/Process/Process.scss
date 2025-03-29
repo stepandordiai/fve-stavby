@@ -1,3 +1,5 @@
+@use "./../../mixins" as *;
+
 .process__title {
     font-size: 1.5rem;
     font-weight: 500;
@@ -32,7 +34,10 @@
 
 .details-wrapper {
     opacity: 0;
+    height: calc(100% - 75px);
     pointer-events: none;
+    display: flex;
+    flex-direction: column;
 
     p:nth-child(1) {
         font: {
@@ -79,6 +84,16 @@
 
 .process__icon--active {
     transform: rotate(45deg);
+}
+
+.process-card__price {
+    margin-top: auto;
+    align-self: flex-start;
+    height: 40px;
+    border-radius: 20px;
+    padding: 0 12.5px;
+    @include grid-center;
+    background: var(--accent-clr);
 }
 
 @media screen and (max-width: 1200px) {

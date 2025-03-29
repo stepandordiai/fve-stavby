@@ -30,7 +30,7 @@
     bottom: 0;
     height: 0;
     width: 100%;
-    background: rgb(195, 242, 114);
+    background: var(--accent-clr);
 }
 
 .candle::before {
