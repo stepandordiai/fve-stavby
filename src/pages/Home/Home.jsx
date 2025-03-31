@@ -16,8 +16,8 @@ const Home = () => {
             <HomeTitle />
             <section className="home">
                 <HomeAboutCompany />
-                <Process />
                 <Advantages />
+                <Process />
                 <Stats />
                 <Partners />
             </section>

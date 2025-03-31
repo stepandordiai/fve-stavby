@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import img1 from "./../../assets/001.jpg";
 import img2 from "./../../assets/002.webp";
 import img3 from "./../../assets/003.jpg";
+import img4 from "./../../assets/mc4.webp";
 import { HashLink } from "react-router-hash-link";
 
 const Header = () => {
@@ -136,7 +137,7 @@ const Header = () => {
                     className={"header-card__link"}
                     to={"/components#connectors"}
                 >
-                    <img className="header-card__img" src={img1} alt="" />
+                    <img className="header-card__img" src={img4} alt="" />
                     <span>Konektors</span>
                 </HashLink>
             </div>
