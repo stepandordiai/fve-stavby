@@ -70,6 +70,7 @@ const HomeAboutCompany = () => {
         const valueWrappers = document.querySelectorAll(".value-wrapper");
         let interval = 1000;
 
+        // if (valueDisplays) {
         valueDisplays.forEach((valueDisplay, index) => {
             let isUsed = false;
             addEventListener("scroll", () => {
@@ -110,6 +111,7 @@ const HomeAboutCompany = () => {
                 }
             });
         });
+        // }
     }, []);
 
     return (

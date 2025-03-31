@@ -83,14 +83,14 @@ const Header = () => {
                         Firemní instalace
                     </NavLink>
                     <NavLink
-                        to={"/products"}
+                        to={"/components"}
                         className={({ isActive }) =>
                             isActive
                                 ? activeHeaderLink + " products"
                                 : inactiveHeaderLink + " products"
                         }
                     >
-                        Produkty
+                        Komponenty
                     </NavLink>
                     <NavLink
                         to={"/references"}
@@ -113,28 +113,28 @@ const Header = () => {
             <div className="header-card">
                 <HashLink
                     className={"header-card__link"}
-                    to={"/products#inverters"}
+                    to={"/components#invertors"}
                 >
                     <img className="header-card__img" src={img1} alt="" />
                     <span>Inverters</span>
                 </HashLink>
                 <HashLink
                     className={"header-card__link"}
-                    to={"/products#panels"}
+                    to={"/components#panels"}
                 >
                     <img className="header-card__img" src={img2} alt="" />
                     <span>Panels</span>
                 </HashLink>
                 <HashLink
                     className={"header-card__link"}
-                    to={"/products#optimizers"}
+                    to={"/components#optimizers"}
                 >
                     <img className="header-card__img" src={img3} alt="" />
                     <span>Optimizers</span>
                 </HashLink>
                 <HashLink
                     className={"header-card__link"}
-                    to={"/products#connectors"}
+                    to={"/components#connectors"}
                 >
                     <img className="header-card__img" src={img1} alt="" />
                     <span>Konektors</span>

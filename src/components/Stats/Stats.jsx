@@ -4,38 +4,41 @@ import "./Stats.scss";
 const Stats = () => {
     useEffect(() => {
         let interval = 1000;
+        const candlesWrapper = document.querySelector(".candles-wrapper");
 
-        document.querySelectorAll(".candle").forEach((el) => {
-            let isActivated = false;
-            document.addEventListener("scroll", () => {
-                const candlesWrapper =
-                    document.querySelector(".candles-wrapper");
-                const candlesWrapperRect =
-                    candlesWrapper.getBoundingClientRect().bottom;
-                if (candlesWrapperRect < window.innerHeight) {
-                    el.style.animation =
-                        "animateCandle 4s ease-in-out forwards";
-                    if (!isActivated) {
-                        let startValue = 0;
-                        let duration = Math.floor(interval / el.dataset.stats);
-                        function start() {
-                            let counter = setTimeout(() => {
-                                startValue += 1;
-                                el.dataset.value = startValue + "kW";
-                                // duration += 0.5;
-                                if (startValue == el.dataset.stats) {
-                                    clearTimeout(counter);
-                                } else {
-                                    start();
-                                }
-                            }, duration);
+        if (candlesWrapper) {
+            document.querySelectorAll(".candle").forEach((el) => {
+                let isActivated = false;
+                document.addEventListener("scroll", () => {
+                    const candlesWrapperRect =
+                        candlesWrapper.getBoundingClientRect().bottom;
+                    if (candlesWrapperRect < window.innerHeight) {
+                        el.style.animation =
+                            "animateCandle 4s ease-in-out forwards";
+                        if (!isActivated) {
+                            let startValue = 0;
+                            let duration = Math.floor(
+                                interval / el.dataset.stats
+                            );
+                            function start() {
+                                let counter = setTimeout(() => {
+                                    startValue += 1;
+                                    el.dataset.value = startValue + "kW";
+                                    // duration += 0.5;
+                                    if (startValue == el.dataset.stats) {
+                                        clearTimeout(counter);
+                                    } else {
+                                        start();
+                                    }
+                                }, duration);
+                            }
+                            start();
                         }
-                        start();
+                        isActivated = true;
                     }
-                    isActivated = true;
-                }
+                });
             });
-        });
+        }
     }, []);
 
     return (

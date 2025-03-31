@@ -73,14 +73,14 @@ const Footer = () => {
                             </li>
                             <li>
                                 <NavLink
-                                    to={"/products"}
+                                    to={"/components"}
                                     className={({ isActive }) =>
                                         isActive
                                             ? activeFooterLink
                                             : inactiveFooterLink
                                     }
                                 >
-                                    Produkty
+                                    Komponenty
                                 </NavLink>
                             </li>
                             <li>

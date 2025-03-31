@@ -70,9 +70,9 @@ const Menu = () => {
                         className={({ isActive }) =>
                             isActive ? activeLink : inactiveLink
                         }
-                        to="/products"
+                        to="/components"
                     >
-                        Produkty
+                        Komponenty
                     </NavLink>
                     <NavLink
                         className={({ isActive }) =>

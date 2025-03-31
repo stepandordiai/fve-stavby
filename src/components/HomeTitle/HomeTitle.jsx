@@ -1,7 +1,5 @@
-import pdf from "./../../pdf/fve-stavby-price-quote-v1-low-quality.pdf";
 import { NavLink } from "react-router-dom";
 import arrow from "./../../assets/icons/arrow-upper-right-white.png";
-import downloadIcon from "./../../assets/icons/download.png";
 import logo2 from "./../../assets/logo/fvestavby-cz-2.png";
 import "./HomeTitle.scss";
 
