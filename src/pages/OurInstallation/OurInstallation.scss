@@ -1,0 +1,151 @@
+@use "./../../mixins" as *;
+
+.our-installation {
+    padding: 25px;
+    // background: var(--accent-clr);
+}
+
+.our-installation__title {
+    // padding-top: 170px;
+    // padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.our-installation__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.our-installation__card-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.our-installation__card {
+    position: relative;
+    flex-grow: 1;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 25px;
+    }
+
+    .our-installation__card-date-info {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        background: var(--accent-clr);
+        height: 50px;
+        min-width: 50px;
+        padding: 0 12.5px;
+        border-radius: 20px;
+        display: grid;
+        place-content: center;
+        grid-template-columns: 0fr;
+        white-space: nowrap;
+        overflow: hidden;
+        transition: all 0.5s;
+        z-index: 1;
+    }
+
+    span {
+        overflow: hidden;
+        opacity: 0;
+    }
+}
+
+.our-installation__card-info {
+    position: relative;
+    // bottom: 10px;
+    // left: 10px;
+    margin-top: 10px;
+    background: var(--accent-clr);
+    height: 50px;
+    min-width: 50px;
+    padding: 0 12.5px;
+    border-radius: 20px;
+    display: grid;
+    place-content: center;
+    grid-template-columns: 0fr;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: all 0.5s;
+    z-index: 2;
+}
+
+.white-el {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0 0 0 20px;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    transition: all 0.5s;
+}
+
+.white-el::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    aspect-ratio: 1/1;
+    top: 0;
+    right: 100%;
+    border-radius: 0 20px 0 0;
+    box-shadow: 25px -25px #fff;
+}
+
+.white-el::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    aspect-ratio: 1/1;
+    top: 100%;
+    right: 0;
+    border-radius: 0 20px 0 0;
+    box-shadow: 25px -25px #fff;
+}
+
+.our-installation__card:hover .our-installation__card-date-info {
+    grid-template-columns: 1fr;
+}
+
+.our-installation__card:hover span {
+    opacity: 1;
+    transition: all 0.5s 0.5s;
+}
+
+.our-installation__card:hover .white-el:nth-last-of-type(1) {
+    width: calc(185.29px + 10px);
+}
+
+@media screen and (max-width: 1200px) {
+    .our-installation__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .our-installation {
+        padding: 10px;
+    }
+
+    .our-installation__grid {
+        gap: 20px;
+    }
+
+    .our-installation__title {
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .our-installation__grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

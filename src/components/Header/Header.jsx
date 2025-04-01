@@ -94,12 +94,12 @@ const Header = () => {
                         Komponenty
                     </NavLink>
                     <NavLink
-                        to={"/references"}
+                        to={"/our-installation"}
                         className={({ isActive }) =>
                             isActive ? activeHeaderLink : inactiveHeaderLink
                         }
                     >
-                        References
+                        Naše instalace
                     </NavLink>
                     <NavLink
                         to={"/contacts"}

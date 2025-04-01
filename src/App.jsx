@@ -11,7 +11,7 @@ import Company from "./pages/Company/Company";
 import House from "./pages/House/House";
 import AboutUs from "./pages/AboutUs/AboutUs";
 import Components from "./pages/Components/Components";
-import References from "./pages/References/References";
+import OurInstallation from "./pages/OurInstallation/OurInstallation";
 
 function App() {
     return (
@@ -27,7 +27,7 @@ function App() {
                 <Route path="/company" element={<Company />} />
                 <Route path="/contacts" element={<Contacts />} />
                 <Route path="/components" element={<Components />} />
-                <Route path="/references" element={<References />} />
+                <Route path="/our-installation" element={<OurInstallation />} />
             </Routes>
             <Footer />
         </Router>
