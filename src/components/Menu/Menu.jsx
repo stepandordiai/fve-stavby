@@ -78,6 +78,14 @@ const Menu = () => {
                         className={({ isActive }) =>
                             isActive ? activeLink : inactiveLink
                         }
+                        to="/our-installation"
+                    >
+                        Naše instalace
+                    </NavLink>
+                    <NavLink
+                        className={({ isActive }) =>
+                            isActive ? activeLink : inactiveLink
+                        }
                         to="/contacts"
                     >
                         Kontakty
