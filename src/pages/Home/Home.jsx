@@ -6,6 +6,7 @@ import HomeTitle from "../../components/HomeTitle/HomeTitle";
 import HomeAboutCompany from "../../components/HomeAboutCompany/HomeAboutCompany";
 import { Helmet } from "react-helmet";
 import "./Home.scss";
+import GetInTouch from "../../components/GetInTouch/GetInTouch";
 
 const Home = () => {
     return (
@@ -20,6 +21,7 @@ const Home = () => {
                 <Process />
                 <Stats />
                 <Partners />
+                <GetInTouch />
             </section>
         </>
     );

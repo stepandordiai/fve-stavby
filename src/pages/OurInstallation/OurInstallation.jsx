@@ -8,6 +8,7 @@ import installationImg4 from "./../../assets/installations/4.jpg";
 import installationImg5 from "./../../assets/installations/5.jpg";
 import installationImg6 from "./../../assets/installations/6.jpg";
 import "./OurInstallation.scss";
+import GetInTouch from "../../components/GetInTouch/GetInTouch";
 
 const OurInstallation = () => {
     return (
@@ -98,6 +99,7 @@ const OurInstallation = () => {
                     </div>
                 </div>
             </section>
+            <GetInTouch />
         </>
     );
 };

@@ -1,0 +1,60 @@
+@use "./../../mixins" as *;
+
+.get-in-touch {
+    position: relative;
+    height: 375px;
+    border-radius: 25px;
+    overflow: hidden;
+    margin: 25px 0;
+}
+
+.get-in-touch__bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.get-in-touch__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    font-weight: 500;
+}
+
+.get-in-touch__link {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    @include flex-center;
+    column-gap: 10px;
+    background: var(--bg-light-clr);
+    @include glass-effect(20px);
+    align-self: flex-end;
+    border-radius: inherit;
+    height: 50px;
+    padding: 0 12.5px;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background: var(--bg-light-lighter-clr);
+    }
+
+    span {
+        color: #fff;
+    }
+}
+
+.get-in-touch__link-icon {
+    width: 25px;
+    transition: transform 0.3s;
+}
+
+.get-in-touch__link:hover .get-in-touch__link-icon {
+    transform: rotate(45deg);
+}

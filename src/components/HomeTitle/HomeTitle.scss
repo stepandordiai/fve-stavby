@@ -126,40 +126,6 @@
     flex-shrink: 0;
 }
 
-.home-title__pdf {
-    height: 50px;
-    background: var(--bg-light-clr);
-    @include glass-effect(20px);
-    color: #fff;
-    @include flex-center;
-    column-gap: 5px;
-    padding: 12.5px;
-    border-radius: 25px;
-    opacity: 0;
-    animation: animateTitle 1s 2s forwards;
-    transition: background-color 0.3s;
-
-    &:hover {
-        background: var(--bg-light-lighter-clr);
-    }
-
-    span {
-        height: 100%;
-        width: 1px;
-        background: var(--bg-light-clr);
-    }
-
-    a {
-        color: #fff;
-        height: 100%;
-        @include flex-center;
-
-        img {
-            height: 100%;
-        }
-    }
-}
-
 .home-title__link {
     @include flex-center;
     column-gap: 5px;

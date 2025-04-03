@@ -7,6 +7,7 @@ import img3 from "./../../assets/003.jpg";
 import img4 from "./../../assets/mc4.webp";
 
 import "./Components.scss";
+import GetInTouch from "../../components/GetInTouch/GetInTouch";
 
 const Components = () => {
     return (
@@ -115,6 +116,7 @@ const Components = () => {
                     </div>
                 </div>
             </div>
+            <GetInTouch />
         </>
     );
 };
