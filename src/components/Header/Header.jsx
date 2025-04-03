@@ -9,21 +9,24 @@ import img3 from "/assets/003.jpg";
 import img4 from "/assets/mc4.webp";
 import logo2 from "/assets/logo/fvestavby-cz-2.png";
 import "./Header.scss";
+import { useLocation } from "react-router-dom";
 
 const Header = () => {
-    const inactiveHeaderLink = "header__link";
-    const activeHeaderLink = "header__link header__link--active";
-
     useEffect(() => {
-        document.addEventListener("click", (e) => {
+        document.addEventListener("mouseover", (e) => {
             const headerCard = document.querySelector(".header-card");
             const headerDd = document.querySelector(".products");
-            const headerCardLink =
+            const headerBottomDd = document.querySelector(".header-bottom-dd");
+            const headerCardLinks =
                 document.querySelectorAll(".header-card__link");
             if (
                 e.target == headerCard ||
                 e.target == headerDd ||
-                e.target == headerCardLink
+                e.target == headerCardLinks[0] ||
+                e.target == headerCardLinks[1] ||
+                e.target == headerCardLinks[2] ||
+                e.target == headerCardLinks[3] ||
+                e.target == headerBottomDd
             ) {
                 document
                     .querySelector(".header-card")
@@ -36,21 +39,52 @@ const Header = () => {
         });
     }, []);
 
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        const homeTitle = document.querySelector(".home-title");
+
+        if (homeTitle) {
+            homeTitle.addEventListener("animationstart", () => {
+                setTimeout(() => {
+                    document
+                        .querySelectorAll(".header-element")
+                        .forEach((element) => {
+                            element.classList.add("header-elements--active");
+                        });
+                }, 0);
+            });
+        } else {
+            document.querySelectorAll(".header-element").forEach((element) => {
+                element.classList.add("header-elements--active");
+            });
+        }
+    }, [pathname]);
+
+    const inactiveHeaderLink = "header__link";
+    const activeHeaderLink = "header__link header__link--active";
+
     return (
         <>
             <header className="header">
                 <div className="header-top">
-                    <NavLink to={"/"} className="header-top__logo">
+                    <NavLink
+                        to={"/"}
+                        className="header-top__logo header-element"
+                    >
                         <img src={logo2} alt="Logo" />
                         <span>FVE STAVBY</span>
                     </NavLink>
-                    <a href="tel:+420728803703" className="header-top__number">
+                    <a
+                        href="tel:+420728803703"
+                        className="header-top__number header-element"
+                    >
                         +420 728 803 703
                     </a>
                     <LngSelect />
                     <BurgerBtn />
                 </div>
-                <div className="header-bottom">
+                <div className="header-bottom header-element">
                     <NavLink
                         to={"/"}
                         className={({ isActive }) =>
@@ -83,16 +117,18 @@ const Header = () => {
                     >
                         Firemní instalace
                     </NavLink>
-                    <NavLink
-                        to={"/components"}
-                        className={({ isActive }) =>
-                            isActive
-                                ? activeHeaderLink + " products"
-                                : inactiveHeaderLink + " products"
-                        }
-                    >
-                        Komponenty
-                    </NavLink>
+                    <div className="header-bottom-dd">
+                        <NavLink
+                            to={"/components"}
+                            className={({ isActive }) =>
+                                isActive
+                                    ? activeHeaderLink + " products"
+                                    : inactiveHeaderLink + " products"
+                            }
+                        >
+                            Komponenty
+                        </NavLink>
+                    </div>
                     <NavLink
                         to={"/our-installation"}
                         className={({ isActive }) =>

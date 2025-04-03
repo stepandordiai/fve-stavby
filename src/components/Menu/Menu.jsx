@@ -31,7 +31,7 @@ const Menu = () => {
     const activeLink = "link js-link link-effect link-effect--active";
 
     return (
-        <section className="menu">
+        <section className="menu header-element">
             <div className="menu-wrapper">
                 <nav className="nav">
                     <NavLink

@@ -13,17 +13,12 @@
     z-index: 2;
     margin-right: 25px;
     opacity: 0;
-    animation: animateHeader 1s 2s forwards;
+    pointer-events: none;
+    transition: opacity 1s 2s;
 }
 
 .lng-select__btn--active {
     background: var(--bg-light-darker-clr);
-}
-
-@keyframes animateHeader {
-    to {
-        opacity: 1;
-    }
 }
 
 .lng-select {
@@ -33,8 +28,6 @@
     z-index: 1;
     border-radius: 25px;
     @include glass-effect(20px);
-    opacity: 0;
-    animation: animateHeader 1s 2s forwards;
     display: grid;
     grid-template-columns: 0fr;
     grid-template-rows: 0fr;
@@ -43,7 +36,9 @@
     min-height: 50px;
     background: var(--bg-light-clr);
     border-radius: 25px;
-    transition: all 0.5s;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s, opacity 1s 2s;
 }
 
 .lng-select--active {

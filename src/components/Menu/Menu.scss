@@ -6,24 +6,16 @@
     right: 50px;
     z-index: 11;
     padding: 25px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    @include flex-start-center;
     width: 50px;
     height: 50px;
     background: var(--bg-light-clr);
     @include glass-effect(20px);
     border-radius: 25px;
     opacity: 0;
-    transition: all 1s;
+    pointer-events: none;
+    transition: all 1s, opacity 1s 2s;
     overflow: hidden;
-    animation: animateHeader 1s 2s forwards;
-}
-
-@keyframes animateHeader {
-    to {
-        opacity: 1;
-    }
 }
 
 .menu--active {

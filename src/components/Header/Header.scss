@@ -11,14 +11,14 @@
     row-gap: 10px;
 }
 
-.header--hide {
-    top: -50px;
+.header-elements--active {
+    pointer-events: all !important;
+    opacity: 1 !important;
 }
 
 .header-top {
     display: flex;
     align-items: flex-start;
-    // color: #fff;
 }
 
 .header-top__logo {
@@ -31,8 +31,8 @@
     padding: 0 12.5px;
     @include glass-effect(20px);
     opacity: 0;
-    animation: animateHeader 1s 2s forwards;
-    transition: background-color 0.3s;
+    pointer-events: none;
+    transition: background-color 0.3s, opacity 1s 2s;
 
     &:hover {
         background: var(--bg-dark-darker-clr);
@@ -49,25 +49,6 @@
 }
 
 // When i apply animation for header blur dissapears so i apply it to children
-
-@keyframes animateHeader {
-    to {
-        opacity: 1;
-    }
-}
-
-.header-top__nav {
-    height: 50px;
-    background: var(--bg-dark-clr);
-    @include flex-center;
-    gap: 25px;
-    @include glass-effect(20px);
-    padding: 0 12.5px;
-    border-radius: 25px;
-    margin-left: 25px;
-    opacity: 0;
-    animation: animateHeader 1s 2s forwards;
-}
 
 .header__link {
     position: relative;
@@ -105,8 +86,8 @@
     margin-right: auto;
     color: #fff;
     opacity: 0;
-    animation: animateHeader 1s 2s forwards;
-    transition: background-color 0.3s;
+    pointer-events: none;
+    transition: background-color 0.3s, opacity 1s 2s;
 
     &:hover {
         background: var(--bg-dark-darker-clr);
@@ -117,25 +98,23 @@
     position: relative;
     min-height: 50px;
     border-radius: 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-between-center;
     white-space: nowrap;
     gap: 12.5px;
     padding: 0 12.5px;
     background: var(--bg-dark-clr);
     backdrop-filter: blur(10px);
-    opacity: 0;
     overflow-x: scroll;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s 2s;
+
     &::-webkit-scrollbar {
         display: none;
     }
-    animation: animateHeader 1s 2s forwards;
 
     ul {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flex-between-center;
         gap: 12.5px;
         padding: 0 12.5px;
         border-radius: 25px;
@@ -165,10 +144,6 @@
     display: none;
 }
 
-.header-bottom__dd {
-    position: absolute;
-}
-
 .header-card {
     position: fixed;
     top: 160px;
@@ -186,6 +161,7 @@
     color: #fff;
     opacity: 0;
     pointer-events: none;
+    transition: opacity 0.3s;
 }
 
 .header-card--active {
@@ -194,9 +170,7 @@
 }
 
 .header-card__link {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    @include flex-start-center;
     gap: 12.5px;
     color: #fff;
     border-radius: 25px;
@@ -216,6 +190,11 @@
     height: 100px;
     border-radius: 25px;
     pointer-events: none;
+}
+
+.header-bottom-dd {
+    height: 50px;
+    @include grid-center;
 }
 
 @media screen and (max-width: 900px) {
