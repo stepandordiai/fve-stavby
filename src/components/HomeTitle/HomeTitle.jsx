@@ -1,17 +1,18 @@
 import { NavLink } from "react-router-dom";
-import arrow from "./../../assets/icons/arrow-upper-right-white.png";
-import logo2 from "./../../assets/logo/fvestavby-cz-2.png";
+import arrow from "/assets/icons/arrow-upper-right-white.png";
+import logo2 from "/assets/logo/fvestavby-cz-2.png";
 import "./HomeTitle.scss";
 
 const HomeTitle = () => {
     return (
-        <>
+        <div className="home-title-wrapper">
             <div className="home-title">
                 <p className="loading__title">
                     <img
                         className="loading__title-icon"
                         src={logo2}
                         alt="Logo"
+                        loading="lazy"
                     />
                     <span>FVE STAVBY s.r.o</span>
                 </p>
@@ -28,31 +29,19 @@ const HomeTitle = () => {
                         </h2>
                     </div>
                     <div className="home-title__links-container">
-                        {/* <div
-                            className="home-title__pdf"
-                            href={pdf}
-                            target="_blank"
-                        >
-                            <a href={pdf} target="_blank">
-                                Cenovou nabídku
-                            </a>
-                            <span></span>
-                            <a href={pdf} download={true}>
-                                <img src={downloadIcon} alt="Download" />
-                            </a>
-                        </div> */}
                         <NavLink className="home-title__link" to={"/contacts"}>
                             <span>Domvluvte si nezavaznu sluzku</span>
                             <img
                                 className="home-title__link-icon"
                                 src={arrow}
                                 alt=""
+                                loading="lazy"
                             />
                         </NavLink>
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 

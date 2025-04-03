@@ -1,14 +1,14 @@
 import { Helmet } from "react-helmet";
 import PageTitle from "../../components/PageTitle/PageTitle";
-import img from "./../../assets/img/5.jpg";
-import installationImg1 from "./../../assets/installations/1.jpg";
-import installationImg2 from "./../../assets/installations/2.jpg";
-import installationImg3 from "./../../assets/installations/3.jpg";
-import installationImg4 from "./../../assets/installations/4.jpg";
-import installationImg5 from "./../../assets/installations/5.jpg";
-import installationImg6 from "./../../assets/installations/6.jpg";
-import "./OurInstallation.scss";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
+import img from "/assets/img/5.jpg";
+import installationImg1 from "/assets/installations/1.jpg";
+import installationImg2 from "/assets/installations/2.jpg";
+import installationImg3 from "/assets/installations/3.jpg";
+import installationImg4 from "/assets/installations/4.jpg";
+import installationImg5 from "/assets/installations/5.jpg";
+import installationImg6 from "/assets/installations/6.jpg";
+import "./OurInstallation.scss";
 
 const OurInstallation = () => {
     return (

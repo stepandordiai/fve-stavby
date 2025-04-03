@@ -1,8 +1,8 @@
 import { Helmet } from "react-helmet";
 import PageTitle from "../../components/PageTitle/PageTitle";
-import img from "./../../assets/img/2.jpg";
-import "./Company.scss";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
+import img from "/assets/img/2.jpg";
+import "./Company.scss";
 
 const Company = () => {
     return (

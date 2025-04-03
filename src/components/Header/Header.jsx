@@ -1,14 +1,14 @@
 import BurgerBtn from "../BurgerBtn/BurgerBtn";
 import { NavLink } from "react-router-dom";
-import logo2 from "./../../assets/logo/fvestavby-cz-2.png";
-import "./Header.scss";
+import { HashLink } from "react-router-hash-link";
 import LngSelect from "../LngSelect/LngSelect";
 import { useEffect } from "react";
-import img1 from "./../../assets/001.jpg";
-import img2 from "./../../assets/002.webp";
-import img3 from "./../../assets/003.jpg";
-import img4 from "./../../assets/mc4.webp";
-import { HashLink } from "react-router-hash-link";
+import img1 from "/assets/001.jpg";
+import img2 from "/assets/002.webp";
+import img3 from "/assets/003.jpg";
+import img4 from "/assets/mc4.webp";
+import logo2 from "/assets/logo/fvestavby-cz-2.png";
+import "./Header.scss";
 
 const Header = () => {
     const inactiveHeaderLink = "header__link";

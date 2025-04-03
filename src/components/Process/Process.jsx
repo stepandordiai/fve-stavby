@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import plusIcon from "./../../assets/icons/plus-black.png";
+import plusIcon from "/assets/icons/plus-black.png";
 import "./Process.scss";
 
 const Process = () => {

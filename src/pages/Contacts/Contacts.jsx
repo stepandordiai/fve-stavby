@@ -1,9 +1,9 @@
-import arrow from "./../../assets/icons/arrow-upper-right-white.png";
 import { Helmet } from "react-helmet";
-import img from "./../../assets/img/6.jpg";
+import PageTitle from "../../components/PageTitle/PageTitle";
+import arrow from "/assets/icons/arrow-upper-right-white.png";
+import img from "/assets/img/6.jpg";
 import "./../../global/LinkEffect.scss";
 import "./Contacts.scss";
-import PageTitle from "../../components/PageTitle/PageTitle";
 
 const ContactUs = () => {
     const date = new Date();

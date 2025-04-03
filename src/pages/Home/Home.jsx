@@ -5,8 +5,8 @@ import Stats from "../../components/Stats/Stats";
 import HomeTitle from "../../components/HomeTitle/HomeTitle";
 import HomeAboutCompany from "../../components/HomeAboutCompany/HomeAboutCompany";
 import { Helmet } from "react-helmet";
-import "./Home.scss";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
+import "./Home.scss";
 
 const Home = () => {
     return (

@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
-import img from "./../../assets/img/2.jpg";
-import arrowIcon from "./../../assets/icons/arrow-upper-right-white.png";
+import img from "/assets/img/2.jpg";
+import arrowIcon from "/assets/icons/arrow-upper-right-white.png";
 import "./GetInTouch.scss";
 
 const GetInTouch = () => {

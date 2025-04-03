@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
-import logo from "./../../assets/logo/fve-stavby-black.png";
-import footerBottomLogo from "./../../assets/fve-stavby-footer-logo.png";
+import logo from "/assets/logo/fve-stavby-black.png";
+import footerBottomLogo from "/assets/fve-stavby-footer-logo.png";
 import "./../../global/LinkEffect.scss";
 import "./Footer.scss";
 

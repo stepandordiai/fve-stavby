@@ -1,9 +1,9 @@
-import partner1 from "./../../assets/partnersLogos/aiko.png";
-import partner2 from "./../../assets/partnersLogos/canadian-solar.webp";
-import partner3 from "./../../assets/partnersLogos/deye.png";
-import partner4 from "./../../assets/partnersLogos/jinko.png";
-import partner5 from "./../../assets/partnersLogos/solax.png";
-import partner6 from "./../../assets/partnersLogos/tigo.png";
+import partner1 from "/assets/partnersLogos/aiko.png";
+import partner2 from "/assets/partnersLogos/canadian-solar.webp";
+import partner3 from "/assets/partnersLogos/deye.png";
+import partner4 from "/assets/partnersLogos/jinko.png";
+import partner5 from "/assets/partnersLogos/solax.png";
+import partner6 from "/assets/partnersLogos/tigo.png";
 
 import "./Partners.scss";
 

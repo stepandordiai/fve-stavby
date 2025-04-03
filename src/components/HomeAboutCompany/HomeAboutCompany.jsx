@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import img1 from "./../../assets/img/9.jpg";
-import img2 from "./../../assets/img/1.jpg";
-import arrow from "./../../assets/icons/arrow-upper-right-white.png";
-import "./HomeAboutCompany.scss";
 import { NavLink } from "react-router-dom";
+import img1 from "/assets/img/9.jpg";
+import img2 from "/assets/img/1.jpg";
+import arrow from "/assets/icons/arrow-upper-right-white.png";
+import "./HomeAboutCompany.scss";
 
 const HomeAboutCompany = () => {
     // useEffect(() => {
