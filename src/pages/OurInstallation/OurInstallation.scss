@@ -165,6 +165,10 @@
     width: 25px;
 }
 
+.full-screen__btn--hide {
+    display: none;
+}
+
 @media screen and (max-width: 1200px) {
     .our-installation__grid {
         grid-template-columns: repeat(2, 1fr);

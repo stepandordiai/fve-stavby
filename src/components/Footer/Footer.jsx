@@ -145,7 +145,7 @@ const Footer = () => {
                         <span>Site by</span>
                         <a
                             className="creator-link footer__link"
-                            href="https://heeeyooo-studio.netlify.app/"
+                            href="https://heeeyooo.studio/"
                             target="_blank"
                         >
                             heeeyooo.studio

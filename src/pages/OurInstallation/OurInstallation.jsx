@@ -1,6 +1,8 @@
 import { Helmet } from "react-helmet";
+import { useEffect } from "react";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
+import isTouchDevice from "../../utils/isTouchDevice";
 import img from "/assets/img/5.jpg";
 import installationImg1 from "/assets/installations/1.jpg";
 import installationImg2 from "/assets/installations/2.jpg";
@@ -8,7 +10,6 @@ import installationImg3 from "/assets/installations/3.jpg";
 import installationImg4 from "/assets/installations/4.jpg";
 import installationImg5 from "/assets/installations/5.jpg";
 import installationImg6 from "/assets/installations/6.jpg";
-import { useEffect } from "react";
 import closeIcon from "/assets/icons/close-white.png";
 import expandIcon from "/assets/icons/expand-white.png";
 import shrinkIcon from "/assets/icons/shrink-white.png";
@@ -69,7 +70,14 @@ const OurInstallation = () => {
                         );
                         fullScreenImage.classList.add("full-screen-image");
                         fullScreenFooter.classList.add("full-screen-footer");
-                        fullScreenBtn.classList.add("full-screen__btn");
+
+                        if (!isTouchDevice) {
+                            fullScreenBtn.classList.add("full-screen__btn");
+                        } else {
+                            fullScreenBtn.classList.add(
+                                "full-screen__btn--hide"
+                            );
+                        }
 
                         fullScreenCloseBtn.innerHTML = `<img title="Close" src="${closeIcon}" alt="Close icon" loading="lazy" />`;
                         fullScreenImage.src = imgData[index].img;
