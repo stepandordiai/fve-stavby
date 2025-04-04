@@ -6,9 +6,7 @@
     border-radius: 25px;
     @include grid-center;
     cursor: pointer;
-    opacity: 0;
-    pointer-events: none;
-    transition: background-color 0.3s, opacity 1s 2s;
+    transition: background-color 0.3s;
 
     &:hover {
         background: var(--bg-light-darker-clr);

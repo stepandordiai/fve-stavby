@@ -3,8 +3,7 @@
 .lng-select__btn {
     width: 50px;
     aspect-ratio: 1/1;
-    display: grid;
-    place-content: center;
+    @include grid-center;
     border-radius: 25px;
     font-weight: 500;
     transition: all 0.5s;
@@ -12,9 +11,6 @@
     margin-left: auto;
     z-index: 2;
     margin-right: 25px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 1s 2s;
 }
 
 .lng-select__btn--active {
@@ -36,9 +32,7 @@
     min-height: 50px;
     background: var(--bg-light-clr);
     border-radius: 25px;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.5s, opacity 1s 2s;
+    transition: all 0.5s;
 }
 
 .lng-select--active {

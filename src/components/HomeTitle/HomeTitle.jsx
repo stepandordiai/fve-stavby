@@ -14,7 +14,7 @@ const HomeTitle = () => {
                         alt="Logo"
                         loading="lazy"
                     />
-                    <span>FVE STAVBY s.r.o</span>
+                    <span>FVE STAVBY s.r.o.</span>
                 </p>
                 <div className="home-title__details-container">
                     <div className="home-title__details">

@@ -11,11 +11,6 @@
     row-gap: 10px;
 }
 
-.header-elements--active {
-    pointer-events: all !important;
-    opacity: 1 !important;
-}
-
 .header-top {
     display: flex;
     align-items: flex-start;
@@ -30,9 +25,7 @@
     background: var(--bg-dark-clr);
     padding: 0 12.5px;
     @include glass-effect(20px);
-    opacity: 0;
-    pointer-events: none;
-    transition: background-color 0.3s, opacity 1s 2s;
+    transition: background-color 0.3s;
 
     &:hover {
         background: var(--bg-dark-darker-clr);
@@ -85,9 +78,7 @@
     margin-left: 25px;
     margin-right: auto;
     color: #fff;
-    opacity: 0;
-    pointer-events: none;
-    transition: background-color 0.3s, opacity 1s 2s;
+    transition: background-color 0.3s;
 
     &:hover {
         background: var(--bg-dark-darker-clr);
@@ -105,9 +96,7 @@
     background: var(--bg-dark-clr);
     backdrop-filter: blur(10px);
     overflow-x: scroll;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 1s 2s;
+    transition: opacity 1s 1s;
 
     &::-webkit-scrollbar {
         display: none;
@@ -123,9 +112,6 @@
         background: var(--bg-dark-clr);
         backdrop-filter: blur(10px);
         white-space: nowrap;
-        &::-webkit-scrollbar {
-            display: none;
-        }
 
         li {
             position: relative;
@@ -136,12 +122,14 @@
     }
 }
 
-.products {
-    color: #fff;
+.header-bottom--hide {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s;
 }
 
-.header-bottom--active {
-    display: none;
+.products {
+    color: #fff;
 }
 
 .header-card {

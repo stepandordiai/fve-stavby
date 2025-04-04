@@ -25,13 +25,10 @@ const LngSelect = () => {
 
     return (
         <>
-            <button
-                onClick={toogleLngSelect}
-                className="lng-select__btn header-element"
-            >
+            <button onClick={toogleLngSelect} className="lng-select__btn">
                 CZ
             </button>
-            <div ref={lngSelect} className="lng-select header-element">
+            <div ref={lngSelect} className="lng-select">
                 <ul className="lng-select__dd">
                     <li className="lng-select__option" data-value="cz">
                         CZ - Cestina

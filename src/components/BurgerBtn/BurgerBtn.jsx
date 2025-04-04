@@ -15,13 +15,10 @@ const BurgerBtn = () => {
             .classList.toggle("menu-wrapper--active");
         document
             .querySelector(".header-bottom")
-            .classList.toggle("header-bottom--active");
+            .classList.toggle("header-bottom--hide");
     }
     return (
-        <div
-            onClick={toggleBurgerBtn}
-            className="burger-btn-wrapper header-element"
-        >
+        <div onClick={toggleBurgerBtn} className="burger-btn-wrapper">
             <div className="burger-btn">
                 <span className="burger-btn__center-line"></span>
             </div>

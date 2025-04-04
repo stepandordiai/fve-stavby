@@ -22,7 +22,7 @@ const Menu = () => {
                     .classList.remove("menu-wrapper--active");
                 document
                     .querySelector(".header-bottom")
-                    .classList.remove("header-bottom--active");
+                    .classList.remove("header-bottom--hide");
             });
         });
     });
@@ -31,7 +31,7 @@ const Menu = () => {
     const activeLink = "link js-link link-effect link-effect--active";
 
     return (
-        <section className="menu header-element">
+        <section className="menu">
             <div className="menu-wrapper">
                 <nav className="nav">
                     <NavLink
