@@ -71,7 +71,7 @@ const OurInstallation = () => {
                         fullScreenImage.classList.add("full-screen-image");
                         fullScreenFooter.classList.add("full-screen-footer");
 
-                        if (!isTouchDevice) {
+                        if (!isTouchDevice()) {
                             fullScreenBtn.classList.add("full-screen__btn");
                         } else {
                             fullScreenBtn.classList.add(

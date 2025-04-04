@@ -1,0 +1,75 @@
+@use "./../../mixins" as *;
+
+.why-solar__title {
+    font: {
+        size: 1.5rem;
+        weight: 500;
+    }
+    margin-top: 25px;
+}
+
+.why-solar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.why-solar__card {
+    height: 250px;
+    background: var(--bg-light-clr);
+    border-radius: 25px;
+    @include flex-between-start;
+    flex-direction: column;
+    padding: 12.5px;
+    cursor: pointer;
+}
+
+.why-solar__card-icon-container {
+    width: 50px;
+    aspect-ratio: 1/1;
+    border-radius: 20px;
+    @include grid-center;
+    background: var(--accent-clr);
+}
+
+.why-solar__card-title {
+    font: {
+        size: 1.5rem;
+        weight: 500;
+    }
+}
+
+.why-solar__card-dd {
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    transition: all 0.3s;
+
+    span {
+        overflow: hidden;
+    }
+}
+
+.why-solar__card:hover .why-solar__card-dd {
+    grid-template-rows: 1fr;
+}
+
+@media screen and (max-width: 1200px) {
+    .why-solar {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .why-solar {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .why-solar {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
