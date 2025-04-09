@@ -3,10 +3,30 @@ import logo from "/assets/logo/fve-stavby-black.png";
 import footerBottomLogo from "/assets/fve-stavby-footer-logo.png";
 import "./../../global/LinkEffect.scss";
 import "./Footer.scss";
+import { useEffect } from "react";
 
 const Footer = () => {
     const inactiveFooterLink = "footer__link";
     const activeFooterLink = "footer__link footer__link--active";
+
+    // TODO: I learned new nice animation with position and scale
+    useEffect(() => {
+        const creatorLink = document.querySelector(".creator-link");
+        const bgElement = document.querySelector(".bg-element");
+
+        creatorLink.addEventListener("mouseenter", (event) => {
+            const rect = bbb.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+            bgElement.style.top = y + "px";
+            bgElement.style.left = x + "px";
+            bgElement.classList.add("bg-element--active");
+        });
+
+        creatorLink.addEventListener("mouseleave", () => {
+            bgElement.classList.remove("bg-element--active");
+        });
+    }, []);
 
     return (
         <>
@@ -144,16 +164,16 @@ const Footer = () => {
                     <div className="creator">
                         <span>Site by</span>
                         <a
-                            className="creator-link footer__link"
+                            className="creator-link"
                             href="https://heeeyooo.studio/"
                             target="_blank"
                         >
                             heeeyooo.studio
+                            <div className="bg-element"></div>
                         </a>
                     </div>
                 </div>
             </footer>
-            {/* <p className="footer-bottom__logo">FVE STAVBY</p> */}
             <img
                 className="footer-bottom__logo-img"
                 src={footerBottomLogo}
