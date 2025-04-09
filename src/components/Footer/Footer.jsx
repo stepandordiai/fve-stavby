@@ -15,7 +15,16 @@ const Footer = () => {
         const bgElement = document.querySelector(".bg-element");
 
         creatorLink.addEventListener("mouseenter", (event) => {
-            const rect = bbb.getBoundingClientRect();
+            const rect = creatorLink.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+            bgElement.style.top = y + "px";
+            bgElement.style.left = x + "px";
+            bgElement.classList.add("bg-element--active");
+        });
+
+        creatorLink.addEventListener("touchstart", (event) => {
+            const rect = creatorLink.getBoundingClientRect();
             const x = event.clientX - rect.left;
             const y = event.clientY - rect.top;
             bgElement.style.top = y + "px";
@@ -24,6 +33,12 @@ const Footer = () => {
         });
 
         creatorLink.addEventListener("mouseleave", () => {
+            const bgElement = document.querySelector(".bg-element");
+            bgElement.classList.remove("bg-element--active");
+        });
+
+        creatorLink.addEventListener("touchend", () => {
+            const bgElement = document.querySelector(".bg-element");
             bgElement.classList.remove("bg-element--active");
         });
     }, []);
