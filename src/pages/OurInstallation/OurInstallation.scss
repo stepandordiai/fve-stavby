@@ -33,29 +33,18 @@
         border-radius: 25px;
         cursor: pointer;
     }
+}
 
-    .our-installation__card-date-info {
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        background: var(--accent-clr);
-        height: 50px;
-        min-width: 50px;
-        padding: 0 12.5px;
-        border-radius: 20px;
-        display: grid;
-        place-content: center;
-        grid-template-columns: 0fr;
-        white-space: nowrap;
-        overflow: hidden;
-        transition: all 0.5s;
-        z-index: 0;
-    }
-
-    span {
-        overflow: hidden;
-        opacity: 0;
-    }
+.our-installation__card-date-info {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: var(--accent-clr);
+    height: 50px;
+    min-width: 50px;
+    padding: 0 12.5px;
+    border-radius: 20px;
+    @include grid-center;
 }
 
 .our-installation__card-info {
@@ -64,29 +53,25 @@
     margin-top: 10px;
     background: var(--accent-clr);
     height: 50px;
-    min-width: 50px;
     padding: 0 12.5px;
     border-radius: 20px;
     @include grid-center;
-    grid-template-columns: 0fr;
-    white-space: nowrap;
-    overflow: hidden;
     transition: all 0.5s;
 }
 
-.white-el {
+.behind-date-element {
     position: absolute;
     top: 0;
     right: 0;
     z-index: 0;
     border-radius: 0 0 0 20px;
-    width: 60px;
+    min-width: 60px;
     height: 60px;
     background: #fff;
     transition: all 0.5s;
 }
 
-.white-el::before {
+.behind-date-element::before {
     content: "";
     position: absolute;
     width: 60px;
@@ -98,7 +83,7 @@
     pointer-events: none;
 }
 
-.white-el::after {
+.behind-date-element::after {
     content: "";
     position: absolute;
     width: 60px;
@@ -108,19 +93,6 @@
     border-radius: 0 20px 0 0;
     box-shadow: 25px -25px #fff;
     pointer-events: none;
-}
-
-.our-installation__card:hover .our-installation__card-date-info {
-    grid-template-columns: 1fr;
-}
-
-.our-installation__card:hover span {
-    opacity: 1;
-    transition: all 0.5s 0.5s;
-}
-
-.our-installation__card:hover .white-el:nth-last-of-type(1) {
-    width: calc(185.29px + 10px);
 }
 
 .full-screen-div {
@@ -189,8 +161,7 @@
         padding-bottom: 20px;
     }
 
-    // Full screen slider
-
+    // Full screen
     .full-screen-div {
         padding: 0 10px;
     }

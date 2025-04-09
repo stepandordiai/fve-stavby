@@ -4,42 +4,78 @@ import PageTitle from "../../components/PageTitle/PageTitle";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
 import isTouchDevice from "../../utils/isTouchDevice";
 import img from "/assets/img/5.jpg";
-import installationImg1 from "/assets/installations/1.jpg";
-import installationImg2 from "/assets/installations/2.jpg";
-import installationImg3 from "/assets/installations/3.jpg";
-import installationImg4 from "/assets/installations/4.jpg";
-import installationImg5 from "/assets/installations/5.jpg";
-import installationImg6 from "/assets/installations/6.jpg";
 import closeIcon from "/assets/icons/close-white.png";
 import expandIcon from "/assets/icons/expand-white.png";
 import shrinkIcon from "/assets/icons/shrink-white.png";
 import "./OurInstallation.scss";
 
 const OurInstallation = () => {
-    const imgData = [
+    const installationsData = [
         {
             id: 1,
-            img: installationImg1,
+            img: "/assets/installations/01.jpeg",
+            installationDate: "18.03.2025",
+            description: "Černá Voda, 24x Trina Solar 450, 10.8kWp",
         },
         {
             id: 2,
-            img: installationImg2,
+            img: "/assets/installations/02.jpeg",
+            installationDate: "18.03.2025",
+            description: "Černá Voda, 24x Trina Solar 450, 10.8kWp",
         },
         {
             id: 3,
-            img: installationImg3,
+            img: "/assets/installations/03.jpeg",
+            installationDate: "18.03.2025",
+            description: "Černá Voda, 24x Trina Solar 450, 10.8kWp",
         },
         {
             id: 4,
-            img: installationImg4,
+            img: "/assets/installations/04.jpeg",
+            installationDate: "18.03.2025",
+            description: "Černá Voda, 24x Trina Solar 450, 10.8kWp",
         },
         {
             id: 5,
-            img: installationImg5,
+            img: "/assets/installations/05.jpeg",
+            installationDate: "18.03.2025",
+            description: "Černá Voda, 24x Trina Solar 450, 10.8kWp",
         },
         {
             id: 6,
-            img: installationImg6,
+            img: "/assets/installations/06.jpeg",
+            installationDate: "18.03.2025",
+            description: "Černá Voda, 24x Trina Solar 450, 10.8kWp",
+        },
+        {
+            id: 7,
+            img: "/assets/installations/07.jpeg",
+            installationDate: "18.03.2025",
+            description: "Černá Voda, 24x Trina Solar 450, 10.8kWp",
+        },
+        {
+            id: 8,
+            img: "/assets/installations/08.jpeg",
+            installationDate: "18.03.2025",
+            description: "Černá Voda, 24x Trina Solar 450, 10.8kWp",
+        },
+        {
+            id: 9,
+            img: "/assets/installations/09.jpeg",
+            installationDate: "18.03.2025",
+            description: "Černá Voda, 24x Trina Solar 450, 10.8kWp",
+        },
+        {
+            id: 10,
+            img: "/assets/installations/10.jpeg",
+            installationDate: "18.03.2025",
+            description: "Černá Voda, 24x Trina Solar 450, 10.8kWp",
+        },
+        {
+            id: 11,
+            img: "/assets/installations/11.jpeg",
+            installationDate: "18.03.2025",
+            description: "Černá Voda, 24x Trina Solar 450, 10.8kWp",
         },
     ];
 
@@ -48,9 +84,8 @@ const OurInstallation = () => {
             .querySelectorAll(".our-installation__card img")
             .forEach((img, index) => {
                 img.addEventListener("click", () => {
-                    if (Number(img.dataset.value) == imgData[index].id) {
+                    if (index + 1 === installationsData[index].id) {
                         // Create elements
-
                         const fullScreen = document.createElement("div");
                         const fullScreenHeader =
                             document.createElement("header");
@@ -62,7 +97,6 @@ const OurInstallation = () => {
                         const fullScreenBtn = document.createElement("button");
 
                         // Add classNames for elements
-
                         fullScreen.classList.add("full-screen-div");
                         fullScreenHeader.classList.add("full-screen-header");
                         fullScreenCloseBtn.classList.add(
@@ -80,7 +114,7 @@ const OurInstallation = () => {
                         }
 
                         fullScreenCloseBtn.innerHTML = `<img title="Close" src="${closeIcon}" alt="Close icon" loading="lazy" />`;
-                        fullScreenImage.src = imgData[index].img;
+                        fullScreenImage.src = installationsData[index].img;
                         fullScreenBtn.innerHTML = `<img title="Expand" src="${expandIcon}" alt="Expand icon" loading="lazy" />`;
 
                         fullScreenCloseBtn.addEventListener("click", () => {
@@ -106,8 +140,7 @@ const OurInstallation = () => {
                             }
                         });
 
-                        // Appending elements
-
+                        // Append elements
                         document.body.appendChild(fullScreen);
                         fullScreen.append(
                             fullScreenHeader,
@@ -119,6 +152,20 @@ const OurInstallation = () => {
                     }
                 });
             });
+
+        // Specify width for each card white background in case if date bigger or smaller
+        const dateElements = document.querySelectorAll(
+            ".our-installation__card-date-info"
+        );
+        const behindDateElements = document.querySelectorAll(
+            ".behind-date-element"
+        );
+
+        dateElements.forEach((dateElement, index) => {
+            behindDateElements[index].style.width = `${
+                dateElement.offsetWidth + 10
+            }px`;
+        });
     }, []);
 
     return (
@@ -135,78 +182,27 @@ const OurInstallation = () => {
                     zaujala, neváhejte nás kontaktovat
                 </p>
                 <div className="our-installation__grid">
-                    <div className="our-installation__card-wrapper">
-                        <div className="our-installation__card">
-                            <img src={installationImg1} data-value="1" alt="" />
-                            <div className="white-el"></div>
-                            <p className="our-installation__card-date-info">
-                                <span>Instalováno 18.12.2024</span>
-                            </p>
-                        </div>
-                        <p className="our-installation__card-info">
-                            Černá Voda, 24x Trina Solar 450, 10.8kWp
-                        </p>
-                    </div>
-                    <div className="our-installation__card-wrapper">
-                        <div className="our-installation__card">
-                            <img src={installationImg2} data-value="2" alt="" />
-                            <div className="white-el"></div>
-                            <p className="our-installation__card-date-info">
-                                <span>Instalováno 18.12.2024</span>
-                            </p>
-                        </div>
-                        <p className="our-installation__card-info">
-                            Lhota, 20x Aiko Solar 500, 10.0 kWp
-                        </p>
-                    </div>
-                    <div className="our-installation__card-wrapper">
-                        <div className="our-installation__card">
-                            <img src={installationImg3} data-value="3" alt="" />
-                            <div className="white-el"></div>
-                            <p className="our-installation__card-date-info">
-                                <span>Instalováno 18.12.2024</span>
-                            </p>
-                        </div>
-                        <p className="our-installation__card-info">
-                            Karviná, 20x Trina Solar 500, 10.0 kWp
-                        </p>
-                    </div>
-                    <div className="our-installation__card-wrapper">
-                        <div className="our-installation__card">
-                            <img src={installationImg4} data-value="4" alt="" />
-                            <div className="white-el"></div>
-                            <p className="our-installation__card-date-info">
-                                <span>Instalováno 18.12.2024</span>
-                            </p>
-                        </div>
-                        <p className="our-installation__card-info">
-                            Liber, 21x Trina Solar 500, 10.5 kWp
-                        </p>
-                    </div>
-                    <div className="our-installation__card-wrapper">
-                        <div className="our-installation__card">
-                            <img src={installationImg5} data-value="5" alt="" />
-                            <div className="white-el"></div>
-                            <p className="our-installation__card-date-info">
-                                <span>Instalováno 18.12.2024</span>
-                            </p>
-                        </div>
-                        <p className="our-installation__card-info">
-                            Klínec, 12x Aiko 640, 7.7 kWp
-                        </p>
-                    </div>
-                    <div className="our-installation__card-wrapper">
-                        <div className="our-installation__card">
-                            <img src={installationImg6} data-value="6" alt="" />
-                            <div className="white-el"></div>
-                            <p className="our-installation__card-date-info">
-                                <span>Instalováno 18.12.2024</span>
-                            </p>
-                        </div>
-                        <p className="our-installation__card-info">
-                            Pysely, 20x Aiko 500, 10.0 kWp
-                        </p>
-                    </div>
+                    {installationsData.map(
+                        ({ id, img, installationDate, description }) => {
+                            return (
+                                <div
+                                    key={id}
+                                    className="our-installation__card-wrapper"
+                                >
+                                    <div className="our-installation__card">
+                                        <img src={img} alt={description} />
+                                        <div className="behind-date-element"></div>
+                                        <p className="our-installation__card-date-info">
+                                            Instalováno {installationDate}
+                                        </p>
+                                    </div>
+                                    <p className="our-installation__card-info">
+                                        {description}
+                                    </p>
+                                </div>
+                            );
+                        }
+                    )}
                 </div>
             </section>
             <GetInTouch />
