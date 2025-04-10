@@ -168,6 +168,42 @@ const OurInstallation = () => {
         });
     }, []);
 
+    useEffect(() => {
+        document
+            .querySelectorAll(".our-installation__card-wrapper")
+            .forEach((card, index) => {
+                document.addEventListener("scroll", () => {
+                    const cardRect = card.getBoundingClientRect();
+
+                    if (cardRect.top < window.innerHeight - 200) {
+                        const innerCard = document.querySelectorAll(
+                            ".our-installation__card"
+                        );
+                        const cardImg = document.querySelectorAll(
+                            ".our-installation__card img"
+                        );
+
+                        innerCard[index].classList.add("inner-card--active");
+                        cardImg[index].classList.add("card-img--active");
+                    }
+                });
+
+                const cardRect = card.getBoundingClientRect();
+
+                if (cardRect.top < window.innerHeight - 200) {
+                    const innerCard = document.querySelectorAll(
+                        ".our-installation__card"
+                    );
+                    const cardImg = document.querySelectorAll(
+                        ".our-installation__card img"
+                    );
+
+                    innerCard[index].classList.add("inner-card--active");
+                    cardImg[index].classList.add("card-img--active");
+                }
+            });
+    }, []);
+
     return (
         <>
             <Helmet>
@@ -191,14 +227,14 @@ const OurInstallation = () => {
                                 >
                                     <div className="our-installation__card">
                                         <img src={img} alt={description} />
-                                        <div className="behind-date-element"></div>
-                                        <p className="our-installation__card-date-info">
-                                            Instalováno {installationDate}
-                                        </p>
+                                        {/* <div className="behind-date-element"></div> */}
+                                        {/* <p className="our-installation__card-date-info">
+                                            ~ 10 kWt
+                                        </p> */}
                                     </div>
-                                    <p className="our-installation__card-info">
+                                    {/* <p className="our-installation__card-info">
                                         {description}
-                                    </p>
+                                    </p> */}
                                 </div>
                             );
                         }
