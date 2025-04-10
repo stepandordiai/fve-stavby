@@ -1,9 +1,10 @@
 import { NavLink } from "react-router-dom";
 import logo from "/assets/logo/fve-stavby-black.png";
 import footerBottomLogo from "/assets/fve-stavby-footer-logo.png";
+import { useEffect } from "react";
+import isTouchDevice from "../../utils/isTouchDevice";
 import "./../../global/LinkEffect.scss";
 import "./Footer.scss";
-import { useEffect } from "react";
 
 const Footer = () => {
     const inactiveFooterLink = "footer__link";
@@ -14,21 +15,32 @@ const Footer = () => {
         const creatorLink = document.querySelector(".creator-link");
         const bgElement = document.querySelector(".bg-element");
 
-        creatorLink.addEventListener("mouseenter", (event) => {
+        let mouseX;
+        let mouseY;
+
+        creatorLink.addEventListener("mouseenter", (e) => {
             const rect = creatorLink.getBoundingClientRect();
-            const x = event.clientX - rect.left;
-            const y = event.clientY - rect.top;
-            bgElement.style.top = y + "px";
-            bgElement.style.left = x + "px";
+            mouseX =
+                (!isTouchDevice() ? e.clientX : e.touches[0].clientX) -
+                rect.left;
+            mouseY =
+                (!isTouchDevice() ? e.clientY : e.touches[0].clientY) -
+                rect.top;
+            bgElement.style.top = mouseY + "px";
+            bgElement.style.left = mouseX + "px";
             bgElement.classList.add("bg-element--active");
         });
 
-        creatorLink.addEventListener("touchstart", (event) => {
+        creatorLink.addEventListener("touchstart", (e) => {
             const rect = creatorLink.getBoundingClientRect();
-            const x = event.clientX - rect.left;
-            const y = event.clientY - rect.top;
-            bgElement.style.top = y + "px";
-            bgElement.style.left = x + "px";
+            mouseX =
+                (!isTouchDevice() ? e.clientX : e.touches[0].clientX) -
+                rect.left;
+            mouseY =
+                (!isTouchDevice() ? e.clientY : e.touches[0].clientY) -
+                rect.top;
+            bgElement.style.top = mouseY + "px";
+            bgElement.style.left = mouseX + "px";
             bgElement.classList.add("bg-element--active");
         });
 
