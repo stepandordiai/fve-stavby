@@ -52,29 +52,42 @@
 // When i apply animation for header blur dissapears so i apply it to children
 
 .header__link {
-    position: relative;
+    // position: relative;
     color: #fff;
-}
-
-.header__link::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%) scaleX(0);
-    width: 25%;
-    height: 1.25px;
-    background: #fff;
+    padding: 5px 7.5px;
+    border-radius: 15px;
     transition: all 0.3s;
+
+    &:hover {
+        background: var(--accent-clr);
+        color: #000 !important;
+    }
 }
 
-.header__link--active::before {
-    transform: translateX(-50%) scaleX(1);
+.header__link--active {
+    background: var(--accent-clr);
+    color: #000 !important;
 }
 
-.header__link:hover::before {
-    transform: translateX(-50%) scaleX(1);
-}
+// .header__link::before {
+//     content: "";
+//     position: absolute;
+//     bottom: 0;
+//     left: 50%;
+//     transform: translateX(-50%) scaleX(0);
+//     width: 25%;
+//     height: 1.25px;
+//     background: #fff;
+//     transition: all 0.3s;
+// }
+
+// .header__link--active::before {
+//     transform: translateX(-50%) scaleX(1);
+// }
+
+// .header__link:hover::before {
+//     transform: translateX(-50%) scaleX(1);
+// }
 
 .header-top__number {
     height: 50px;

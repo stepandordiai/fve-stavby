@@ -89,7 +89,7 @@ const ContactUs = () => {
                                 Telefonní číslo
                             </p>
                             <a
-                                className="contact-details__link link-effect"
+                                className="contact-details__link"
                                 href="tel:+420728803703"
                             >
                                 +420 728 803 703
@@ -98,7 +98,7 @@ const ContactUs = () => {
                         <div className="contact-details">
                             <p className="contact-details__title">E-mail</p>
                             <a
-                                className="contact-details__link link-effect"
+                                className="contact-details__link"
                                 href="mailto:obchod@fvestavby.cz"
                             >
                                 obchod@fvestavby.cz
@@ -107,7 +107,7 @@ const ContactUs = () => {
                         <div className="contact-details">
                             <p className="contact-details__title">Adresa</p>
                             <a
-                                className="contact-details__link link-effect"
+                                className="contact-details__link"
                                 href="mailto:obchod@fvestavby.cz"
                             >
                                 Pod Hroby 271 Kolín IV

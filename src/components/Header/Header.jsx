@@ -74,7 +74,7 @@ const Header = () => {
     }, []);
 
     const inactiveHeaderLink = "header__link";
-    const activeHeaderLink = "header__link header__link--active";
+    const activeHeaderLink = "header__link header__link--active bg--acent";
 
     return (
         <>

@@ -112,6 +112,13 @@ textarea {
 
 .contact-details__link {
     color: #000;
+    padding: 5px 7.5px;
+    border-radius: 15px;
+    transition: all 0.3s;
+
+    &:hover {
+        background: var(--accent-clr);
+    }
 }
 
 .business-hours__list {
@@ -127,24 +134,30 @@ textarea {
 }
 
 .business-hours__item {
-    position: relative;
+    // position: relative;
+    padding: 5px 7.5px;
+    border-radius: 15px;
 }
 
-.business-hours__item::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 25%;
-    height: 1.25px;
-    background: #000;
-    transform: scaleX(0);
-    transform-origin: bottom left;
-    transition: transform 0.3s;
-}
+// .business-hours__item::before {
+//     content: "";
+//     position: absolute;
+//     bottom: 0;
+//     left: 0;
+//     width: 25%;
+//     height: 1.25px;
+//     background: #000;
+//     transform: scaleX(0);
+//     transform-origin: bottom left;
+//     transition: transform 0.3s;
+// }
 
-.business-hours__item--active::before {
-    transform: scale(1);
+// .business-hours__item--active::before {
+//     transform: scale(1);
+// }
+
+.business-hours__item--active {
+    background: var(--accent-clr);
 }
 
 @media screen and (max-width: 1000px) {

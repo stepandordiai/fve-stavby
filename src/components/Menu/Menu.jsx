@@ -94,17 +94,14 @@ const Menu = () => {
                 <ul className="menu__contacts-details">
                     <li>
                         <p>Telefonní číslo</p>
-                        <a
-                            className="menu-link link-effect"
-                            href="tel:+420728803703"
-                        >
+                        <a className="menu-link" href="tel:+420728803703">
                             +420 728 803 703
                         </a>
                     </li>
                     <li>
                         <p>E-mail</p>
                         <a
-                            className="menu-link link-effect"
+                            className="menu-link"
                             href="mailto:obchod@fvestavby.cz"
                         >
                             obchod@fvestavby.cz
@@ -113,7 +110,7 @@ const Menu = () => {
                     <li>
                         <p>Adresa</p>
                         <a
-                            className="menu-link link-effect"
+                            className="menu-link"
                             href="mailto:obchod@fvestavby.cz"
                         >
                             Pod Hroby 271 Kolín IV
