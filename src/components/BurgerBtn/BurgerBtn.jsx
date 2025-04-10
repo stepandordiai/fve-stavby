@@ -8,7 +8,6 @@ const BurgerBtn = () => {
         document
             .querySelector(".burger-btn__center-line")
             .classList.toggle("burger-btn__center-line--active");
-
         document.querySelector(".menu").classList.toggle("menu--active");
         document
             .querySelector(".menu-wrapper")
@@ -19,6 +18,9 @@ const BurgerBtn = () => {
     }
     return (
         <div onClick={toggleBurgerBtn} className="burger-btn-wrapper">
+            {/* <div className="burger-btn">
+                <span className="burger-btn__center-line"></span>
+            </div> */}
             <div className="burger-btn">
                 <span className="burger-btn__center-line"></span>
             </div>
