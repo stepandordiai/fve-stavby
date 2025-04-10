@@ -25,7 +25,9 @@
     background: var(--bg-dark-clr);
     padding: 0 12.5px;
     @include glass-effect(20px);
-    transition: background-color 0.3s;
+    opacity: 0;
+    transition: background-color 0.3s, opacity 1s;
+    animation: revealHeader 1s 2s forwards;
 
     &:hover {
         background: var(--bg-dark-darker-clr);
@@ -38,6 +40,12 @@
     span {
         font-size: 1.5rem;
         font-weight: 500;
+    }
+}
+
+@keyframes revealHeader {
+    100% {
+        opacity: 1;
     }
 }
 
@@ -79,6 +87,8 @@
     margin-right: auto;
     color: #fff;
     transition: background-color 0.3s;
+    opacity: 0;
+    animation: revealHeader 1s 2s forwards;
 
     &:hover {
         background: var(--bg-dark-darker-clr);
@@ -97,6 +107,8 @@
     backdrop-filter: blur(10px);
     overflow-x: scroll;
     transition: opacity 1s 1s;
+    opacity: 0;
+    animation: revealHeader 1s 2s forwards;
 
     &::-webkit-scrollbar {
         display: none;
@@ -123,9 +135,9 @@
 }
 
 .header-bottom--hide {
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 1s;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transition: opacity 1s !important;
 }
 
 .products {
@@ -156,6 +168,7 @@
     opacity: 1;
     pointer-events: all;
 }
+
 
 .header-card__link {
     @include flex-start-center;

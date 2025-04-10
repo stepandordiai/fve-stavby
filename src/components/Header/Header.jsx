@@ -38,7 +38,6 @@ const Header = () => {
         });
 
         // For mobile
-
         document.addEventListener("touchstart", (e) => {
             const headerCard = document.querySelector(".header-card");
             const headerDd = document.querySelector(".products");
@@ -65,7 +64,6 @@ const Header = () => {
         });
 
         //  Close header card on link click
-
         document.querySelectorAll(".header-card__link").forEach((link) => {
             link.addEventListener("click", () => {
                 document
