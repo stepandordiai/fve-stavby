@@ -5,6 +5,7 @@ import img from "/assets/img/7.jpg";
 import userIcon from "/assets/icons/user.png";
 // import "./AboutUs.scss";
 import styles from "./AboutUs.module.scss";
+import Mission from "../../components/Mission/Mission";
 
 const AboutUs = () => {
     return (
@@ -122,6 +123,7 @@ const AboutUs = () => {
                         <p>cyklů baterie</p>
                     </div>
                 </div>
+                <Mission />
             </div>
             <GetInTouch />
         </>

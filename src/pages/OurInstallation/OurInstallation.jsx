@@ -172,19 +172,24 @@ const OurInstallation = () => {
         document
             .querySelectorAll(".our-installation__card-wrapper")
             .forEach((card, index) => {
+                let isUsed = false;
                 document.addEventListener("scroll", () => {
                     const cardRect = card.getBoundingClientRect();
-
                     if (cardRect.top < window.innerHeight) {
-                        const innerCard = document.querySelectorAll(
-                            ".our-installation__card"
-                        );
-                        const cardImg = document.querySelectorAll(
-                            ".our-installation__card img"
-                        );
+                        if (!isUsed) {
+                            const innerCard = document.querySelectorAll(
+                                ".our-installation__card"
+                            );
+                            const cardImg = document.querySelectorAll(
+                                ".our-installation__card img"
+                            );
 
-                        innerCard[index].classList.add("inner-card--active");
-                        cardImg[index].classList.add("card-img--active");
+                            innerCard[index].classList.add(
+                                "inner-card--active"
+                            );
+                            cardImg[index].classList.add("card-img--active");
+                        }
+                        isUsed = true;
                     }
                 });
 

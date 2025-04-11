@@ -1,5 +1,5 @@
 import Process from "../../components/Process/Process";
-import Advantages from "../../components/Advantages/Advantages";
+import WhyUs from "../../components/WhyUs/WhyUs";
 import Partners from "../../components/Partners/Partners";
 import Stats from "../../components/Stats/Stats";
 import HomeTitle from "../../components/HomeTitle/HomeTitle";
@@ -17,7 +17,7 @@ const Home = () => {
             <HomeTitle />
             <section className="home">
                 <HomeAboutCompany />
-                <Advantages />
+                <WhyUs />
                 <Process />
                 <Stats />
                 <Partners />

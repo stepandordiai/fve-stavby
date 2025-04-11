@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import plusIcon from "/assets/icons/plus-black.png";
-import "./Advantages.scss";
+import "./WhyUs.scss";
 
 const Advantages = () => {
     useEffect(() => {
