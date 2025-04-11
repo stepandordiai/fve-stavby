@@ -17,6 +17,8 @@
 }
 
 .header-top__logo {
+    position: relative;
+    z-index: 5;
     height: 50px;
     @include flex-center;
     color: #fff;
@@ -90,6 +92,8 @@
 // }
 
 .header-top__number {
+    position: relative;
+    z-index: 5;
     height: 50px;
     background: var(--bg-dark-clr);
     @include grid-center;
@@ -211,7 +215,7 @@
     @include grid-center;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 896px) {
     .header {
         top: 20px;
         right: 20px;

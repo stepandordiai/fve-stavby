@@ -46,7 +46,6 @@ const Process = () => {
                     </div>
                     <img
                         className="process__icon process__icon--active"
-                        width={30}
                         src={plusIcon}
                         alt=""
                     />
@@ -62,12 +61,7 @@ const Process = () => {
                             projektu potrebujete.
                         </p>
                     </div>
-                    <img
-                        className="process__icon"
-                        width={30}
-                        src={plusIcon}
-                        alt=""
-                    />
+                    <img className="process__icon" src={plusIcon} alt="" />
                 </div>
                 {/* <div className="process-card">
                     <p className="details-number">02</p>
@@ -96,12 +90,7 @@ const Process = () => {
 
                         <p>Na zaklade vsech podkladu zpracujeme nabidku</p>
                     </div>
-                    <img
-                        className="process__icon"
-                        width={30}
-                        src={plusIcon}
-                        alt=""
-                    />
+                    <img className="process__icon" src={plusIcon} alt="" />
                 </div>
                 <div className="process-card">
                     <p className="details-number">04</p>
@@ -118,12 +107,7 @@ const Process = () => {
                             Zdarma pro naše klienty
                         </div>
                     </div>
-                    <img
-                        className="process__icon"
-                        width={30}
-                        src={plusIcon}
-                        alt=""
-                    />
+                    <img className="process__icon" src={plusIcon} alt="" />
                 </div>
 
                 <div className="process-card">
@@ -137,12 +121,7 @@ const Process = () => {
                             projektu potrebujete.
                         </p>
                     </div>
-                    <img
-                        className="process__icon"
-                        width={30}
-                        src={plusIcon}
-                        alt=""
-                    />
+                    <img className="process__icon" src={plusIcon} alt="" />
                 </div>
                 <div className="process-card">
                     <p className="details-number">06</p>
@@ -155,12 +134,7 @@ const Process = () => {
                             Predame vam dokumentaci a zaskolime vas.
                         </p>
                     </div>
-                    <img
-                        className="process__icon"
-                        width={30}
-                        src={plusIcon}
-                        alt=""
-                    />
+                    <img className="process__icon" src={plusIcon} alt="" />
                 </div>
                 <div className="process-card">
                     <p className="details-number">07</p>
@@ -172,12 +146,7 @@ const Process = () => {
                             zajistime co nejrychleji.
                         </p>
                     </div>
-                    <img
-                        className="process__icon"
-                        width={30}
-                        src={plusIcon}
-                        alt=""
-                    />
+                    <img className="process__icon" src={plusIcon} alt="" />
                 </div>
             </div>
         </>

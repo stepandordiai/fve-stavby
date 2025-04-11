@@ -125,29 +125,6 @@ const HomeAboutCompany = () => {
                 profesionálů. Každý z nás se v energetice pohybuje již dlouhá
                 léta a nabízíme komplexní služby, které zaručují maximální
                 spokojenost zákazníků.
-                <br />
-                <br />
-                Především klademe důraz na individuální přístup. Každý projekt
-                je pro nás jedinečný a věnujeme mu maximální péči od prvotní
-                konzultace, přes projekt, až po samotnou instalaci a následný
-                servis. Naši odborníci Vám pomohou vybrat optimální řešení,
-                které bude odpovídat Vašim potřebám, finančním možnostem a
-                charakteru Vaší nemovitosti.
-                <br />
-                <br />
-                Dbáme na kvalitu použitých materiálů a technologií.
-                Spolupracujeme s předními světovými výrobci, což zajišťuje
-                dlouhou životnost a vysokou efektivitu našich systémů. Kromě
-                toho Vám pomůžeme s administrativou a získáním dotací, abyste
-                měli celý proces co nejjednodušší.
-                <br />
-                <br />
-                Naší prioritou je transparentnost, spolehlivost a budování
-                dlouhodobých vztahů. S námi získáte nejen kvalitní produkt, ale
-                také jistotu, že se o Vás postaráme i po dokončení instalace.
-                Věříme, že investice do fotovoltaiky má smysl, a rádi Vás na
-                této cestě podpoříme. Vyberte si nás a získejte spolehlivého
-                partnera pro vaši energetickou budoucnost.
             </p>
             <div className="about-company__counter-container">
                 <div className="counter">

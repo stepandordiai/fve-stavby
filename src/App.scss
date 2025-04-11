@@ -36,7 +36,9 @@ body {
     }
 }
 
-@media screen and (max-width: 900px) {
+// $mobile: 896px;
+
+@media screen and (max-width: 896px) {
     body {
         padding: 10px;
     }

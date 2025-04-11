@@ -2,6 +2,16 @@
     padding: 25px;
 }
 
+.about-us__title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-bottom: 25px;
+}
+
+.about-us__desc {
+    padding-bottom: 25px;
+}
+
 .our-team__title {
     font-size: 1.5rem;
     font-weight: 500;
@@ -87,7 +97,7 @@
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 896px) {
     .about-us {
         padding: 25px 10px;
     }

@@ -1,7 +1,7 @@
 @use "./../../mixins" as *;
 
 .components {
-    padding: 25px;
+    padding: 0 25px 25px;
 }
 
 .components-container {
@@ -27,9 +27,7 @@
 }
 
 .inverter-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
 }
 
 .inverter-title {
@@ -37,17 +35,13 @@
     font-weight: 500;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 896px) {
     .components {
-        padding: 10px;
+        padding: 0 10px 10px;
     }
 
     .components-container__title {
-        position: sticky;
-        top: 0;
-
-        padding-top: 140px;
-        padding-bottom: 10px;
+        padding-top: 80px;
     }
 }
 

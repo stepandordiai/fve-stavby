@@ -14,6 +14,30 @@ const AboutUs = () => {
             </Helmet>
             <PageTitle title={"O nás"} img={img} />
             <div className={styles["about-us"]}>
+                <h2 className={styles["about-us__title"]}>O nás</h2>
+                <p className={styles["about-us__desc"]}>
+                    Především klademe důraz na individuální přístup. Každý
+                    projekt je pro nás jedinečný a věnujeme mu maximální péči od
+                    prvotní konzultace, přes projekt, až po samotnou instalaci a
+                    následný servis. Naši odborníci Vám pomohou vybrat optimální
+                    řešení, které bude odpovídat Vašim potřebám, finančním
+                    možnostem a charakteru Vaší nemovitosti.
+                    <br />
+                    <br />
+                    Dbáme na kvalitu použitých materiálů a technologií.
+                    Spolupracujeme s předními světovými výrobci, což zajišťuje
+                    dlouhou životnost a vysokou efektivitu našich systémů. Kromě
+                    toho Vám pomůžeme s administrativou a získáním dotací,
+                    abyste měli celý proces co nejjednodušší.
+                    <br />
+                    <br />
+                    Naší prioritou je transparentnost, spolehlivost a budování
+                    dlouhodobých vztahů. S námi získáte nejen kvalitní produkt,
+                    ale také jistotu, že se o Vás postaráme i po dokončení
+                    instalace. Věříme, že investice do fotovoltaiky má smysl, a
+                    rádi Vás na této cestě podpoříme. Vyberte si nás a získejte
+                    spolehlivého partnera pro vaši energetickou budoucnost.
+                </p>
                 <h2 className={styles["our-team__title"]}>Náš tým</h2>
                 <div className={styles["our-team__grid"]}>
                     <div className={styles["our-team__grid-item"]}>

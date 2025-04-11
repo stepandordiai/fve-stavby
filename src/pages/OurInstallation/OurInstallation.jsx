@@ -175,7 +175,7 @@ const OurInstallation = () => {
                 document.addEventListener("scroll", () => {
                     const cardRect = card.getBoundingClientRect();
 
-                    if (cardRect.top < window.innerHeight - 200) {
+                    if (cardRect.top < window.innerHeight) {
                         const innerCard = document.querySelectorAll(
                             ".our-installation__card"
                         );
@@ -190,7 +190,7 @@ const OurInstallation = () => {
 
                 const cardRect = card.getBoundingClientRect();
 
-                if (cardRect.top < window.innerHeight - 200) {
+                if (cardRect.top < window.innerHeight) {
                     const innerCard = document.querySelectorAll(
                         ".our-installation__card"
                     );

@@ -28,17 +28,15 @@ const HomeTitle = () => {
                             se solární energií
                         </h2>
                     </div>
-                    <div className="home-title__links-container">
-                        <NavLink className="home-title__link" to={"/contacts"}>
-                            <span>Domvluvte si nezavaznu sluzku</span>
-                            <img
-                                className="home-title__link-icon"
-                                src={arrow}
-                                alt=""
-                                loading="lazy"
-                            />
-                        </NavLink>
-                    </div>
+                    <NavLink className="home-title__link" to={"/contacts"}>
+                        <span>Domvluvte si nezavaznu sluzku</span>
+                        <img
+                            className="home-title__link-icon"
+                            src={arrow}
+                            alt=""
+                            loading="lazy"
+                        />
+                    </NavLink>
                 </div>
             </div>
         </div>

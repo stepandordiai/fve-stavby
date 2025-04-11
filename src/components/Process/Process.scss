@@ -60,8 +60,7 @@
 .details-number {
     width: 50px;
     aspect-ratio: 1/1;
-    display: grid;
-    place-content: center;
+    @include grid-center;
     background: #fff;
     margin-bottom: 25px;
     font-weight: 500;
@@ -76,6 +75,7 @@
 }
 
 .process__icon {
+    width: 30px;
     position: absolute;
     bottom: 35px;
     right: 35px;
@@ -89,10 +89,8 @@
 .process-card__price {
     margin-top: auto;
     align-self: flex-start;
-    height: 40px;
-    border-radius: 20px;
-    padding: 0 12.5px;
-    @include grid-center;
+    border-radius: 15px;
+    padding: 5px 7.5px;
     background: var(--accent-clr);
 }
 
@@ -111,23 +109,13 @@
         gap: 25px;
     }
 
-    .process-card {
-        background: var(--bg-light-clr);
-        padding: 25px;
-        border-radius: 25px;
-        flex-basis: 100px;
-        overflow: hidden;
-        height: 400px;
-        transition: all 0.3s;
-    }
-
     .process-card--active {
         flex-grow: 1;
         flex-basis: 400px;
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 896px) {
     .process__title {
         padding: 80px 0 10px;
     }
