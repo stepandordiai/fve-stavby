@@ -19,14 +19,14 @@ const Components = () => {
                 <div className="components-container" id="invertors">
                     <div className="components-container__title">
                         <a href="#invertors" className="components__title">
-                            Invertors
+                        Střídače
                         </a>
                     </div>
                     <div className="inverter-container">
                         <img width={400} src={img1} alt="" />
                         <div>
                             <p className="inverter-title">
-                                SUN-5/6/8/10/12K-SG04LP3-EU
+                            Deye SUN-5/6/8/10/12K-SG04LP3-EU
                             </p>
                             <p>
                                 The Deye Three Phase Hybrid Inverter,
@@ -47,7 +47,7 @@ const Components = () => {
                 <div className="components-container" id="panels">
                     <div className="components-container__title">
                         <a href="#panels" className="components__title">
-                            Panels
+                        Panely
                         </a>
                     </div>
                     <div className="inverter-container">
@@ -67,7 +67,7 @@ const Components = () => {
                 <div className="components-container" id="optimizers">
                     <div className="components-container__title">
                         <a href="#optimizers" className="components__title">
-                            Optimizers
+                        Optimizéry
                         </a>
                     </div>
                     <div className="inverter-container">
@@ -98,7 +98,7 @@ const Components = () => {
                 <div className="components-container" id="connectors">
                     <div className="components-container__title">
                         <a href="#connectors" className="components__title">
-                            Konektors
+                        Bateriová uložiště
                         </a>
                     </div>
                     <div className="inverter-container">

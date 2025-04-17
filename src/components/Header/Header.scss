@@ -170,11 +170,9 @@
     display: flex;
     flex-direction: column;
     gap: 12.5px;
-    min-height: 250px;
     background: var(--bg-dark-clr);
     @include glass-effect(20px);
     border-radius: 25px;
-    padding: 12.5px;
     color: #fff;
     opacity: 0;
     pointer-events: none;
@@ -188,16 +186,14 @@
 
 
 .header-card__link {
-    @include flex-start-center;
-    gap: 12.5px;
     color: #fff;
     border-radius: 25px;
+    padding: 12.5px;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     transition: all 0.3s;
-
-    span {
-        pointer-events: none;
-        font-size: 1.5rem;
-    }
 
     &:hover {
         background: var(--bg-dark-darker-clr);

@@ -158,29 +158,25 @@ const Header = () => {
                     className={"header-card__link"}
                     to={"/components#invertors"}
                 >
-                    <img className="header-card__img" src={img1} alt="" />
-                    <span>Inverters</span>
+                   Střídače
                 </HashLink>
                 <HashLink
                     className={"header-card__link"}
                     to={"/components#panels"}
                 >
-                    <img className="header-card__img" src={img2} alt="" />
-                    <span>Panels</span>
+                    Panely
                 </HashLink>
                 <HashLink
                     className={"header-card__link"}
                     to={"/components#optimizers"}
                 >
-                    <img className="header-card__img" src={img3} alt="" />
-                    <span>Optimizers</span>
+                    Optimizéry
                 </HashLink>
                 <HashLink
                     className={"header-card__link"}
                     to={"/components#connectors"}
                 >
-                    <img className="header-card__img" src={img4} alt="" />
-                    <span>Konektors</span>
+                    Bateriová uložiště
                 </HashLink>
             </div>
         </>

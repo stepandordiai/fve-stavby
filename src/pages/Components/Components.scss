@@ -21,7 +21,9 @@
     background: var(--bg-light-clr);
     height: 50px;
     border-radius: 25px;
-    @include grid-center;
+    padding: 0 12.5px;
+    display: flex;
+    align-items: center;
     @include glass-effect(20px);
     color: #000;
 }
