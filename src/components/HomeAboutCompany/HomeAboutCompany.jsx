@@ -1,76 +1,16 @@
 import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import img1 from "/assets/img/9.jpg";
-import img2 from "/assets/img/1.jpg";
+import img1 from "/assets/img/3.jpg";
+import img2 from "/assets/img/10.jpg";
 import arrow from "/assets/icons/arrow-upper-right-white.png";
 import "./HomeAboutCompany.scss";
 
 const HomeAboutCompany = () => {
-    // useEffect(() => {
-    // let isClosureUsed = false;
-
-    // document.addEventListener("scroll", () => {
-    // const counterContainer = document.querySelector(
-    //     ".about-company__counter-container"
-    // );
-
-    // const counters = document.querySelectorAll(".counter");
-
-    // if (counters) {
-    //     counters.forEach((counter) => {
-    //         let counterRect = counter.getBoundingClientRect().top;
-    //         let counterInner = counter.querySelector("p");
-    //         let counterText = counterInner.textContent;
-
-    //         if (counterRect < window.innerHeight) {
-    //             if (!isClosureUsed) {
-    //                 closureCounterOuter(counterInner, counterText, 100);
-    //                 // closureCounterOuter("client", 380, 10);
-    //                 // closureCounterOuter("work", 50, 50);
-    //                 isClosureUsed = true;
-    //             }
-    //         }
-    //     });
-    // const counterContainerRect =
-    //     counterContainer.getBoundingClientRect().top;
-    // if (counterContainerRect < window.innerHeight) {
-    //     if (!isClosureUsed) {
-    //         closureCounterOuter("year", 14, 100);
-    //         closureCounterOuter("client", 380, 10);
-    //         closureCounterOuter("work", 50, 50);
-    //         isClosureUsed = true;
-    //     }
-    //             // }
-    //         }
-    //     });
-    // }, []);
-
-    // function closureCounterOuter(id, qty, speed) {
-    //     let isCounting = false;
-    //     const text = id;
-    //     const width = text.offsetWidth;
-    //     if (!isCounting) {
-    //         let initQty = 0;
-    //         let customInterval = setInterval(closureCounterInner, speed);
-    //         function closureCounterInner() {
-    //             if (initQty === qty) {
-    //                 clearInterval(customInterval);
-    //             } else {
-    //                 initQty++;
-    //                 id.innerHTML = initQty;
-    //                 text.style.width = `${width}px`;
-    //             }
-    //         }
-    //     }
-    //     isCounting = true;
-    // }
-
     useEffect(() => {
         let valueDisplays = document.querySelectorAll(".counter-wrapper");
         const valueWrappers = document.querySelectorAll(".value-wrapper");
         let interval = 1000;
 
-        // if (valueDisplays) {
         valueDisplays.forEach((valueDisplay, index) => {
             let isUsed = false;
             addEventListener("scroll", () => {
@@ -111,7 +51,6 @@ const HomeAboutCompany = () => {
                 }
             });
         });
-        // }
     }, []);
 
     return (

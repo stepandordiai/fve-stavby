@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
 import Advantages from "../../components/Advantages/Avantages";
-import img from "/assets/img/2.jpg";
+import img from "/assets/img/10.jpg";
 import "./Company.scss";
 
 const Company = () => {

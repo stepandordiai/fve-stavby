@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
-import img from "/assets/img/1.jpg";
+import img from "/assets/img/6.jpg";
 import img1 from "/assets/001.jpg";
 import img2 from "/assets/002.webp";
 import img3 from "/assets/003.jpg";

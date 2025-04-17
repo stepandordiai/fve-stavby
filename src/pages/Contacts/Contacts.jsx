@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import arrow from "/assets/icons/arrow-upper-right-white.png";
-import img from "/assets/img/6.jpg";
+import img from "/assets/img/14.jpg";
 import "./../../global/LinkEffect.scss";
 import "./Contacts.scss";
 
