@@ -25,7 +25,7 @@ const ContactUs = () => {
                     </h2>
                     <form
                         className="form"
-                        action="mailto:obchod@fvestavby.cz"
+                        action="mailto:info@fvestavby.cz"
                         method="post"
                         encType="text/plain"
                     >
@@ -99,16 +99,16 @@ const ContactUs = () => {
                             <p className="contact-details__title">E-mail</p>
                             <a
                                 className="contact-details__link"
-                                href="mailto:obchod@fvestavby.cz"
+                                href="mailto:info@fvestavby.cz"
                             >
-                                obchod@fvestavby.cz
+                                info@fvestavby.cz
                             </a>
                         </div>
                         <div className="contact-details">
                             <p className="contact-details__title">Adresa</p>
                             <a
                                 className="contact-details__link"
-                                href="mailto:obchod@fvestavby.cz"
+                                href="mailto:info@fvestavby.cz"
                             >
                                 Pod Hroby 271 Kolín IV
                             </a>

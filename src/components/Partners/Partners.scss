@@ -1,3 +1,5 @@
+@use './../../mixins' as *;
+
 .partners-title {
     font: {
         size: 1.5rem;
@@ -34,8 +36,7 @@
     height: var(--height);
     position: absolute;
     left: 100%;
-    display: grid;
-    place-content: center;
+    @include grid-center;
     animation: autoRun 10s linear infinite;
     //
     animation-delay: calc(
@@ -43,8 +44,10 @@
     ) !important;
     //
 
+
     img {
         width: 100%;
+        cursor: pointer;
         filter: grayscale(1);
         transition: 0.3s;
 

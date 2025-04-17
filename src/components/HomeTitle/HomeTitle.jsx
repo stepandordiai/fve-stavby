@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import arrow from "/assets/icons/arrow-upper-right-white.png";
-import logo2 from "/assets/logo/fvestavby-cz-2.png";
+import logo from "/assets/logo/solar-panel.png";
 import "./HomeTitle.scss";
 
 const HomeTitle = () => {
@@ -10,8 +10,8 @@ const HomeTitle = () => {
                 <p className="loading__title">
                     <img
                         className="loading__title-icon"
-                        src={logo2}
-                        alt="Logo"
+                        src={logo}
+                        alt=""
                         loading="lazy"
                     />
                     <span>FVE STAVBY s.r.o.</span>

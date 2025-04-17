@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
-import logo from "/assets/logo/fve-stavby-black.png";
-import footerBottomLogo from "/assets/fve-stavby-footer-logo.png";
+import logo from "/assets/logo/solar-panel.png";
+import footerBottomLogo from "/assets/fve-stavby-footer-logo.svg";
 import { useEffect } from "react";
 import isTouchDevice from "../../utils/isTouchDevice";
 import "./../../global/LinkEffect.scss";
@@ -170,16 +170,16 @@ const Footer = () => {
                             <span>E-mail</span>
                             <a
                                 className="footer__link"
-                                href="mailto:obchod@fvestavby.com"
+                                href="mailto:info@fvestavby.com"
                             >
-                                obchod@fvestavby.com
+                                info@fvestavby.com
                             </a>
                         </li>
                         <li>
                             <span>Adresa</span>
                             <a
                                 className="footer__link"
-                                href="mailto:obchod@fvestavby.com"
+                                href="mailto:info@fvestavby.com"
                             >
                                 Pod Hroby 271 Kolín IV
                             </a>

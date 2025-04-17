@@ -46,7 +46,7 @@ const AboutUs = () => {
                             <img src={userIcon} alt="" />
                         </div>
                         <p className={styles["our-team__grid-item-name"]}>
-                            John Doe
+                            Tomáš Maliga
                         </p>
                         <p className={styles["our-team__grid-item-position"]}>
                             Generální ředitel
@@ -79,10 +79,10 @@ const AboutUs = () => {
                             <img src={userIcon} alt="" />
                         </div>
                         <p className={styles["our-team__grid-item-name"]}>
-                            John Doe
+                            Stepan Dordiai
                         </p>
                         <p className={styles["our-team__grid-item-position"]}>
-                            Marketing
+                            IT Specialista
                         </p>
                     </div>
                 </div>
@@ -96,27 +96,27 @@ const AboutUs = () => {
                     </div>
                     <div className={styles["guarantees__grid-item"]}>
                         <p>15</p>
-                        <p>let Fotovoltaické panely</p>
+                        <p>let fotovoltaické panely</p>
                     </div>
                     <div className={styles["guarantees__grid-item"]}>
                         <p>25</p>
-                        <p>let Záruka na výkon panelů</p>
+                        <p>let záruka na výkon panelů</p>
                     </div>
                     <div className={styles["guarantees__grid-item"]}>
                         <p>5</p>
-                        <p>let Montáž</p>
+                        <p>let montáž</p>
                     </div>
                     <div className={styles["guarantees__grid-item"]}>
                         <p>10</p>
-                        <p>let Montážní systém</p>
+                        <p>let montážní systém</p>
                     </div>
                     <div className={styles["guarantees__grid-item"]}>
                         <p>2</p>
-                        <p>let Kabeláž</p>
+                        <p>roky kabeláž</p>
                     </div>
                     <div className={styles["guarantees__grid-item"]}>
                         <p>2</p>
-                        <p>let Zabezpečení AC/DC </p>
+                        <p>roky zabezpečení AC/DC </p>
                     </div>
                     <div className={styles["guarantees__grid-item"]}>
                         <p>6000</p>

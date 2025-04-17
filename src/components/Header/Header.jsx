@@ -7,7 +7,7 @@ import img1 from "/assets/001.jpg";
 import img2 from "/assets/002.webp";
 import img3 from "/assets/003.jpg";
 import img4 from "/assets/mc4.webp";
-import logo2 from "/assets/logo/fvestavby-cz-2.png";
+import logo from "/assets/logo/solar-panel.png";
 import "./Header.scss";
 
 const Header = () => {
@@ -81,7 +81,7 @@ const Header = () => {
             <header className="header">
                 <div className="header-top">
                     <NavLink to={"/"} className="header-top__logo">
-                        <img src={logo2} alt="Logo" />
+                        <img src={logo} alt="Logo" />
                         <span>FVE STAVBY</span>
                     </NavLink>
                     <a href="tel:+420728803703" className="header-top__number">

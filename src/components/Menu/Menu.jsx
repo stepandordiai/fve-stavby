@@ -102,16 +102,16 @@ const Menu = () => {
                         <p>E-mail</p>
                         <a
                             className="menu-link"
-                            href="mailto:obchod@fvestavby.cz"
+                            href="mailto:info@fvestavby.cz"
                         >
-                            obchod@fvestavby.cz
+                            info@fvestavby.cz
                         </a>
                     </li>
                     <li>
                         <p>Adresa</p>
                         <a
                             className="menu-link"
-                            href="mailto:obchod@fvestavby.cz"
+                            href="mailto:info@fvestavby.cz"
                         >
                             Pod Hroby 271 Kolín IV
                         </a>

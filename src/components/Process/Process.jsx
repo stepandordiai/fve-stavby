@@ -31,17 +31,13 @@ const Process = () => {
                 <div className="process-card process-card--active">
                     <p className="details-number">01</p>
                     <div className="details-wrapper details-wrapper--active">
-                        <p>Osobni konzultace a zajisteni podkladu</p>
+                        <p>Osobní konzultace a zajištění podkladů</p>
                         <div className="process-divider"></div>
 
                         <p>
-                            Nas technicky konzultant primo na miste zhodnoti
-                            moznosti realizace
-                        </p>
-                        <p>
-                            Zjistime zakladni informace o vasich planech,
-                            predstavach a moznostech - a navrhneme idealni
-                            reseni
+                        Náš technický konzultant přímo na místě zhodnotí možnosti realizace. Zjistí
+základní informace o Vašich plánech, představách a možnostech  a navrhne
+ideální řešení.
                         </p>
                     </div>
                     <img
@@ -53,55 +49,34 @@ const Process = () => {
                 <div className="process-card">
                     <p className="details-number">02</p>
                     <div className="details-wrapper">
-                        <p>Priprava nabidky</p>
+                        <p>Příprava nabídky</p>
                         <div className="process-divider"></div>
 
                         <p>
-                            Obstarame veskera povoleni, ktera pro realizaci
-                            projektu potrebujete.
+                        Na základě všech podkladů zpracujeme cenovou nabídku.
                         </p>
                     </div>
                     <img className="process__icon" src={plusIcon} alt="" />
                 </div>
-                {/* <div className="process-card">
-                    <p className="details-number">02</p>
-                    <div className="details-wrapper">
-                        <p>Zajisteni podkladu</p>
-                        <div className="process-divider"></div>
-                        <p>
-                            Zjistime zakladni informace o vasich planech,
-                            predstavach a moznostech - a navrhneme idealni
-                            reseni
-                        </p>
-                    </div>
-                    <img
-                        className="process__icon"
-                        width={30}
-                        src={plusIcon}
-                        alt=""
-                    />
-                </div> */}
-
                 <div className="process-card">
                     <p className="details-number">03</p>
                     <div className="details-wrapper">
-                        <p> Podpis smlouvy</p>
+                        <p>Technický audit</p>
                         <div className="process-divider"></div>
 
-                        <p>Na zaklade vsech podkladu zpracujeme nabidku</p>
+                        <p>V případě dohody Vás navštíví náš technický specialista, a dopodrobna s Vámi
+projedná nejlepší možný technologický postup instalace Vaší fotovoltaické
+elektrárny.</p>
                     </div>
                     <img className="process__icon" src={plusIcon} alt="" />
                 </div>
                 <div className="process-card">
                     <p className="details-number">04</p>
                     <div className="details-wrapper">
-                        <p>Technický audit</p>
+                        <p>Podpis smlouvy</p>
                         <div className="process-divider"></div>
                         <p>
-                            Po podpisy smoulvi Vas navstivi nas technicki
-                            specialista, a dopodrobna s vami projedna nejlepsi
-                            mozne technologicki postup instalace vasi
-                            fotovoltacke elektrarni
+                        Dalším krokem v postupu je podepsání smlouvy o dílo.
                         </p>
                         <div className="process-card__price">
                             Zdarma pro naše klienty
@@ -113,12 +88,12 @@ const Process = () => {
                 <div className="process-card">
                     <p className="details-number">05</p>
                     <div className="details-wrapper">
-                        <p>Vyrizeni administrativy</p>
+                        <p>Vyřízení administrativy</p>
                         <div className="process-divider"></div>
 
                         <p>
-                            Obstarame veskera povoleni, ktera pro realizaci
-                            projektu potrebujete.
+                        Zajistíme veškerá povolení, která pro realizaci projektu potřebujeme a vyřídíme
+                        Vám dotaci.
                         </p>
                     </div>
                     <img className="process__icon" src={plusIcon} alt="" />
@@ -130,8 +105,7 @@ const Process = () => {
                         <div className="process-divider"></div>
 
                         <p>
-                            Propojime vsechny komponenty a provedeme revizi.
-                            Predame vam dokumentaci a zaskolime vas.
+                        Nainstalujeme Vaši fotovoltaickou elektrárnu a provedeme revizi.
                         </p>
                     </div>
                     <img className="process__icon" src={plusIcon} alt="" />
@@ -142,8 +116,20 @@ const Process = () => {
                         <p>Servis a monitoring</p>
                         <div className="process-divider"></div>
                         <p>
-                            Nadale hlidame funkcnost reseni a pripadny servis
-                            zajistime co nejrychleji.
+                        Nadále hlídáme funkčnost instalace a v případě potřeby zajistíme servis co 
+                        nejrychleji.
+                        </p>
+                    </div>
+                    <img className="process__icon" src={plusIcon} alt="" />
+                </div>
+                <div className="process-card">
+                    <p className="details-number">08</p>
+                    <div className="details-wrapper">
+                        <p>Spokojený zákazník</p>
+                        <div className="process-divider"></div>
+                        <p>
+                        Spokojený zákazník, který používá svou fotovoltaickou elektrárnu a své
+zkušenosti s montáží a firmou dále doporučuje svým kamarádům a známým.
                         </p>
                     </div>
                     <img className="process__icon" src={plusIcon} alt="" />
