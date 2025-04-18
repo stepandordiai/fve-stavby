@@ -3,10 +3,6 @@ import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import LngSelect from "../LngSelect/LngSelect";
 import { useEffect } from "react";
-import img1 from "/assets/001.jpg";
-import img2 from "/assets/002.webp";
-import img3 from "/assets/003.jpg";
-import img4 from "/assets/mc4.webp";
 import logo from "/assets/logo/solar-panel.png";
 import "./Header.scss";
 
@@ -158,25 +154,25 @@ const Header = () => {
                     className={"header-card__link"}
                     to={"/components#invertors"}
                 >
-                    Střídače
-                </HashLink>
-                <HashLink
-                    className={"header-card__link"}
-                    to={"/components#panels"}
-                >
-                    Panely
-                </HashLink>
-                <HashLink
-                    className={"header-card__link"}
-                    to={"/components#optimizers"}
-                >
-                    Optimizéry
+                    Střídače (Deye, Solax Power)
                 </HashLink>
                 <HashLink
                     className={"header-card__link"}
                     to={"/components#connectors"}
                 >
-                    Bateriová uložiště
+                    Bateriová uložiště (Deye, Solax)
+                </HashLink>
+                <HashLink
+                    className={"header-card__link"}
+                    to={"/components#panels"}
+                >
+                    Panely (Jinko, Aiko)
+                </HashLink>
+                <HashLink
+                    className={"header-card__link"}
+                    to={"/components#optimizers"}
+                >
+                    Optimizéry (Tigo)
                 </HashLink>
             </div>
         </>

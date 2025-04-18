@@ -1,4 +1,3 @@
 User-agent: *
-Disallow: /private/
 Allow: /
-Sitemap: https://www.fvestavby.cz/sitemap.xml
+Sitemap: https://fvestavby.cz/sitemap.xml
