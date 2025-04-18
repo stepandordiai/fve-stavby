@@ -10,6 +10,7 @@ const Company = () => {
         <>
             <Helmet>
                 <title>Firemní instalace | FVE STAVBY</title>
+                <link rel="canonical" href="https://fvestavby.cz/company" />
             </Helmet>
             <PageTitle title={"Firemní instalace"} img={img} />
             <Advantages />

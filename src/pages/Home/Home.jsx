@@ -13,6 +13,7 @@ const Home = () => {
         <>
             <Helmet>
                 <title>Fotovoltaika, která dává smysl | FVE STAVBY</title>
+                <link rel="canonical" href="https://fvestavby.cz/" />
             </Helmet>
             <HomeTitle />
             <section className="home">

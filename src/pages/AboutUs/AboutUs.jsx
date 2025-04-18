@@ -12,6 +12,7 @@ const AboutUs = () => {
         <>
             <Helmet>
                 <title>O nás | FVE STAVBY</title>
+                <link rel="canonical" href="https://fvestavby.cz/about-us" />
             </Helmet>
             <PageTitle title={"O nás"} img={img} />
             <div className={styles["about-us"]}>

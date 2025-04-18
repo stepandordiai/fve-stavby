@@ -16,6 +16,7 @@ const ContactUs = () => {
         <>
             <Helmet>
                 <title>Kontakty | FVE STAVBY</title>
+                <link rel="canonical" href="https://fvestavby.cz/contacts" />
             </Helmet>
             <PageTitle title={"Kontakty"} img={img} />
             <div className="contacts">

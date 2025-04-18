@@ -213,6 +213,7 @@ const OurInstallation = () => {
         <>
             <Helmet>
                 <title>Naše instalace | FVE STAVBY</title>
+                <link rel="canonical" href="https://fvestavby.cz/our-installation" />
             </Helmet>
             <PageTitle title={"Naše instalace"} img={img} />
             <section className="our-installation">

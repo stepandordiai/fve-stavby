@@ -17,6 +17,7 @@ const Components = () => {
         <>
             <Helmet>
                 <title>Komponenty | FVE STAVBY</title>
+                <link rel="canonical" href="https://fvestavby.cz/components" />
             </Helmet>
             <PageTitle title={"Komponenty"} img={titleImg} />
             <div className="components">
