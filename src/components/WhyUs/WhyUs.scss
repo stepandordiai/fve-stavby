@@ -8,6 +8,7 @@
 
 .advantages {
     display: flex;
+    padding-top: 25px;
 }
 
 .advantages-title-container {
@@ -30,6 +31,10 @@
 .advantages-item {
     border-bottom: 2.5px solid var(--bg-light-clr);
     padding: 12.5px 0;
+
+    &:nth-last-child(1){
+        border-bottom: none;
+    }
 }
 
 .advantages-btn {

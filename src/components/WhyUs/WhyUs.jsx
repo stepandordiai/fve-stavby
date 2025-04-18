@@ -19,7 +19,7 @@ const Advantages = () => {
 
     return (
         <>
-            <div className="divider"></div>
+            {/* <div className="divider"></div> */}
             <section className="advantages">
                 <div className="advantages-title-container">
                     <h2>Proč si vybrat naši firmu?</h2>

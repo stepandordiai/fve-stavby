@@ -10,7 +10,7 @@ const WhySolar = () => {
             <h2 className="why-solar__title">
                 Proč byste měli používat solární energii
             </h2>
-            <p style={{ marginTop: "12.5px" }}>
+            <p>
                 Věříme v sílu sluneční energie transformovat životy a komunity
             </p>
             <div className="why-solar">

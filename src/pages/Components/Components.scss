@@ -5,14 +5,12 @@
 }
 
 .components-container {
-    // min-height: 500px;
 }
 
 .components-container__title {
     position: sticky;
-    top: 0;
-    padding-top: 170px;
-    padding-bottom: 25px;
+    top: 145px;
+    padding: 25px 0;
 }
 
 .components__title {
@@ -39,11 +37,11 @@
 
 @media screen and (max-width: 896px) {
     .components {
-        padding: 0 10px 10px;
+        padding: 0 10px 25px;
     }
 
     .components-container__title {
-        padding-top: 80px;
+        top: 55px;
     }
 }
 

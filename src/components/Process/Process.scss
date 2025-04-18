@@ -4,7 +4,7 @@
     font-size: 1.5rem;
     font-weight: 500;
     text-transform: uppercase;
-    padding: 125px 0 25px;
+    padding: 25px 0 25px;
 }
 
 .process-grid {
@@ -112,11 +112,5 @@
     .process-card--active {
         flex-grow: 1;
         flex-basis: 400px;
-    }
-}
-
-@media screen and (max-width: 896px) {
-    .process__title {
-        padding: 80px 0 10px;
     }
 }

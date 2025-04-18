@@ -6,7 +6,7 @@
 }
 
 .about-company__title {
-    padding: 125px 0 25px;
+    padding: 25px 0 25px;
 
     font: {
         size: 1.5rem;
@@ -94,7 +94,7 @@
     }
 
     text-transform: uppercase;
-    padding: 120px 0 25px;
+    padding: 25px 0 25px;
 }
 
 .cards-container {
@@ -236,17 +236,9 @@
 }
 
 @media screen and (max-width: 896px) {
-    .about-company__title {
-        padding: 80px 0 10px;
-    }
-
     .counter {
         p:nth-child(2) {
             padding-bottom: 30px;
         }
-    }
-
-    .we-work-with__title {
-        padding: 80px 0 10px;
     }
 }

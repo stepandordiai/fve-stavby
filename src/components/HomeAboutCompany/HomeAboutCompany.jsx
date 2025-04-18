@@ -36,7 +36,7 @@ const HomeAboutCompany = () => {
 
                                 // I tried to increase duration every loop so counter end up smoothly
 
-                                duration += 0.5;
+                                // duration += 0.25;
                                 if (startValue == endValue) {
                                     clearTimeout(counter);
                                 } else {
@@ -67,8 +67,9 @@ const HomeAboutCompany = () => {
             </p>
             <div className="about-company__counter-container">
                 <div className="counter">
-                    <p className="counter-wrapper value-wrapper" data-val="5">
-                        0
+                    <p>
+                        <span className="counter-wrapper value-wrapper" data-val="5">0</span>
+                        <span>+</span>
                     </p>
                     <p>let praxe</p>
                 </div>
@@ -76,7 +77,7 @@ const HomeAboutCompany = () => {
                     <p>
                         <span
                             className="counter-wrapper value-wrapper"
-                            data-val="100"
+                            data-val="270"
                         >
                             000
                         </span>
@@ -89,7 +90,7 @@ const HomeAboutCompany = () => {
                     <p className="counter-wrapper value-wrapper" data-val="14">
                         00
                     </p>
-                    <p>pracovníků</p>
+                    <p>členů týmu</p>
                 </div>
             </div>
             <NavLink to={"/about-us"} className="about-company__link">

@@ -33,7 +33,7 @@ const Header = () => {
             } else {
                 document
                     .querySelector(".header-card")
-                    .classList.remove("header-card--active");
+                .classList.remove("header-card--active");
             }
         });
 
@@ -158,7 +158,7 @@ const Header = () => {
                     className={"header-card__link"}
                     to={"/components#invertors"}
                 >
-                   Střídače
+                    Střídače
                 </HashLink>
                 <HashLink
                     className={"header-card__link"}
