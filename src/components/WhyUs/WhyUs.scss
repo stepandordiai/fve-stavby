@@ -1,10 +1,6 @@
 @use "./../../mixins" as *;
 
-.divider {
-    height: 2.5px;
-    background: var(--bg-light-clr);
-    margin-top: 125px;
-}
+
 
 .advantages {
     display: flex;
@@ -89,12 +85,6 @@
 }
 
 @media screen and (max-width: 896px) {
-    .divider {
-        height: 2.5px;
-        background: var(--bg-light-clr);
-        margin-top: 80px;
-    }
-
     .advantages {
         flex-direction: column;
     }

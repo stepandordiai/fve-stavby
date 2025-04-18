@@ -1,5 +1,12 @@
 @use "./../../mixins" as *;
 
+.divider {
+    height: 3px;
+    border-radius: 1.5px;
+    background: var(--bg-light-clr);
+    margin: 25px 0;
+}
+
 .components {
     padding: 0 25px 25px;
 }
@@ -27,7 +34,10 @@
 }
 
 .inverter-container {
-    @include flex-center;
+    // @include flex-center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .inverter-title {
