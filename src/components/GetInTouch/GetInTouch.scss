@@ -1,73 +1,69 @@
 @use "./../../mixins" as *;
 
 .get-in-touch {
-    position: relative;
-    height: 375px;
-    border-radius: 25px;
-    overflow: hidden;
-    @include grid-center;
-    margin-bottom: 25px;
+	position: relative;
+	height: 375px;
+	border-radius: 25px;
+	overflow: hidden;
+	@include grid-center;
 }
 
 .get-in-touch__bg {
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
 }
 
 .get-in-touch__title {
-    text-align: center;
-    padding: 0 25px;
-    color: #fff;
-    font-size: clamp(1.5rem, 4vw, 3rem);
-    font-weight: 500;
+	text-align: center;
+	padding: 0 25px;
+	color: #fff;
+	font-size: clamp(1.5rem, 4vw, 3rem);
+	font-weight: 500;
 }
 
 .get-in-touch__link {
-    position: absolute;
-    right: 25px;
-    bottom: 25px;
-    @include flex-center;
-    column-gap: 10px;
-    background: var(--bg-light-clr);
-    @include glass-effect(20px);
-    align-self: flex-end;
-    border-radius: inherit;
-    height: 50px;
-    padding: 0 12.5px;
-    transition: background-color 0.3s;
+	position: absolute;
+	right: 25px;
+	bottom: 25px;
+	@include flex-center;
+	column-gap: 10px;
+	background: var(--bg-light-clr);
+	@include glass-effect(20px);
+	align-self: flex-end;
+	border-radius: inherit;
+	height: 50px;
+	padding: 0 12.5px;
+	transition: background-color 0.3s;
 
-    &:hover {
-        background: var(--bg-light-lighter-clr);
-    }
+	&:hover {
+		background: var(--bg-light-lighter-clr);
+	}
 
-    span {
-        color: #fff;
-    }
+	span {
+		color: #fff;
+	}
 }
 
 .get-in-touch__link-icon {
-    width: 25px;
-    transition: transform 0.3s;
+	width: 25px;
+	transition: transform 0.3s;
 }
 
 .get-in-touch__link:hover .get-in-touch__link-icon {
-    transform: rotate(45deg);
+	transform: rotate(45deg);
 }
 
 @media screen and (max-width: 896px) {
+	.get-in-touch__title {
+		padding: 0 10px;
+	}
 
-    .get-in-touch__title {
-        padding: 0 10px;
-    }
-
-    .get-in-touch__link {
-        right: 10px;
-        bottom: 10px;
-    }
-
-
+	.get-in-touch__link {
+		right: 10px;
+		bottom: 10px;
+	}
 }

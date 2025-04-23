@@ -1,84 +1,78 @@
-@use './../../mixins' as *;
+@use "./../../mixins" as *;
 
 .partners-title {
-    font: {
-        size: 1.5rem;
-        weight: 500;
-    }
+	font: {
+		size: 1.5rem;
+		weight: 500;
+	}
 
-    text-transform: uppercase;
-    padding: 25px 0 25px;
+	text-transform: uppercase;
+	padding: 25px 0 25px;
 }
 
 .slider {
-    margin-bottom: 25px;
-    height: var(--height);
-    overflow: hidden;
-    //
-    mask-image: linear-gradient(
-        to right,
-        transparent,
-        #000 10% 90%,
-        transparent
-    );
-    //
+	margin-bottom: 25px;
+	height: var(--height);
+	overflow: hidden;
+	//
+	mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
+	//
 }
 
 .list {
-    display: flex;
-    width: 100%;
-    min-width: calc(var(--width) * var(--quantity));
-    position: relative;
+	display: flex;
+	width: 100%;
+	min-width: calc(var(--width) * var(--quantity));
+	position: relative;
 }
 
 .item {
-    width: var(--width);
-    height: var(--height);
-    position: absolute;
-    left: 100%;
-    @include grid-center;
-    animation: autoRun 10s linear infinite;
-    //
-    animation-delay: calc(
-        (10s / var(--quantity)) * (var(--position) - 1)
-    ) !important;
-    //
+	width: var(--width);
+	height: var(--height);
+	position: absolute;
+	left: 100%;
+	@include grid-center;
+	animation: autoRun 10s linear infinite;
+	//
+	animation-delay: calc(
+		(10s / var(--quantity)) * (var(--position) - 1)
+	) !important;
+	//
 
+	img {
+		width: 100%;
+		cursor: pointer;
+		filter: grayscale(1);
+		transition: 0.3s;
 
-    img {
-        width: 100%;
-        cursor: pointer;
-        filter: grayscale(1);
-        transition: 0.3s;
-
-        &:hover {
-            filter: grayscale(0);
-        }
-    }
+		&:hover {
+			filter: grayscale(0);
+		}
+	}
 }
 
 .slider:hover .item {
-    animation-play-state: paused;
+	animation-play-state: paused;
 }
 
 @keyframes autoRun {
-    from {
-        left: 100%;
-    }
-    to {
-        left: calc(var(--width) * -1);
-    }
+	from {
+		left: 100%;
+	}
+	to {
+		left: calc(var(--width) * -1);
+	}
 }
 
 .slider[reverse="true"] .item {
-    animation: reversePlay 10s linear infinite;
+	animation: reversePlay 10s linear infinite;
 }
 
 @keyframes reversePlay {
-    from {
-        left: calc(var(--width) * -1);
-    }
-    to {
-        left: 100%;
-    }
+	from {
+		left: calc(var(--width) * -1);
+	}
+	to {
+		left: 100%;
+	}
 }

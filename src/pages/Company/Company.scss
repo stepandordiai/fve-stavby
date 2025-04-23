@@ -1,0 +1,9 @@
+.company {
+	padding: 25px;
+}
+
+@media screen and (max-width: 896px) {
+	.company {
+		padding: 25px 10px;
+	}
+}

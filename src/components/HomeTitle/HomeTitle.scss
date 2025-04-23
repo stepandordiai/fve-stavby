@@ -1,176 +1,169 @@
 @use "./../../mixins" as *;
 
 .home-title {
-    position: relative;
-    height: calc(100svh - 50px);
-    border-radius: 25px;
-    overflow: hidden;
-    scale: 0.25;
-    animation: animateHomeTitle 2s forwards;
-    animation-timing-function: cubic-bezier(0.75, 0.5, 0.25, 1);
+	position: relative;
+	height: calc(100svh - 50px);
+	border-radius: 25px;
+	overflow: hidden;
+	scale: 0.25;
+	animation: animateHomeTitle 2s forwards;
+	animation-timing-function: cubic-bezier(0.75, 0.5, 0.25, 1);
 }
 
 @keyframes animateHomeTitle {
-    100% {
-        scale: 1;
-    }
+	100% {
+		scale: 1;
+	}
 }
 
 .home-title::before {
-    content: "";
-    position: absolute;
-    z-index: -10;
-    height: 100%;
-    width: 100%;
-    background: url("/assets/img/4.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    scale: 2;
-    animation: animateBgImg 2s forwards;
-    animation-timing-function: cubic-bezier(0.75, 0.5, 0.25, 1);
+	content: "";
+	position: absolute;
+	z-index: -10;
+	height: 100%;
+	width: 100%;
+	background: url("/assets/img/4.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	scale: 2;
+	animation: animateBgImg 2s forwards;
+	animation-timing-function: cubic-bezier(0.75, 0.5, 0.25, 1);
 }
 
 @keyframes animateBgImg {
-    100% {
-        scale: 1;
-    }
+	100% {
+		scale: 1;
+	}
 }
 
 .loading__title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    @include flex-center;
-    column-gap: 5px;
-    pointer-events: none;
-    opacity: 0;
-    animation: animateLoadingTitle 2s forwards;
-
-    img {
-        height: 50px;
-    }
-
-    span {
-        font-size: clamp(1.5rem, 4vw, 4rem);
-        font-weight: 500;
-        color: #fff;
-    }
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: clamp(1.5rem, 4vw, 4rem);
+	font-weight: 500;
+	color: #fff;
+	width: 100%;
+	@include flex-center;
+	column-gap: 5px;
+	pointer-events: none;
+	opacity: 0;
+	animation: animateLoadingTitle 2s forwards;
 }
 
 @keyframes animateLoadingTitle {
-    50% {
-        opacity: 1;
-    }
+	50% {
+		opacity: 1;
+	}
 
-    100% {
-        opacity: 0;
-    }
+	100% {
+		opacity: 0;
+	}
 }
 
 .home-title__details-container {
-    position: absolute;
-    right: 25px;
-    bottom: 25px;
-    left: 25px;
-    @include flex-between-end;
-    gap: 10px;
+	position: absolute;
+	right: 25px;
+	bottom: 25px;
+	left: 25px;
+	@include flex-between-end;
+	gap: 10px;
 }
 
 .home-title__details {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    row-gap: 10px;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	row-gap: 10px;
 }
 
 .home-title__title {
-    border-radius: 25px;
-    padding: 12.5px;
-    background: var(--bg-light-clr);
-    @include glass-effect(20px);
-    justify-self: flex-start;
-    color: #fff;
-    font-size: 1.5rem;
-    font-weight: 500;
-    opacity: 0;
-    animation: animateTitle 1s 2s forwards;
+	border-radius: 25px;
+	padding: 12.5px;
+	background: var(--bg-light-clr);
+	@include glass-effect(20px);
+	justify-self: flex-start;
+	color: #fff;
+	font-size: 1.5rem;
+	font-weight: 500;
+	opacity: 0;
+	animation: animateTitle 1s 2s forwards;
 }
 
 .home-title__sec-title {
-    border-radius: 25px;
-    padding: 12.5px;
-    background: var(--bg-light-clr);
-    @include glass-effect(20px);
-    justify-self: flex-start;
-    color: #fff;
-    font-size: 1.5rem;
-    opacity: 0;
-    animation: animateTitle 1s 2s forwards;
+	border-radius: 25px;
+	padding: 12.5px;
+	background: var(--bg-light-clr);
+	@include glass-effect(20px);
+	justify-self: flex-start;
+	color: #fff;
+	font-size: 1.5rem;
+	opacity: 0;
+	animation: animateTitle 1s 2s forwards;
 }
 
 .home-title__info {
-    color: #fff;
-    font-size: clamp(1.5rem, 4vw, 4rem);
-    font-weight: 500;
-    opacity: 0;
-    animation: animateTitle 1s 2s forwards;
+	color: #fff;
+	font-size: clamp(1.5rem, 4vw, 4rem);
+	font-weight: 500;
+	opacity: 0;
+	animation: animateTitle 1s 2s forwards;
 }
 
 .home-title__link {
-    @include flex-center;
-    column-gap: 5px;
-    background: var(--bg-light-clr);
-    color: #fff;
-    @include glass-effect(20px);
-    white-space: nowrap;
-    border-radius: 25px;
-    padding: 12.5px;
-    height: 50px;
-    cursor: pointer;
-    opacity: 0;
-    animation: animateTitle 1s 2s forwards;
-    transition: background-color 0.3s;
+	@include flex-center;
+	column-gap: 5px;
+	background: var(--bg-light-clr);
+	color: #fff;
+	@include glass-effect(20px);
+	white-space: nowrap;
+	border-radius: 25px;
+	padding: 12.5px;
+	height: 50px;
+	cursor: pointer;
+	opacity: 0;
+	animation: animateTitle 1s 2s forwards;
+	transition: background-color 0.3s;
 
-    &:hover {
-        background: var(--bg-light-lighter-clr);
-    }
+	&:hover {
+		background: var(--bg-light-lighter-clr);
+	}
 }
 
 .home-title__link-icon {
-    height: 100%;
-    flex-shrink: 0;
-    transition: all 0.3s;
+	height: 100%;
+	flex-shrink: 0;
+	transition: all 0.3s;
 }
 
 .home-title__link:hover .home-title__link-icon {
-    transform: rotate(45deg);
+	transform: rotate(45deg);
 }
 
 @keyframes animateTitle {
-    to {
-        opacity: 1;
-    }
+	to {
+		opacity: 1;
+	}
 }
 
 @media screen and (max-width: 896px) {
-    .home-title {
-        height: calc(100svh - 20px);
-    }
+	.home-title {
+		height: calc(100svh - 20px);
+	}
 
-    .home-title__details-container {
-        right: 10px;
-        bottom: 10px;
-        left: 10px;
-    }
+	.home-title__details-container {
+		right: 10px;
+		bottom: 10px;
+		left: 10px;
+	}
 }
 
 @media screen and (max-width: 800px) {
-    .home-title__details-container {
-        display: flex;
-        align-items: flex-start;
-        flex-direction: column-reverse;
-    }
+	.home-title__details-container {
+		display: flex;
+		align-items: flex-start;
+		flex-direction: column-reverse;
+	}
 }

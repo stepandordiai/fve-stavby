@@ -1,116 +1,112 @@
 @use "./../../mixins" as *;
 
 .process__title {
-    font-size: 1.5rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    padding: 25px 0 25px;
+	font-size: 1.5rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	padding: 25px 0 25px;
 }
 
 .process-grid {
-    display: flex;
-    gap: 25px;
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
 }
 
 .process-card {
-    position: relative;
-    background: var(--bg-light-clr);
-    padding: 25px;
-    border-radius: 25px;
-    flex-basis: 100px;
-    overflow: hidden;
-    height: 400px;
-    cursor: pointer;
-    transition: all 0.3s;
+	display: flex;
+	flex-direction: column;
+	gap: 12.5px;
+	background: var(--bg-light-clr);
+	padding: 25px;
+	border-radius: 25px;
+	overflow: hidden;
+	min-height: 100px;
+	cursor: pointer;
+	transition: all 0.3s;
 
-    &:hover {
-        background: var(--bg-light-darker-clr);
-    }
+	&:hover {
+		background: var(--bg-light-darker-clr);
+	}
 }
 
-.process-card--active {
-    flex-grow: 1;
+.process-card__title {
+	font: {
+		size: 1.25rem;
+		weight: 500;
+	}
 }
 
-.details-wrapper {
-    opacity: 0;
-    height: calc(100% - 75px);
-    pointer-events: none;
-    display: flex;
-    flex-direction: column;
+.process-card__step {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 5px;
 
-    p:nth-child(1) {
-        font: {
-            size: 1.25rem;
-            weight: 500;
-        }
-    }
-
-    p:nth-of-type(2) {
-        text-align: justify;
-    }
+	span {
+		position: relative;
+		height: 15px;
+		width: 100%;
+		background: white;
+		border-radius: 7.5px;
+		overflow: hidden;
+		transition: all 0.3s;
+	}
 }
 
-.details-wrapper--active {
-    opacity: 1;
-    pointer-events: all;
-    transition: all 0.3s 0.3s;
+.step::before {
+	content: attr(data-step-value);
+	position: absolute;
+	color: transparent;
+	display: grid;
+	place-content: center;
+	width: 100%;
+	height: 100%;
+	transform: scaleX(0);
+	transform-origin: left;
+	background: var(--accent-clr);
+	transition: all 0.3s;
+}
+
+.step--active::before {
+	transform: scaleX(1);
+}
+
+.process-card:hover .process-card__step > span {
+	height: 30px;
+}
+
+.process-card:hover .process-card__step > .step--active::before {
+	color: #000;
+	transition: all 0.3s 0.3s;
 }
 
 .details-number {
-    width: 50px;
-    aspect-ratio: 1/1;
-    @include grid-center;
-    background: #fff;
-    margin-bottom: 25px;
-    font-weight: 500;
-    border-radius: 12.5px;
+	width: 50px;
+	aspect-ratio: 1/1;
+	@include grid-center;
+	background: #fff;
+	font-weight: 500;
+	border-radius: 12.5px;
 }
 
-.process-divider {
-    height: 2.5px;
-    width: 25%;
-    background: #000;
-    margin: 10px 0;
-}
-
-.process__icon {
-    width: 30px;
-    position: absolute;
-    bottom: 35px;
-    right: 35px;
-    transition: all 0.3s;
-}
-
-.process__icon--active {
-    transform: rotate(45deg);
+.process-card__details {
+	text-align: justify;
 }
 
 .process-card__price {
-    margin-top: auto;
-    align-self: flex-start;
-    border-radius: 15px;
-    padding: 5px 7.5px;
-    background: var(--accent-clr);
+	align-self: flex-start;
+	border-radius: 15px;
+	padding: 5px 7.5px;
+	background: var(--accent-clr);
 }
 
-@media screen and (max-width: 1200px) {
-    .process-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
+@media screen and (max-width: 896px) {
+	.process-card {
+		padding: 12.5px;
+	}
 
-// 1125 + (10px of scrollbar width)
-
-@media screen and (max-width: 1135px) {
-    .process-grid {
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-    }
-
-    .process-card--active {
-        flex-grow: 1;
-        flex-basis: 400px;
-    }
+	.process-card__header {
+		margin-bottom: 12.5px;
+	}
 }
