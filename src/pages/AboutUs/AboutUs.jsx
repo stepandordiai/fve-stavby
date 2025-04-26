@@ -1,11 +1,10 @@
 import { Helmet } from "react-helmet";
 import PageTitle from "../../components/PageTitle/PageTitle";
+import Mission from "../../components/Mission/Mission";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
 import img from "/assets/img/7.jpg";
 import userIcon from "/assets/icons/user.png";
-// import "./AboutUs.scss";
 import styles from "./AboutUs.module.scss";
-import Mission from "../../components/Mission/Mission";
 
 const AboutUs = () => {
 	return (
@@ -15,7 +14,7 @@ const AboutUs = () => {
 				<link rel="canonical" href="https://fvestavby.cz/about-us" />
 			</Helmet>
 			<PageTitle title={"O nás"} img={img} />
-			<div className={styles["about-us"]}>
+			<section className={styles["about-us"]}>
 				<h2 className={styles["about-us__title"]}>O nás</h2>
 				<p className={styles["about-us__desc"]}>
 					V dnešní době, kdy roste důraz na udržitelnost a energetickou
@@ -91,40 +90,40 @@ const AboutUs = () => {
 				<div className={styles["guarantees__grid"]}>
 					<div className={styles["guarantees__grid-item"]}>
 						<p>12</p>
-						<p>let střídač</p>
+						<p>let na střídač</p>
 					</div>
 					<div className={styles["guarantees__grid-item"]}>
 						<p>15</p>
-						<p>let fotovoltaické panely</p>
+						<p>let na fotovoltaické panely</p>
 					</div>
 					<div className={styles["guarantees__grid-item"]}>
 						<p>25</p>
-						<p>let záruka na výkon panelů</p>
+						<p>let na záruka na výkon panelů</p>
 					</div>
 					<div className={styles["guarantees__grid-item"]}>
 						<p>5</p>
-						<p>let montáž</p>
+						<p>let na montáž</p>
 					</div>
 					<div className={styles["guarantees__grid-item"]}>
 						<p>10</p>
-						<p>let montážní systém</p>
+						<p>let na montážní systém</p>
 					</div>
 					<div className={styles["guarantees__grid-item"]}>
 						<p>2</p>
-						<p>roky kabeláž</p>
+						<p>roky na kabeláž</p>
 					</div>
 					<div className={styles["guarantees__grid-item"]}>
 						<p>2</p>
-						<p>roky zabezpečení AC/DC </p>
+						<p>roky na zabezpečení AC/DC </p>
 					</div>
 					<div className={styles["guarantees__grid-item"]}>
 						<p>6000</p>
-						<p>cyklů baterie</p>
+						<p>cyklů na baterie</p>
 					</div>
 				</div>
 				<Mission />
-			</div>
-			<GetInTouch />
+				<GetInTouch />
+			</section>
 		</>
 	);
 };

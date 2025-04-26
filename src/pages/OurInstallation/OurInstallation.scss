@@ -1,187 +1,203 @@
 @use "./../../mixins" as *;
 
 .our-installation {
-    padding: 25px;
+	padding: 25px 25px 0;
 }
 
 .our-installation__title {
-    padding-bottom: 25px;
+	padding-bottom: 25px;
 }
 
 .our-installation__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.our-installation__card-wrapper {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 25px;
+	margin-bottom: 25px;
 }
 
 .our-installation__card {
-    position: relative;
-    flex-grow: 1;
-    scale: 0;
-    border-radius: 25px;
-    overflow: hidden;
+	position: relative;
+	flex-grow: 1;
+	scale: 0;
+	border-radius: 25px;
+	overflow: hidden;
 
-    img {
-        position: relative;
-        z-index: 0;
-        width: 100%;
-        height: 250px;
-        object-fit: cover;
-        object-position: center;
-        border-radius: 25px;
-        cursor: pointer;
-        scale: 2;
-    }
+	img {
+		position: relative;
+		z-index: 0;
+		width: 100%;
+		height: 250px;
+		object-fit: cover;
+		object-position: center;
+		border-radius: 25px;
+		cursor: pointer;
+		scale: 2;
+	}
 }
 
 .inner-card--active {
-    animation: animateImg1 2s forwards;
-    animation-timing-function: cubic-bezier(0.75, 0.5, 0.25, 1);
+	animation: animateImg1 2s forwards;
+	animation-timing-function: cubic-bezier(0.75, 0.5, 0.25, 1);
 }
 
 .card-img--active {
-    animation: animateImg1 2s forwards;
-    animation-timing-function: cubic-bezier(0.75, 0.5, 0.25, 1);
+	animation: animateImg1 2s forwards;
+	animation-timing-function: cubic-bezier(0.75, 0.5, 0.25, 1);
 }
 
 @keyframes animateImg1 {
-    to {
-        scale: 1;
-    }
+	to {
+		scale: 1;
+	}
 }
 
 .our-installation__card-date-info {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    background: var(--accent-clr);
-    height: 50px;
-    min-width: 50px;
-    padding: 0 12.5px;
-    border-radius: 20px;
-    @include grid-center;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background: var(--accent-clr);
+	height: 50px;
+	min-width: 50px;
+	padding: 0 12.5px;
+	border-radius: 20px;
+	@include grid-center;
 }
 
 .our-installation__card-info {
-    position: relative;
-    z-index: 0;
-    margin-top: 10px;
-    background: var(--accent-clr);
-    height: 50px;
-    padding: 0 12.5px;
-    border-radius: 20px;
-    @include grid-center;
-    transition: all 0.5s;
+	position: relative;
+	z-index: 0;
+	margin-top: 10px;
+	background: var(--accent-clr);
+	height: 50px;
+	padding: 0 12.5px;
+	border-radius: 20px;
+	@include grid-center;
+	transition: all 0.5s;
 }
 
 .behind-date-element {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 0;
-    border-radius: 0 0 0 20px;
-    min-width: 60px;
-    height: 60px;
-    background: #fff;
-    transition: all 0.5s;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 0;
+	border-radius: 0 0 0 20px;
+	min-width: 60px;
+	height: 60px;
+	background: #fff;
+	transition: all 0.5s;
 }
 
 .behind-date-element::before {
-    content: "";
-    position: absolute;
-    width: 60px;
-    aspect-ratio: 1/1;
-    top: 0;
-    right: 100%;
-    border-radius: 0 20px 0 0;
-    box-shadow: 25px -25px #fff;
-    pointer-events: none;
+	content: "";
+	position: absolute;
+	width: 60px;
+	aspect-ratio: 1/1;
+	top: 0;
+	right: 100%;
+	border-radius: 0 20px 0 0;
+	box-shadow: 25px -25px #fff;
+	pointer-events: none;
 }
 
 .behind-date-element::after {
-    content: "";
-    position: absolute;
-    width: 60px;
-    aspect-ratio: 1/1;
-    top: 100%;
-    right: 0;
-    border-radius: 0 20px 0 0;
-    box-shadow: 25px -25px #fff;
-    pointer-events: none;
+	content: "";
+	position: absolute;
+	width: 60px;
+	aspect-ratio: 1/1;
+	top: 100%;
+	right: 0;
+	border-radius: 0 20px 0 0;
+	box-shadow: 25px -25px #fff;
+	pointer-events: none;
 }
 
 .full-screen-div {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 100;
-    @include flex-between-center;
-    flex-direction: column;
-    background: rgba(0, 0, 0, 0.5);
-    @include glass-effect(20px);
-    padding: 0 25px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 100;
+	@include flex-between-center;
+	flex-direction: column;
+	background: rgba(0, 0, 0, 0.5);
+	@include glass-effect(20px);
+	padding: 0 25px;
 }
 
 .full-screen-header {
-    width: 100%;
-    height: 50px;
-    flex-shrink: 0;
-    @include flex-end-center;
+	width: 100%;
+	height: 50px;
+	flex-shrink: 0;
+	@include flex-end-center;
 }
 
 .full-screen-footer {
-    @include flex-end-center;
-    width: 100%;
-    height: 50px;
-    flex-shrink: 0;
+	@include flex-end-center;
+	width: 100%;
+	height: 50px;
+	flex-shrink: 0;
 }
 
 .full-screen-image {
-    height: calc(100% - 100px);
-    object-fit: contain;
-    object-position: center;
+	height: calc(100% - 100px);
+	object-fit: contain;
+	object-position: center;
+}
+
+.full-screen__left-arrow {
+	width: 25px;
+	height: 25px;
+	position: fixed;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 25px;
+}
+
+.full-screen__right-arrow {
+	width: 25px;
+	height: 25px;
+	position: fixed;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 25px;
 }
 
 .full-screen__close-btn {
-    width: 25px;
+	width: 25px;
 }
 
 .full-screen__btn {
-    width: 25px;
+	width: 25px;
 }
 
 .full-screen__btn--hide {
-    display: none;
+	display: none;
 }
 
 @media screen and (max-width: 1200px) {
-    .our-installation__grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+	.our-installation__grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
 
 @media screen and (max-width: 896px) {
-    .our-installation {
-        padding: 25px 10px;
-    }
+	.our-installation {
+		padding: 25px 10px 0;
+	}
 
-    .our-installation__grid {
-        gap: 25px;
-    }
+	.our-installation__grid {
+		gap: 25px;
+	}
 
-    // Full screen
-    .full-screen-div {
-        padding: 0 10px;
-    }
+	// Full screen
+	.full-screen-div {
+		padding: 0 10px;
+	}
 }
 
 @media screen and (max-width: 750px) {
-    .our-installation__grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
+	.our-installation__grid {
+		grid-template-columns: repeat(1, 1fr);
+	}
 }

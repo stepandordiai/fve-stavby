@@ -1,62 +1,59 @@
 @use "./../../mixins" as *;
 
 .divider {
-    height: 3px;
-    border-radius: 1.5px;
-    background: var(--bg-light-clr);
-    margin: 25px 0;
+	height: 3px;
+	border-radius: 1.5px;
+	background: var(--bg-light-clr);
+	margin: 25px 0;
 }
 
 .components {
-    padding: 0 25px 25px;
-}
-
-.components-container {
+	padding: 0 25px;
 }
 
 .components-container__title {
-    position: sticky;
-    top: 145px;
-    padding: 25px 0;
+	position: sticky;
+	top: 145px;
+	padding: 25px 0;
 }
 
 .components__title {
-    font-size: 1.5rem;
-    font-weight: 500;
-    background: var(--bg-light-clr);
-    height: 50px;
-    border-radius: 25px;
-    padding: 0 12.5px;
-    display: flex;
-    align-items: center;
-    @include glass-effect(20px);
-    color: #000;
+	font-size: 1.5rem;
+	font-weight: 500;
+	background: var(--bg-light-clr);
+	height: 50px;
+	border-radius: 25px;
+	padding: 0 12.5px;
+	display: flex;
+	align-items: center;
+	@include glass-effect(20px);
+	color: #000;
 }
 
 .inverter-container {
-    // @include flex-center;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+	// @include flex-center;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
 }
 
 .inverter-title {
-    font-size: 1.5rem;
-    font-weight: 500;
+	font-size: 1.5rem;
+	font-weight: 500;
 }
 
 @media screen and (max-width: 896px) {
-    .components {
-        padding: 0 10px 25px;
-    }
+	.components {
+		padding: 0 10px;
+	}
 
-    .components-container__title {
-        top: 55px;
-    }
+	.components-container__title {
+		top: 55px;
+	}
 }
 
 @media screen and (max-width: 800px) {
-    .inverter-container {
-        flex-direction: column;
-    }
+	.inverter-container {
+		flex-direction: column;
+	}
 }

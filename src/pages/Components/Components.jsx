@@ -20,7 +20,7 @@ const Components = () => {
 				<link rel="canonical" href="https://fvestavby.cz/components" />
 			</Helmet>
 			<PageTitle title={"Komponenty"} img={titleImg} />
-			<div className="components">
+			<section className="components">
 				<div className="components-container" id="invertors">
 					<div className="components-container__title">
 						<a href="#invertors" className="components__title">
@@ -176,8 +176,8 @@ const Components = () => {
 						</div>
 					</div>
 				</div>
-			</div>
-			<GetInTouch />
+				<GetInTouch />
+			</section>
 		</>
 	);
 };
