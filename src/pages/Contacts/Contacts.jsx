@@ -4,8 +4,11 @@ import arrow from "/assets/icons/arrow-upper-right-white.png";
 import img from "/assets/img/14.jpg";
 import "./../../global/LinkEffect.scss";
 import "./Contacts.scss";
+import { useTranslation } from "react-i18next";
 
 const ContactUs = () => {
+	const { t } = useTranslation();
+
 	const date = new Date();
 	const dayNow = date.getDay();
 
@@ -15,10 +18,10 @@ const ContactUs = () => {
 	return (
 		<>
 			<Helmet>
-				<title>Kontakty | FVE STAVBY</title>
+				<title>FVE STAVBY | {t("contacts_title")}</title>
 				<link rel="canonical" href="https://fvestavby.cz/contacts" />
 			</Helmet>
-			<PageTitle title={"Kontakty"} img={img} />
+			<PageTitle title={t("contacts_title")} img={img} />
 			<div className="contacts">
 				<div className="contacts-left-container">
 					<h2 className="contacts-left-container__title">Kontaktujte nás</h2>

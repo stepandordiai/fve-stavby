@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
 import titleImg from "/assets/img/6.jpg";
@@ -13,10 +14,12 @@ import optimizer2 from "/assets/optimizer2.jpg";
 import "./Components.scss";
 
 const Components = () => {
+	const { t } = useTranslation();
+
 	return (
 		<>
 			<Helmet>
-				<title>Komponenty | FVE STAVBY</title>
+				<title>FVE STAVBY | {t("components_title")}</title>
 				<link rel="canonical" href="https://fvestavby.cz/components" />
 			</Helmet>
 			<PageTitle title={"Komponenty"} img={titleImg} />

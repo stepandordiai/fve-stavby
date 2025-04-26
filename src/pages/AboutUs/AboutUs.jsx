@@ -2,15 +2,18 @@ import { Helmet } from "react-helmet";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import Mission from "../../components/Mission/Mission";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
+import { useTranslation } from "react-i18next";
 import img from "/assets/img/7.jpg";
 import userIcon from "/assets/icons/user.png";
 import styles from "./AboutUs.module.scss";
 
 const AboutUs = () => {
+	const { t } = useTranslation();
+
 	return (
 		<>
 			<Helmet>
-				<title>O nás | FVE STAVBY</title>
+				<title>FVE STAVBY | {t("about_us_title")}</title>
 				<link rel="canonical" href="https://fvestavby.cz/about-us" />
 			</Helmet>
 			<PageTitle title={"O nás"} img={img} />

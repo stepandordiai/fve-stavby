@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet";
-import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
 import isTouchDevice from "../../utils/isTouchDevice";
@@ -12,6 +13,8 @@ import rightArrowIcon from "/assets/icons/right-arrow.png";
 import "./OurInstallation.scss";
 
 const OurInstallation = () => {
+	const { t } = useTranslation();
+
 	const installationsData = [
 		{
 			id: 1,
@@ -239,7 +242,7 @@ const OurInstallation = () => {
 	return (
 		<>
 			<Helmet>
-				<title>Naše instalace | FVE STAVBY</title>
+				<title>FVE STAVBY | {t("our_installation_title")}</title>
 				<link rel="canonical" href="https://fvestavby.cz/our-installation" />
 			</Helmet>
 			<PageTitle title={"Naše instalace"} img={img} />
