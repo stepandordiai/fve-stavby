@@ -63,78 +63,64 @@ const Footer = () => {
 					</div>
 					<div className="footer-top__nav">
 						<p>Navigace</p>
-						<ul className="footer-top__nav-list">
-							<li>
-								<NavLink
-									to={"/"}
-									className={({ isActive }) =>
-										isActive ? activeFooterLink : inactiveFooterLink
-									}
-								>
-									Úvod
-								</NavLink>
-							</li>
-							<li>
-								<NavLink
-									to={"/about-us"}
-									className={({ isActive }) =>
-										isActive ? activeFooterLink : inactiveFooterLink
-									}
-								>
-									O nás
-								</NavLink>
-							</li>
-							<li>
-								<NavLink
-									to={"/house"}
-									className={({ isActive }) =>
-										isActive ? activeFooterLink : inactiveFooterLink
-									}
-								>
-									Dům
-								</NavLink>
-							</li>
-							<li>
-								<NavLink
-									to={"/company"}
-									className={({ isActive }) =>
-										isActive ? activeFooterLink : inactiveFooterLink
-									}
-								>
-									Firemní instalace
-								</NavLink>
-							</li>
-							<li>
-								<NavLink
-									to={"/components"}
-									className={({ isActive }) =>
-										isActive ? activeFooterLink : inactiveFooterLink
-									}
-								>
-									Komponenty
-								</NavLink>
-							</li>
-							<li>
-								<NavLink
-									to={"/our-installation"}
-									className={({ isActive }) =>
-										isActive ? activeFooterLink : inactiveFooterLink
-									}
-								>
-									Naše instalace
-								</NavLink>
-							</li>
-							<li>
-								<NavLink
-									to={"/contacts"}
-									className={({ isActive }) =>
-										isActive ? activeFooterLink : inactiveFooterLink
-									}
-								>
-									Kontakty
-								</NavLink>
-							</li>
-						</ul>
+						<div className="footer-top__nav-list">
+							<NavLink
+								to={"/"}
+								className={({ isActive }) =>
+									isActive ? activeFooterLink : inactiveFooterLink
+								}
+							>
+								Úvod
+							</NavLink>
+							<NavLink
+								to={"/about-us"}
+								className={({ isActive }) =>
+									isActive ? activeFooterLink : inactiveFooterLink
+								}
+							>
+								O nás
+							</NavLink>
+							<NavLink
+								to={"/house"}
+								className={({ isActive }) =>
+									isActive ? activeFooterLink : inactiveFooterLink
+								}
+							>
+								Dům
+							</NavLink>
+							<NavLink
+								to={"/company"}
+								className={({ isActive }) =>
+									isActive ? activeFooterLink : inactiveFooterLink
+								}
+							>
+								Firemní instalace
+							</NavLink>
+							<NavLink
+								to={"/components"}
+								className={({ isActive }) =>
+									isActive ? activeFooterLink : inactiveFooterLink
+								}
+							>
+								Komponenty
+							</NavLink>
+							<NavLink
+								to={"/our-installation"}
+								className={({ isActive }) =>
+									isActive ? activeFooterLink : inactiveFooterLink
+								}
+							>
+								Naše instalace
+							</NavLink>
+							<NavLink
+								to={"/contacts"}
+								className={({ isActive }) =>
+									isActive ? activeFooterLink : inactiveFooterLink
+								}
+							>
+								Kontakty
+							</NavLink>
+						</div>
 					</div>
 					<ul className="footer-top__contact-details">
 						<li>

@@ -11,6 +11,10 @@
 	padding: 0 25px;
 }
 
+.components-container {
+	scroll-margin-top: 145px;
+}
+
 .components-container__title {
 	position: sticky;
 	top: 145px;
@@ -31,10 +35,7 @@
 }
 
 .inverter-container {
-	// @include flex-center;
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
+	@include flex-start-center;
 }
 
 .inverter-title {
@@ -49,6 +50,10 @@
 
 	.components-container__title {
 		top: 55px;
+	}
+
+	.components-container {
+		scroll-margin-top: 55px;
 	}
 }
 
