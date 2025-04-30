@@ -1,19 +1,37 @@
 import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import arrow from "/assets/icons/arrow-upper-right-white.png";
 import img from "/assets/img/14.jpg";
 import "./../../global/LinkEffect.scss";
 import "./Contacts.scss";
-import { useTranslation } from "react-i18next";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const ContactUs = () => {
 	const { t } = useTranslation();
 
-	const date = new Date();
-	const dayNow = date.getDay();
+	const dateNow = new Date();
+	const dayNow = dateNow.getDay();
 
 	const inactiveDay = "business-hours__item";
 	const activeDay = "business-hours__item business-hours__item--active";
+
+	const [email, setEmail] = useState("");
+
+	useEffect(() => {
+		if (email.length === 0) {
+			document.querySelector(".email").classList.remove("email--correct");
+			document.querySelector(".email").classList.remove("email--incorrect");
+		}
+		if (email.includes("@")) {
+			document.querySelector(".email").classList.remove("email--incorrect");
+			document.querySelector(".email").classList.add("email--correct");
+		} else if (!email.includes("@") && email.length > 0) {
+			document.querySelector(".email").classList.remove("email--correct");
+			document.querySelector(".email").classList.add("email--incorrect");
+		}
+	}, [email]);
 
 	return (
 		<>
@@ -27,33 +45,42 @@ const ContactUs = () => {
 					<h2 className="contacts-left-container__title">Kontaktujte nás</h2>
 					<form
 						className="form"
-						action="mailto:info@fvestavby.cz"
+						action="https://formsubmit.co/info@fvestavby.cz"
 						method="post"
-						encType="text/plain"
+						autoComplete="on"
 					>
 						<div className="input-container">
-							<input name="First name" type="text" placeholder="Jméno" />
-							<input name="Last name" type="text" placeholder="Příjmení" />
+							<input
+								name="firstName"
+								autoComplete="given-name"
+								type="text"
+								placeholder="Jméno"
+							/>
+							<input
+								name="lastName"
+								autoComplete="family-name"
+								type="text"
+								placeholder="Příjmení"
+							/>
 						</div>
 						<div className="input-container">
-							<input name="E-mail" type="email" placeholder="E-mail" />
 							<input
-								name="Phone number"
+								className="email"
+								value={email}
+								onChange={(e) => setEmail(e.target.value)}
+								name="email"
+								autoComplete="email"
+								type="email"
+								placeholder="E-mail"
+							/>
+							<input
+								name="tel"
+								autoComplete="tel"
 								type="tel"
 								placeholder="Telefonní číslo"
 							/>
 						</div>
-						{/* <div>
-                            <label htmlFor="lol">
-                                <input
-                                    className="radio-btn"
-                                    id="lol"
-                                    type="radio"
-                                />
-                                Residental
-                            </label>
-                        </div> */}
-						<textarea name="Message" placeholder="Zpráva" />
+						<textarea name="message" autoComplete="on" placeholder="Zpráva" />
 						<button className="form-btn" type="submit">
 							<span>Odeslat</span>
 							<img className="form-btn__icon" src={arrow} alt="" />

@@ -1,253 +1,230 @@
 @use "./../../mixins" as *;
 
 .header {
-    position: fixed;
-    top: 50px;
-    right: 50px;
-    left: 50px;
-    z-index: 100;
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
+	position: fixed;
+	top: 50px;
+	right: 50px;
+	left: 50px;
+	z-index: 100;
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
 }
 
 .header-top {
-    display: flex;
-    align-items: flex-start;
+	display: flex;
+	align-items: flex-start;
 }
 
 .header-top__logo {
-    position: relative;
-    z-index: 5;
-    height: 50px;
-    @include flex-center;
-    color: #fff;
-    column-gap: 5px;
-    border-radius: 25px;
-    background: var(--bg-dark-clr);
-    padding: 0 12.5px;
-    @include glass-effect(20px);
-    opacity: 0;
-    transition: background-color 0.3s, opacity 1s;
-    animation: revealHeader 1s 2s forwards;
+	position: relative;
+	z-index: 5;
+	height: 50px;
+	@include flex-center;
+	color: #fff;
+	column-gap: 5px;
+	border-radius: 25px;
+	background: var(--bg-dark-clr);
+	padding: 0 12.5px;
+	@include glass-effect(20px);
+	opacity: 0;
+	transition: background-color 0.3s, opacity 1s;
+	animation: revealHeader 1s 2s forwards;
 
-    &:hover {
-        background: var(--bg-dark-darker-clr);
-    }
+	&:hover {
+		background: var(--bg-dark-darker-clr);
+	}
 
-    img {
-        height: 25px;
-    }
+	img {
+		height: 25px;
+	}
 
-    span {
-        font-size: 1.5rem;
-        font-weight: 500;
-    }
+	span {
+		font-size: 1.5rem;
+		font-weight: 500;
+	}
 }
 
 @keyframes revealHeader {
-    100% {
-        opacity: 1;
-    }
+	100% {
+		opacity: 1;
+	}
 }
 
 // When i apply animation for header blur dissapears so i apply it to children
-
 .header__link {
-    // position: relative;
-    color: #fff;
-    padding: 5px 7.5px;
-    border-radius: 15px;
-    transition: all 0.3s;
+	color: #fff;
+	padding: 5px 7.5px;
+	border-radius: 15px;
+	transition: all 0.3s;
 
-    &:hover {
-        background: var(--accent-clr);
-        color: #000 !important;
-    }
+	&:hover {
+		background: var(--accent-clr);
+		color: #000 !important;
+	}
 }
 
 .header__link--active {
-    background: var(--accent-clr);
-    color: #000 !important;
+	background: var(--accent-clr);
+	color: #000 !important;
 }
 
-// .header__link::before {
-//     content: "";
-//     position: absolute;
-//     bottom: 0;
-//     left: 50%;
-//     transform: translateX(-50%) scaleX(0);
-//     width: 25%;
-//     height: 1.25px;
-//     background: #fff;
-//     transition: all 0.3s;
-// }
-
-// .header__link--active::before {
-//     transform: translateX(-50%) scaleX(1);
-// }
-
-// .header__link:hover::before {
-//     transform: translateX(-50%) scaleX(1);
-// }
-
 .header-top__number {
-    position: relative;
-    z-index: 5;
-    height: 50px;
-    background: var(--bg-dark-clr);
-    @include grid-center;
-    @include glass-effect(20px);
-    padding: 0 12.5px;
-    border-radius: 25px;
-    margin-left: 25px;
-    margin-right: auto;
-    color: #fff;
-    transition: background-color 0.3s;
-    opacity: 0;
-    animation: revealHeader 1s 2s forwards;
+	position: relative;
+	z-index: 5;
+	height: 50px;
+	background: var(--bg-dark-clr);
+	@include grid-center;
+	@include glass-effect(20px);
+	padding: 0 12.5px;
+	border-radius: 25px;
+	margin-left: 25px;
+	margin-right: auto;
+	color: #fff;
+	transition: background-color 0.3s;
+	opacity: 0;
+	animation: revealHeader 1s 2s forwards;
 
-    &:hover {
-        background: var(--bg-dark-darker-clr);
-    }
+	&:hover {
+		background: var(--bg-dark-darker-clr);
+	}
 }
 
 .header-bottom {
-    position: relative;
-    min-height: 50px;
-    border-radius: 25px;
-    @include flex-between-center;
-    white-space: nowrap;
-    gap: 12.5px;
-    padding: 0 12.5px;
-    background: var(--bg-dark-clr);
-    backdrop-filter: blur(10px);
-    overflow-x: scroll;
-    transition: opacity 1s 1s;
-    opacity: 0;
-    animation: revealHeader 1s 2s forwards;
+	position: relative;
+	min-height: 50px;
+	border-radius: 25px;
+	@include flex-between-center;
+	white-space: nowrap;
+	//
+	padding: 0 10px;
+	//
+	background: var(--bg-dark-clr);
+	backdrop-filter: blur(10px);
+	overflow-x: scroll;
+	transition: opacity 1s 1s;
+	opacity: 0;
+	animation: revealHeader 1s 2s forwards;
 
-    &::-webkit-scrollbar {
-        display: none;
-    }
+	&::-webkit-scrollbar {
+		display: none;
+	}
 
-    ul {
-        @include flex-between-center;
-        gap: 12.5px;
-        padding: 0 12.5px;
-        border-radius: 25px;
-        width: 100%;
-        height: 50px;
-        background: var(--bg-dark-clr);
-        backdrop-filter: blur(10px);
-        white-space: nowrap;
+	ul {
+		@include flex-between-center;
+		gap: 12.5px;
+		padding: 0 12.5px;
+		border-radius: 25px;
+		width: 100%;
+		height: 50px;
+		background: var(--bg-dark-clr);
+		backdrop-filter: blur(10px);
+		white-space: nowrap;
 
-        li {
-            position: relative;
-            color: #fff;
-            height: 100%;
-            @include grid-center;
-        }
-    }
+		li {
+			position: relative;
+			color: #fff;
+			height: 100%;
+			@include grid-center;
+		}
+	}
 }
 
 .header-bottom--hide {
-    opacity: 0 !important;
-    pointer-events: none !important;
-    transition: opacity 1s !important;
+	opacity: 0 !important;
+	pointer-events: none !important;
+	transition: opacity 1s !important;
 }
 
 .products {
-    color: #fff;
+	color: #fff;
 }
 
 .header-card {
-    position: fixed;
-    top: 160px;
-    right: 50px;
-    left: 50px;
-    z-index: 9999;
-    background: var(--bg-dark-clr);
-    @include glass-effect(20px);
-    border-radius: 25px;
-    color: #fff;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s;
+	position: fixed;
+	top: 160px;
+	right: 50px;
+	left: 50px;
+	z-index: 9999;
+	background: var(--bg-dark-clr);
+	@include glass-effect(20px);
+	border-radius: 25px;
+	color: #fff;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.3s;
 }
 
 .header-card--active {
-    opacity: 1;
-    pointer-events: all;
+	opacity: 1;
+	pointer-events: all;
 }
 
-
 .header-card__link {
-    color: #fff;
-    border-radius: 25px;
-    padding: 12.5px;
-    height: 50px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    transition: all 0.3s;
+	color: #fff;
+	border-radius: 25px;
+	padding: 12.5px;
+	height: 50px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	transition: all 0.3s;
 
-    &:hover {
-        background: var(--bg-dark-darker-clr);
-    }
+	&:hover {
+		background: var(--bg-dark-darker-clr);
+	}
 }
 
 .header-card__img {
-    height: 100px;
-    border-radius: 25px;
-    pointer-events: none;
+	height: 100px;
+	border-radius: 25px;
+	pointer-events: none;
 }
 
 .header-bottom-dd {
-    height: 50px;
-    @include grid-center;
+	height: 50px;
+	@include grid-center;
 }
 
 @media screen and (max-width: 896px) {
-    .header {
-        top: 20px;
-        right: 20px;
-        left: 20px;
-    }
+	.header {
+		top: 20px;
+		right: 20px;
+		left: 20px;
+	}
 
-    .header--hide {
-        top: -50px;
-    }
+	.header--hide {
+		top: -50px;
+	}
 
-    .header-top__number {
-        margin-left: 10px;
-    }
+	.header-top__number {
+		margin-left: 10px;
+	}
 
-    .header-top__nav {
-        margin-left: 10px;
-    }
+	.header-top__nav {
+		margin-left: 10px;
+	}
 
+	.header-bottom {
+		display: none;
+	}
 
-    .header-bottom {
-        display: none;
-    }
-
-    .header-card {
-        top: 130px;
-        right: 20px;
-        left: 20px;
-        z-index: 1;
-    }
+	.header-card {
+		top: 130px;
+		right: 20px;
+		left: 20px;
+		z-index: 1;
+	}
 }
 
 @media screen and (max-width: 800px) {
-    .header-top__nav {
-        display: none;
-    }
+	.header-top__nav {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 600px) {
-    .header-top__number {
-        display: none;
-    }
+	.header-top__number {
+		display: none;
+	}
 }

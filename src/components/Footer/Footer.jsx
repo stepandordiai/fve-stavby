@@ -132,7 +132,7 @@ const Footer = () => {
 						<li>
 							<span>E-mail</span>
 							<a className="footer__link" href="mailto:info@fvestavby.cz">
-								info@fvestavby.com
+								info@fvestavby.cz
 							</a>
 						</li>
 						<li>
