@@ -16,10 +16,17 @@ const Company = () => {
 				<link rel="canonical" href="https://fvestavby.cz/company" />
 			</Helmet>
 			<PageTitle title={"Firemní instalace"} img={img} />
-			<section className="company">
+			<div className="company">
+				<p style={{ marginBottom: 25 }}>
+					Nabízíme firmám individuální poradenství šité na míru jejich potřebám,
+					díky čemuž umíme maximalizovat výhody fotovoltaických elektráren.
+					Postavíme Vám fotovoltaickou elektrárnu na jakémkoliv typu střech a
+					jsem taktéž specialisté v pozemních instalacích. Zanechte nám své
+					kontaktní údaje a my se Vám rádi ozveme.
+				</p>
 				<Advantages />
 				<GetInTouch />
-			</section>
+			</div>
 		</>
 	);
 };

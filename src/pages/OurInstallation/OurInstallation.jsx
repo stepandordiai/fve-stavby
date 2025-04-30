@@ -246,7 +246,7 @@ const OurInstallation = () => {
 				<link rel="canonical" href="https://fvestavby.cz/our-installation" />
 			</Helmet>
 			<PageTitle title={"Naše instalace"} img={img} />
-			<section className="our-installation">
+			<div className="our-installation">
 				<p className="our-installation__title">
 					Na spokojenosti našich zákazníků nám záleží. Zde si můžete prohlédnout
 					některé z našich instalací fotovoltaických elektráren. Pokud vás
@@ -264,7 +264,7 @@ const OurInstallation = () => {
 					})}
 				</div>
 				<GetInTouch />
-			</section>
+			</div>
 		</>
 	);
 };

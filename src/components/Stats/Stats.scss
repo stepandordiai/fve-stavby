@@ -1,113 +1,114 @@
 .stats__title {
-    font: {
-        size: 1.5rem;
-        weight: 500;
-    }
+	font: {
+		size: 1.5rem;
+		weight: 500;
+	}
 
-    padding: 25px 0 25px;
+	padding: 25px 0 25px;
+	text-transform: uppercase;
 }
 
 .stats {
-    position: relative;
-    height: 500px;
-    background: var(--bg-light-clr);
-    border-radius: 25px;
-    margin-bottom: 20px;
+	position: relative;
+	height: 500px;
+	background: var(--bg-light-clr);
+	border-radius: 25px;
+	margin-bottom: 20px;
 }
 
 .candles-wrapper {
-    position: absolute;
-    bottom: 0;
-    left: 25px;
-    right: 25px;
-    height: 100%;
-    display: flex;
-    align-items: flex-end;
-    gap: 25px;
+	position: absolute;
+	bottom: 0;
+	left: 25px;
+	right: 25px;
+	height: 100%;
+	display: flex;
+	align-items: flex-end;
+	gap: 25px;
 }
 
 .candle {
-    position: relative;
-    bottom: 0;
-    height: 0;
-    width: 100%;
-    background: var(--accent-clr);
+	position: relative;
+	bottom: 0;
+	height: 0;
+	width: 100%;
+	background: var(--accent-clr);
 }
 
 .candle::before {
-    content: attr(data-month-l);
-    position: absolute;
-    bottom: -20px;
-    left: 50%;
-    transform: translateX(-50%);
+	content: attr(data-month-l);
+	position: absolute;
+	bottom: -20px;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 .candle::after {
-    content: attr(data-value);
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: clamp(0.8rem, 2vw, 1rem);
+	content: attr(data-value);
+	position: absolute;
+	top: -20px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: clamp(0.8rem, 2vw, 1rem);
 }
 
 @keyframes animateCandle {
-    100% {
-        height: var(--candle-height);
-    }
+	100% {
+		height: var(--candle-height);
+	}
 }
 
 .candle-month {
-    position: absolute;
-    bottom: -20px;
-    left: 50%;
-    transform: translateX(-50%);
+	position: absolute;
+	bottom: -20px;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 @media screen and (max-width: 896px) {
-    .stats__title {
-        font: {
-            size: 1.5rem;
-            weight: 500;
-        }
-    }
+	.stats__title {
+		font: {
+			size: 1.5rem;
+			weight: 500;
+		}
+	}
 
-    .candles-wrapper {
-        gap: 12.5px;
-    }
+	.candles-wrapper {
+		gap: 12.5px;
+	}
 
-    .candle::before {
-        content: attr(data-month-m);
+	.candle::before {
+		content: attr(data-month-m);
 
-        position: absolute;
-        bottom: -20px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
+		position: absolute;
+		bottom: -20px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
 }
 
 @media screen and (max-width: 600px) {
-    .candles-wrapper {
-        gap: 6.25px;
-    }
+	.candles-wrapper {
+		gap: 6.25px;
+	}
 
-    .candle::before {
-        content: attr(data-month-s);
-        position: absolute;
-        bottom: -20px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
+	.candle::before {
+		content: attr(data-month-s);
+		position: absolute;
+		bottom: -20px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
 
-    .candle::after {
-        content: attr(data-value);
-        position: absolute;
-        top: 0;
-        left: 50%;
-        writing-mode: vertical-lr;
-        text-orientation: upright;
-        transform: translate(-50%, -100%);
-        font-size: clamp(0.8rem, 2vw, 1rem);
-        font-weight: 500;
-    }
+	.candle::after {
+		content: attr(data-value);
+		position: absolute;
+		top: 0;
+		left: 50%;
+		writing-mode: vertical-lr;
+		text-orientation: upright;
+		transform: translate(-50%, -100%);
+		font-size: clamp(0.8rem, 2vw, 1rem);
+		font-weight: 500;
+	}
 }

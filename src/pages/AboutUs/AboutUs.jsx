@@ -1,14 +1,53 @@
 import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import Mission from "../../components/Mission/Mission";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
-import { useTranslation } from "react-i18next";
 import img from "/assets/img/7.jpg";
 import userIcon from "/assets/icons/user.png";
 import styles from "./AboutUs.module.scss";
 
 const AboutUs = () => {
 	const { t } = useTranslation();
+
+	const membersData = [
+		{
+			name: "Kristián",
+			position: "Projektant",
+		},
+		{
+			name: "Veronika",
+			position: "Vedoucí kanceláře",
+		},
+		{
+			name: "Rostislav",
+			position: "Obchodní ředitel",
+		},
+		{
+			name: "Stepan",
+			position: "IT Specialista",
+		},
+		{
+			name: "Alexandr",
+			position: "Logistika",
+		},
+		{
+			name: "Aneta",
+			position: "Kancelář Frontoffice",
+		},
+		{
+			name: "Zuzana",
+			position: "Kancelář Backoffice",
+		},
+		{
+			name: "René",
+			position: "Vedoucí Instalačních týmů",
+		},
+		{
+			name: "Tomáš",
+			position: "Výkonný ředitel",
+		},
+	];
 
 	return (
 		<>
@@ -17,7 +56,7 @@ const AboutUs = () => {
 				<link rel="canonical" href="https://fvestavby.cz/about-us" />
 			</Helmet>
 			<PageTitle title={"O nás"} img={img} />
-			<section className={styles["about-us"]}>
+			<div className={styles["about-us"]}>
 				<h2 className={styles["about-us__title"]}>O nás</h2>
 				<p className={styles["about-us__desc"]}>
 					V dnešní době, kdy roste důraz na udržitelnost a energetickou
@@ -50,50 +89,29 @@ const AboutUs = () => {
 				</p>
 				<h2 className={styles["our-team__title"]}>Náš tým</h2>
 				<div className={styles["our-team__grid"]}>
-					<div className={styles["our-team__grid-item"]}>
-						<div className={styles["img-wrapper"]}>
-							<img src={userIcon} alt="" />
-						</div>
-						<p className={styles["our-team__grid-item-name"]}>Tomáš Maliga</p>
-						<p className={styles["our-team__grid-item-position"]}>
-							Generální ředitel
-						</p>
-					</div>
-					<div className={styles["our-team__grid-item"]}>
-						<div className={styles["img-wrapper"]}>
-							<img src={userIcon} alt="" />
-						</div>
-						<p className={styles["our-team__grid-item-name"]}>John Doe</p>
-						<p className={styles["our-team__grid-item-position"]}>
-							Produktový manažer
-						</p>
-					</div>
-					<div className={styles["our-team__grid-item"]}>
-						<div className={styles["img-wrapper"]}>
-							<img src={userIcon} alt="" />
-						</div>
-						<p className={styles["our-team__grid-item-name"]}>John Doe</p>
-						<p className={styles["our-team__grid-item-position"]}>
-							Vedoucí montážních specialistů
-						</p>
-					</div>
-					<div className={styles["our-team__grid-item"]}>
-						<div className={styles["img-wrapper"]}>
-							<img src={userIcon} alt="" />
-						</div>
-						<p className={styles["our-team__grid-item-name"]}>Stepan Dordiai</p>
-						<p className={styles["our-team__grid-item-position"]}>
-							IT Specialista
-						</p>
-					</div>
+					{membersData.map(({ name, position }, index) => {
+						return (
+							<div key={index} className={styles["our-team__grid-item"]}>
+								<div className={styles["img-wrapper"]}>
+									<img src={userIcon} alt="" />
+								</div>
+								<p className={styles["our-team__grid-item-name"]}>{name}</p>
+								<p className={styles["our-team__grid-item-position"]}>
+									{position}
+								</p>
+							</div>
+						);
+					})}
 				</div>
-				<h2 className={styles["guarantees__title"]}>
-					Záruky FVE STAVBY s.r.o.
-				</h2>
+				<h2 className={styles["guarantees__title"]}>Záruky FVE STAVBY</h2>
 				<div className={styles["guarantees__grid"]}>
 					<div className={styles["guarantees__grid-item"]}>
-						<p>12</p>
+						<p>10</p>
 						<p>let na střídač</p>
+					</div>
+					<div className={styles["guarantees__grid-item"]}>
+						<p>až 8000</p>
+						<p>cyklů na baterie</p>
 					</div>
 					<div className={styles["guarantees__grid-item"]}>
 						<p>15</p>
@@ -102,10 +120,6 @@ const AboutUs = () => {
 					<div className={styles["guarantees__grid-item"]}>
 						<p>25</p>
 						<p>let na záruka na výkon panelů</p>
-					</div>
-					<div className={styles["guarantees__grid-item"]}>
-						<p>5</p>
-						<p>let na montáž</p>
 					</div>
 					<div className={styles["guarantees__grid-item"]}>
 						<p>10</p>
@@ -119,14 +133,10 @@ const AboutUs = () => {
 						<p>2</p>
 						<p>roky na zabezpečení AC/DC </p>
 					</div>
-					<div className={styles["guarantees__grid-item"]}>
-						<p>6000</p>
-						<p>cyklů na baterie</p>
-					</div>
 				</div>
 				<Mission />
 				<GetInTouch />
-			</section>
+			</div>
 		</>
 	);
 };

@@ -16,10 +16,10 @@ const House = () => {
 				<link rel="canonical" href="https://fvestavby.cz/house" />
 			</Helmet>
 			<PageTitle title={"Fotovoltaika pro rodinné domy"} img={img} />
-			<section className="house">
+			<div className="house">
 				<WhySolar />
 				<GetInTouch />
-			</section>
+			</div>
 		</>
 	);
 };

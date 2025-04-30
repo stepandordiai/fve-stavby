@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
 import titleImg from "/assets/img/6.jpg";
-
 import invertor1 from "/assets/invertor1.jpg";
 import invertor2 from "/assets/invertor2.jpg";
 import battery1 from "/assets/battery1.png";
@@ -23,7 +22,7 @@ const Components = () => {
 				<link rel="canonical" href="https://fvestavby.cz/components" />
 			</Helmet>
 			<PageTitle title={"Komponenty"} img={titleImg} />
-			<section className="components">
+			<div className="components">
 				<div className="components-container" id="invertors">
 					<div className="components-container__title">
 						<a href="#invertors" className="components__title">
@@ -180,7 +179,7 @@ const Components = () => {
 					</div>
 				</div>
 				<GetInTouch />
-			</section>
+			</div>
 		</>
 	);
 };

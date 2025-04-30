@@ -5,7 +5,8 @@
 .about-us__title {
 	font-size: 1.5rem;
 	font-weight: 500;
-	padding-bottom: 25px;
+	margin-bottom: 25px;
+	text-transform: uppercase;
 }
 
 .about-us__desc {
@@ -15,7 +16,8 @@
 .our-team__title {
 	font-size: 1.5rem;
 	font-weight: 500;
-	padding-bottom: 25px;
+	margin-bottom: 25px;
+	text-transform: uppercase;
 }
 
 .our-team__grid {
@@ -56,7 +58,8 @@
 		weight: 500;
 	}
 
-	padding: 25px 0;
+	margin: 25px 0;
+	text-transform: uppercase;
 }
 
 .guarantees__grid {

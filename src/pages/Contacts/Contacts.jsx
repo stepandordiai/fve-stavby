@@ -1,12 +1,11 @@
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import PageTitle from "../../components/PageTitle/PageTitle";
+import { useState, useEffect } from "react";
 import arrow from "/assets/icons/arrow-upper-right-white.png";
 import img from "/assets/img/14.jpg";
 import "./../../global/LinkEffect.scss";
 import "./Contacts.scss";
-import { useState } from "react";
-import { useEffect } from "react";
 
 const ContactUs = () => {
 	const { t } = useTranslation();
