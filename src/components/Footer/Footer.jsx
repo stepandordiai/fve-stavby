@@ -51,8 +51,8 @@ const Footer = () => {
 
 	return (
 		<>
-			<div className="footer-divider"></div>
 			<footer className="footer">
+				<div className="footer-divider"></div>
 				<div className="footer-top">
 					<div>
 						<NavLink className={"footer-top__logo"} to={"/"}>

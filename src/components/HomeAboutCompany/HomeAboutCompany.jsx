@@ -80,29 +80,38 @@ const HomeAboutCompany = () => {
 				nás a získejte spolehlivého partnera pro vaši energetickou budoucnost.
 			</p>
 			<div className="about-company__counter-container">
-				<div className="counter">
-					<p className="counter-container">
+				<div>
+					<div className="counter-container">
 						<span className="counter-wrapper" data-val="5">
 							0
 						</span>
 						<span>+</span>
-					</p>
-					<p>let praxe</p>
+					</div>
+					<span className="counter-info">let praxe</span>
 				</div>
-				<div className="counter">
-					<p className="counter-container">
+				<div>
+					<div className="counter-container">
 						<span className="counter-wrapper" data-val="270">
 							000
 						</span>
 						<span>+</span>
-					</p>
-					<p>klientů</p>
+					</div>
+					<span className="counter-info">klientů</span>
 				</div>
-				<div className="counter">
-					<p className="counter-wrapper counter-container" data-val="14">
+				<div>
+					<div className="counter-wrapper counter-container" data-val="14">
 						00
-					</p>
-					<p>členů týmu</p>
+					</div>
+					<span className="counter-info">členů týmu</span>
+				</div>
+				<div>
+					<div className="counter-container">
+						<span className="counter-wrapper" data-val="5">
+							0
+						</span>
+						<span>+ MWp</span>
+					</div>
+					<span className="counter-info">instalovaneho vykony</span>
 				</div>
 			</div>
 			<NavLink to={"/about-us"} className="about-company__link">

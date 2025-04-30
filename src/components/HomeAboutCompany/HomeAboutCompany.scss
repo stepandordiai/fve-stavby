@@ -1,244 +1,221 @@
 @use "./../../mixins" as *;
 
 .home-about-company {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .about-company__title {
-    padding: 25px 0 25px;
+	padding: 25px 0 25px;
 
-    font: {
-        size: 1.5rem;
-        weight: 500;
-    }
+	font: {
+		size: 1.5rem;
+		weight: 500;
+	}
 
-    text-transform: uppercase;
+	text-transform: uppercase;
 }
 
 .about-company__sec-title {
-    text-align: justify;
+	text-align: justify;
 }
 
 .about-company__counter-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 25px;
-    padding: 25px 0;
+	display: flex;
+	justify-content: space-between;
+	gap: 25px;
+	padding: 25px 0;
+	flex-wrap: wrap;
 }
 
-.counter {
-    width: 100%;
-    @include flex-center-end;
-
-    p:nth-child(1) {
-        font-size: clamp(8rem, 20vw, 12rem);
-        font-weight: 500;
-    }
-
-    p:nth-child(2) {
-        font-size: clamp(1rem, 2vw, 1.25rem);
-        padding-bottom: 40px;
-
-        // Semi transparent color
-
-        color: var(--bg-dark-darker-clr);
-    }
+.counter-container {
+	font-size: 5rem;
+	font-weight: 500;
 }
 
-.counter:nth-child(1) {
-    justify-content: flex-start;
-}
-
-.counter:nth-child(3) {
-    justify-content: flex-end;
-}
-
-.counter-plus {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.counter-info {
+	color: var(--bg-dark-darker-clr);
 }
 
 .about-company__link {
-    align-self: flex-end;
-    position: relative;
-    @include flex-center;
-    column-gap: 5px;
-    background: var(--bg-dark-clr);
-    color: #fff;
-    @include glass-effect(20px);
-    border-radius: 25px;
-    padding: 0 12.5px;
-    height: 50px;
-    transition: background-color 0.3s;
+	align-self: flex-end;
+	position: relative;
+	@include flex-center;
+	column-gap: 5px;
+	background: var(--bg-dark-clr);
+	color: #fff;
+	@include glass-effect(20px);
+	border-radius: 25px;
+	padding: 0 12.5px;
+	height: 50px;
+	transition: background-color 0.3s;
 
-    &:hover {
-        background: var(--bg-dark-darker-clr);
-    }
+	&:hover {
+		background: var(--bg-dark-darker-clr);
+	}
 }
 
 .about-company__link-icon {
-    width: 25px;
-    transition: all 0.3s;
+	width: 25px;
+	transition: all 0.3s;
 }
 
 .about-company__link:hover .about-company__link-icon {
-    transform: rotate(45deg);
+	transform: rotate(45deg);
 }
 
 .we-work-with__title {
-    font: {
-        size: 1.5rem;
-        weight: 500;
-    }
+	font: {
+		size: 1.5rem;
+		weight: 500;
+	}
 
-    text-transform: uppercase;
-    padding: 25px 0 25px;
+	text-transform: uppercase;
+	padding: 25px 0 25px;
 }
 
 .cards-container {
-    display: flex;
-    gap: 25px;
+	display: flex;
+	gap: 25px;
 }
 
 .card {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    height: 400px;
-    border-radius: 25px;
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	height: 400px;
+	border-radius: 25px;
 }
 
 .card::before {
-    content: "";
-    position: absolute;
-    right: 100px;
-    bottom: 0;
-    width: 100px;
-    aspect-ratio: 1/1;
-    background: transparent;
-    border-radius: 0 0 25px 0;
-    box-shadow: 25px 25px #fff;
+	content: "";
+	position: absolute;
+	right: 100px;
+	bottom: 0;
+	width: 100px;
+	aspect-ratio: 1/1;
+	background: transparent;
+	border-radius: 0 0 25px 0;
+	box-shadow: 25px 25px #fff;
 }
 
 .card::after {
-    content: "";
-    position: absolute;
-    right: 0px;
-    bottom: 100px;
-    width: 100px;
-    aspect-ratio: 1/1;
-    background: transparent;
-    border-radius: 0 0 25px 0;
-    box-shadow: 25px 25px #fff;
+	content: "";
+	position: absolute;
+	right: 0px;
+	bottom: 100px;
+	width: 100px;
+	aspect-ratio: 1/1;
+	background: transparent;
+	border-radius: 0 0 25px 0;
+	box-shadow: 25px 25px #fff;
 }
 
 .card__title {
-    color: #fff;
-    padding: 25px 0 0 25px;
+	color: #fff;
+	padding: 25px 0 0 25px;
 
-    font: {
-        size: clamp(1.5rem, 4vw, 3rem);
-        weight: 500;
-    }
+	font: {
+		size: clamp(1.5rem, 4vw, 3rem);
+		weight: 500;
+	}
 }
 
 .card__img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    object-fit: cover;
-    object-position: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	object-fit: cover;
+	object-position: center;
 }
 
 .card__link {
-    position: absolute;
-    z-index: 1;
-    right: 0;
-    bottom: 0;
-    @include flex-center;
-    background: var(--bg-dark-clr);
-    @include glass-effect(20px);
-    border-radius: 25px;
-    width: 90px;
-    aspect-ratio: 1/1;
-    transition: background-color 0.3s;
+	position: absolute;
+	z-index: 1;
+	right: 0;
+	bottom: 0;
+	@include flex-center;
+	background: var(--bg-dark-clr);
+	@include glass-effect(20px);
+	border-radius: 25px;
+	width: 90px;
+	aspect-ratio: 1/1;
+	transition: background-color 0.3s;
 
-    &:hover {
-        background: var(--bg-dark-darker-clr);
-    }
+	&:hover {
+		background: var(--bg-dark-darker-clr);
+	}
 }
 
 .card__link-icon {
-    width: 50%;
-    flex-shrink: 0;
-    transition: transform 0.3s;
+	width: 50%;
+	flex-shrink: 0;
+	transition: transform 0.3s;
 }
 
 .card__link:hover .card__link-icon {
-    transform: rotate(45deg);
+	transform: rotate(45deg);
 }
 
 .card__white-element {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 100px;
-    aspect-ratio: 1/1;
-    background: #fff;
-    border-radius: 25px 0 0 0;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 100px;
+	aspect-ratio: 1/1;
+	background: #fff;
+	border-radius: 25px 0 0 0;
 }
 
 @media screen and (max-width: 1200px) {
-    .about-company__counter-container {
-        flex-direction: column;
-    }
+	.about-company__counter-container {
+		// flex-direction: column;
+	}
 
-    .counter:nth-child(1) {
-        justify-content: center;
-    }
+	.counter:nth-child(1) {
+		// justify-content: center;
+	}
 
-    .counter:nth-child(3) {
-        justify-content: center;
-    }
+	.counter:nth-child(3) {
+		// justify-content: center;
+	}
 
-    .cards-container {
-        display: flex;
-        gap: 25px;
-        flex-direction: column;
-    }
+	.cards-container {
+		display: flex;
+		gap: 25px;
+		flex-direction: column;
+	}
 
-    .card {
-        height: 300px;
-    }
+	.card {
+		height: 300px;
+	}
 
-    .card::before {
-        right: 80px;
-        width: 80px;
-    }
+	.card::before {
+		right: 80px;
+		width: 80px;
+	}
 
-    .card::after {
-        bottom: 80px;
-        width: 80px;
-    }
+	.card::after {
+		bottom: 80px;
+		width: 80px;
+	}
 
-    .card__white-element {
-        width: 80px;
-    }
+	.card__white-element {
+		width: 80px;
+	}
 
-    .card__link {
-        width: 70px;
-    }
+	.card__link {
+		width: 70px;
+	}
 }
 
 @media screen and (max-width: 896px) {
-    .counter {
-        p:nth-child(2) {
-            padding-bottom: 30px;
-        }
-    }
+	// .counter {
+	// 	p:nth-child(2) {
+	// 		padding-bottom: 30px;
+	// 	}
+	// }
 }

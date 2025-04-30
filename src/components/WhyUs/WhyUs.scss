@@ -1,96 +1,94 @@
 @use "./../../mixins" as *;
 
-
-
 .advantages {
-    display: flex;
-    padding-top: 25px;
+	display: flex;
+	padding-top: 25px;
 }
 
 .advantages-title-container {
-    width: 100%;
+	width: 100%;
 
-    h2 {
-        font: {
-            size: 1.5rem;
-            weight: 500;
-        }
+	h2 {
+		font: {
+			size: 1.5rem;
+			weight: 500;
+		}
 
-        text-transform: uppercase;
-    }
+		text-transform: uppercase;
+	}
 }
 
 .advantages-list {
-    width: 100%;
+	width: 100%;
 }
 
 .advantages-item {
-    border-bottom: 2.5px solid var(--bg-light-clr);
-    padding: 12.5px 0;
+	border-bottom: 2.5px solid var(--bg-light-clr);
+	padding: 12.5px 0;
 
-    &:nth-last-child(1){
-        border-bottom: none;
-    }
+	&:nth-last-child(1) {
+		border-bottom: none;
+	}
 }
 
 .advantages-btn {
-    width: 100%;
-    @include flex-between-center;
-    padding: 5px 0;
+	width: 100%;
+	@include flex-between-center;
+	padding: 5px 0;
 }
 
 .advantages-btn-title {
-    font: {
-        size: 1.25rem;
-        weight: 500;
-    }
+	font: {
+		size: 1.25rem;
+		weight: 500;
+	}
 }
 
 .advantages-btn-icon-container {
-    background-color: var(--bg-light-clr);
-    width: 40px;
-    aspect-ratio: 1/1;
-    padding: 10px;
-    border-radius: 20px;
-    transition: background-color 0.3s;
+	background-color: var(--bg-light-clr);
+	width: 40px;
+	aspect-ratio: 1/1;
+	padding: 10px;
+	border-radius: 20px;
+	transition: background-color 0.3s;
 }
 
 .advantages-btn:hover .advantages-btn-icon-container {
-    background-color: var(--bg-light-darker-clr);
+	background-color: var(--bg-light-darker-clr);
 }
 
 .advantages-btn-icon {
-    width: 100%;
-    transition: all 0.6s ease-in-out;
+	width: 100%;
+	transition: all 0.6s ease-in-out;
 }
 
 .advantages-btn-icon--active {
-    transform: rotate(225deg);
+	transform: rotate(225deg);
 }
 
 .dd-wrapper {
-    display: grid;
-    grid-template-rows: 0fr;
-    overflow: hidden;
-    transition: all 0.6s ease-in-out;
+	display: grid;
+	grid-template-rows: 0fr;
+	overflow: hidden;
+	transition: all 0.6s ease-in-out;
 }
 
 .dd-wrapper--active {
-    grid-template-rows: 1fr;
+	grid-template-rows: 1fr;
 }
 
 .dd-details {
-    text-align: justify;
-    overflow: hidden;
+	text-align: justify;
+	overflow: hidden;
 }
 
 @media screen and (max-width: 896px) {
-    .advantages {
-        flex-direction: column;
-    }
+	.advantages {
+		flex-direction: column;
+	}
 
-    .advantages-title-container {
-        justify-content: flex-start;
-        margin: 10px 0;
-    }
+	.advantages-title-container {
+		justify-content: flex-start;
+		margin: 10px 0;
+	}
 }
