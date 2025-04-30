@@ -1,10 +1,12 @@
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import PageTitle from "../../components/PageTitle/PageTitle";
-import img from "/assets/img/16.jpg";
-import styles from "./Documents.module.scss";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
 import React from "react";
+import img from "/assets/img/16.jpg";
+import pdf1 from "/pdf/fve-stavby-price-offer-h.pdf";
+import pdf2 from "/pdf/fve-stavby-price-offer-v.pdf";
+import styles from "./Documents.module.scss";
 
 const Documents = () => {
 	const { t } = useTranslation();
@@ -43,12 +45,20 @@ const Documents = () => {
 
 	const documentsData = [
 		{
+			info: "Cenová nabídka (pdf)",
+			path: pdf1,
+		},
+		{
+			info: "Cenová nabídka vertikální (pdf)",
+			path: pdf2,
+		},
+		{
 			info: "Cenová nabídka (docx)",
-			path: "/assets/word/fve-stavby-for-raynet.docx",
+			path: "/docs/fve-stavby-price-offer-h.docx",
 		},
 		{
 			info: "Cenová nabídka vertikální (docx)",
-			path: "/assets/word/fve-stavby-v-price-offer.docx",
+			path: "/docs/fve-stavby-price-offer-v.docx",
 		},
 	];
 
@@ -66,7 +76,11 @@ const Documents = () => {
 						<React.Fragment key={index}>
 							<div className={styles["documents-container"]}>
 								<p>{info} (pdf)</p>
-								<a className={styles["documents__dl-link"]} href={link}>
+								<a
+									className={styles["documents__dl-link"]}
+									href={link}
+									target="_blank"
+								>
 									Download
 								</a>
 							</div>
@@ -80,7 +94,11 @@ const Documents = () => {
 						<React.Fragment key={index}>
 							<div className={styles["documents-container"]}>
 								<p>{info}</p>
-								<a className={styles["documents__dl-link"]} href={path}>
+								<a
+									className={styles["documents__dl-link"]}
+									href={path}
+									target="_blank"
+								>
 									Download
 								</a>
 							</div>
