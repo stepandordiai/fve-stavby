@@ -15,6 +15,9 @@
 	"about_us_p2": "Především klademe důraz na individuální přístup. Každý projekt je pro nás jedinečný a věnujeme mu maximální péči od prvotní konzultace, přes projekt, až po samotnou instalaci a následný servis. Naši odborníci Vám pomohou vybrat optimální řešení, které bude odpovídat Vašim potřebám, finančním možnostem a charakteru Vaší nemovitosti",
 	"about_us_p3": "Dbáme na kvalitu použitých materiálů a technologií. Spolupracujeme s předními světovými výrobci, což zajišťuje dlouhou životnost a vysokou efektivitu našich systémů. Kromě toho Vám pomůžeme s administrativou a získáním dotací, abyste měli celý proces co nejjednodušší",
 	"about_us_p4": "Naší prioritou je transparentnost, spolehlivost a budování dlouhodobých vztahů. S námi získáte nejen kvalitní produkt, ale také jistotu, že se o Vás postaráme i po dokončení instalace. Věříme, že investice do fotovoltaiky má smysl, a rádi Vás na této cestě podpoříme. Vyberte si nás a získejte spolehlivého partnera pro vaši energetickou budoucnost",
+	"company_desc": "Nabízíme firmám individuální poradenství šité na míru jejich potřebám, díky čemuž umíme maximalizovat výhody fotovoltaických elektráren. Postavíme Vám fotovoltaickou elektrárnu na jakémkoliv typu střech a jsem taktéž specialisté v pozemních instalacích. Zanechte nám své kontaktní údaje a my se Vám rádi ozveme",
+	"our_installation_desc": "Na spokojenosti našich zákazníků nám záleží. Zde si můžete prohlédnout některé z našich instalací fotovoltaických elektráren. Pokud vás nějaká ze zhotovených instalací zaujala, neváhejte nás kontaktovat",
+	"navigation": "Navigace",
 
 	"home": {
 		"title": "Rozsviťte svůj domov, nebo firmu se solární energií",
@@ -131,5 +134,55 @@
 		"guarantee6": "roky na kabeláž",
 		"guarantee7": "roky na zabezpečení AC/DC",
 		"till": "až"
+	},
+
+	"why_solar": {
+		"title": "Proč byste měli používat solární energii",
+		"sec_title": "Věříme v sílu sluneční energie transformovat životy a komunity",
+		"option1": "Finanční výhody",
+		"desc1": "Investice do vlastní fotovoltaické instalace není jen způsobem, jak snížit účty za elektřinu, ale také krokem k udržitelné budoucnosti",
+		"option2": "Energetická nezávislost",
+		"desc2": "Převezměte plnou kontrolu nad svým zdrojem energie a maximalizujte svůj potenciál",
+		"option3": "Spolehlivost",
+		"desc3": "Užijte si nepřetržité napájení pro Vaše pohodlí",
+		"option4": "Environmentální přínosy",
+		"desc4": "Vyrábějte elektřinu na Vaší střeše. Vyřídíme pro Vás dotaci, ušetříte na drahých energiích ze sítě. Zvýšíte hodnotu Vaší nemovitosti a přispějete k ochraně životního prostředí"
+	},
+
+	"advantages": {
+		"title": "Výhody",
+		"option1": "Kontrola nákladů za energie",
+		"desc1": "Se solární energií si můžete zajistit předvídatelné náklady na elektřinu na roky dopředu",
+		"option2": "Pomoc životnímu prostředí",
+		"desc2": "Solární energie vytváří o 91 % méně znečištění CO2 než zemní plyn a o 96 % méně CO2 než uhlí",
+		"option3": "Energetická nezávislost",
+		"desc3": "Čistá solární energie nám poskytuje neomezený spolehlivý zdroj energie"
+	},
+
+	"components": {
+		"section1": "Střídače",
+		"section2": "Bateriová uložiště",
+		"section3": "Panely",
+		"section4": "Optimizéry"
+	},
+
+	"contacts": {
+		"contact_us": "Kontaktujte nás",
+		"first_name": "Jméno",
+		"last_name": "Příjmení",
+		"message": "Zpráva",
+		"submit": "Odeslat",
+		"contact_details": "Kontaktní údaje",
+		"address_office": "Adresa kanceláře",
+		"address_company": "Adresa společnosti",
+		"working_hours": "Pracovní doba",
+		"mon": "Pondělí",
+		"tue": "Úterý",
+		"wed": "Středa",
+		"thu": "Čtvrtek",
+		"fri": "Pátek",
+		"sat": "Sobota",
+		"sun": "Neděle",
+		"closed": "Zavřeno"
 	}
 }

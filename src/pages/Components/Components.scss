@@ -43,6 +43,12 @@
 	font-weight: 500;
 }
 
+.component-list {
+	li {
+		list-style: inside !important;
+	}
+}
+
 @media screen and (max-width: 896px) {
 	.components {
 		padding: 0 10px;

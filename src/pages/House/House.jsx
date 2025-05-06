@@ -15,7 +15,7 @@ const House = () => {
 				<title>FVE STAVBY | {t("house_title")}</title>
 				<link rel="canonical" href="https://fvestavby.cz/house" />
 			</Helmet>
-			<PageTitle title={"Fotovoltaika pro rodinné domy"} img={img} />
+			<PageTitle title={t("house_title")} img={img} />
 			<div className="house">
 				<WhySolar />
 				<GetInTouch />

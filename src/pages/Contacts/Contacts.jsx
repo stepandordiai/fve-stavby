@@ -41,7 +41,9 @@ const ContactUs = () => {
 			<PageTitle title={t("contacts_title")} img={img} />
 			<div className="contacts">
 				<div className="contacts-left-container">
-					<h2 className="contacts-left-container__title">Kontaktujte nás</h2>
+					<h2 className="contacts-left-container__title">
+						{t("contacts.contact_us")}
+					</h2>
 					<form
 						className="form"
 						action="https://formsubmit.co/info@fvestavby.cz"
@@ -53,13 +55,13 @@ const ContactUs = () => {
 								name="firstName"
 								autoComplete="given-name"
 								type="text"
-								placeholder="Jméno"
+								placeholder={t("contacts.first_name")}
 							/>
 							<input
 								name="lastName"
 								autoComplete="family-name"
 								type="text"
-								placeholder="Příjmení"
+								placeholder={t("contacts.last_name")}
 							/>
 						</div>
 						<div className="input-container">
@@ -76,21 +78,27 @@ const ContactUs = () => {
 								name="tel"
 								autoComplete="tel"
 								type="tel"
-								placeholder="Telefonní číslo"
+								placeholder={t("tel")}
 							/>
 						</div>
-						<textarea name="message" autoComplete="on" placeholder="Zpráva" />
+						<textarea
+							name="message"
+							autoComplete="on"
+							placeholder={t("contacts.message")}
+						/>
 						<button className="form-btn" type="submit">
-							<span>Odeslat</span>
+							<span>{t("contacts.submit")}</span>
 							<img className="form-btn__icon" src={arrow} alt="" />
 						</button>
 					</form>
 				</div>
 				<div className="contacts-right-container">
-					<h2 className="contacts-right-container__title">Kontaktní údaje</h2>
+					<h2 className="contacts-right-container__title">
+						{t("contacts.contact_details")}
+					</h2>
 					<div className="contact-details-container">
 						<div className="contact-details">
-							<p className="contact-details__title">Telefonní číslo</p>
+							<p className="contact-details__title">{t("tel")}</p>
 							<a className="contact-details__link" href="tel:+420728803703">
 								+420 728 803 703
 							</a>
@@ -105,7 +113,9 @@ const ContactUs = () => {
 							</a>
 						</div>
 						<div className="contact-details">
-							<p className="contact-details__title">Adresa kanceláře</p>
+							<p className="contact-details__title">
+								{t("contacts.address_office")}
+							</p>
 							<a
 								className="contact-details__link"
 								href="https://maps.app.goo.gl/B8QvEwaqziXBAe776"
@@ -114,7 +124,9 @@ const ContactUs = () => {
 							</a>
 						</div>
 						<div className="contact-details">
-							<p className="contact-details__title">Adresa společnosti</p>
+							<p className="contact-details__title">
+								{t("contacts.address_company")}
+							</p>
 							<a
 								className="contact-details__link"
 								href="https://maps.app.goo.gl/EsrX5bSfKpw8GprZ9"
@@ -123,35 +135,37 @@ const ContactUs = () => {
 							</a>
 						</div>
 						<div className="contact-details">
-							<p className="contact-details__title">Pracovní doba</p>
+							<p className="contact-details__title">
+								{t("contacts.working_hours")}
+							</p>
 							<ul className="business-hours__list">
 								<li className={dayNow === 1 ? activeDay : inactiveDay}>
-									<span>Pondělí:</span>
+									<span>{t("contacts.mon")}:</span>
 									<span>8:00 - 17:00</span>
 								</li>
 								<li className={dayNow === 2 ? activeDay : inactiveDay}>
-									<span>Úterý:</span>
+									<span>{t("contacts.tue")}:</span>
 									<span>8:00 - 17:00</span>
 								</li>
 								<li className={dayNow === 3 ? activeDay : inactiveDay}>
-									<span>Středa:</span>
+									<span>{t("contacts.wed")}:</span>
 									<span>8:00 - 17:00</span>
 								</li>
 								<li className={dayNow === 4 ? activeDay : inactiveDay}>
-									<span>Čtvrtek:</span>
+									<span>{t("contacts.thu")}:</span>
 									<span>8:00 - 17:00</span>
 								</li>
 								<li className={dayNow === 5 ? activeDay : inactiveDay}>
-									<span>Pátek:</span>
+									<span>{t("contacts.fri")}:</span>
 									<span>8:00 - 17:00</span>
 								</li>
 								<li className={dayNow === 6 ? activeDay : inactiveDay}>
-									<span>Sobota:</span>
-									<span>Zavřeno</span>
+									<span>{t("contacts.sat")}:</span>
+									<span>{t("contacts.closed")}</span>
 								</li>
 								<li className={dayNow === 0 ? activeDay : inactiveDay}>
-									<span>Neděle:</span>
-									<span>Zavřeno</span>
+									<span>{t("contacts.sun")}:</span>
+									<span>{t("contacts.closed")}</span>
 								</li>
 							</ul>
 						</div>

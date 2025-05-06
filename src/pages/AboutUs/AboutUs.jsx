@@ -55,9 +55,9 @@ const AboutUs = () => {
 				<title>FVE STAVBY | {t("about_us_title")}</title>
 				<link rel="canonical" href="https://fvestavby.cz/about-us" />
 			</Helmet>
-			<PageTitle title={"O nás"} img={img} />
+			<PageTitle title={t("about_us_title")} img={img} />
 			<div className={styles["about-us"]}>
-				<h2 className={styles["about-us__title"]}>O nás</h2>
+				<h2 className={styles["about-us__title"]}>{t("about_us_title")}</h2>
 				<p className={styles["about-us__desc"]}>
 					{t("about_us_p1")}.
 					<br />

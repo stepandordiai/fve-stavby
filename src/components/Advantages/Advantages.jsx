@@ -1,42 +1,42 @@
+import { useTranslation } from "react-i18next";
 import leafIcon from "/assets/icons/leaf-fve-stavby.png";
 import batteryIcon from "/assets/icons/battery-charge-fve-stavby.png";
 import thunderIcon from "/assets/icons/thunder-fve-stavby.png";
 import styles from "./Advantages.module.scss";
 
 const Advantages = () => {
+	const { t } = useTranslation();
+
 	return (
 		<div>
-			<h2 className={styles["advantages__title"]}>Výhody</h2>
+			<h2 className={styles["advantages__title"]}>{t("advantages.title")}</h2>
 			<div className={styles["advantages"]}>
 				<div className={styles["advantages-card"]}>
 					<div className={styles["advantages-card__wrapper"]}>
 						<p className={styles["advantages-card__title"]}>
-							Kontrola nákladů za energie
+							{t("advantages.option1")}
 						</p>
 						<p className={styles["advantages__desc"]}>
-							Se solární energií si můžete zajistit předvídatelné náklady na
-							elektřinu na roky dopředu
+							{t("advantages.desc1")}.
 						</p>
 					</div>
 					<img src={thunderIcon} alt="" />
 				</div>
 				<div className={styles["advantages-card"]}>
 					<p className={styles["advantages-card__title"]}>
-						Pomoc životnímu prostředí
+						{t("advantages.option2")}
 					</p>
 					<p className={styles["advantages-card__desc"]}>
-						Solární energie vytváří o 91 % méně znečištění CO2 než zemní plyn a
-						o 96 % méně CO2 než uhlí
+						{t("advantages.desc2")}.
 					</p>
 					<img src={leafIcon} alt="" />
 				</div>
 				<div className={styles["advantages-card"]}>
 					<p className={styles["advantages-card__title"]}>
-						Energetická nezávislost
+						{t("advantages.option3")}
 					</p>
 					<p className={styles["advantages-card__desc"]}>
-						Čistá solární energie nám poskytuje neomezený spolehlivý zdroj
-						energie
+						{t("advantages.desc3")}.
 					</p>
 					<img src={batteryIcon} alt="" />
 				</div>

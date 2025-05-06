@@ -15,7 +15,7 @@ const Home = () => {
 	return (
 		<>
 			<Helmet>
-				<title>FVE STAVBY | {t("home_title")}</title>
+				<title>FVE STAVBY | {t("logo_title")}</title>
 				<link rel="canonical" href="https://fvestavby.cz/" />
 			</Helmet>
 			<HomeTitle />

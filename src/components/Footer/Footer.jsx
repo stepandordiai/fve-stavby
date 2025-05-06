@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import logo from "/assets/logo/solar-panel.png";
 import footerBottomLogo from "/assets/fve-stavby-footer-logo.svg";
@@ -7,6 +8,8 @@ import "./../../global/LinkEffect.scss";
 import "./Footer.scss";
 
 const Footer = () => {
+	const { t } = useTranslation();
+
 	const inactiveFooterLink = "footer__link";
 	const activeFooterLink = "footer__link footer__link--active";
 
@@ -59,10 +62,10 @@ const Footer = () => {
 							<img src={logo} alt="Logo" />
 							<span>FVE STAVBY</span>
 						</NavLink>
-						<p>Fotovoltaika, která dává smysl</p>
+						<p>{t("logo_title")}</p>
 					</div>
 					<div className="footer-top__nav">
-						<p>Navigace</p>
+						<p>{t("navigation")}</p>
 						<div className="footer-top__nav-list">
 							<NavLink
 								to={"/"}
@@ -70,7 +73,7 @@ const Footer = () => {
 									isActive ? activeFooterLink : inactiveFooterLink
 								}
 							>
-								Úvod
+								{t("home_title")}
 							</NavLink>
 							<NavLink
 								to={"/about-us"}
@@ -78,7 +81,7 @@ const Footer = () => {
 									isActive ? activeFooterLink : inactiveFooterLink
 								}
 							>
-								O nás
+								{t("about_us_title")}
 							</NavLink>
 							<NavLink
 								to={"/house"}
@@ -86,7 +89,7 @@ const Footer = () => {
 									isActive ? activeFooterLink : inactiveFooterLink
 								}
 							>
-								Dům
+								{t("house_title")}
 							</NavLink>
 							<NavLink
 								to={"/company"}
@@ -94,7 +97,7 @@ const Footer = () => {
 									isActive ? activeFooterLink : inactiveFooterLink
 								}
 							>
-								Firemní instalace
+								{t("company_title")}
 							</NavLink>
 							<NavLink
 								to={"/components"}
@@ -102,7 +105,7 @@ const Footer = () => {
 									isActive ? activeFooterLink : inactiveFooterLink
 								}
 							>
-								Komponenty
+								{t("components_title")}
 							</NavLink>
 							<NavLink
 								to={"/our-installation"}
@@ -110,7 +113,7 @@ const Footer = () => {
 									isActive ? activeFooterLink : inactiveFooterLink
 								}
 							>
-								Naše instalace
+								{t("our_installation_title")}
 							</NavLink>
 							<NavLink
 								to={"/contacts"}
@@ -118,13 +121,13 @@ const Footer = () => {
 									isActive ? activeFooterLink : inactiveFooterLink
 								}
 							>
-								Kontakty
+								{t("contacts_title")}
 							</NavLink>
 						</div>
 					</div>
 					<ul className="footer-top__contact-details">
 						<li>
-							<span>Telefonní číslo</span>
+							<span>{t("tel")}</span>
 							<a className="footer__link" href="tel:+420728803703">
 								+420 728 803 703
 							</a>
@@ -136,7 +139,7 @@ const Footer = () => {
 							</a>
 						</li>
 						<li>
-							<span>Adresa kanceláře</span>
+							<span>{t("contacts.address_office")}</span>
 							<a
 								className="footer__link"
 								href="https://maps.app.goo.gl/B8QvEwaqziXBAe776"
@@ -145,7 +148,7 @@ const Footer = () => {
 							</a>
 						</li>
 						<li>
-							<span>Adresa společnosti</span>
+							<span>{t("contacts.address_company")}</span>
 							<a
 								className="footer__link"
 								href="https://maps.app.goo.gl/EsrX5bSfKpw8GprZ9"

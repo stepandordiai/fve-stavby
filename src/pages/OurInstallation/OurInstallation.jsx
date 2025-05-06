@@ -245,13 +245,9 @@ const OurInstallation = () => {
 				<title>FVE STAVBY | {t("our_installation_title")}</title>
 				<link rel="canonical" href="https://fvestavby.cz/our-installation" />
 			</Helmet>
-			<PageTitle title={"Naše instalace"} img={img} />
+			<PageTitle title={t("our_installation_title")} img={img} />
 			<div className="our-installation">
-				<p className="our-installation__title">
-					Na spokojenosti našich zákazníků nám záleží. Zde si můžete prohlédnout
-					některé z našich instalací fotovoltaických elektráren. Pokud vás
-					nějaká ze zhotovených instalací zaujala, neváhejte nás kontaktovat
-				</p>
+				<p className="our-installation__title">{t("our_installation_desc")}</p>
 				<div className="our-installation__grid">
 					{installationsData.map(({ id, img, description }) => {
 						return (
