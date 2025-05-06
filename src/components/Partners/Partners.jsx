@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import partner3 from "/assets/partnersLogos/deye.png";
 import partner5 from "/assets/partnersLogos/solax.png";
 import partner1 from "/assets/partnersLogos/aiko.png";
@@ -10,9 +11,11 @@ import partner9 from "/assets/partnersLogos/skoda.png";
 import "./Partners.scss";
 
 const Partners = () => {
+	const { t } = useTranslation();
+
 	return (
 		<>
-			<h2 className="partners-title">Spolupracujeme s</h2>
+			<h2 className="partners-title">{t("partners.title")}</h2>
 			<div
 				className="slider"
 				// reverse="true"

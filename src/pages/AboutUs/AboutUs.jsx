@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import PageTitle from "../../components/PageTitle/PageTitle";
-import Mission from "../../components/Mission/Mission";
+// import Mission from "../../components/Mission/Mission";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
 import img from "/assets/img/7.jpg";
 import userIcon from "/assets/icons/user.png";
@@ -13,39 +13,39 @@ const AboutUs = () => {
 	const membersData = [
 		{
 			name: "Kristián",
-			position: "Projektant",
+			position: t("our_team.member1"),
 		},
 		{
 			name: "Veronika",
-			position: "Vedoucí kanceláře",
+			position: t("our_team.member2"),
 		},
 		{
 			name: "Rostislav",
-			position: "Obchodní ředitel",
+			position: t("our_team.member3"),
 		},
 		{
-			name: "Stepan",
-			position: "IT Specialista",
+			name: "Štěpán",
+			position: t("our_team.member4"),
 		},
 		{
 			name: "Alexandr",
-			position: "Logistika",
+			position: t("our_team.member5"),
 		},
 		{
 			name: "Aneta",
-			position: "Kancelář Frontoffice",
+			position: t("our_team.member6"),
 		},
 		{
 			name: "Zuzana",
-			position: "Kancelář Backoffice",
+			position: t("our_team.member7"),
 		},
 		{
 			name: "René",
-			position: "Vedoucí Instalačních týmů",
+			position: t("our_team.member8"),
 		},
 		{
 			name: "Tomáš",
-			position: "Výkonný ředitel",
+			position: t("our_team.member9"),
 		},
 	];
 
@@ -59,35 +59,18 @@ const AboutUs = () => {
 			<div className={styles["about-us"]}>
 				<h2 className={styles["about-us__title"]}>O nás</h2>
 				<p className={styles["about-us__desc"]}>
-					V dnešní době, kdy roste důraz na udržitelnost a energetickou
-					soběstačnost, se fotovoltaika stává klíčovým řešením pro domácnosti i
-					firmy. Výběr správného partnera pro realizaci fotovoltaického systému
-					je zásadní. Jsme tým zkušených profesionálů. Každý z nás se v
-					energetice pohybuje již dlouhá léta a nabízíme komplexní služby, které
-					zaručují maximální spokojenost zákazníků.
+					{t("about_us_p1")}.
 					<br />
 					<br />
-					Především klademe důraz na individuální přístup. Každý projekt je pro
-					nás jedinečný a věnujeme mu maximální péči od prvotní konzultace, přes
-					projekt, až po samotnou instalaci a následný servis. Naši odborníci
-					Vám pomohou vybrat optimální řešení, které bude odpovídat Vašim
-					potřebám, finančním možnostem a charakteru Vaší nemovitosti.
+					{t("about_us_p2")}.
 					<br />
 					<br />
-					Dbáme na kvalitu použitých materiálů a technologií. Spolupracujeme s
-					předními světovými výrobci, což zajišťuje dlouhou životnost a vysokou
-					efektivitu našich systémů. Kromě toho Vám pomůžeme s administrativou a
-					získáním dotací, abyste měli celý proces co nejjednodušší.
+					{t("about_us_p3")}.
 					<br />
 					<br />
-					Naší prioritou je transparentnost, spolehlivost a budování
-					dlouhodobých vztahů. S námi získáte nejen kvalitní produkt, ale také
-					jistotu, že se o Vás postaráme i po dokončení instalace. Věříme, že
-					investice do fotovoltaiky má smysl, a rádi Vás na této cestě
-					podpoříme. Vyberte si nás a získejte spolehlivého partnera pro vaši
-					energetickou budoucnost.
+					{t("about_us_p4")}.
 				</p>
-				<h2 className={styles["our-team__title"]}>Náš tým</h2>
+				<h2 className={styles["our-team__title"]}>{t("our_team.title")}</h2>
 				<div className={styles["our-team__grid"]}>
 					{membersData.map(({ name, position }, index) => {
 						return (
@@ -103,38 +86,40 @@ const AboutUs = () => {
 						);
 					})}
 				</div>
-				<h2 className={styles["guarantees__title"]}>Záruky FVE STAVBY</h2>
+				<h2 className={styles["guarantees__title"]}>
+					{t("guarantees.title")} FVE STAVBY
+				</h2>
 				<div className={styles["guarantees__grid"]}>
 					<div className={styles["guarantees__grid-item"]}>
 						<p>10</p>
-						<p>let na střídač</p>
+						<p>{t("guarantees.guarantee1")}</p>
 					</div>
 					<div className={styles["guarantees__grid-item"]}>
 						<p>až 8000</p>
-						<p>cyklů na baterie</p>
+						<p>{t("guarantees.guarantee2")}</p>
 					</div>
 					<div className={styles["guarantees__grid-item"]}>
 						<p>15</p>
-						<p>let na fotovoltaické panely</p>
+						<p>{t("guarantees.guarantee3")}</p>
 					</div>
 					<div className={styles["guarantees__grid-item"]}>
 						<p>25</p>
-						<p>let na záruka na výkon panelů</p>
+						<p>{t("guarantees.guarantee4")}</p>
 					</div>
 					<div className={styles["guarantees__grid-item"]}>
 						<p>10</p>
-						<p>let na montážní systém</p>
+						<p>{t("guarantees.guarantee5")}</p>
 					</div>
 					<div className={styles["guarantees__grid-item"]}>
 						<p>2</p>
-						<p>roky na kabeláž</p>
+						<p>{t("guarantees.guarantee6")}</p>
 					</div>
 					<div className={styles["guarantees__grid-item"]}>
 						<p>2</p>
-						<p>roky na zabezpečení AC/DC </p>
+						<p>{t("guarantees.guarantee7")}</p>
 					</div>
 				</div>
-				<Mission />
+				{/* <Mission /> */}
 				<GetInTouch />
 			</div>
 		</>

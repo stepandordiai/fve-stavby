@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import img1 from "/assets/img/15.jpg";
@@ -6,6 +7,8 @@ import arrow from "/assets/icons/arrow-upper-right-white.png";
 import "./HomeAboutCompany.scss";
 
 const HomeAboutCompany = () => {
+	const { t } = useTranslation();
+
 	useEffect(() => {
 		let valueDisplays = document.querySelectorAll(".counter-wrapper");
 		const valueWrappers = document.querySelectorAll(".counter-container");
@@ -50,34 +53,18 @@ const HomeAboutCompany = () => {
 
 	return (
 		<div className="home-about-company">
-			<h2 className="about-company__title">O naší společnosti</h2>
+			<h2 className="about-company__title">{t("home.about_company_title")}</h2>
 			<p className="about-company__sec-title">
-				V dnešní době, kdy roste důraz na udržitelnost a energetickou
-				soběstačnost, se fotovoltaika stává klíčovým řešením pro domácnosti i
-				firmy. Výběr správného partnera pro realizaci fotovoltaického systému je
-				zásadní. Jsme tým zkušených profesionálů. Každý z nás se v energetice
-				pohybuje již dlouhá léta a nabízíme komplexní služby, které zaručují
-				maximální spokojenost zákazníků.
+				{t("about_us_p1")}.
 				<br />
 				<br />
-				Především klademe důraz na individuální přístup. Každý projekt je pro
-				nás jedinečný a věnujeme mu maximální péči od prvotní konzultace, přes
-				projekt, až po samotnou instalaci a následný servis. Naši odborníci Vám
-				pomohou vybrat optimální řešení, které bude odpovídat Vašim potřebám,
-				finančním možnostem a charakteru Vaší nemovitosti.
+				{t("about_us_p2")}.
 				<br />
 				<br />
-				Dbáme na kvalitu použitých materiálů a technologií. Spolupracujeme s
-				předními světovými výrobci, což zajišťuje dlouhou životnost a vysokou
-				efektivitu našich systémů. Kromě toho Vám pomůžeme s administrativou a
-				získáním dotací, abyste měli celý proces co nejjednodušší.
+				{t("about_us_p3")}.
 				<br />
 				<br />
-				Naší prioritou je transparentnost, spolehlivost a budování dlouhodobých
-				vztahů. S námi získáte nejen kvalitní produkt, ale také jistotu, že se o
-				Vás postaráme i po dokončení instalace. Věříme, že investice do
-				fotovoltaiky má smysl, a rádi Vás na této cestě podpoříme. Vyberte si
-				nás a získejte spolehlivého partnera pro vaši energetickou budoucnost.
+				{t("about_us_p4")}.
 			</p>
 			<div className="about-company__counter-container">
 				<div>
@@ -87,7 +74,7 @@ const HomeAboutCompany = () => {
 						</span>
 						<span>+</span>
 					</div>
-					<span className="counter-info">let praxe</span>
+					<span className="counter-info">{t("home.years")}</span>
 				</div>
 				<div>
 					<div className="counter-container">
@@ -96,13 +83,13 @@ const HomeAboutCompany = () => {
 						</span>
 						<span>+</span>
 					</div>
-					<span className="counter-info">klientů</span>
+					<span className="counter-info">{t("home.clients")}</span>
 				</div>
 				<div>
 					<div className="counter-wrapper counter-container" data-val="14">
 						00
 					</div>
-					<span className="counter-info">členů týmu</span>
+					<span className="counter-info">{t("home.members")}</span>
 				</div>
 				<div>
 					<div className="counter-container">
@@ -111,17 +98,17 @@ const HomeAboutCompany = () => {
 						</span>
 						<span>+ MWp</span>
 					</div>
-					<span className="counter-info">instalovaneho vykony</span>
+					<span className="counter-info">{t("home.installated")}</span>
 				</div>
 			</div>
 			<NavLink to={"/about-us"} className="about-company__link">
-				<span>Více o nás</span>
+				<span>{t("home.about_us_link")}</span>
 				<img className="about-company__link-icon" src={arrow} alt="Arrow" />
 			</NavLink>
-			<h2 className="we-work-with__title">Pracujeme s</h2>
+			<h2 className="we-work-with__title">{t("home.we_work_with_title")}</h2>
 			<div className="cards-container">
 				<div className="card">
-					<p className="card__title">Fotovoltaika pro rodinne domy</p>
+					<p className="card__title">{t("house_title")}</p>
 					<img className="card__img" src={img1} alt="" loading="lazy" />
 					<NavLink to={"/house"} className="card__link">
 						<img
@@ -134,7 +121,7 @@ const HomeAboutCompany = () => {
 					<div className="card__white-element"></div>
 				</div>
 				<div className="card">
-					<p className="card__title">Firemní instalace</p>
+					<p className="card__title">{t("company_title")}</p>
 					<img className="card__img" src={img2} alt="" loading="lazy" />
 					<NavLink to={"/company"} className="card__link">
 						<img

@@ -1,10 +1,135 @@
 {
-	"home_title": "Fotovoltaika, která dává smysl",
+	"home_title": "Úvod",
 	"about_us_title": "O nás",
 	"house_title": "Fotovoltaika pro rodinné domy",
 	"company_title": "Firemní instalace",
 	"components_title": "Komponenty",
 	"our_installation_title": "Naše instalace",
 	"contacts_title": "Kontakty",
-	"documents_title": "Dokumenty a manuály"
+	"tel": "Telefonní číslo",
+	"documents_title": "Dokumenty a manuály",
+	"logo_title": "Fotovoltaika, která dává smysl",
+	"get_in_touch_title": "Konzultace od našich odborníků",
+	"get_in_touch_link": "Chci nabídku",
+	"about_us_p1": "V dnešní době, kdy roste důraz na udržitelnost a energetickou soběstačnost, se fotovoltaika stává klíčovým řešením pro domácnosti i firmy. Výběr správného partnera pro realizaci fotovoltaického systému je zásadní. Jsme tým zkušených profesionálů. Každý z nás se v energetice pohybuje již dlouhá léta a nabízíme komplexní služby, které zaručují maximální spokojenost zákazníků",
+	"about_us_p2": "Především klademe důraz na individuální přístup. Každý projekt je pro nás jedinečný a věnujeme mu maximální péči od prvotní konzultace, přes projekt, až po samotnou instalaci a následný servis. Naši odborníci Vám pomohou vybrat optimální řešení, které bude odpovídat Vašim potřebám, finančním možnostem a charakteru Vaší nemovitosti",
+	"about_us_p3": "Dbáme na kvalitu použitých materiálů a technologií. Spolupracujeme s předními světovými výrobci, což zajišťuje dlouhou životnost a vysokou efektivitu našich systémů. Kromě toho Vám pomůžeme s administrativou a získáním dotací, abyste měli celý proces co nejjednodušší",
+	"about_us_p4": "Naší prioritou je transparentnost, spolehlivost a budování dlouhodobých vztahů. S námi získáte nejen kvalitní produkt, ale také jistotu, že se o Vás postaráme i po dokončení instalace. Věříme, že investice do fotovoltaiky má smysl, a rádi Vás na této cestě podpoříme. Vyberte si nás a získejte spolehlivého partnera pro vaši energetickou budoucnost",
+
+	"home": {
+		"title": "Rozsviťte svůj domov, nebo firmu se solární energií",
+		"contacts_link": "Domluvte si nezávaznou schůzku",
+		"about_company_title": "O naší společnosti",
+
+		"years": "let praxe",
+		"clients": "klientů",
+		"members": "členů týmu",
+		"installated": "instalovaneho vykony",
+		"about_us_link": "Více o nás",
+		"we_work_with_title": "Pracujeme s"
+	},
+
+	"why_us": {
+		"title": "Proč si vybrat naši firmu",
+		"option1": "Řešení na míru",
+		"desc1": "Na základě Vašich potřeb a požadavků doporučíme vhodné řešení, se kterým ušetříte a budete soběstační",
+		"option2": "Zajistíme celý proces",
+		"desc2": "Navrhneme řešení, zařídíme všechna povolení, fotovoltaiku nainstalujeme a spustíme. Postaráme se i o následný servis",
+		"option3": "Online sledování",
+		"desc3": "Dálkově sledujeme stav Vaší fotovoltaické elektrárny a pokud se vyskytne problém, okamžitě o něm víme. Opravu zajistíme rychle a efektivně",
+		"option4": "Nonstop servis",
+		"desc4": "Týmy specialistů máme po celém Česku. Záruční i pozáruční servis díky tomu zajišťujeme velmi rychle v každém regionu",
+		"option5": "Nadstandartní záruky",
+		"desc5": "Na panely a optimizéry poskytujeme záruku až 25 let, na střídače  až 20 let a na konstrukce až 20 let"
+	},
+
+	"process": {
+		"title": "Náš proces",
+		"option1": "Osobní konzultace a zajištění podkladů",
+		"desc1": "Náš technický konzultant přímo na místě zhodnotí možnosti realizace. Zjistí základní informace o Vašich plánech, představách a možnostech a navrhne ideální řešení",
+		"option2": "Příprava nabídky",
+		"desc2": "Na základě všech podkladů zpracujeme cenovou nabídku",
+		"option3": "Technický audit",
+		"desc3": "V případě dohody Vás navštíví náš technický specialista, a dopodrobna s Vámi projedná nejlepší možný technologický postup instalace Vaší fotovoltaické elektrárny",
+		"option4": "Podpis smlouvy",
+		"desc4": "Dalším krokem v postupu je podepsání smlouvy o dílo",
+		"free": "Zdarma pro naše klienty",
+		"option5": "Vyřízení administrativy",
+		"desc5": "Zajistíme veškerá povolení, která pro realizaci projektu potřebujeme a vyřídíme Vám dotaci",
+		"option6": "Realizace projektu",
+		"desc6": "Nainstalujeme Vaši fotovoltaickou elektrárnu a provedeme revizi",
+		"option7": "Servis a monitoring",
+		"desc7": "Nadále hlídáme funkčnost instalace a v případě potřeby zajistíme servis co nejrychleji",
+		"option8": "Spokojený zákazník",
+		"desc8": "Spokojený zákazník, který používá svou fotovoltaickou elektrárnu a své zkušenosti s montáží a firmou dále doporučuje svým kamarádům a známým"
+	},
+
+	"stats": {
+		"title": "Odhadovaná energie za měsíc",
+		"jan_s": "L",
+		"feb_s": "Ú",
+		"mar_s": "B",
+		"apr_s": "D",
+		"may_s": "K",
+		"jun_s": "Č",
+		"jul_s": "Č",
+		"aug_s": "S",
+		"sep_s": "Ž",
+		"oct_s": "Ř",
+		"nov_s": "L",
+		"dec_s": "P",
+		"jan_m": "Led",
+		"feb_m": "Úno",
+		"mar_m": "Bře",
+		"apr_m": "Dub",
+		"may_m": "Kvě",
+		"jun_m": "Čer",
+		"jul_m": "Čer",
+		"aug_m": "Srp",
+		"sep_m": "Žář",
+		"oct_m": "Říj",
+		"nov_m": "Lis",
+		"dec_m": "Pro",
+		"jan_l": "Leden",
+		"feb_l": "Únor",
+		"mar_l": "Březen",
+		"apr_l": "Duben",
+		"may_l": "Květen",
+		"jun_l": "Červen",
+		"jul_l": "Červenec",
+		"aug_l": "Srpen",
+		"sep_l": "Žáří",
+		"oct_l": "Říjen",
+		"nov_l": "Listopad",
+		"dec_l": "Prosinec"
+	},
+
+	"partners": {
+		"title": "Spolupracujeme s"
+	},
+
+	"our_team": {
+		"title": "Náš tým",
+		"member1": "Projektant",
+		"member2": "Vedoucí kanceláře",
+		"member3": "Obchodní ředitel",
+		"member4": "IT Specialista",
+		"member5": "Logistika",
+		"member6": "Kancelář Frontoffice",
+		"member7": "Kancelář Backoffice",
+		"member8": "Vedoucí Instalačních týmů",
+		"member9": "Výkonný ředitel"
+	},
+
+	"guarantees": {
+		"title": "Záruky FVE STAVBY",
+		"guarantee1": "let na střídač",
+		"guarantee2": "cyklů na baterie",
+		"guarantee3": "let na fotovoltaické panely",
+		"guarantee4": "let na záruka na výkon panelů",
+		"guarantee5": "let na montážní systém",
+		"guarantee6": "roky na kabeláž",
+		"guarantee7": "roky na zabezpečení AC/DC",
+		"till": "až"
+	}
 }

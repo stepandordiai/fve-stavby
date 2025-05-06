@@ -1,9 +1,12 @@
+import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
 import "./../../global/LinkEffect.scss";
 import "./Menu.scss";
 
 const Menu = () => {
+	const { t } = useTranslation();
+
 	useEffect(() => {
 		document.querySelectorAll(".js-link").forEach((link) => {
 			link.addEventListener("click", () => {
@@ -36,48 +39,48 @@ const Menu = () => {
 						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
 						to="/"
 					>
-						Úvod
+						{t("home_title")}
 					</NavLink>
 					<NavLink
 						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
 						to="/about-us"
 					>
-						O nás
+						{t("about_us_title")}
 					</NavLink>
 					<NavLink
 						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
 						to="/house"
 					>
-						Fotovoltaika pro rodinné domy
+						{t("house_title")}
 					</NavLink>
 					<NavLink
 						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
 						to="/company"
 					>
-						Firemní instalace
+						{t("company_title")}
 					</NavLink>
 					<NavLink
 						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
 						to="/components"
 					>
-						Komponenty
+						{t("components_title")}
 					</NavLink>
 					<NavLink
 						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
 						to="/our-installation"
 					>
-						Naše instalace
+						{t("our_installation_title")}
 					</NavLink>
 					<NavLink
 						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
 						to="/contacts"
 					>
-						Kontakty
+						{t("contacts_title")}
 					</NavLink>
 				</nav>
 				<ul className="menu__contacts-details">
 					<li>
-						<p>Telefonní číslo</p>
+						<p>{t("tel")}</p>
 						<a className="menu-link" href="tel:+420728803703">
 							+420 728 803 703
 						</a>

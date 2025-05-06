@@ -11,7 +11,7 @@ const Advantages = () => {
 				<div className={styles["advantages-card"]}>
 					<div className={styles["advantages-card__wrapper"]}>
 						<p className={styles["advantages-card__title"]}>
-							Kontrolovat náklady na energii
+							Kontrola nákladů za energie
 						</p>
 						<p className={styles["advantages__desc"]}>
 							Se solární energií si můžete zajistit předvídatelné náklady na
@@ -22,7 +22,7 @@ const Advantages = () => {
 				</div>
 				<div className={styles["advantages-card"]}>
 					<p className={styles["advantages-card__title"]}>
-						Pomoci životnímu prostředí
+						Pomoc životnímu prostředí
 					</p>
 					<p className={styles["advantages-card__desc"]}>
 						Solární energie vytváří o 91 % méně znečištění CO2 než zemní plyn a

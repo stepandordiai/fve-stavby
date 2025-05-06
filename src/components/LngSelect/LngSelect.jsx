@@ -104,7 +104,7 @@ const LngSelect = () => {
 						}
 						data-value="cs"
 					>
-						CZ - Cestina
+						CZ - Čeština
 					</li>
 					<li
 						className={

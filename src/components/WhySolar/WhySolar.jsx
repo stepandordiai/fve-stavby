@@ -50,7 +50,7 @@ const WhySolar = () => {
 					<div>
 						<span className="why-solar__card-title">Spolehlivost</span>
 						<div className="why-solar__card-dd">
-							<span>Užijte si nepřetržité napájení pro vaše pohodlí</span>
+							<span>Užijte si nepřetržité napájení pro Vaše pohodlí</span>
 						</div>
 					</div>
 				</div>

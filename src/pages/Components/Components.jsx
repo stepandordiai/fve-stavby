@@ -34,14 +34,13 @@ const Components = () => {
 						<div>
 							<p className="inverter-title">Deye SUN-5/6/8/10/12K-SG04LP3-EU</p>
 							<p>
-								The Deye Three Phase Hybrid Inverter, encompassing models
-								SUN-5K-SG04LP3-EU, SUN-6K-SG04LP3-EU, SUN-8K-SG04LP3-EU,
-								SUN-10K-SG04LP3-EU, and SUN-12K-SG04LP3-EU, is a sophisticated
-								energy management solution designed for both residential and
-								commercial solar power applications. This series of inverters is
-								engineered to integrate solar power generation with battery
-								storage, ensuring optimal energy utilization and enhancing
-								overall system efficiency.
+								Nový multifunkční hybridní asymetrický měnič kombinuje funkce
+								měniče, solární nabíječky a nabíječky baterií, přičemž nabízí
+								nepřerušovanou podporu napájení s nastavitelným výkonem. Je
+								vybaven komplexním LCD displejem, který umožňuje uživatelsky
+								přívětivé ovládání pomocí tlačítek, včetně možností nastavení
+								nabíjení baterie, AC/solárního nabíjení a přípustného vstupního
+								napětí pro různé aplikace.
 							</p>
 						</div>
 					</div>
@@ -53,14 +52,40 @@ const Components = () => {
 								Solax Power X3-HYBRID-5.0/6.0/8.0/10.0/12.0/15.0-D/M
 							</p>
 							<p>
-								The Deye Three Phase Hybrid Inverter, encompassing models
-								SUN-5K-SG04LP3-EU, SUN-6K-SG04LP3-EU, SUN-8K-SG04LP3-EU,
-								SUN-10K-SG04LP3-EU, and SUN-12K-SG04LP3-EU, is a sophisticated
-								energy management solution designed for both residential and
-								commercial solar power applications. This series of inverters is
-								engineered to integrate solar power generation with battery
-								storage, ensuring optimal energy utilization and enhancing
-								overall system efficiency.
+								Hybridní solární střídač, který kombinuje účinnost, bezpečnost a
+								inteligenci se zjednodušeným designem pro snadnou instalaci
+								jednou osobou. Střídač zaručuje odolnost a kompatibilitu i v
+								prostředí s nízkými teplotami, s krytím IP65 a podporou vysoce
+								výkonných solárních panelů. Ukládá přebytečnou energii a
+								umožňuje chytrou správu zátěže. Nabízí množství všestranných
+								provozních režimů, včetně paralelního zapnutí/vypnutí sítě a
+								připravenosti na VPP.
+							</p>
+						</div>
+					</div>
+					<div className="divider"></div>
+					<div className="inverter-container">
+						<img
+							width={400}
+							src={
+								"https://chisagess.com/wp-content/uploads/2023/10/CHISAGE-ESS-Mars-5-14G2-LE-Product-Pictures-01.jpg"
+							}
+							alt=""
+						/>
+						<div>
+							<p className="inverter-title">Chisage ESS MARS-5-14G2-LE</p>
+							<p>
+								• Jmenovitý výstupní výkon 14 kW
+								<br />• Volitelná detekce poruchy ARC
+								<br />• Podpora zapnutí/vypnutí režimu GRID, výstup EPS
+								<br />• Podpora ukládání energie z dieselového generátoru
+								<br />• Nezávislý AC vstupní port pro dieselový generátor
+								<br />• 20 PCS invertorů paralelně pro provoz mimo síť
+								<br />• Barevný 7palcový dotykový LCD displej, stupeň krytí IP65
+								<br />• Podpora paralelního připojení různých výkonových měničů
+								<br />• Podpora nabíjení/vybíjení baterie podle nastavení času
+								<br />• 100% nesymetrický výstup, každá fáze max. výstup až 50%
+								jmenovitého výkonu
 							</p>
 						</div>
 					</div>
@@ -97,6 +122,28 @@ const Components = () => {
 							<p>
 								Bateriový set Solax Triple Power Master Battery T-BAT H 11,5 kWh
 								V2
+							</p>
+						</div>
+					</div>
+					<div className="divider"></div>
+					<div className="inverter-container">
+						<img
+							width={400}
+							src={
+								"https://chisagess.com/wp-content/uploads/2024/07/CHISAGE-ESS-MOON16-G-Home-Battery-Pack-Product-Pictures-01.jpg"
+							}
+							alt=""
+						/>
+						<div>
+							<p className="inverter-title">Chisage ESS MOON16-G</p>
+							<p>
+								• Nominální energie 16 kWh
+								<br />• Vysoká kompatibilita měničů
+								<br />• Podpora Bluetooth monitorování
+								<br />• Bezpečná dobíjecí baterie LiFePO4
+								<br />• LCD displej a podpora bluetooth připojení
+								<br />• Podpora max. 15ks baterií paralelně
+								<br />• Kolečka na spodní straně pro snadný pohyb
 							</p>
 						</div>
 					</div>
