@@ -42,6 +42,29 @@
 	}
 }
 
+.footer__socials-title {
+	color: var(--bg-dark-darker-clr);
+	margin-bottom: 6.25px;
+}
+
+.footer__socials-list {
+	display: flex;
+	column-gap: 25px;
+
+	a {
+		display: grid;
+		place-content: center;
+		width: 50px;
+		aspect-ratio: 1/1;
+		border-radius: 50%;
+		transition: background-color 0.3s;
+
+		&:hover {
+			background: var(--accent-clr);
+		}
+	}
+}
+
 .footer-top__nav {
 	display: flex;
 	align-items: center;

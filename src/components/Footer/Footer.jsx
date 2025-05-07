@@ -1,9 +1,12 @@
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
-import logo from "/assets/logo/solar-panel.png";
-import footerBottomLogo from "/assets/fve-stavby-footer-logo.svg";
 import { useEffect } from "react";
 import isTouchDevice from "../../utils/isTouchDevice";
+import footerBottomLogo from "/assets/fve-stavby-footer-logo.svg";
+import logo from "/assets/logo/solar-panel.png";
+import instagramIcon from "/assets/icons/instagram.png";
+import facebookIcon from "/assets/icons/facebook.png";
+import tiktokIcon from "/assets/icons/tiktok.png";
 import "./../../global/LinkEffect.scss";
 import "./Footer.scss";
 
@@ -63,6 +66,20 @@ const Footer = () => {
 							<span>FVE STAVBY</span>
 						</NavLink>
 						<p>{t("logo_title")}</p>
+					</div>
+					<div>
+						<p className="footer__socials-title">Sledujte nás</p>
+						<div className="footer__socials-list">
+							<a href="" title="Instagram">
+								<img width={25} src={instagramIcon} alt="" />
+							</a>
+							<a href="" title="Facebook">
+								<img width={25} src={facebookIcon} alt="" />
+							</a>
+							<a href="" title="TikTok">
+								<img width={25} src={tiktokIcon} alt="" />
+							</a>
+						</div>
 					</div>
 					<div className="footer-top__nav">
 						<p>{t("navigation")}</p>
