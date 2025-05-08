@@ -5,6 +5,18 @@ import GetInTouch from "../../components/GetInTouch/GetInTouch";
 import titleImg from "/assets/img/6.jpg";
 import "./Components.scss";
 
+//
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+// import required modules
+import { Navigation, Pagination } from "swiper/modules";
+
 const Components = () => {
 	const { t } = useTranslation();
 
@@ -23,13 +35,45 @@ const Components = () => {
 						</a>
 					</div>
 					<div className="inverter-container">
-						<img
-							width={500}
-							src={
-								"https://deye.com/wp-content/uploads/2024/06/sun-5_6_8_10_12k-sg04lp3-eu-01.jpg"
-							}
-							alt=""
-						/>
+						<div className="swiper-container">
+							<Swiper
+								navigation={true}
+								pagination={true}
+								loop={true}
+								modules={[Navigation, Pagination]}
+							>
+								<SwiperSlide>
+									<img
+										width={500}
+										src={
+											"https://deye.com/wp-content/uploads/2024/06/sun-5_6_8_10_12k-sg04lp3-eu-01.jpg"
+										}
+										loading="lazy"
+										alt=""
+									/>
+								</SwiperSlide>
+								<SwiperSlide>
+									<img
+										width={500}
+										src={
+											"https://deye.com/wp-content/uploads/2024/06/sun-5_6_8_10_12k-sg04lp3-eu-02.jpg"
+										}
+										loading="lazy"
+										alt=""
+									/>
+								</SwiperSlide>
+								<SwiperSlide>
+									<img
+										width={500}
+										src={
+											"https://deye.com/wp-content/uploads/2024/06/sun-5_6_8_10_12k-sg04lp3-eu-03.jpg"
+										}
+										loading="lazy"
+										alt=""
+									/>
+								</SwiperSlide>
+							</Swiper>
+						</div>
 						<div>
 							<p className="inverter-title">Deye SUN-5/6/8/10/12K-SG04LP3-EU</p>
 							<ul className="component-list">
@@ -55,14 +99,49 @@ const Components = () => {
 					</div>
 					<div className="divider"></div>
 					<div className="inverter-container">
-						<img
-							style={{ padding: 100 }}
-							width={500}
-							src={
-								"https://www.solaxpower.com/uploads/image/20230620/15/energy-storage-inverter-x3-hybrid-g4-1.webp"
-							}
-							alt=""
-						/>
+						<div className="swiper-container">
+							<Swiper
+								navigation={true}
+								pagination={true}
+								loop={true}
+								modules={[Navigation, Pagination]}
+							>
+								<SwiperSlide>
+									<img
+										style={{ padding: 100 }}
+										width={500}
+										src={
+											"https://www.solaxpower.com/uploads/image/20230620/15/energy-storage-inverter-x3-hybrid-g4-1.webp"
+										}
+										loading="lazy"
+										alt=""
+									/>
+								</SwiperSlide>
+								<SwiperSlide>
+									<img
+										width={500}
+										style={{ padding: 100 }}
+										src={
+											"https://www.solaxpower.com/uploads/image/20230620/15/energy-storage-inverter-x3-hybrid-g4-2.webp"
+										}
+										loading="lazy"
+										alt=""
+									/>
+								</SwiperSlide>
+								<SwiperSlide>
+									<img
+										width={500}
+										style={{ padding: 100 }}
+										src={
+											"https://www.solaxpower.com/uploads/image/20230620/15/energy-storage-inverter-x3-hybrid-g4-3.webp"
+										}
+										loading="lazy"
+										alt=""
+									/>
+								</SwiperSlide>
+							</Swiper>
+						</div>
+
 						<div>
 							<p className="inverter-title">
 								Solax Power X3-HYBRID-5.0/6.0/8.0/10.0/12.0/15.0-D/M
@@ -92,13 +171,86 @@ const Components = () => {
 					</div>
 					<div className="divider"></div>
 					<div className="inverter-container">
-						<img
-							width={500}
-							src={
-								"https://chisagess.com/wp-content/uploads/2023/10/CHISAGE-ESS-Mars-5-14G2-LE-Product-Pictures-01.jpg"
-							}
-							alt=""
-						/>
+						<div className="swiper-container">
+							<Swiper
+								navigation={true}
+								pagination={true}
+								loop={true}
+								modules={[Navigation, Pagination]}
+							>
+								<SwiperSlide>
+									<img
+										width={500}
+										src={
+											"https://chisagess.com/wp-content/uploads/2023/10/CHISAGE-ESS-Mars-5-14G2-LE-Product-Pictures-01.jpg"
+										}
+										loading="lazy"
+										alt=""
+									/>
+								</SwiperSlide>
+								<SwiperSlide>
+									<img
+										width={500}
+										src={
+											"https://chisagess.com/wp-content/uploads/2023/10/CHISAGE-ESS-Mars-5-14G2-LE-Product-Pictures-02.jpg"
+										}
+										loading="lazy"
+										alt=""
+									/>
+								</SwiperSlide>
+								<SwiperSlide>
+									<img
+										width={500}
+										src={
+											"https://chisagess.com/wp-content/uploads/2023/10/CHISAGE-ESS-Mars-5-14G2-LE-Product-Pictures-03.jpg"
+										}
+										loading="lazy"
+										alt=""
+									/>
+								</SwiperSlide>
+								<SwiperSlide>
+									<img
+										width={500}
+										src={
+											"https://chisagess.com/wp-content/uploads/2023/10/CHISAGE-ESS-Mars-5-14G2-LE-Product-Pictures-04.jpg"
+										}
+										loading="lazy"
+										alt=""
+									/>
+								</SwiperSlide>
+								<SwiperSlide>
+									<img
+										width={500}
+										src={
+											"https://chisagess.com/wp-content/uploads/2023/10/CHISAGE-ESS-Mars-5-14G2-LE-Product-Pictures-05.jpg"
+										}
+										loading="lazy"
+										alt=""
+									/>
+								</SwiperSlide>
+								<SwiperSlide>
+									<img
+										width={500}
+										src={
+											"https://chisagess.com/wp-content/uploads/2023/10/CHISAGE-ESS-Mars-5-14G2-LE-Product-Pictures-07.jpg"
+										}
+										loading="lazy"
+										alt=""
+									/>
+								</SwiperSlide>
+								<SwiperSlide>
+									<img
+										width={500}
+										src={
+											"https://chisagess.com/wp-content/uploads/2023/10/CHISAGE-ESS-Mars-5-14G2-LE-Product-Pictures-08.jpg"
+										}
+										loading="lazy"
+										alt=""
+									/>
+								</SwiperSlide>
+							</Swiper>
+						</div>
+
 						<div>
 							<p className="inverter-title">Chisage ESS MARS-5-14G2-LE</p>
 							<ul className="component-list">
@@ -128,13 +280,36 @@ const Components = () => {
 						</a>
 					</div>
 					<div className="inverter-container">
-						<img
-							width={500}
-							src={
-								"https://cdn.myshoptet.com/usr/www.mobler.cz/user/shop/big/328066-1_snimek-obrazovky-2024-05-31-130533-removebg-preview.png?6659af7b"
-							}
-							alt=""
-						/>
+						<div className="swiper-container">
+							<Swiper
+								navigation={true}
+								pagination={true}
+								loop={true}
+								modules={[Navigation, Pagination]}
+							>
+								<SwiperSlide>
+									<img
+										width={500}
+										src={
+											"https://cdn.myshoptet.com/usr/www.mobler.cz/user/shop/big/328066-1_snimek-obrazovky-2024-05-31-130533-removebg-preview.png?6659af7b"
+										}
+										loading="lazy"
+										alt=""
+									/>
+								</SwiperSlide>
+								<SwiperSlide>
+									<img
+										width={500}
+										src={
+											"https://cdn.myshoptet.com/usr/www.mobler.cz/user/shop/big/328066_snimek-obrazovky-2024-05-31-130658-removebg-preview.png?6659af79"
+										}
+										loading="lazy"
+										alt=""
+									/>
+								</SwiperSlide>
+							</Swiper>
+						</div>
+
 						<div>
 							<p className="inverter-title">Deye Baterie RW-M6.1</p>
 							<ul className="component-list">
@@ -157,14 +332,38 @@ const Components = () => {
 					</div>
 					<div className="divider"></div>
 					<div className="inverter-container">
-						<img
-							style={{ padding: 100 }}
-							width={500}
-							src={
-								"https://www.solaxpower.com/uploads/image/20230620/15/battery-system-t-bat-sys-hv-5-8-1.webp"
-							}
-							alt=""
-						/>
+						<div className="swiper-container">
+							<Swiper
+								navigation={true}
+								pagination={true}
+								loop={true}
+								modules={[Navigation, Pagination]}
+							>
+								<SwiperSlide>
+									<img
+										style={{ padding: 100 }}
+										width={500}
+										src={
+											"https://www.svet-svitidel.cz/triple-power-baterie-solax-t58-master-unit-5-8-kwh-v1-img-sm9962-fd-2.webp"
+										}
+										loading="lazy"
+										alt=""
+									/>
+								</SwiperSlide>
+								<SwiperSlide>
+									<img
+										width={500}
+										style={{ padding: 100 }}
+										src={
+											"https://img-cdn.heureka.group/v1/647b8c4d-5b53-4bd9-afba-6832d79195ac.jpg?width=2000&height=2000&fit=upsize"
+										}
+										loading="lazy"
+										alt=""
+									/>
+								</SwiperSlide>
+							</Swiper>
+						</div>
+
 						<div>
 							<p className="inverter-title">Solax Triple Power T-BAT H 11.5</p>
 							<ul className="component-list">
@@ -189,13 +388,45 @@ const Components = () => {
 					</div>
 					<div className="divider"></div>
 					<div className="inverter-container">
-						<img
-							width={500}
-							src={
-								"https://chisagess.com/wp-content/uploads/2024/07/CHISAGE-ESS-MOON16-G-Home-Battery-Pack-Product-Pictures-01.jpg"
-							}
-							alt=""
-						/>
+						<div className="swiper-container">
+							<Swiper
+								navigation={true}
+								pagination={true}
+								loop={true}
+								modules={[Navigation, Pagination]}
+							>
+								<SwiperSlide>
+									<img
+										width={500}
+										src={
+											"https://chisagess.com/wp-content/uploads/2024/07/CHISAGE-ESS-MOON16-G-Home-Battery-Pack-Product-Pictures-01.jpg"
+										}
+										loading="lazy"
+										alt=""
+									/>
+								</SwiperSlide>
+								<SwiperSlide>
+									<img
+										width={500}
+										src={
+											"https://chisagess.com/wp-content/uploads/2024/07/CHISAGE-ESS-MOON16-G-Home-Battery-Pack-Product-Pictures-02.jpg"
+										}
+										loading="lazy"
+										alt=""
+									/>
+								</SwiperSlide>
+								<SwiperSlide>
+									<img
+										width={500}
+										src={
+											"https://chisagess.com/wp-content/uploads/2024/07/CHISAGE-ESS-MOON16-G-Home-Battery-Pack-Product-Pictures-03.jpg"
+										}
+										loading="lazy"
+										alt=""
+									/>
+								</SwiperSlide>
+							</Swiper>
+						</div>
 						<div>
 							<p className="inverter-title">Chisage ESS MOON16-G</p>
 							<ul className="component-list">
