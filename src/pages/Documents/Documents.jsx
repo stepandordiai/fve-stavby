@@ -4,8 +4,6 @@ import PageTitle from "../../components/PageTitle/PageTitle";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
 import React from "react";
 import img from "/assets/img/16.jpg";
-import pdf1 from "/pdf/fve-stavby-price-offer-h.pdf";
-import pdf2 from "/pdf/fve-stavby-price-offer-v.pdf";
 import styles from "./Documents.module.scss";
 
 const Documents = () => {
@@ -43,25 +41,6 @@ const Documents = () => {
 		},
 	];
 
-	const documentsData = [
-		{
-			info: "Cenová nabídka (pdf)",
-			path: pdf1,
-		},
-		{
-			info: "Cenová nabídka vertikální (pdf)",
-			path: pdf2,
-		},
-		{
-			info: "Cenová nabídka (docx)",
-			path: "/docs/fve-stavby-price-offer-h.docx",
-		},
-		{
-			info: "Cenová nabídka vertikální (docx)",
-			path: "/docs/fve-stavby-price-offer-v.docx",
-		},
-	];
-
 	return (
 		<>
 			<Helmet>
@@ -79,24 +58,6 @@ const Documents = () => {
 								<a
 									className={styles["documents__dl-link"]}
 									href={link}
-									target="_blank"
-								>
-									Download
-								</a>
-							</div>
-							<div className={styles["documents-divider"]}></div>
-						</React.Fragment>
-					);
-				})}
-				<h2 className={styles["documents__title"]}>Documents</h2>
-				{documentsData.map(({ info, path }, index) => {
-					return (
-						<React.Fragment key={index}>
-							<div className={styles["documents-container"]}>
-								<p>{info}</p>
-								<a
-									className={styles["documents__dl-link"]}
-									href={path}
 									target="_blank"
 								>
 									Download
