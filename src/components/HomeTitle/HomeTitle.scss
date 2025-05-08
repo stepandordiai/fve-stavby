@@ -166,10 +166,6 @@
 		bottom: 10px;
 		left: 10px;
 	}
-
-	.home-title__link-container {
-		align-items: flex-start;
-	}
 }
 
 @media screen and (max-width: 800px) {
@@ -177,5 +173,9 @@
 		display: flex;
 		align-items: flex-start;
 		flex-direction: column-reverse;
+	}
+
+	.home-title__link-container {
+		align-items: flex-start;
 	}
 }

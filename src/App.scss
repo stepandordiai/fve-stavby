@@ -5,51 +5,51 @@
 // Prevent scaling size when rotating on mobile
 
 html {
-    -webkit-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    // scroll-behavior: smooth;
+	-webkit-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	// scroll-behavior: smooth;
 }
 
 body {
-    padding: 25px;
-    font-family: "Quicksand", sans-serif;
+	padding: 25px;
+	font-family: "Quicksand", "Montserrat", sans-serif;
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+	width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    border: 2.5px solid transparent;
+	border: 2.5px solid transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--bg-dark-clr);
-    border-radius: 5px;
-    border: 2.5px solid transparent;
-    background-clip: content-box;
+	background: var(--bg-dark-clr);
+	border-radius: 5px;
+	border: 2.5px solid transparent;
+	background-clip: content-box;
 
-    &:hover {
-        background: rgba(0, 0, 0, 0.5);
-        background-clip: content-box;
-    }
+	&:hover {
+		background: rgba(0, 0, 0, 0.5);
+		background-clip: content-box;
+	}
 }
 
 // $mobile: 896px;
 
 @media screen and (max-width: 896px) {
-    body {
-        padding: 10px;
-    }
+	body {
+		padding: 10px;
+	}
 
-    .home-top {
-        height: calc(100svh - 20px);
-    }
+	.home-top {
+		height: calc(100svh - 20px);
+	}
 
-    .home-loading__title {
-        padding: 0 10px;
-        // opacity: 0;
-        // animation: animateHomeTitle 2s forwards;
-    }
+	.home-loading__title {
+		padding: 0 10px;
+		// opacity: 0;
+		// animation: animateHomeTitle 2s forwards;
+	}
 }

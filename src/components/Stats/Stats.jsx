@@ -19,13 +19,13 @@ const Stats = () => {
 						el.style.animation = "animateCandle 4s ease-in-out forwards";
 						if (!isActivated) {
 							let startValue = 0;
-							let duration = Math.floor(interval / el.dataset.stats);
+							let duration = Math.floor(interval / el.dataset.finalValue);
 							function start() {
 								let counter = setTimeout(() => {
 									startValue += 1;
-									el.dataset.value = startValue + "kW";
+									el.dataset.initValue = startValue + "kW";
 									// duration += 0.5;
-									if (startValue == el.dataset.stats) {
+									if (startValue == el.dataset.finalValue) {
 										clearTimeout(counter);
 									} else {
 										start();
@@ -54,8 +54,8 @@ const Stats = () => {
 						style={{
 							"--candle-height": "50px",
 						}}
-						data-value="420kW"
-						data-stats="420"
+						data-init-value="0kW"
+						data-final-value="420"
 					></div>
 					<div
 						className="candle"
@@ -65,8 +65,8 @@ const Stats = () => {
 						style={{
 							"--candle-height": "100px",
 						}}
-						data-value="610kW"
-						data-stats="610"
+						data-init-value="0kW"
+						data-final-value="610"
 					></div>
 					<div
 						className="candle"
@@ -76,8 +76,8 @@ const Stats = () => {
 						style={{
 							"--candle-height": "150px",
 						}}
-						data-value="980kW"
-						data-stats="980"
+						data-init-value="0kW"
+						data-final-value="980"
 					></div>
 					<div
 						className="candle"
@@ -87,8 +87,8 @@ const Stats = () => {
 						style={{
 							"--candle-height": "200px",
 						}}
-						data-value="1220kW"
-						data-stats="1220"
+						data-init-value="0kW"
+						data-final-value="1220"
 					></div>
 					<div
 						className="candle"
@@ -98,8 +98,8 @@ const Stats = () => {
 						style={{
 							"--candle-height": "300px",
 						}}
-						data-value="1480kW"
-						data-stats="1480"
+						data-init-value="0kW"
+						data-final-value="1480"
 					></div>
 					<div
 						className="candle"
@@ -109,8 +109,8 @@ const Stats = () => {
 						style={{
 							"--candle-height": "325px",
 						}}
-						data-value="1380kW"
-						data-stats="1380"
+						data-init-value="0kW"
+						data-final-value="1380"
 					></div>
 					<div
 						className="candle"
@@ -120,8 +120,8 @@ const Stats = () => {
 						style={{
 							"--candle-height": "225px",
 						}}
-						data-value="1570kW"
-						data-stats="1570"
+						data-init-value="0kW"
+						data-final-value="1570"
 					></div>
 					<div
 						className="candle"
@@ -131,8 +131,8 @@ const Stats = () => {
 						style={{
 							"--candle-height": "150px",
 						}}
-						data-value="1440kW"
-						data-stats="1440"
+						data-init-value="0kW"
+						data-final-value="1440"
 					></div>
 					<div
 						className="candle"
@@ -142,8 +142,8 @@ const Stats = () => {
 						style={{
 							"--candle-height": "125px",
 						}}
-						data-value="1080kW"
-						data-stats="1080"
+						data-init-value="0kW"
+						data-final-value="1080"
 					></div>
 					<div
 						className="candle"
@@ -153,8 +153,8 @@ const Stats = () => {
 						style={{
 							"--candle-height": "100px",
 						}}
-						data-value="890kW"
-						data-stats="890"
+						data-init-value="0kW"
+						data-final-value="890"
 					></div>
 					<div
 						className="candle"
@@ -164,8 +164,8 @@ const Stats = () => {
 						style={{
 							"--candle-height": "50px",
 						}}
-						data-value="390kW"
-						data-stats="390"
+						data-init-value="0kW"
+						data-final-value="390"
 					></div>
 					<div
 						className="candle"
@@ -175,8 +175,8 @@ const Stats = () => {
 						style={{
 							"--candle-height": "25px",
 						}}
-						data-value="310kW"
-						data-stats="310"
+						data-init-value="0kW"
+						data-final-value="310"
 					></div>
 				</div>
 			</div>

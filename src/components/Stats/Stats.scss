@@ -44,7 +44,7 @@
 }
 
 .candle::after {
-	content: attr(data-value);
+	content: attr(data-init-value);
 	position: absolute;
 	top: -20px;
 	left: 50%;
@@ -79,7 +79,6 @@
 
 	.candle::before {
 		content: attr(data-month-m);
-
 		position: absolute;
 		bottom: -20px;
 		left: 50%;
@@ -101,7 +100,7 @@
 	}
 
 	.candle::after {
-		content: attr(data-value);
+		content: attr(data-init-value);
 		position: absolute;
 		top: 0;
 		left: 50%;
