@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
-import plusIcon from "/assets/icons/plus-black.png";
+import plusIcon from "/icons/plus-black.png";
 import "./WhyUs.scss";
 
 const Advantages = () => {

@@ -1,7 +1,6 @@
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import PageTitle from "../../components/PageTitle/PageTitle";
-// import Mission from "../../components/Mission/Mission";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
 import img from "/img/7.jpg";
 import userIcon from "/icons/user.png";
@@ -119,7 +118,6 @@ const AboutUs = () => {
 						<p>{t("guarantees.guarantee7")}</p>
 					</div>
 				</div>
-				{/* <Mission /> */}
 				<GetInTouch />
 			</div>
 		</>
