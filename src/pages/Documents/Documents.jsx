@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
 import React from "react";
-import img from "/assets/img/16.jpg";
+import img from "/img/16.jpg";
 import styles from "./Documents.module.scss";
 
 const Documents = () => {
