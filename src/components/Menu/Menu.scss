@@ -23,7 +23,6 @@
 	right: 25px;
 	width: calc(100% - 50px);
 	height: calc(100% - 50px);
-	transition: all 1s;
 }
 
 .menu-wrapper {
@@ -33,7 +32,7 @@
 
 .menu-wrapper--active {
 	opacity: 1;
-	transition: all 0.5s 0.5s;
+	transition: all 0.5s 1s;
 }
 
 .nav {

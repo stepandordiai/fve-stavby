@@ -1,9 +1,9 @@
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import img1 from "/assets/img/15.jpg";
-import img2 from "/assets/img/10.jpg";
-import arrow from "/assets/icons/arrow-upper-right-white.png";
+import img1 from "/img/15.jpg";
+import img2 from "/img/10.jpg";
+import arrow from "/icons/arrow-upper-right-white.png";
 import "./HomeAboutCompany.scss";
 
 const HomeAboutCompany = () => {

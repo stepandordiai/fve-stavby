@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
-import arrow from "/assets/icons/arrow-upper-right-white.png";
+import arrow from "/icons/arrow-upper-right-white.png";
 import "./HomeTitle.scss";
 
 const HomeTitle = () => {

@@ -3,8 +3,8 @@ import { useTranslation } from "react-i18next";
 import PageTitle from "../../components/PageTitle/PageTitle";
 // import Mission from "../../components/Mission/Mission";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
-import img from "/assets/img/7.jpg";
-import userIcon from "/assets/icons/user.png";
+import img from "/img/7.jpg";
+import userIcon from "/icons/user.png";
 import styles from "./AboutUs.module.scss";
 
 const AboutUs = () => {
@@ -76,7 +76,7 @@ const AboutUs = () => {
 						return (
 							<div key={index} className={styles["our-team__grid-item"]}>
 								<div className={styles["img-wrapper"]}>
-									<img src={userIcon} alt="" />
+									<img src={userIcon} alt="" loading="lazy" />
 								</div>
 								<p className={styles["our-team__grid-item-name"]}>{name}</p>
 								<p className={styles["our-team__grid-item-position"]}>

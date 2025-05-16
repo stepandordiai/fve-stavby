@@ -130,6 +130,17 @@ textarea {
 	}
 }
 
+.contacts__copy-btn {
+	position: relative;
+	padding: 5px 7.5px;
+	border-radius: 15px;
+	transition: all 0.3s;
+
+	&:hover {
+		background: var(--accent-clr);
+	}
+}
+
 .business-hours__list {
 	width: 100%;
 	display: flex;

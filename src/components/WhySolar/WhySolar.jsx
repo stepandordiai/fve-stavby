@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
-import leafIcon from "/assets/icons/leaf.png";
-import moneyIcon from "/assets/icons/money.png";
-import flashIcon from "/assets/icons/flash.png";
-import shieldIcon from "/assets/icons/shield.png";
+import leafIcon from "/icons/leaf.png";
+import moneyIcon from "/icons/money.png";
+import flashIcon from "/icons/flash.png";
+import shieldIcon from "/icons/shield.png";
 import "./WhySolar.scss";
 
 const WhySolar = () => {

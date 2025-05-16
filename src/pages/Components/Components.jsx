@@ -2,10 +2,9 @@ import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
-import titleImg from "/assets/img/6.jpg";
+import titleImg from "/img/6.jpg";
 import "./Components.scss";
 
-//
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -428,7 +427,7 @@ const Components = () => {
 							</Swiper>
 						</div>
 						<div>
-							<p className="inverter-title">Chisage ESS MOON16-G</p>
+							<p className="inverter-title">Chisage ESS MOON16-G Pro</p>
 							<ul className="component-list">
 								<li>Nominální energie 16 kWh</li>
 								<li>Vysoká kompatibilita měničů</li>

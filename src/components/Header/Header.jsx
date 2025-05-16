@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import LngSelect from "../LngSelect/LngSelect";
 import { useEffect } from "react";
-import logo from "/assets/logo/solar-panel.png";
+import logo from "/logo/solar-panel.png";
 import "./Header.scss";
 
 const Header = () => {
@@ -81,8 +81,8 @@ const Header = () => {
 						<img src={logo} alt="Logo" />
 						<span>FVE STAVBY</span>
 					</NavLink>
-					<a href="tel:+420728803703" className="header-top__number">
-						+420 728 803 703
+					<a href="tel:+420777957290" className="header-top__number">
+						+420 777 957 290
 					</a>
 					<LngSelect />
 					<BurgerBtn />

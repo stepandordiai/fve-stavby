@@ -32,7 +32,7 @@ const Menu = () => {
 	const activeLink = "link js-link link-effect link-effect--active";
 
 	return (
-		<section className="menu">
+		<div className="menu">
 			<div className="menu-wrapper">
 				<nav className="nav">
 					<NavLink
@@ -81,8 +81,8 @@ const Menu = () => {
 				<ul className="menu__contacts-details">
 					<li>
 						<p>{t("tel")}</p>
-						<a className="menu-link" href="tel:+420728803703">
-							+420 728 803 703
+						<a className="menu-link" href="tel:+420777957290">
+							+420 777 957 290
 						</a>
 					</li>
 					<li>
@@ -91,21 +91,9 @@ const Menu = () => {
 							info@fvestavby.cz
 						</a>
 					</li>
-					{/* <li>
-						<p>Adresa kanceláře</p>
-						<a className="menu-link" href="mailto:info@fvestavby.cz">
-							Pod Hroby 271 Kolín IV
-						</a>
-					</li>
-					<li>
-						<p>Adresa společnosti</p>
-						<a className="menu-link" href="mailto:info@fvestavby.cz">
-							Pod Hroby 271 Kolín IV
-						</a>
-					</li> */}
 				</ul>
 			</div>
-		</section>
+		</div>
 	);
 };
 

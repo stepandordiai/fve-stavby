@@ -4,12 +4,12 @@ import { useEffect } from "react";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
 import isTouchDevice from "../../utils/isTouchDevice";
-import img from "/assets/img/5.jpg";
-import closeIcon from "/assets/icons/close-white.png";
-import expandIcon from "/assets/icons/expand-white.png";
-import shrinkIcon from "/assets/icons/shrink-white.png";
-import leftArrowIcon from "/assets/icons/left-arrow.png";
-import rightArrowIcon from "/assets/icons/right-arrow.png";
+import img from "/img/5.jpg";
+import closeIcon from "/icons/close-white.png";
+import expandIcon from "/icons/expand-white.png";
+import shrinkIcon from "/icons/shrink-white.png";
+import leftArrowIcon from "/icons/left-arrow.png";
+import rightArrowIcon from "/icons/right-arrow.png";
 import "./OurInstallation.scss";
 
 const OurInstallation = () => {
@@ -18,73 +18,49 @@ const OurInstallation = () => {
 	const installationsData = [
 		{
 			id: 1,
-			img: "/assets/installations/01.jpeg",
-			installationDate: "18.03.2025",
-			description: "Černá Voda, 24x Trina Solar 450, 10.8kWp",
+			img: "/installations/01.jpeg",
 		},
 		{
 			id: 2,
-			img: "/assets/installations/02.jpeg",
-			installationDate: "18.03.2025",
-			description: "Černá Voda, 24x Trina Solar 450, 10.8kWp",
+			img: "/installations/02.jpeg",
 		},
 		{
 			id: 3,
-			img: "/assets/installations/03.jpeg",
-			installationDate: "18.03.2025",
-			description: "Černá Voda, 24x Trina Solar 450, 10.8kWp",
+			img: "/installations/03.jpeg",
 		},
 		{
 			id: 4,
-			img: "/assets/installations/04.jpeg",
-			installationDate: "18.03.2025",
-			description: "Černá Voda, 24x Trina Solar 450, 10.8kWp",
+			img: "/installations/04.jpeg",
 		},
 		{
 			id: 5,
-			img: "/assets/installations/05.jpeg",
-			installationDate: "18.03.2025",
-			description: "Černá Voda, 24x Trina Solar 450, 10.8kWp",
+			img: "/installations/05.jpeg",
 		},
 		{
 			id: 6,
-			img: "/assets/installations/06.jpeg",
-			installationDate: "18.03.2025",
-			description: "Černá Voda, 24x Trina Solar 450, 10.8kWp",
+			img: "/installations/06.jpeg",
 		},
 		{
 			id: 7,
-			img: "/assets/installations/07.jpeg",
-			installationDate: "18.03.2025",
-			description: "Černá Voda, 24x Trina Solar 450, 10.8kWp",
+			img: "/installations/07.jpeg",
 		},
 		{
 			id: 8,
-			img: "/assets/installations/08.jpeg",
-			installationDate: "18.03.2025",
-			description: "Černá Voda, 24x Trina Solar 450, 10.8kWp",
+			img: "/installations/08.jpeg",
 		},
 		{
 			id: 9,
-			img: "/assets/installations/09.jpeg",
-			installationDate: "18.03.2025",
-			description: "Černá Voda, 24x Trina Solar 450, 10.8kWp",
+			img: "/installations/09.jpeg",
 		},
 		{
 			id: 10,
-			img: "/assets/installations/10.jpeg",
-			installationDate: "18.03.2025",
-			description: "Černá Voda, 24x Trina Solar 450, 10.8kWp",
+			img: "/installations/10.jpeg",
 		},
 		{
 			id: 11,
-			img: "/assets/installations/11.jpeg",
-			installationDate: "18.03.2025",
-			description: "Černá Voda, 24x Trina Solar 450, 10.8kWp",
+			img: "/installations/11.jpeg",
 		},
 	];
-
-	// const [slide, setSlide] = useState(0);
 
 	useEffect(() => {
 		document
@@ -249,11 +225,11 @@ const OurInstallation = () => {
 			<div className="our-installation">
 				<p className="our-installation__title">{t("our_installation_desc")}</p>
 				<div className="our-installation__grid">
-					{installationsData.map(({ id, img, description }) => {
+					{installationsData.map(({ id, img }) => {
 						return (
 							<div key={id} className="our-installation__card-wrapper">
 								<div className="our-installation__card">
-									<img src={img} alt={description} />
+									<img src={img} alt="" loading="lazy" />
 								</div>
 							</div>
 						);

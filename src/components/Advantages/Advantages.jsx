@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
-import leafIcon from "/assets/icons/leaf-fve-stavby.png";
-import batteryIcon from "/assets/icons/battery-charge-fve-stavby.png";
-import thunderIcon from "/assets/icons/thunder-fve-stavby.png";
+import leafIcon from "/icons/leaf-fve-stavby.png";
+import batteryIcon from "/icons/battery-charge-fve-stavby.png";
+import thunderIcon from "/icons/thunder-fve-stavby.png";
 import styles from "./Advantages.module.scss";
 
 const Advantages = () => {

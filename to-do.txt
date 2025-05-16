@@ -1,0 +1,2 @@
+update partners logos with image address and remove images
+add manuals for each component

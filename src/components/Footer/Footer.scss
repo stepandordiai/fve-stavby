@@ -170,6 +170,18 @@
 	height: 100%;
 }
 
+.footer__copy-btn {
+	align-self: center;
+	position: relative;
+	padding: 5px 7.5px;
+	border-radius: 15px;
+	transition: all 0.3s;
+
+	&:hover {
+		background: var(--accent-clr);
+	}
+}
+
 @media screen and (max-width: 896px) {
 	.footer {
 		padding: 0 10px 25px;

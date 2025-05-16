@@ -2,12 +2,12 @@ import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
 import isTouchDevice from "../../utils/isTouchDevice";
-import footerBottomLogo from "/assets/fve-stavby-footer-logo.svg";
-import logo from "/assets/logo/solar-panel.png";
-import instagramIcon from "/assets/icons/instagram.png";
-import facebookIcon from "/assets/icons/facebook.png";
-import tiktokIcon from "/assets/icons/tiktok.png";
-import "./../../global/LinkEffect.scss";
+import handleCopy from "../../utils/handleCopy";
+import footerBottomLogo from "/fve-stavby-footer-logo.svg";
+import logo from "/logo/solar-panel.png";
+import instagramIcon from "/icons/instagram.png";
+import facebookIcon from "/icons/facebook.png";
+import tiktokIcon from "/icons/tiktok.png";
 import "./Footer.scss";
 
 const Footer = () => {
@@ -145,8 +145,8 @@ const Footer = () => {
 					<ul className="footer-top__contact-details">
 						<li>
 							<span>{t("tel")}</span>
-							<a className="footer__link" href="tel:+420728803703">
-								+420 728 803 703
+							<a className="footer__link" href="tel:+420777957290">
+								+420 777 957 290
 							</a>
 						</li>
 						<li>
@@ -159,9 +159,9 @@ const Footer = () => {
 							<span>{t("contacts.address_office")}</span>
 							<a
 								className="footer__link"
-								href="https://maps.app.goo.gl/B8QvEwaqziXBAe776"
+								href="https://maps.app.goo.gl/56b3G1KEn5RwGfdW7"
 							>
-								Pod Hroby 271 Kolín IV
+								Krocínova 333/3, Staré Město, 110 00 Praha 1
 							</a>
 						</li>
 						<li>
@@ -174,13 +174,18 @@ const Footer = () => {
 							</a>
 						</li>
 						<li>
-							<span>IČO</span>
-							<p>17066387</p>
+							<span>Identifikační číslo</span>
+							<button
+								className="footer__copy-btn"
+								onClick={(e) => handleCopy(e, ".footer__copy-btn")}
+							>
+								23287179
+							</button>
 						</li>
 					</ul>
 				</div>
 				<div className="footer-bottom">
-					<p>&copy; 2025 FVE STAVBY. Všechna práva vyhrazena.</p>
+					<p>&copy; 2025 FVE STAVBY s.r.o. Všechna práva vyhrazena.</p>
 					<div className="creator">
 						<span>Site by</span>
 						<a
@@ -188,7 +193,7 @@ const Footer = () => {
 							href="https://heeeyooo.studio/"
 							target="_blank"
 						>
-							heeeyooo.studio
+							heeeyooo studio
 							<div className="bg-element"></div>
 						</a>
 					</div>

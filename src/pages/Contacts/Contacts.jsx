@@ -2,8 +2,9 @@ import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import { useState, useEffect } from "react";
-import arrow from "/assets/icons/arrow-upper-right-white.png";
-import img from "/assets/img/14.jpg";
+import handleCopy from "../../utils/handleCopy";
+import arrow from "/icons/arrow-upper-right-white.png";
+import img from "/img/14.jpg";
 import "./../../global/LinkEffect.scss";
 import "./Contacts.scss";
 
@@ -99,8 +100,8 @@ const ContactUs = () => {
 					<div className="contact-details-container">
 						<div className="contact-details">
 							<p className="contact-details__title">{t("tel")}</p>
-							<a className="contact-details__link" href="tel:+420728803703">
-								+420 728 803 703
+							<a className="contact-details__link" href="tel:+420777957290">
+								+420 777 957 290
 							</a>
 						</div>
 						<div className="contact-details">
@@ -133,6 +134,15 @@ const ContactUs = () => {
 							>
 								Lidická 700/19 Brno
 							</a>
+						</div>
+						<div className="contact-details">
+							<p className="contact-details__title">Identifikační číslo</p>
+							<button
+								className="contacts__copy-btn"
+								onClick={(e) => handleCopy(e, ".contacts__copy-btn")}
+							>
+								23287179
+							</button>
 						</div>
 						<div className="contact-details">
 							<p className="contact-details__title">

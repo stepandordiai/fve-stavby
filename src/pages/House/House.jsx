@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import WhySolar from "../../components/WhySolar/WhySolar";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
-import img from "/assets/img/15.jpg";
+import img from "/img/15.jpg";
 import "./House.scss";
 
 const House = () => {
