@@ -163,56 +163,31 @@ const OurInstallation = () => {
 				});
 			});
 
-		// Specify width for each card white background in case if date bigger or smaller
-		const dateElements = document.querySelectorAll(
-			".our-installation__card-date-info"
-		);
-		const behindDateElements = document.querySelectorAll(
-			".behind-date-element"
-		);
+		const cards = document.querySelectorAll(".our-installation__card-wrapper");
+		const innerCards = document.querySelectorAll(".our-installation__card");
+		const cardImgs = document.querySelectorAll(".our-installation__card img");
 
-		dateElements.forEach((dateElement, index) => {
-			behindDateElements[index].style.width = `${
-				dateElement.offsetWidth + 10
-			}px`;
-		});
-
-		document
-			.querySelectorAll(".our-installation__card-wrapper")
-			.forEach((card, index) => {
-				let isUsed = false;
-				document.addEventListener("scroll", () => {
-					const cardRect = card.getBoundingClientRect();
-					if (cardRect.top < window.innerHeight) {
-						if (!isUsed) {
-							const innerCard = document.querySelectorAll(
-								".our-installation__card"
-							);
-							const cardImg = document.querySelectorAll(
-								".our-installation__card img"
-							);
-
-							innerCard[index].classList.add("inner-card--active");
-							cardImg[index].classList.add("card-img--active");
-						}
-						isUsed = true;
-					}
-				});
-
+		const handleScroll = () => {
+			cards.forEach((card, index) => {
+				if (!card) return;
 				const cardRect = card.getBoundingClientRect();
+				const isInView = cardRect.top < window.innerHeight;
 
-				if (cardRect.top < window.innerHeight) {
-					const innerCard = document.querySelectorAll(
-						".our-installation__card"
-					);
-					const cardImg = document.querySelectorAll(
-						".our-installation__card img"
-					);
-
-					innerCard[index].classList.add("inner-card--active");
-					cardImg[index].classList.add("card-img--active");
+				if (isInView) {
+					innerCards[index].classList.add("inner-card--active");
+					cardImgs[index].classList.add("card-img--active");
 				}
 			});
+		};
+
+		// Initial check
+		handleScroll();
+
+		document.addEventListener("scroll", handleScroll);
+
+		return () => {
+			document.removeEventListener("scroll", handleScroll);
+		};
 	}, []);
 
 	return (
