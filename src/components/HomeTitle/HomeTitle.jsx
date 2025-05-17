@@ -9,7 +9,7 @@ const HomeTitle = () => {
 	return (
 		<div className="home-title-wrapper">
 			<div className="home-title">
-				<p className="loading__title">FVE STAVBY</p>
+				<p className="loading__title">FVE STAVBY s.r.o</p>
 				<div className="home-title__details-container">
 					<div className="home-title__details">
 						<h1 className="home-title__title">FVE STAVBY s.r.o.</h1>
