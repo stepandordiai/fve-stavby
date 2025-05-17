@@ -11,8 +11,8 @@ import AboutUs from "./pages/AboutUs/AboutUs";
 import Components from "./pages/Components/Components";
 import OurInstallation from "./pages/OurInstallation/OurInstallation";
 import "./i18next";
+import Manuals from "./pages/Manuals/Manuals";
 import "./App.scss";
-import Documents from "./pages/Documents/Documents";
 
 function App() {
 	return (
@@ -28,7 +28,7 @@ function App() {
 				<Route path="/contacts" element={<Contacts />} />
 				<Route path="/components" element={<Components />} />
 				<Route path="/our-installation" element={<OurInstallation />} />
-				<Route path="/documents" element={<Documents />} />
+				<Route path="/manuals" element={<Manuals />} />
 			</Routes>
 			<Footer />
 		</Router>

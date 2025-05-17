@@ -17,8 +17,8 @@ const HomeTitle = () => {
 						<h2 className="home-title__info">{t("home.title")}</h2>
 					</div>
 					<div className="home-title__link-container">
-						<NavLink className="home-title__link" to={"/documents"}>
-							<span>{t("documents_title")}</span>
+						<NavLink className="home-title__link" to={"/manuals"}>
+							<span>{t("manuals_title")}</span>
 							<img
 								className="home-title__link-icon"
 								src={arrow}

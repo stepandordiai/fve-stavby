@@ -1,8 +1,8 @@
-.documents {
+.manuals {
 	padding: 25px 25px 0;
 }
 
-.documents__title {
+.manuals__title {
 	font: {
 		size: 1.5rem;
 		weight: 500;
@@ -11,15 +11,13 @@
 	text-transform: uppercase;
 }
 
-.documents-container {
-	margin-top: 25px;
+.manuals-container {
 	display: flex;
 	justify-content: space-between;
 	column-gap: 10px;
 }
 
-.documents__link,
-.documents__dl-link {
+.manuals__link {
 	color: #000;
 	padding: 5px 7.5px;
 	border-radius: 15px;
@@ -31,7 +29,7 @@
 	}
 }
 
-.documents-divider {
+.manuals-divider {
 	height: 3px;
 	border-radius: 1.5px;
 	background: var(--bg-light-clr);
@@ -39,7 +37,7 @@
 }
 
 @media screen and (max-width: 896px) {
-	.documents {
+	.manuals {
 		padding: 25px 10px 0;
 	}
 }

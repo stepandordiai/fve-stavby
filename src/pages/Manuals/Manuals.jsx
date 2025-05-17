@@ -4,9 +4,9 @@ import PageTitle from "../../components/PageTitle/PageTitle";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
 import React from "react";
 import img from "/img/16.jpg";
-import styles from "./Documents.module.scss";
+import styles from "./Manuals.module.scss";
 
-const Documents = () => {
+const Manuals = () => {
 	const { t } = useTranslation();
 
 	const manualsData = [
@@ -44,26 +44,25 @@ const Documents = () => {
 	return (
 		<>
 			<Helmet>
-				<title>FVE STAVBY | {t("documents_title")}</title>
-				<link rel="canonical" href="https://fvestavby.cz/documents" />
+				<title>FVE STAVBY | {t("manuals_title")}</title>
+				<link rel="canonical" href="https://fvestavby.cz/manuals" />
 			</Helmet>
-			<PageTitle title={"Dokumenty a manuály"} img={img} />
-			<div className={styles["documents"]}>
-				<h2 className={styles["documents__title"]}>Manuals</h2>
+			<PageTitle title={t("manuals_title")} img={img} />
+			<div className={styles["manuals"]}>
 				{manualsData.map(({ info, link }, index) => {
 					return (
 						<React.Fragment key={index}>
-							<div className={styles["documents-container"]}>
+							<div className={styles["manuals-container"]}>
 								<p>{info} (pdf)</p>
 								<a
-									className={styles["documents__dl-link"]}
+									className={styles["manuals__link"]}
 									href={link}
 									target="_blank"
 								>
 									Download
 								</a>
 							</div>
-							<div className={styles["documents-divider"]}></div>
+							<div className={styles["manuals-divider"]}></div>
 						</React.Fragment>
 					);
 				})}
@@ -73,4 +72,4 @@ const Documents = () => {
 	);
 };
 
-export default Documents;
+export default Manuals;

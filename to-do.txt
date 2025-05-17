@@ -1,2 +1,1 @@
-add manuals for each component
 add loading or smth to prevent home title img already load without animation (first need to load) on first render

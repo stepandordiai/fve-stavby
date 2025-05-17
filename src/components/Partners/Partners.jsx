@@ -74,7 +74,7 @@ const Partners = () => {
 				<div className="list">
 					{partnersData.map(({ siteUrl, imgUrl, alt }, index) => {
 						return (
-							<a
+							<div
 								key={index}
 								className="item"
 								style={{ "--position": index + 1 }}
@@ -82,7 +82,7 @@ const Partners = () => {
 								<a href={siteUrl} target="_blank">
 									<img src={imgUrl} alt={alt} loading="lazy" />
 								</a>
-							</a>
+							</div>
 						);
 					})}
 				</div>

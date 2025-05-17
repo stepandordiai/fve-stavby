@@ -1,32 +1,70 @@
+@use "./../../mixins" as *;
+
 .page-title {
-    position: relative;
-    width: 100%;
-    height: 250px;
-    overflow: hidden;
-    border-radius: 25px;
+	position: relative;
+	width: 100%;
+	height: 250px;
+	overflow: hidden;
+	border-radius: 25px;
 }
 
 .page-title__title {
-    position: absolute;
-    bottom: 25px;
-    left: 25px;
-    color: #fff;
-    font-size: clamp(1.5rem, 4vw, 3rem);
-    font-weight: 500;
+	position: absolute;
+	bottom: 25px;
+	left: 25px;
+	color: #fff;
+	font-size: clamp(1.5rem, 4vw, 3rem);
+	font-weight: 500;
 }
 
 .page-title__img {
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.page-title__link {
+	position: absolute;
+	right: 25px;
+	bottom: 25px;
+	@include flex-center;
+	column-gap: 5px;
+	background: var(--bg-light-clr);
+	color: #fff;
+	@include glass-effect(20px);
+	white-space: nowrap;
+	border-radius: 25px;
+	padding: 12.5px;
+	height: 50px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+
+	&:hover {
+		background: var(--bg-light-lighter-clr);
+	}
+}
+
+.page-title__link-icon {
+	height: 100%;
+	flex-shrink: 0;
+	transition: all 0.3s;
+}
+
+.page-title__link:hover .page-title__link-icon {
+	transform: rotate(45deg);
 }
 
 @media screen and (max-width: 896px) {
-    .page-title__title {
-        bottom: 10px;
-        left: 10px;
-    }
+	.page-title__title {
+		bottom: 10px;
+		left: 10px;
+	}
+
+	.page-title__link {
+		right: 10px;
+		bottom: 10px;
+	}
 }

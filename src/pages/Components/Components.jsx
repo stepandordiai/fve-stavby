@@ -25,7 +25,11 @@ const Components = () => {
 				<title>FVE STAVBY | {t("components_title")}</title>
 				<link rel="canonical" href="https://fvestavby.cz/components" />
 			</Helmet>
-			<PageTitle title={t("components_title")} img={titleImg} />
+			<PageTitle
+				title={t("components_title")}
+				img={titleImg}
+				linkPath={"/manuals"}
+			/>
 			<div className="components">
 				<div className="components-container" id="invertors">
 					<div className="components-container__title">
