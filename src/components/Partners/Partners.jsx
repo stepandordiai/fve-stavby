@@ -1,17 +1,63 @@
 import { useTranslation } from "react-i18next";
-import partner3 from "/partnersLogos/deye.png";
-import partner5 from "/partnersLogos/solax.png";
-import partner1 from "/partnersLogos/aiko.png";
-import partner2 from "/partnersLogos/canadian-solar.webp";
-import partner4 from "/partnersLogos/jinko-solar-logo.png";
-import partner6 from "/partnersLogos/tigo-logo.png";
-import partner7 from "/partnersLogos/solar-edge-logo.png";
-import partner8 from "/partnersLogos/zjbeny.webp";
-import partner9 from "/partnersLogos/skoda.png";
 import "./Partners.scss";
 
 const Partners = () => {
 	const { t } = useTranslation();
+
+	const partnersData = [
+		{
+			siteUrl: "https://aikosolar.com/cz/",
+			imgUrl:
+				"https://www.memodo.cz/m/fileadmin/shopware_products/manufacturer_images/400x200px_Aiko-Logo.png",
+			alt: "Aiko",
+		},
+		{
+			siteUrl: "https://www.canadiansolar.com/",
+			imgUrl:
+				"https://www.canadiansolar.com/wp-content/uploads/2024/06/CS-LOGO-RED-RGB-NEW-2024-W-TAG-2.png",
+			alt: "Canadian Solar",
+		},
+		{
+			siteUrl: "https://deye.com/cs/",
+			imgUrl: "https://www.deyeinverter.com/template/en/images/logo.png",
+			alt: "Deye",
+		},
+		{
+			siteUrl: "https://www.jinkosolar.com/en/#index1",
+			imgUrl:
+				"https://jinkosolarcdn.shwebspace.com/themes/basicen/skin/images/logony.png",
+			alt: "Jinko Solar",
+		},
+		{
+			siteUrl: "https://www.solaxpower.com/",
+			imgUrl: "https://www.solaxpower.com/uploads/image/20240715/22/logo.svg",
+			alt: "Solax Power",
+		},
+		{
+			siteUrl: "https://cs.tigoenergy.com/",
+			imgUrl:
+				"https://cdn.prod.website-files.com/5fa5ee97e1eb253b5efc0385/5fad42bc7dee3e2002385080_Tigo-logo.svg",
+			alt: "Tigo",
+		},
+		{
+			siteUrl: "https://www.solaredge.com/en",
+			imgUrl:
+				"https://www.solaredge.com/sites/master/files/SolarEdge_logo_header_new_0.svg",
+			alt: "Solar Edge",
+		},
+		{
+			siteUrl: "http://cz.zjbeny-german.com/",
+			imgUrl:
+				"https://lh4.googleusercontent.com/proxy/341zOYGIOFlOW5xf7XYn1CNQqGaKaOOXc9uAKv9aqbU-PX_0ameieUdtYshiwsEjcMGtbEMWv96le1WXvbtR65quSuLbJ--cyZkI7d6I8rjZOI5qriUi8jowokGgPw",
+			alt: "Zjbeny",
+		},
+		{
+			siteUrl: "https://www.skoda-auto.cz/",
+			imgUrl:
+				"https://upload.wikimedia.org/wikipedia/commons/0/09/%C5%A0koda_nieuw.png",
+			alt: "Skoda",
+		},
+	];
 
 	return (
 		<>
@@ -26,33 +72,19 @@ const Partners = () => {
 				}}
 			>
 				<div className="list">
-					<div className="item" style={{ "--position": "1" }}>
-						<img src={partner1} alt="" loading="lazy" />
-					</div>
-					<div className="item" style={{ "--position": "2" }}>
-						<img src={partner2} alt="" loading="lazy" />
-					</div>
-					<div className="item" style={{ "--position": "3" }}>
-						<img src={partner3} alt="" loading="lazy" />
-					</div>
-					<div className="item" style={{ "--position": "4" }}>
-						<img src={partner4} alt="" loading="lazy" />
-					</div>
-					<div className="item" style={{ "--position": "5" }}>
-						<img src={partner5} alt="" loading="lazy" />
-					</div>
-					<div className="item" style={{ "--position": "6" }}>
-						<img src={partner6} alt="" loading="lazy" />
-					</div>
-					<div className="item" style={{ "--position": "7" }}>
-						<img src={partner7} alt="" loading="lazy" />
-					</div>
-					<div className="item" style={{ "--position": "8" }}>
-						<img src={partner8} alt="" loading="lazy" />
-					</div>
-					<div className="item" style={{ "--position": "9" }}>
-						<img src={partner9} alt="" loading="lazy" />
-					</div>
+					{partnersData.map(({ siteUrl, imgUrl, alt }, index) => {
+						return (
+							<a
+								key={index}
+								className="item"
+								style={{ "--position": index + 1 }}
+							>
+								<a href={siteUrl} target="_blank">
+									<img src={imgUrl} alt={alt} loading="lazy" />
+								</a>
+							</a>
+						);
+					})}
 				</div>
 			</div>
 		</>

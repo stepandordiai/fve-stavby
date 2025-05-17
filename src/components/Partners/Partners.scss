@@ -42,7 +42,7 @@
 		width: 100%;
 		cursor: pointer;
 		filter: grayscale(1);
-		transition: 0.3s;
+		transition: filter 0.3s;
 
 		&:hover {
 			filter: grayscale(0);
