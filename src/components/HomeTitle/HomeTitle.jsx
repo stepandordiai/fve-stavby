@@ -12,7 +12,7 @@ const HomeTitle = () => {
 				<p className="loading__title">FVE STAVBY s.r.o</p>
 				<div className="home-title__details-container">
 					<div className="home-title__details">
-						<h1 className="home-title__title">FVE STAVBY s.r.o.</h1>
+						<h1 className="home-title__title">FVE - stavby s.r.o.</h1>
 						<h2 className="home-title__sec-title">{t("logo_title")}</h2>
 						<h2 className="home-title__info">{t("home.title")}</h2>
 					</div>

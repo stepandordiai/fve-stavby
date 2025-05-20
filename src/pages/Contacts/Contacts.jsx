@@ -119,9 +119,9 @@ const ContactUs = () => {
 							</p>
 							<a
 								className="contact-details__link"
-								href="https://maps.app.goo.gl/B8QvEwaqziXBAe776"
+								href="https://maps.app.goo.gl/56b3G1KEn5RwGfdW7"
 							>
-								Pod Hroby 271 Kolín IV
+								Krocínova 333/3, Staré Město, 110 00 Praha 1
 							</a>
 						</div>
 						<div className="contact-details">
