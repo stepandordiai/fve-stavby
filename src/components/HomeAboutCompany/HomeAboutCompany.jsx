@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import img1 from "/img/15.jpg";
+import img1 from "/img/15.webp";
 import img2 from "/img/10.jpg";
 import arrow from "/icons/arrow-upper-right-white.png";
 import "./HomeAboutCompany.scss";
