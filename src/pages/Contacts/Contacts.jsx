@@ -119,9 +119,10 @@ const ContactUs = () => {
 							</p>
 							<a
 								className="contact-details__link"
-								href="https://maps.app.goo.gl/56b3G1KEn5RwGfdW7"
+								href="https://maps.app.goo.gl/UBXCPbrrCNxUSXNY8"
+								target="_blank"
 							>
-								Krocínova 333/3, Staré Město, 110 00 Praha 1
+								Pod Hroby 271 Kolín IV
 							</a>
 						</div>
 						<div className="contact-details">
@@ -130,9 +131,10 @@ const ContactUs = () => {
 							</p>
 							<a
 								className="contact-details__link"
-								href="https://maps.app.goo.gl/EsrX5bSfKpw8GprZ9"
+								href="https://maps.app.goo.gl/56b3G1KEn5RwGfdW7"
+								target="_blank"
 							>
-								Lidická 700/19 Brno
+								Krocínova 333/3, Staré Město, 110 00 Praha 1
 							</a>
 						</div>
 						<div className="contact-details">

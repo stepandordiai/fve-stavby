@@ -59,7 +59,7 @@ const Manuals = () => {
 									href={link}
 									target="_blank"
 								>
-									Download
+									{t("download")}
 								</a>
 							</div>
 							<div className={styles["manuals-divider"]}></div>

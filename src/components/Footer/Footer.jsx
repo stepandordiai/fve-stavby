@@ -73,7 +73,11 @@ const Footer = () => {
 							<a href="" title="Instagram">
 								<img width={25} src={instagramIcon} alt="" />
 							</a>
-							<a href="" title="Facebook">
+							<a
+								href="https://www.facebook.com/profile.php?id=61576683235805"
+								title="Facebook"
+								target="_blank"
+							>
 								<img width={25} src={facebookIcon} alt="" />
 							</a>
 							<a href="" title="TikTok">
@@ -159,18 +163,20 @@ const Footer = () => {
 							<span>{t("contacts.address_office")}</span>
 							<a
 								className="footer__link"
-								href="https://maps.app.goo.gl/56b3G1KEn5RwGfdW7"
+								href="https://maps.app.goo.gl/UBXCPbrrCNxUSXNY8"
+								target="_blank"
 							>
-								Krocínova 333/3, Staré Město, 110 00 Praha 1
+								Pod Hroby 271 Kolín IV
 							</a>
 						</li>
 						<li>
 							<span>{t("contacts.address_company")}</span>
 							<a
 								className="footer__link"
-								href="https://maps.app.goo.gl/EsrX5bSfKpw8GprZ9"
+								href="https://maps.app.goo.gl/56b3G1KEn5RwGfdW7"
+								target="_blank"
 							>
-								Lidická 700/19 Brno
+								Krocínova 333/3, Staré Město, 110 00 Praha 1
 							</a>
 						</li>
 						<li>
