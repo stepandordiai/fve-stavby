@@ -1,3 +1,3 @@
 # FVE STAVBY
 
-<img src='./public/screenshots/fve-stavby-screenshot.png' />
+<img src='./public/screenshot/fve-stavby-ss-v4-c.png' />
