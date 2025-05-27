@@ -8,7 +8,7 @@ import img from "/img/14.jpg";
 import "./../../global/LinkEffect.scss";
 import "./Contacts.scss";
 
-const ContactUs = () => {
+const Contacts = () => {
 	const { t } = useTranslation();
 
 	const dateNow = new Date();
@@ -36,6 +36,10 @@ const ContactUs = () => {
 	return (
 		<>
 			<Helmet>
+				<meta
+					name="description"
+					content="Visit or contact us for more information. See our location, phone number, and working hours on the Contacts page."
+				/>
 				<title>FVE STAVBY | {t("contacts_title")}</title>
 				<link rel="canonical" href="https://fvestavby.cz/contacts" />
 			</Helmet>
@@ -46,7 +50,6 @@ const ContactUs = () => {
 						{t("contacts.contact_us")}
 					</h2>
 					<form
-						className="form"
 						action="https://formsubmit.co/info@fvestavby.cz"
 						method="post"
 						autoComplete="on"
@@ -188,4 +191,4 @@ const ContactUs = () => {
 	);
 };
 
-export default ContactUs;
+export default Contacts;

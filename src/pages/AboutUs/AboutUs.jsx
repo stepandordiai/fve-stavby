@@ -51,6 +51,7 @@ const AboutUs = () => {
 	return (
 		<>
 			<Helmet>
+				<meta name="description" content="" />
 				<title>FVE STAVBY | {t("about_us_title")}</title>
 				<link rel="canonical" href="https://fvestavby.cz/about-us" />
 			</Helmet>
