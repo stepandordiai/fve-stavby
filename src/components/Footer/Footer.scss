@@ -1,4 +1,4 @@
-@use "./../../mixins" as *;
+@use "./../../scss/mixins" as *;
 
 .footer-divider {
 	height: 3px;
@@ -43,7 +43,7 @@
 }
 
 .footer__socials-title {
-	color: var(--bg-dark-darker-clr);
+	color: var(--gray-clr);
 	margin-bottom: 6.25px;
 }
 
@@ -72,7 +72,7 @@
 	row-gap: 6.25px;
 
 	p {
-		color: var(--bg-dark-darker-clr);
+		color: var(--gray-clr);
 	}
 }
 
@@ -94,7 +94,7 @@
 		row-gap: 6.25px;
 
 		span {
-			color: var(--bg-dark-darker-clr);
+			color: var(--gray-clr);
 		}
 
 		a {
@@ -111,7 +111,7 @@
 
 	p,
 	span {
-		color: var(--bg-dark-darker-clr);
+		color: var(--gray-clr);
 	}
 }
 

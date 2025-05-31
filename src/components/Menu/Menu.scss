@@ -1,4 +1,4 @@
-@use "./../../mixins" as *;
+@use "./../../scss/mixins" as *;
 
 .menu {
 	position: fixed;
@@ -56,7 +56,7 @@
 	justify-content: space-between;
 
 	p {
-		color: var(--bg-dark-darker-clr);
+		color: var(--gray-clr);
 		margin-bottom: 6.25px;
 	}
 }

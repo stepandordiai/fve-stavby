@@ -1,4 +1,4 @@
-@use "./../../mixins" as *;
+@use "./../../scss/mixins" as *;
 
 .lng-select__btn {
 	width: 50px;
@@ -62,7 +62,6 @@
 		cursor: pointer;
 
 		&:hover {
-			// background: var(--bg-light-darker-clr);
 			background: var(--accent-clr);
 		}
 	}

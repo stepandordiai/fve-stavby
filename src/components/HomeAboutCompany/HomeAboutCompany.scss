@@ -1,4 +1,4 @@
-@use "./../../mixins" as *;
+@use "./../../scss/mixins" as *;
 
 .home-about-company {
 	display: flex;
@@ -34,7 +34,7 @@
 }
 
 .counter-info {
-	color: var(--bg-dark-darker-clr);
+	color: var(--gray-clr);
 }
 
 .about-company__link {

@@ -1,4 +1,4 @@
-@use "./../../mixins" as *;
+@use "./../../scss/mixins" as *;
 
 .process__title {
 	font-size: 1.5rem;
@@ -38,9 +38,7 @@
 }
 
 .process-card__step {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	@include flex-between-center;
 	gap: 5px;
 
 	span {

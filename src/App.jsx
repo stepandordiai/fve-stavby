@@ -1,7 +1,7 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Menu from "./components/Menu/Menu";
 import Home from "./pages/Home/Home";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Contacts from "./pages/Contacts/Contacts";
 import Footer from "./components/Footer/Footer";
 import ScrollToTop from "./utils/ScrollToTop";
@@ -10,9 +10,9 @@ import House from "./pages/House/House";
 import AboutUs from "./pages/AboutUs/AboutUs";
 import Components from "./pages/Components/Components";
 import OurInstallation from "./pages/OurInstallation/OurInstallation";
-import "./i18next";
 import Manuals from "./pages/Manuals/Manuals";
-import "./App.scss";
+import "./i18next";
+import "./scss/App.scss";
 
 function App() {
 	return (

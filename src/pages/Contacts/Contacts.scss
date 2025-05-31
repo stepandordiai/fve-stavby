@@ -1,4 +1,4 @@
-@use "./../../mixins" as *;
+@use "./../../scss/mixins" as *;
 
 .contacts {
 	display: flex;
@@ -116,7 +116,7 @@ textarea {
 }
 
 .contact-details__title {
-	color: var(--bg-dark-darker-clr);
+	color: var(--gray-clr);
 }
 
 .contact-details__link {
