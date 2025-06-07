@@ -15,11 +15,13 @@ const House = () => {
 				<title>FVE STAVBY | {t("house_title")}</title>
 				<link rel="canonical" href="https://fvestavby.cz/house" />
 			</Helmet>
-			<PageTitle title={t("house_title")} img={img} />
-			<div className="house">
-				<WhySolar />
-				<GetInTouch />
-			</div>
+			<main>
+				<PageTitle title={t("house_title")} img={img} />
+				<div className="house">
+					<WhySolar />
+					<GetInTouch />
+				</div>
+			</main>
 		</>
 	);
 };

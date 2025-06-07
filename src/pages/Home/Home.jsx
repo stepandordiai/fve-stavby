@@ -18,15 +18,17 @@ const Home = () => {
 				<title>FVE STAVBY | {t("logo_title")}</title>
 				<link rel="canonical" href="https://fvestavby.cz/" />
 			</Helmet>
-			<HomeTitle />
-			<div className="home">
-				<HomeAboutCompany />
-				<WhyUs />
-				<Process />
-				<Stats />
-				<Partners />
-				<GetInTouch />
-			</div>
+			<main>
+				<HomeTitle />
+				<div className="home">
+					<HomeAboutCompany />
+					<WhyUs />
+					<Process />
+					<Stats />
+					<Partners />
+					<GetInTouch />
+				</div>
+			</main>
 		</>
 	);
 };

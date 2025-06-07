@@ -196,22 +196,26 @@ const OurInstallation = () => {
 				<title>FVE STAVBY | {t("our_installation_title")}</title>
 				<link rel="canonical" href="https://fvestavby.cz/our-installation" />
 			</Helmet>
-			<PageTitle title={t("our_installation_title")} img={img} />
-			<div className="our-installation">
-				<p className="our-installation__title">{t("our_installation_desc")}</p>
-				<div className="our-installation__grid">
-					{installationsData.map(({ id, img }) => {
-						return (
-							<div key={id} className="our-installation__card-wrapper">
-								<div className="our-installation__card">
-									<img src={img} alt="" loading="lazy" />
+			<main>
+				<PageTitle title={t("our_installation_title")} img={img} />
+				<div className="our-installation">
+					<p className="our-installation__title">
+						{t("our_installation_desc")}
+					</p>
+					<div className="our-installation__grid">
+						{installationsData.map(({ id, img }) => {
+							return (
+								<div key={id} className="our-installation__card-wrapper">
+									<div className="our-installation__card">
+										<img src={img} alt="" loading="lazy" />
+									</div>
 								</div>
-							</div>
-						);
-					})}
+							);
+						})}
+					</div>
+					<GetInTouch />
 				</div>
-				<GetInTouch />
-			</div>
+			</main>
 		</>
 	);
 };

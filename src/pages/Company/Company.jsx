@@ -15,12 +15,14 @@ const Company = () => {
 				<title>FVE STAVBY | {t("company_title")}</title>
 				<link rel="canonical" href="https://fvestavby.cz/company" />
 			</Helmet>
-			<PageTitle title={t("company_title")} img={img} />
-			<div className="company">
-				<p style={{ marginBottom: 25 }}>{t("company_desc")}.</p>
-				<Advantages />
-				<GetInTouch />
-			</div>
+			<main>
+				<PageTitle title={t("company_title")} img={img} />
+				<div className="company">
+					<p style={{ marginBottom: 25 }}>{t("company_desc")}.</p>
+					<Advantages />
+					<GetInTouch />
+				</div>
+			</main>
 		</>
 	);
 };

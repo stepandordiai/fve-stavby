@@ -47,27 +47,29 @@ const Manuals = () => {
 				<title>FVE STAVBY | {t("manuals_title")}</title>
 				<link rel="canonical" href="https://fvestavby.cz/manuals" />
 			</Helmet>
-			<PageTitle title={t("manuals_title")} img={img} />
-			<div className={styles["manuals"]}>
-				{manualsData.map(({ info, link }, index) => {
-					return (
-						<React.Fragment key={index}>
-							<div className={styles["manuals-container"]}>
-								<p>{info} (pdf)</p>
-								<a
-									className={styles["manuals__link"]}
-									href={link}
-									target="_blank"
-								>
-									{t("download")}
-								</a>
-							</div>
-							<div className={styles["manuals-divider"]}></div>
-						</React.Fragment>
-					);
-				})}
-				<GetInTouch />
-			</div>
+			<main>
+				<PageTitle title={t("manuals_title")} img={img} />
+				<div className={styles["manuals"]}>
+					{manualsData.map(({ info, link }, index) => {
+						return (
+							<React.Fragment key={index}>
+								<div className={styles["manuals-container"]}>
+									<p>{info + " (pdf)"}</p>
+									<a
+										className={styles["manuals__link"]}
+										href={link}
+										target="_blank"
+									>
+										{t("download")}
+									</a>
+								</div>
+								<div className={styles["manuals-divider"]}></div>
+							</React.Fragment>
+						);
+					})}
+					<GetInTouch />
+				</div>
+			</main>
 		</>
 	);
 };
