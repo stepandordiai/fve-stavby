@@ -44,6 +44,10 @@ const Manuals = () => {
 	return (
 		<>
 			<Helmet>
+				<meta
+					name="description"
+					content="Stáhněte si návody a manuály k fotovoltaickým systémům. FVE – stavby s.r.o. poskytuje přehledné dokumentace k obsluze a údržbě solárních technologií."
+				/>
 				<title>FVE STAVBY | {t("manuals_title")}</title>
 				<link rel="canonical" href="https://fvestavby.cz/manuals" />
 			</Helmet>

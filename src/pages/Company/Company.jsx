@@ -12,6 +12,10 @@ const Company = () => {
 	return (
 		<>
 			<Helmet>
+				<meta
+					name="description"
+					content="Specializujeme se na instalaci fotovoltaických systémů pro firmy. FVE – stavby s.r.o. nabízí úsporná a efektivní řešení solární energie pro komerční objekty po celé ČR."
+				/>
 				<title>FVE STAVBY | {t("company_title")}</title>
 				<link rel="canonical" href="https://fvestavby.cz/company" />
 			</Helmet>

@@ -38,7 +38,7 @@ const Contacts = () => {
 			<Helmet>
 				<meta
 					name="description"
-					content="Visit or contact us for more information. See our location, phone number, and working hours on the Contacts page."
+					content="Kontaktujte nás – FVE – stavby s.r.o. vám rádi zodpoví dotazy k fotovoltaice. Najdete zde telefon, e-mail, adresu sídla i kontaktní formulář pro rychlou zprávu."
 				/>
 				<title>FVE STAVBY | {t("contacts_title")}</title>
 				<link rel="canonical" href="https://fvestavby.cz/contacts" />

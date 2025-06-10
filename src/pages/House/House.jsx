@@ -12,6 +12,10 @@ const House = () => {
 	return (
 		<>
 			<Helmet>
+				<meta
+					name="description"
+					content="Instalujeme fotovoltaické elektrárny pro rodinné domy na klíč. Snižte své náklady na energie s FVE – stavby s.r.o. a využijte dotace z programu Nová zelená úsporám."
+				/>
 				<title>FVE STAVBY | {t("house_title")}</title>
 				<link rel="canonical" href="https://fvestavby.cz/house" />
 			</Helmet>
