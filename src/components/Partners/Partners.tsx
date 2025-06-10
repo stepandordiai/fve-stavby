@@ -4,7 +4,13 @@ import "./Partners.scss";
 const Partners = () => {
 	const { t } = useTranslation();
 
-	const partnersData = [
+	interface PartnersData {
+		siteUrl: string;
+		imgUrl: string;
+		alt: string;
+	}
+
+	const partnersData: PartnersData[] = [
 		{
 			siteUrl: "https://aikosolar.com/cz/",
 			imgUrl:
@@ -65,11 +71,14 @@ const Partners = () => {
 			<div
 				className="slider"
 				// reverse="true"
-				style={{
-					"--width": "100px",
-					"--height": "100px",
-					"--quantity": "9",
-				}}
+				// FIXME:
+				style={
+					{
+						"--width": "100px",
+						"--height": "100px",
+						"--quantity": "9",
+					} as React.CSSProperties
+				}
 			>
 				<div className="list">
 					{partnersData.map(({ siteUrl, imgUrl, alt }, index) => {
@@ -77,7 +86,8 @@ const Partners = () => {
 							<div
 								key={index}
 								className="item"
-								style={{ "--position": index + 1 }}
+								// FIXME:
+								style={{ "--position": index + 1 } as React.CSSProperties}
 							>
 								<a href={siteUrl} target="_blank">
 									<img src={imgUrl} alt={alt} loading="lazy" />
