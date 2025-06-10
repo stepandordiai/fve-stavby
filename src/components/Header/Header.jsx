@@ -78,7 +78,7 @@ const Header = () => {
 			<header className="header">
 				<div className="header-top">
 					<NavLink to={"/"} className="header-top__logo">
-						<img src={logo} alt="Logo" />
+						<img src={logo} alt="FVE STAVBY Logo" />
 						<span>FVE STAVBY</span>
 					</NavLink>
 					<a href="tel:+420777957290" className="header-top__number">
