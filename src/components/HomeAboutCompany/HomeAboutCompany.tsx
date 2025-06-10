@@ -10,45 +10,53 @@ const HomeAboutCompany = () => {
 	const { t } = useTranslation();
 
 	useEffect(() => {
-		let valueDisplays = document.querySelectorAll(".counter-wrapper");
-		const valueWrappers = document.querySelectorAll(".counter-container");
-		let interval = 1000;
+		const valueDisplays = document.querySelectorAll(
+			".counter-wrapper"
+		) as NodeListOf<HTMLSpanElement>;
+		const valueWrappers = document.querySelectorAll(
+			".counter-container"
+		) as NodeListOf<HTMLDivElement>;
+		let interval: number = 1000;
 
-		valueDisplays.forEach((valueDisplay, index) => {
-			let isUsed = false;
-			addEventListener("scroll", () => {
-				const valueDisplayRect = valueDisplay.getBoundingClientRect().top;
+		const activatedDisplays = new Set<number>();
+
+		function handleDisplay() {
+			valueDisplays.forEach((display, index) => {
+				const displayRect = display.getBoundingClientRect().top;
 				const valueText = valueWrappers[index].offsetWidth;
-				if (valueDisplayRect < window.innerHeight) {
-					if (!isUsed) {
-						let startValue = 0;
-						let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+				const targetValue = Number(display.getAttribute("data-val"));
 
-						let duration = Math.floor(interval / endValue);
+				if (
+					displayRect < window.innerHeight - 25 &&
+					!activatedDisplays.has(index)
+				) {
+					let startValue: number = 0;
 
-						function start() {
-							let counter = setTimeout(() => {
+					function startCount() {
+						let duration = Math.floor(interval / targetValue);
+
+						setTimeout(() => {
+							if (startValue < targetValue) {
 								startValue += 1;
 								valueWrappers[index].style.width = `${valueText}px`;
-								valueDisplay.textContent = startValue;
-
-								// I tried to increase duration every loop so counter end up smoothly
-
-								// duration += 0.25;
-								if (startValue == endValue) {
-									clearTimeout(counter);
-								} else {
-									start();
-								}
-							}, duration);
-						}
-
-						start();
+								display.textContent = startValue.toString();
+								startCount();
+							}
+						}, duration);
 					}
-					isUsed = true;
+					startCount();
+					activatedDisplays.add(index);
 				}
 			});
-		});
+		}
+
+		handleDisplay();
+
+		document.addEventListener("scroll", handleDisplay);
+
+		return () => {
+			document.removeEventListener("scroll", handleDisplay);
+		};
 	}, []);
 
 	return (
@@ -114,7 +122,7 @@ const HomeAboutCompany = () => {
 						<img
 							className="card__link-icon"
 							src={arrow}
-							alt="Arrow"
+							alt=""
 							loading="lazy"
 						/>
 					</NavLink>
@@ -127,7 +135,7 @@ const HomeAboutCompany = () => {
 						<img
 							className="card__link-icon"
 							src={arrow}
-							alt="Arrow"
+							alt=""
 							loading="lazy"
 						/>
 					</NavLink>
