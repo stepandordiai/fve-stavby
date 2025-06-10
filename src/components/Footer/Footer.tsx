@@ -18,41 +18,56 @@ const Footer = () => {
 
 	// TODO: I learned new nice animation with position and scale
 	useEffect(() => {
-		const creatorLink = document.querySelector(".creator-link");
-		const bgElement = document.querySelector(".bg-element");
+		const creatorLink = document.querySelector(
+			".creator-link"
+		) as HTMLAnchorElement | null;
+		const bgElement = document.querySelector(
+			".bg-element"
+		) as HTMLDivElement | null;
+		let positionX;
+		let positionY;
 
-		let mouseX;
-		let mouseY;
-
-		creatorLink.addEventListener("mouseenter", (e) => {
+		const handleLinkAnimation = (e: MouseEvent | TouchEvent) => {
+			if (!creatorLink || !bgElement) return;
 			const rect = creatorLink.getBoundingClientRect();
-			mouseX =
-				(!isTouchDevice() ? e.clientX : e.touches[0].clientX) - rect.left;
-			mouseY = (!isTouchDevice() ? e.clientY : e.touches[0].clientY) - rect.top;
-			bgElement.style.top = mouseY + "px";
-			bgElement.style.left = mouseX + "px";
+			positionX =
+				(!isTouchDevice()
+					? (e as MouseEvent).clientX
+					: (e as TouchEvent).touches[0].clientX) - rect.left;
+			positionY =
+				(!isTouchDevice()
+					? (e as MouseEvent).clientY
+					: (e as TouchEvent).touches[0].clientY) - rect.top;
+			bgElement.style.top = positionY + "px";
+			bgElement.style.left = positionX + "px";
 			bgElement.classList.add("bg-element--active");
+		};
+
+		creatorLink?.addEventListener("mouseenter", handleLinkAnimation);
+
+		creatorLink?.addEventListener("touchstart", handleLinkAnimation);
+
+		creatorLink?.addEventListener("mouseleave", () => {
+			bgElement?.classList.remove("bg-element--active");
 		});
 
-		creatorLink.addEventListener("touchstart", (e) => {
-			const rect = creatorLink.getBoundingClientRect();
-			mouseX =
-				(!isTouchDevice() ? e.clientX : e.touches[0].clientX) - rect.left;
-			mouseY = (!isTouchDevice() ? e.clientY : e.touches[0].clientY) - rect.top;
-			bgElement.style.top = mouseY + "px";
-			bgElement.style.left = mouseX + "px";
-			bgElement.classList.add("bg-element--active");
+		creatorLink?.addEventListener("touchend", () => {
+			bgElement?.classList.remove("bg-element--active");
 		});
 
-		creatorLink.addEventListener("mouseleave", () => {
-			const bgElement = document.querySelector(".bg-element");
-			bgElement.classList.remove("bg-element--active");
-		});
+		return () => {
+			creatorLink?.removeEventListener("mouseenter", handleLinkAnimation);
 
-		creatorLink.addEventListener("touchend", () => {
-			const bgElement = document.querySelector(".bg-element");
-			bgElement.classList.remove("bg-element--active");
-		});
+			creatorLink?.removeEventListener("touchstart", handleLinkAnimation);
+
+			creatorLink?.removeEventListener("mouseleave", () => {
+				bgElement?.classList.remove("bg-element--active");
+			});
+
+			creatorLink?.removeEventListener("touchend", () => {
+				bgElement?.classList.remove("bg-element--active");
+			});
+		};
 	}, []);
 
 	return (
@@ -62,7 +77,7 @@ const Footer = () => {
 				<div className="footer-top">
 					<div>
 						<NavLink className={"footer-top__logo"} to={"/"}>
-							<img src={logo} alt="Logo" />
+							<img src={logo} alt="FVE STAVBY Logo" />
 							<span>FVE STAVBY</span>
 						</NavLink>
 						<p>{t("logo_title")}</p>
@@ -71,17 +86,17 @@ const Footer = () => {
 						<p className="footer__socials-title">Sledujte nás</p>
 						<div className="footer__socials-list">
 							<a href="" title="Instagram">
-								<img width={25} src={instagramIcon} alt="" />
+								<img width={25} height={25} src={instagramIcon} alt="" />
 							</a>
 							<a
 								href="https://www.facebook.com/profile.php?id=61576683235805"
 								title="Facebook"
 								target="_blank"
 							>
-								<img width={25} src={facebookIcon} alt="" />
+								<img width={25} height={25} src={facebookIcon} alt="" />
 							</a>
 							<a href="" title="TikTok">
-								<img width={25} src={tiktokIcon} alt="" />
+								<img width={25} height={25} src={tiktokIcon} alt="" />
 							</a>
 						</div>
 					</div>

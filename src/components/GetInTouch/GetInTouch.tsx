@@ -16,7 +16,7 @@ const GetInTouch = () => {
 				<img
 					className="get-in-touch__link-icon"
 					src={arrowIcon}
-					alt="Arrow icon"
+					alt=""
 					loading="lazy"
 				/>
 			</NavLink>
