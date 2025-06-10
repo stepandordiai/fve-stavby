@@ -3,7 +3,13 @@ import { NavLink } from "react-router-dom";
 import arrow from "/icons/arrow-upper-right-white.png";
 import "./PageTitle.scss";
 
-const PageTitle = ({ title, img, linkPath }) => {
+type PageTitleProps = {
+	title: string;
+	img: string;
+	linkPath: string;
+};
+
+const PageTitle = ({ title, img, linkPath }: PageTitleProps) => {
 	const { t } = useTranslation();
 
 	return (

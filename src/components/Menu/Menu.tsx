@@ -7,26 +7,34 @@ import "./Menu.scss";
 const Menu = () => {
 	const { t } = useTranslation();
 
-	useEffect(() => {
-		document.querySelectorAll(".js-link").forEach((link) => {
-			link.addEventListener("click", () => {
-				document
-					.querySelector(".burger-btn")
-					.classList.remove("burger-btn--active");
-				document
-					.querySelector(".burger-btn__center-line")
-					.classList.remove("burger-btn__center-line--active");
+	const handleLinkClick = (): void => {
+		const elements = [
+			".burger-btn",
+			".burger-btn__center-line",
+			".menu",
+			".menu-wrapper",
+			".header-bottom",
+		].map(
+			(selector) => document.querySelector(selector) as HTMLDivElement | null
+		);
 
-				document.querySelector(".menu").classList.remove("menu--active");
-				document
-					.querySelector(".menu-wrapper")
-					.classList.remove("menu-wrapper--active");
-				document
-					.querySelector(".header-bottom")
-					.classList.remove("header-bottom--hide");
-			});
+		elements.forEach((el) =>
+			el?.classList.remove(`${el?.classList[0]}--active`)
+		);
+	};
+
+	useEffect(() => {
+		const links = document.querySelectorAll(".js-link");
+		links.forEach((link) => {
+			link.addEventListener("click", handleLinkClick);
 		});
-	});
+
+		return () => {
+			links.forEach((link) => {
+				link.removeEventListener("click", handleLinkClick);
+			});
+		};
+	}, []);
 
 	const inactiveLink = "link js-link link-effect";
 	const activeLink = "link js-link link-effect link-effect--active";
