@@ -26,6 +26,12 @@ const LngSelect = () => {
 	};
 
 	function toogleLngSelect() {
+		const lngSelectBtn = document.querySelector(
+			".lng-select__btn"
+		) as HTMLButtonElement | null;
+		const lngSelectDd = document.querySelector(
+			".lng-select__dd"
+		) as HTMLUListElement;
 		if (!lngSelect.current || !lngSelectBtn || !lngSelectDd) return;
 		lngSelect.current.classList.toggle("lng-select--active");
 		lngSelectBtn?.classList.toggle("lng-select__btn--active");
@@ -33,6 +39,15 @@ const LngSelect = () => {
 	}
 
 	useEffect(() => {
+		const lngSelectBtn = document.querySelector(
+			".lng-select__btn"
+		) as HTMLButtonElement | null;
+		const lngSelectDd = document.querySelector(
+			".lng-select__dd"
+		) as HTMLUListElement;
+		const lngSelectOptions = document.querySelectorAll(
+			".lng-select__option"
+		) as NodeListOf<HTMLLIElement>;
 		lngSelectOptions.forEach((option: HTMLLIElement) => {
 			option.addEventListener("click", () => {
 				handleLanguage(option.dataset?.value || "cs");
