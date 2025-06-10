@@ -3,45 +3,48 @@ import i18next from "i18next";
 import "./LngSelect.scss";
 
 const LngSelect = () => {
-	const lngSelect = useRef(null);
+	const lngSelect = useRef<HTMLDivElement | null>(null);
+	const lngSelectBtn = document.querySelector(
+		".lng-select__btn"
+	) as HTMLButtonElement | null;
+	const lngSelectDd = document.querySelector(
+		".lng-select__dd"
+	) as HTMLUListElement;
+	const lngSelectOptions = document.querySelectorAll(
+		".lng-select__option"
+	) as NodeListOf<HTMLLIElement>;
 
 	function getStorage() {
 		return localStorage.getItem("i18nextLng") || "cs";
 	}
 
-	const handleLanguage = (lng) => {
+	const handleLanguage = (lng: string) => {
 		i18next.changeLanguage(lng);
+
+		// FIXME:
 		getStorage();
 	};
 
 	function toogleLngSelect() {
+		if (!lngSelect.current || !lngSelectBtn || !lngSelectDd) return;
 		lngSelect.current.classList.toggle("lng-select--active");
-		document
-			.querySelector(".lng-select__btn")
-			.classList.toggle("lng-select__btn--active");
-		document
-			.querySelector(".lng-select__dd")
-			.classList.toggle("lng-select__dd--active");
+		lngSelectBtn?.classList.toggle("lng-select__btn--active");
+		lngSelectDd?.classList.toggle("lng-select__dd--active");
 	}
 
 	useEffect(() => {
-		const lngSelectBtn = document.querySelector(".lng-select__btn");
-		const lngSelectOptions = document.querySelectorAll(".lng-select__option");
-		lngSelectOptions.forEach((option) => {
+		lngSelectOptions.forEach((option: HTMLLIElement) => {
 			option.addEventListener("click", () => {
-				handleLanguage(option.dataset.value);
-				// document.querySelector(".lng-select__btn").textContent =
-				// 	option.dataset.value.toUpperCase();
+				handleLanguage(option.dataset?.value || "cs");
 				for (let i = 0; i < lngSelectOptions.length; i++) {
 					lngSelectOptions[i].classList.remove("lng-select__option--active");
 				}
+				if (!lngSelectBtn || !lngSelect.current) return;
 				lngSelectBtn.innerHTML = option.innerHTML.slice(0, 2);
-				lngSelect.current.classList.remove("lng-select--active");
+				lngSelect.current?.classList.remove("lng-select--active");
 
 				lngSelectBtn.classList.remove("lng-select__btn--active");
-				document
-					.querySelector(".lng-select__dd")
-					.classList.remove("lng-select__dd--active");
+				lngSelectDd?.classList.remove("lng-select__dd--active");
 				if (option.dataset.value === getStorage()) {
 					option.classList.add("lng-select__option--active");
 				}
@@ -59,13 +62,9 @@ const LngSelect = () => {
 				e.target != lngOptions[1] &&
 				e.target != lngOptions[2]
 			) {
-				lngSelect.current.classList.remove("lng-select--active");
-				document
-					.querySelector(".lng-select__btn")
-					.classList.remove("lng-select__btn--active");
-				document
-					.querySelector(".lng-select__dd")
-					.classList.remove("lng-select__dd--active");
+				lngSelect.current?.classList.remove("lng-select--active");
+				lngSelectBtn?.classList.remove("lng-select__btn--active");
+				lngSelectDd?.classList.remove("lng-select__dd--active");
 			}
 		});
 
@@ -73,18 +72,17 @@ const LngSelect = () => {
 			return code;
 		};
 
+		if (!lngSelectBtn) return;
+
 		switch (getStorage()) {
 			case "uk":
-				document.querySelector(".lng-select__btn").innerHTML =
-					handleLngSelectBtn("UA");
+				lngSelectBtn.innerHTML = handleLngSelectBtn("UA");
 				break;
 			case "en":
-				document.querySelector(".lng-select__btn").innerHTML =
-					handleLngSelectBtn("EN");
+				lngSelectBtn.innerHTML = handleLngSelectBtn("EN");
 				break;
 			case "cs":
-				document.querySelector(".lng-select__btn").innerHTML =
-					handleLngSelectBtn("CZ");
+				lngSelectBtn.innerHTML = handleLngSelectBtn("CZ");
 				break;
 		}
 	}, []);
