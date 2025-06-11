@@ -8,7 +8,6 @@ const HomeTitle = () => {
 	const { t } = useTranslation();
 
 	function handleHomeTitleImg() {
-		document.querySelector(".home-title")?.classList.add("home-title--active");
 		document
 			.querySelector(".home-title__img")
 			?.classList.add("home-title__img--active");

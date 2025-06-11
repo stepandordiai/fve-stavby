@@ -6,9 +6,6 @@
 	border-radius: 25px;
 	overflow: hidden;
 	scale: 0.25;
-}
-
-.home-title--active {
 	animation: animateHomeTitle 2s forwards;
 	animation-timing-function: cubic-bezier(0.75, 0.5, 0.25, 1);
 }
@@ -25,11 +22,14 @@
 	object-fit: cover;
 	object-position: center;
 	scale: 2;
+	opacity: 0;
+	animation: animateBgImg 2s forwards;
+	animation-timing-function: cubic-bezier(0.75, 0.5, 0.25, 1);
+	transition: opacity 0.3s;
 }
 
 .home-title__img--active {
-	animation: animateBgImg 2s forwards;
-	animation-timing-function: cubic-bezier(0.75, 0.5, 0.25, 1);
+	opacity: 1;
 }
 
 @keyframes animateBgImg {
