@@ -43,7 +43,7 @@ const Footer = () => {
 			bgElement.classList.add("bg-element--active");
 		};
 
-		creatorLink?.addEventListener("mouseenter", handleLinkAnimation);
+		creatorLink?.addEventListener("mousemove", handleLinkAnimation);
 
 		creatorLink?.addEventListener("touchstart", handleLinkAnimation);
 
@@ -56,7 +56,7 @@ const Footer = () => {
 		});
 
 		return () => {
-			creatorLink?.removeEventListener("mouseenter", handleLinkAnimation);
+			creatorLink?.removeEventListener("mousemove", handleLinkAnimation);
 
 			creatorLink?.removeEventListener("touchstart", handleLinkAnimation);
 
@@ -85,18 +85,33 @@ const Footer = () => {
 					<div>
 						<p className="footer__socials-title">Sledujte nás</p>
 						<div className="footer__socials-list">
-							<a href="" title="Instagram">
-								<img width={25} height={25} src={instagramIcon} alt="" />
+							<a href="https://www.instagram.com/fvestavby" title="Instagram">
+								<img
+									width={25}
+									height={25}
+									src={instagramIcon}
+									alt="Instagram FVE STAVBY Logo"
+								/>
 							</a>
 							<a
 								href="https://www.facebook.com/profile.php?id=61576683235805"
 								title="Facebook"
 								target="_blank"
 							>
-								<img width={25} height={25} src={facebookIcon} alt="" />
+								<img
+									width={25}
+									height={25}
+									src={facebookIcon}
+									alt="Facebook FVE STAVBY Logo"
+								/>
 							</a>
-							<a href="" title="TikTok">
-								<img width={25} height={25} src={tiktokIcon} alt="" />
+							<a href="https://www.tiktok.com/@fvestavby" title="TikTok">
+								<img
+									width={25}
+									height={25}
+									src={tiktokIcon}
+									alt="TikTok FVE STAVBY Logo"
+								/>
 							</a>
 						</div>
 					</div>
@@ -158,6 +173,14 @@ const Footer = () => {
 								}
 							>
 								{t("contacts_title")}
+							</NavLink>
+							<NavLink
+								to={"/manuals"}
+								className={({ isActive }) =>
+									isActive ? activeFooterLink : inactiveFooterLink
+								}
+							>
+								{t("manuals_title")}
 							</NavLink>
 						</div>
 					</div>
@@ -223,7 +246,7 @@ const Footer = () => {
 			<img
 				className="footer-bottom__logo-img"
 				src={footerBottomLogo}
-				alt="Logo"
+				alt="FVE STAVBY Logo"
 			/>
 		</>
 	);
