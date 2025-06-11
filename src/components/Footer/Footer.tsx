@@ -24,17 +24,15 @@ const Footer = () => {
 		const bgElement = document.querySelector(
 			".bg-element"
 		) as HTMLDivElement | null;
-		let positionX;
-		let positionY;
 
 		const handleLinkAnimation = (e: MouseEvent | TouchEvent) => {
 			if (!creatorLink || !bgElement) return;
 			const rect = creatorLink.getBoundingClientRect();
-			positionX =
+			let positionX =
 				(!isTouchDevice()
 					? (e as MouseEvent).clientX
 					: (e as TouchEvent).touches[0].clientX) - rect.left;
-			positionY =
+			let positionY =
 				(!isTouchDevice()
 					? (e as MouseEvent).clientY
 					: (e as TouchEvent).touches[0].clientY) - rect.top;

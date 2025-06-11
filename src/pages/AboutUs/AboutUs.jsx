@@ -2,6 +2,8 @@ import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
+import { useEffect } from "react";
+import isTouchDevice from "../../utils/isTouchDevice";
 import img from "/img/7.jpg";
 import userIcon from "/icons/user.png";
 import styles from "./AboutUs.module.scss";
@@ -25,6 +27,7 @@ const AboutUs = () => {
 		{
 			name: "Štěpán",
 			position: t("our_team.member4"),
+			linkedInUrl: "https://linkedin.com/in/stepandordiai",
 		},
 		{
 			name: "Alexandr",
@@ -47,6 +50,51 @@ const AboutUs = () => {
 			position: t("our_team.member9"),
 		},
 	];
+
+	useEffect(() => {
+		const portfolio = document.querySelectorAll(
+			`.${styles["guarantees__grid-item"]}`
+		);
+
+		portfolio.forEach((creatorLink, index) => {
+			const bgElement = document.createElement("div");
+
+			creatorLink.appendChild(bgElement);
+
+			bgElement.classList.add("bg-element");
+
+			creatorLink.addEventListener("mousemove", (e) => {
+				console.log(1);
+				const rect = creatorLink.getBoundingClientRect();
+				let mouseX =
+					(!isTouchDevice() ? e.clientX : e.touches[0].clientX) - rect.left;
+				let mouseY =
+					(!isTouchDevice() ? e.clientY : e.touches[0].clientY) - rect.top;
+				bgElement.style.top = mouseY + "px";
+				bgElement.style.left = mouseX + "px";
+				bgElement.classList.add("bg-element--active");
+			});
+
+			creatorLink.addEventListener("touchstart", (e) => {
+				const rect = creatorLink.getBoundingClientRect();
+				mouseX =
+					(!isTouchDevice() ? e.clientX : e.touches[0].clientX) - rect.left;
+				mouseY =
+					(!isTouchDevice() ? e.clientY : e.touches[0].clientY) - rect.top;
+				bgElement.style.top = mouseY + "px";
+				bgElement.style.left = mouseX + "px";
+				bgElement.classList.add("bg-element--active");
+			});
+
+			creatorLink.addEventListener("mouseleave", () => {
+				bgElement.classList.remove("bg-element--active");
+			});
+
+			creatorLink.addEventListener("touchend", () => {
+				bgElement.classList.remove("bg-element--active");
+			});
+		});
+	}, []);
 
 	return (
 		<>
@@ -76,7 +124,7 @@ const AboutUs = () => {
 					</p>
 					<h2 className={styles["our-team__title"]}>{t("our_team.title")}</h2>
 					<div className={styles["our-team__grid"]}>
-						{membersData.map(({ name, position }, index) => {
+						{membersData.map(({ name, position, linkedInUrl }, index) => {
 							return (
 								<div key={index} className={styles["our-team__grid-item"]}>
 									<div className={styles["img-wrapper"]}>
@@ -86,6 +134,15 @@ const AboutUs = () => {
 									<p className={styles["our-team__grid-item-position"]}>
 										{position}
 									</p>
+									{linkedInUrl && (
+										<a
+											className={styles["our-team__grid-item-link"]}
+											href={linkedInUrl}
+											target="_blank"
+										>
+											LinkedIn
+										</a>
+									)}
 								</div>
 							);
 						})}
