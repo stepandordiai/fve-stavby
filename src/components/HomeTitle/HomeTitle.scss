@@ -6,6 +6,9 @@
 	border-radius: 25px;
 	overflow: hidden;
 	scale: 0.25;
+}
+
+.home-title--active {
 	animation: animateHomeTitle 2s forwards;
 	animation-timing-function: cubic-bezier(0.75, 0.5, 0.25, 1);
 }
@@ -16,17 +19,15 @@
 	}
 }
 
-.home-title::before {
-	content: "";
-	position: absolute;
-	z-index: -10;
-	height: 100%;
+.home-title__img {
 	width: 100%;
-	background: url("/img/4.jpg");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
 	scale: 2;
+}
+
+.home-title__img--active {
 	animation: animateBgImg 2s forwards;
 	animation-timing-function: cubic-bezier(0.75, 0.5, 0.25, 1);
 }
