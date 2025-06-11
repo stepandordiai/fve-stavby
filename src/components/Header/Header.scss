@@ -78,8 +78,9 @@
 	@include glass-effect(20px);
 	padding: 0 12.5px;
 	border-radius: 25px;
-	margin-left: 25px;
-	margin-right: auto;
+	margin-left: auto;
+	// margin-right: auto;
+	margin-right: 10px;
 	color: #fff;
 	transition: background-color 0.3s;
 	opacity: 0;
@@ -198,7 +199,7 @@
 	}
 
 	.header-top__number {
-		margin-left: 10px;
+		// margin-left: 10px;
 	}
 
 	.header-top__nav {

@@ -1,10 +1,11 @@
 @use "./../../scss/mixins" as *;
 
 .burger-btn-wrapper {
+	display: none;
+	place-content: center;
 	width: 50px;
 	aspect-ratio: 1/1;
 	border-radius: 25px;
-	@include grid-center;
 	cursor: pointer;
 	transition: background-color 0.3s;
 	opacity: 0;
@@ -70,4 +71,10 @@
 .burger-btn--active::after {
 	transform: translateY(0);
 	rotate: -225deg;
+}
+
+@media screen and (max-width: 896px) {
+	.burger-btn-wrapper {
+		display: grid;
+	}
 }

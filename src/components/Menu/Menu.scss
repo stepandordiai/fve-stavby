@@ -1,12 +1,14 @@
 @use "./../../scss/mixins" as *;
 
 .menu {
+	display: none;
 	position: fixed;
 	top: 50px;
 	right: 50px;
 	z-index: 11;
 	padding: 25px;
-	@include flex-start-center;
+	justify-content: start;
+	align-items: center;
 	width: 50px;
 	height: 50px;
 	background: var(--bg-light-clr);
@@ -74,6 +76,7 @@
 
 @media screen and (max-width: 896px) {
 	.menu {
+		display: flex;
 		top: 20px;
 		right: 20px;
 		padding: 10px;
