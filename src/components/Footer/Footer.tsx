@@ -206,7 +206,7 @@ const Footer = () => {
 					</ul>
 				</div>
 				<div className="footer-bottom">
-					<p>&copy; 2025 FVE - stavby s.r.o. Všechna práva vyhrazena.</p>
+					<p>&copy; 2025 FVE - stavby s.r.o. {t("all_rights_reserved")}.</p>
 					<div className="creator">
 						<span>Site by</span>
 						<a
