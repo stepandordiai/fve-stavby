@@ -51,10 +51,14 @@
 	padding: 10px;
 	border-radius: 20px;
 	transition: background-color 0.3s;
+
+	&:hover {
+		background-color: var(--bg-light-darker-clr);
+	}
 }
 
-.advantages-btn:hover .advantages-btn-icon-container {
-	background-color: var(--bg-light-darker-clr);
+.advantages-btn-icon-container--active {
+	background-color: var(--accent-clr) !important;
 }
 
 .advantages-btn-icon {

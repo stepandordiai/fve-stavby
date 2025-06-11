@@ -8,12 +8,30 @@ const Advantages = () => {
 
 	useEffect(() => {
 		document.querySelectorAll(".advantages-btn").forEach((btn, index) => {
-			btn.addEventListener("click", () => {
-				const ddWrapper = document.querySelectorAll(".dd-wrapper");
-				const btnICon = document.querySelectorAll(".advantages-btn-icon");
+			const ddWrapper = document.querySelectorAll(".dd-wrapper");
+			const btnIcon = document.querySelectorAll(".advantages-btn-icon");
+			const btnIconContainer = document.querySelectorAll(
+				".advantages-btn-icon-container"
+			);
 
+			btn.addEventListener("click", () => {
 				ddWrapper[index].classList.toggle("dd-wrapper--active");
-				btnICon[index].classList.toggle("advantages-btn-icon--active");
+				btnIconContainer[index].classList.toggle(
+					"advantages-btn-icon-container--active"
+				);
+				btnIcon[index].classList.toggle("advantages-btn-icon--active");
+			});
+
+			document.addEventListener("scroll", () => {
+				const firstOptionRect = btnIconContainer[0].getBoundingClientRect();
+
+				if (firstOptionRect.top < window.innerHeight - 100) {
+					ddWrapper[0].classList.add("dd-wrapper--active");
+					btnIconContainer[0].classList.add(
+						"advantages-btn-icon-container--active"
+					);
+					btnIcon[0].classList.add("advantages-btn-icon--active");
+				}
 			});
 		});
 	}, []);
@@ -31,14 +49,10 @@ const Advantages = () => {
 								{t("why_us.option1")}
 							</span>
 							<div className="advantages-btn-icon-container">
-								<img
-									className="advantages-btn-icon advantages-btn-icon--active"
-									src={plusIcon}
-									alt=""
-								/>
+								<img className="advantages-btn-icon" src={plusIcon} alt="" />
 							</div>
 						</button>
-						<div className="dd-wrapper dd-wrapper--active">
+						<div className="dd-wrapper">
 							<p className="dd-details">{t("why_us.desc1")}.</p>
 						</div>
 					</li>
