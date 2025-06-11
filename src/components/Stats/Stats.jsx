@@ -15,7 +15,7 @@ const Stats = () => {
 				document.addEventListener("scroll", () => {
 					const candlesWrapperRect =
 						candlesWrapper.getBoundingClientRect().bottom;
-					if (candlesWrapperRect < window.innerHeight) {
+					if (candlesWrapperRect < window.innerHeight + 100) {
 						el.style.animation = "animateCandle 4s ease-in-out forwards";
 						if (!isActivated) {
 							let startValue = 0;

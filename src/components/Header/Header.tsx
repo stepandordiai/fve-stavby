@@ -142,16 +142,32 @@ const Header = () => {
 				</div>
 			</header>
 			<div className="header-card">
-				<HashLink className={"header-card__link"} to={"/components#invertors"}>
+				<HashLink
+					className={"header-card__link"}
+					to={"/components#invertors"}
+					smooth
+				>
 					{t("components.section1")} (Deye, Solax Power, Chisage ESS)
 				</HashLink>
-				<HashLink className={"header-card__link"} to={"/components#connectors"}>
+				<HashLink
+					className={"header-card__link"}
+					to={"/components#connectors"}
+					smooth
+				>
 					{t("components.section2")} (Deye, Solax, Chisage ESS)
 				</HashLink>
-				<HashLink className={"header-card__link"} to={"/components#panels"}>
+				<HashLink
+					className={"header-card__link"}
+					to={"/components#panels"}
+					smooth
+				>
 					{t("components.section3")} (Jinko, Aiko)
 				</HashLink>
-				<HashLink className={"header-card__link"} to={"/components#optimizers"}>
+				<HashLink
+					className={"header-card__link"}
+					to={"/components#optimizers"}
+					smooth
+				>
 					{t("components.section4")} (Tigo)
 				</HashLink>
 			</div>

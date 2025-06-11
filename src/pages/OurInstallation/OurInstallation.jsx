@@ -211,7 +211,11 @@ const OurInstallation = () => {
 							return (
 								<div key={id} className="our-installation__card-wrapper">
 									<div className="our-installation__card">
-										<img src={img} alt="" loading="lazy" />
+										<img
+											src={img}
+											alt="FVE STAVBY Installation"
+											loading="lazy"
+										/>
 									</div>
 								</div>
 							);
