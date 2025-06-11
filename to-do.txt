@@ -1,1 +1,2 @@
 convert all files from jsx to tsx
+think where to put socials except footer
