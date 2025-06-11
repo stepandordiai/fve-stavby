@@ -104,12 +104,12 @@ const Header = () => {
 						{t("family_houses_title")}
 					</NavLink>
 					<NavLink
-						to={"/company"}
+						to={"/commercial-installation"}
 						className={({ isActive }) =>
 							isActive ? activeHeaderLink : inactiveHeaderLink
 						}
 					>
-						{t("company_title")}
+						{t("commercial_installation_title")}
 					</NavLink>
 					<div className="header-bottom-dd">
 						<NavLink

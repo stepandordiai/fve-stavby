@@ -129,9 +129,9 @@ const HomeAboutCompany = () => {
 					<div className="card__white-element"></div>
 				</div>
 				<div className="card">
-					<p className="card__title">{t("company_title")}</p>
+					<p className="card__title">{t("commercial_installation_title")}</p>
 					<img className="card__img" src={img2} alt="" loading="lazy" />
-					<NavLink to={"/company"} className="card__link">
+					<NavLink to={"/commercial-installation"} className="card__link">
 						<img
 							className="card__link-icon"
 							src={arrow}
