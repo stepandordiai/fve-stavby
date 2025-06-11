@@ -7,17 +7,17 @@ import "./HomeTitle.scss";
 const HomeTitle = () => {
 	const { t } = useTranslation();
 
-	function handleHomeTitleImg() {
-		document
-			.querySelector(".home-title__img")
-			?.classList.add("home-title__img--active");
-	}
+	// function handleHomeTitleImg() {
+	// 	document
+	// 		.querySelector(".home-title__img")
+	// 		?.classList.add("home-title__img--active");
+	// }
 
 	return (
 		<div className="home-title-wrapper">
 			<div className="home-title">
 				<img
-					onLoad={handleHomeTitleImg}
+					// onLoad={handleHomeTitleImg}
 					className="home-title__img"
 					src={img}
 					alt=""

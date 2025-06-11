@@ -12,23 +12,11 @@ type PageTitleProps = {
 const PageTitle = ({ title, img, linkPath }: PageTitleProps) => {
 	const { t } = useTranslation();
 
-	function handlePageTitleImg() {
-		document
-			.querySelector(".page-title__img")
-			?.classList.add("page-title__img--active");
-	}
-
 	return (
 		<>
 			<div className="page-title">
 				<h1 className="page-title__title">{title}</h1>
-				<img
-					className="page-title__img"
-					onLoad={handlePageTitleImg}
-					src={img}
-					alt=""
-					loading="lazy"
-				/>
+				<img className="page-title__img" src={img} alt="" loading="lazy" />
 				{linkPath && (
 					<NavLink className="page-title__link" to={linkPath}>
 						<span>{t("manuals_title")}</span>
