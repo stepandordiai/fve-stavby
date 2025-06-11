@@ -120,12 +120,12 @@ const Footer = () => {
 								{t("about_us_title")}
 							</NavLink>
 							<NavLink
-								to={"/house"}
+								to={"/family-houses"}
 								className={({ isActive }) =>
 									isActive ? activeFooterLink : inactiveFooterLink
 								}
 							>
-								{t("house_title")}
+								{t("family_houses_title")}
 							</NavLink>
 							<NavLink
 								to={"/company"}

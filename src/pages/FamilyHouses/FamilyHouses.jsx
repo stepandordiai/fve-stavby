@@ -4,9 +4,9 @@ import PageTitle from "../../components/PageTitle/PageTitle";
 import WhySolar from "../../components/WhySolar/WhySolar";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
 import img from "/img/15.webp";
-import "./House.scss";
+import "./FamilyHouses.scss";
 
-const House = () => {
+const FamilyHouses = () => {
 	const { t } = useTranslation();
 
 	return (
@@ -16,12 +16,12 @@ const House = () => {
 					name="description"
 					content="Instalujeme fotovoltaické elektrárny pro rodinné domy na klíč. Snižte své náklady na energie s FVE – stavby s.r.o. a využijte dotace z programu Nová zelená úsporám."
 				/>
-				<title>FVE STAVBY | {t("house_title")}</title>
-				<link rel="canonical" href="https://fvestavby.cz/house" />
+				<title>FVE STAVBY | {t("family_houses_title")}</title>
+				<link rel="canonical" href="https://fvestavby.cz/family-houses" />
 			</Helmet>
 			<main>
-				<PageTitle title={t("house_title")} img={img} />
-				<div className="house">
+				<PageTitle title={t("family_houses_title")} img={img} />
+				<div className="family-houses">
 					<WhySolar />
 					<GetInTouch />
 				</div>
@@ -30,4 +30,4 @@ const House = () => {
 	);
 };
 
-export default House;
+export default FamilyHouses;

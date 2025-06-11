@@ -6,7 +6,7 @@ import Contacts from "./pages/Contacts/Contacts";
 import Footer from "./components/Footer/Footer";
 import ScrollToTop from "./utils/ScrollToTop";
 import Company from "./pages/Company/Company";
-import House from "./pages/House/House";
+import FamilyHouses from "./pages/FamilyHouses/FamilyHouses";
 import AboutUs from "./pages/AboutUs/AboutUs";
 import Components from "./pages/Components/Components";
 import OurInstallation from "./pages/OurInstallation/OurInstallation";
@@ -23,7 +23,7 @@ function App() {
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/about-us" element={<AboutUs />} />
-				<Route path="/house" element={<House />} />
+				<Route path="/family-houses" element={<FamilyHouses />} />
 				<Route path="/company" element={<Company />} />
 				<Route path="/components" element={<Components />} />
 				<Route path="/our-installation" element={<OurInstallation />} />

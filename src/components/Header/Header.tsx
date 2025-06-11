@@ -96,12 +96,12 @@ const Header = () => {
 						{t("about_us_title")}
 					</NavLink>
 					<NavLink
-						to={"/house"}
+						to={"/family-houses"}
 						className={({ isActive }) =>
 							isActive ? activeHeaderLink : inactiveHeaderLink
 						}
 					>
-						{t("house_title")}
+						{t("family_houses_title")}
 					</NavLink>
 					<NavLink
 						to={"/company"}

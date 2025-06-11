@@ -57,9 +57,9 @@ const Menu = () => {
 					</NavLink>
 					<NavLink
 						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
-						to="/house"
+						to="/family-houses"
 					>
-						{t("house_title")}
+						{t("family_houses_title")}
 					</NavLink>
 					<NavLink
 						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}

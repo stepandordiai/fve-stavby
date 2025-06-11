@@ -116,9 +116,9 @@ const HomeAboutCompany = () => {
 			<h2 className="we-work-with__title">{t("home.we_work_with_title")}</h2>
 			<div className="cards-container">
 				<div className="card">
-					<p className="card__title">{t("house_title")}</p>
+					<p className="card__title">{t("family_houses_title")}</p>
 					<img className="card__img" src={img1} alt="" loading="lazy" />
-					<NavLink to={"/house"} className="card__link">
+					<NavLink to={"/family-houses"} className="card__link">
 						<img
 							className="card__link-icon"
 							src={arrow}
