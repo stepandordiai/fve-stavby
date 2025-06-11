@@ -63,19 +63,21 @@ const AboutUs = () => {
 
 			bgElement.classList.add("bg-element");
 
+			let mouseX;
+			let mouseY;
+
 			creatorLink.addEventListener("mousemove", (e) => {
-				console.log(1);
 				const rect = creatorLink.getBoundingClientRect();
-				let mouseX =
+				mouseX =
 					(!isTouchDevice() ? e.clientX : e.touches[0].clientX) - rect.left;
-				let mouseY =
+				mouseY =
 					(!isTouchDevice() ? e.clientY : e.touches[0].clientY) - rect.top;
 				bgElement.style.top = mouseY + "px";
 				bgElement.style.left = mouseX + "px";
 				bgElement.classList.add("bg-element--active");
 			});
 
-			creatorLink.addEventListener("touchstart", (e) => {
+			creatorLink.addEventListener("touchmove", (e) => {
 				const rect = creatorLink.getBoundingClientRect();
 				mouseX =
 					(!isTouchDevice() ? e.clientX : e.touches[0].clientX) - rect.left;
