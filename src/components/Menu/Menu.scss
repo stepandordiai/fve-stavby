@@ -14,10 +14,8 @@
 	background: var(--bg-light-clr);
 	@include glass-effect(20px);
 	border-radius: 25px;
-	transition: all 1s;
+	transition: top 1s, right 1s, width 1s, height 1s;
 	overflow: hidden;
-	opacity: 0;
-	animation: revealHeader 1s 2s forwards;
 }
 
 .menu--active {

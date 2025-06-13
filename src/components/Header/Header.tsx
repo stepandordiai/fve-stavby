@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import BurgerBtn from "../BurgerBtn/BurgerBtn";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import LngSelect from "../LngSelect/LngSelect";
 import { useEffect } from "react";
@@ -10,8 +10,40 @@ import "./Header.scss";
 const Header = () => {
 	const { t } = useTranslation();
 
+	const { pathname, hash } = useLocation();
+
 	const inactiveHeaderLink = "header__link";
 	const activeHeaderLink = "header__link header__link--active bg--acent";
+
+	useEffect(() => {
+		const elements = [
+			".header-top__logo",
+			".header-top__number",
+			".header-bottom",
+			".lng-select",
+			".lng-select__btn",
+			".burger-btn",
+			".menu",
+		];
+
+		if (pathname === "/" && !hash) {
+			elements.forEach((selector) => {
+				const el = document.querySelector(selector);
+
+				if (el) {
+					el?.classList.add("header--active");
+				}
+			});
+		} else {
+			elements.forEach((selector) => {
+				const el = document.querySelector(selector);
+
+				if (el) {
+					el?.classList.remove("header--active");
+				}
+			});
+		}
+	}, [pathname, hash]);
 
 	useEffect(() => {
 		const headerCard = document.querySelector(

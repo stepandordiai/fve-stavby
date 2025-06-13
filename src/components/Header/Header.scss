@@ -27,9 +27,7 @@
 	background: var(--bg-dark-clr);
 	padding: 0 12.5px;
 	@include glass-effect(20px);
-	opacity: 0;
-	transition: background-color 0.3s, opacity 1s;
-	animation: revealHeader 1s 2s forwards;
+	transition: background-color 0.3s;
 
 	&:hover {
 		background: var(--bg-dark-darker-clr);
@@ -47,6 +45,7 @@
 
 @keyframes revealHeader {
 	100% {
+		pointer-events: all;
 		opacity: 1;
 	}
 }
@@ -79,12 +78,9 @@
 	padding: 0 12.5px;
 	border-radius: 25px;
 	margin-left: auto;
-	// margin-right: auto;
 	margin-right: 10px;
 	color: #fff;
 	transition: background-color 0.3s;
-	opacity: 0;
-	animation: revealHeader 1s 2s forwards;
 
 	&:hover {
 		background: var(--bg-dark-darker-clr);
@@ -103,9 +99,6 @@
 	background: var(--bg-dark-clr);
 	backdrop-filter: blur(10px);
 	overflow-x: scroll;
-	transition: opacity 1s 1s;
-	opacity: 0;
-	animation: revealHeader 1s 2s forwards;
 
 	&::-webkit-scrollbar {
 		display: none;
@@ -131,10 +124,10 @@
 	}
 }
 
-.header-bottom--active {
-	opacity: 0 !important;
-	pointer-events: none !important;
-	transition: opacity 1s !important;
+.header--active {
+	pointer-events: none;
+	opacity: 0;
+	animation: revealHeader 1s 2s forwards !important;
 }
 
 .products {
@@ -196,10 +189,6 @@
 
 	.header--hide {
 		top: -50px;
-	}
-
-	.header-top__number {
-		// margin-left: 10px;
 	}
 
 	.header-top__nav {

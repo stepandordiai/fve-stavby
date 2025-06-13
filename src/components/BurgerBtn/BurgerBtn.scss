@@ -8,17 +8,9 @@
 	border-radius: 25px;
 	cursor: pointer;
 	transition: background-color 0.3s;
-	opacity: 0;
-	animation: revealHeader 1s 2s forwards;
 
 	&:hover {
 		background: var(--bg-light-darker-clr);
-	}
-}
-
-@keyframes animateHeader {
-	to {
-		opacity: 1;
 	}
 }
 

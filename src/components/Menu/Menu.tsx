@@ -13,7 +13,6 @@ const Menu = () => {
 			".burger-btn__center-line",
 			".menu",
 			".menu-wrapper",
-			".header-bottom",
 		].map(
 			(selector) => document.querySelector(selector) as HTMLDivElement | null
 		);
