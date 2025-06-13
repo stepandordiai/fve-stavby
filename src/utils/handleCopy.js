@@ -1,9 +1,13 @@
-const handleCopy = (e, className) => {
+// import { useTranslation } from "react-i18next";
+
+// const { t } = useTranslation();
+
+const handleCopy = (e, className, copiedTxt) => {
 	navigator.clipboard
 		.writeText(e.target.innerText)
 		.then(() => {
 			const copyBanner = document.createElement("span");
-			copyBanner.innerText = "Copied";
+			copyBanner.innerText = copiedTxt;
 
 			// For multiple styles
 			Object.assign(copyBanner.style, {

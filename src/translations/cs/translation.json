@@ -20,6 +20,8 @@
 	"navigation": "Navigace",
 	"download": "Stáhnout",
 	"all_rights_reserved": "Všechna práva vyhrazena",
+	"copy": "Kliknutím zkopírujete",
+	"copied": "Zkopírováno",
 
 	"home": {
 		"title": "Rozsviťte svůj domov, nebo firmu se solární energií",
@@ -126,7 +128,7 @@
 	},
 
 	"guarantees": {
-		"title": "Záruky FVE STAVBY",
+		"title": "Záruky",
 		"guarantee1": "let na střídač",
 		"guarantee2": "cyklů na baterie",
 		"guarantee3": "let na fotovoltaické panely",

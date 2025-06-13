@@ -111,7 +111,6 @@ const AboutUs = () => {
 			<main>
 				<PageTitle title={t("about_us_title")} img={img} />
 				<div className={styles["about-us"]}>
-					<h2 className={styles["about-us__title"]}>{t("about_us_title")}</h2>
 					<p className={styles["about-us__desc"]}>
 						{t("about_us_p1")}.
 						<br />
@@ -150,7 +149,7 @@ const AboutUs = () => {
 						})}
 					</div>
 					<h2 className={styles["guarantees__title"]}>
-						{t("guarantees.title")} FVE STAVBY
+						{t("guarantees.title")} FVE - stavby s.r.o.
 					</h2>
 					<div className={styles["guarantees__grid"]}>
 						<div className={styles["guarantees__grid-item"]}>

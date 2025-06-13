@@ -219,7 +219,8 @@ const Footer = () => {
 							<span>Identifikační číslo</span>
 							<button
 								className="footer__copy-btn"
-								onClick={(e) => handleCopy(e, ".footer__copy-btn")}
+								onClick={(e) => handleCopy(e, ".footer__copy-btn", t("copied"))}
+								title={t("copy")}
 							>
 								23287179
 							</button>

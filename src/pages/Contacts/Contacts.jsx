@@ -145,7 +145,10 @@ const Contacts = () => {
 								<p className="contact-details__title">Identifikační číslo</p>
 								<button
 									className="contacts__copy-btn"
-									onClick={(e) => handleCopy(e, ".contacts__copy-btn")}
+									onClick={(e) =>
+										handleCopy(e, ".contacts__copy-btn", t("copied"))
+									}
+									title={t("copy")}
 								>
 									23287179
 								</button>
