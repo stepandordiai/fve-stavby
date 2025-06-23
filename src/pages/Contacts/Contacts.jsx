@@ -5,7 +5,6 @@ import { useState, useEffect } from "react";
 import handleCopy from "../../utils/handleCopy";
 import arrow from "/icons/arrow-upper-right-white.png";
 import img from "/img/14.jpg";
-import "./../../global/LinkEffect.scss";
 import "./Contacts.scss";
 
 const Contacts = () => {

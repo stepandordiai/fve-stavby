@@ -1,7 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
-import "./../../global/LinkEffect.scss";
 import "./Menu.scss";
 
 const Menu = () => {
