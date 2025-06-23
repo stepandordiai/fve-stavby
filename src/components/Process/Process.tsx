@@ -6,27 +6,16 @@ const Process = () => {
 	const { t } = useTranslation();
 
 	useEffect(() => {
-		const processCard = document.querySelectorAll(".process-card");
-		const processIcon = document.querySelectorAll(".process__icon");
-		const detailsWrapper = document.querySelectorAll(".details-wrapper");
+		const processCard = document.querySelectorAll(
+			".process-card"
+		) as NodeListOf<HTMLDivElement>;
+		const steps = document.querySelectorAll(
+			".step"
+		) as NodeListOf<HTMLSpanElement>;
 
-		for (let i = 0; i < processCard.length; i++) {
-			processCard[i].addEventListener("click", () => {
-				for (let i = 0; i < processCard.length; i++) {
-					processCard[i].classList.remove("process-card--active");
-					detailsWrapper[i].classList.remove("details-wrapper--active");
-					processIcon[i].classList.remove("process__icon--active");
-				}
-				processCard[i].classList.add("process-card--active");
-				detailsWrapper[i].classList.add("details-wrapper--active");
-				processIcon[i].classList.add("process__icon--active");
-			});
-		}
-
-		document.querySelectorAll(".process-card").forEach((card, index) => {
+		processCard.forEach((card, index) => {
 			document.addEventListener("scroll", () => {
 				const cardRect = card.getBoundingClientRect();
-				const steps = document.querySelectorAll(".step");
 				if (cardRect.bottom < window.innerHeight) {
 					if (card.contains(steps[index])) {
 						steps[index].classList.add("step--active");
