@@ -19,16 +19,20 @@ const Contacts = () => {
 	const [email, setEmail] = useState("");
 
 	useEffect(() => {
+		const emailInput = document.querySelector(
+			".email"
+		) as HTMLInputElement | null;
+
 		if (email.length === 0) {
-			document.querySelector(".email").classList.remove("email--correct");
-			document.querySelector(".email").classList.remove("email--incorrect");
+			emailInput?.classList.remove("email--correct");
+			emailInput?.classList.remove("email--incorrect");
 		}
 		if (email.includes("@")) {
-			document.querySelector(".email").classList.remove("email--incorrect");
-			document.querySelector(".email").classList.add("email--correct");
+			emailInput?.classList.remove("email--incorrect");
+			emailInput?.classList.add("email--correct");
 		} else if (!email.includes("@") && email.length > 0) {
-			document.querySelector(".email").classList.remove("email--correct");
-			document.querySelector(".email").classList.add("email--incorrect");
+			emailInput?.classList.remove("email--correct");
+			emailInput?.classList.add("email--incorrect");
 		}
 	}, [email]);
 
