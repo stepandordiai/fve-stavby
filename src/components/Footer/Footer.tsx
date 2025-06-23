@@ -13,8 +13,8 @@ import "./Footer.scss";
 const Footer = () => {
 	const { t } = useTranslation();
 
-	const inactiveFooterLink = "footer__link";
-	const activeFooterLink = "footer__link footer__link--active";
+	const inactiveFooterLink = "footer__nav-link";
+	const activeFooterLink = "footer__nav-link footer__nav-link--active";
 
 	// TODO: I learned new nice animation with position and scale
 	useEffect(() => {
@@ -115,7 +115,7 @@ const Footer = () => {
 					</div>
 					<div className="footer-top__nav">
 						<p>{t("navigation")}</p>
-						<div className="footer-top__nav-list">
+						<nav className="footer-top__nav-list">
 							<NavLink
 								to={"/"}
 								className={({ isActive }) =>
@@ -149,6 +149,15 @@ const Footer = () => {
 								{t("commercial_installation_title")}
 							</NavLink>
 							<NavLink
+								to={"/svj"}
+								className={({ isActive }) =>
+									isActive ? activeFooterLink : inactiveFooterLink
+								}
+							>
+								<span>SVJ</span>
+								<span className="footer__nav-link--new">New</span>
+							</NavLink>
+							<NavLink
 								to={"/components"}
 								className={({ isActive }) =>
 									isActive ? activeFooterLink : inactiveFooterLink
@@ -180,7 +189,7 @@ const Footer = () => {
 							>
 								{t("manuals_title")}
 							</NavLink>
-						</div>
+						</nav>
 					</div>
 					<ul className="footer-top__contact-details">
 						<li>

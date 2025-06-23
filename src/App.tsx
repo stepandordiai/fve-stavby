@@ -7,6 +7,7 @@ import ScrollToTop from "./utils/ScrollToTop";
 import FamilyHouses from "./pages/FamilyHouses/FamilyHouses";
 import AboutUs from "./pages/AboutUs/AboutUs";
 import CommercialInstallation from "./pages/CommercialInstallation/CommercialInstallation";
+import SVJ from "./pages/SVJ/SVJ";
 import Manuals from "./pages/Manuals/Manuals";
 import OurInstallation from "./pages/OurInstallation/OurInstallation";
 import Components from "./pages/Components/Components";
@@ -27,6 +28,7 @@ function App() {
 					path="/commercial-installation"
 					element={<CommercialInstallation />}
 				/>
+				<Route path="/svj" element={<SVJ />} />
 				<Route path="/components" element={<Components />} />
 				<Route path="/our-installation" element={<OurInstallation />} />
 				<Route path="/contacts" element={<Contacts />} />

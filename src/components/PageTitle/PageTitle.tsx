@@ -5,18 +5,21 @@ import "./PageTitle.scss";
 
 type PageTitleProps = {
 	title: string;
-	img: string;
+	img?: string;
 	linkPath?: string;
+	className?: string;
 };
 
-const PageTitle = ({ title, img, linkPath }: PageTitleProps) => {
+const PageTitle = ({ title, img, linkPath, className }: PageTitleProps) => {
 	const { t } = useTranslation();
 
 	return (
 		<>
-			<div className="page-title">
+			<div className={`page-title ${className}`}>
 				<h1 className="page-title__title">{title}</h1>
-				<img className="page-title__img" src={img} alt="" loading="lazy" />
+				{img && (
+					<img className="page-title__img" src={img} alt="" loading="lazy" />
+				)}
 				{linkPath && (
 					<NavLink className="page-title__link" to={linkPath}>
 						<span>{t("manuals_title")}</span>

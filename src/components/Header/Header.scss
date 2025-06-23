@@ -51,7 +51,8 @@
 }
 
 // When i apply animation for header blur dissapears so i apply it to children
-.header__link {
+.header__nav-link {
+	position: relative;
 	color: #fff;
 	padding: 5px 7.5px;
 	border-radius: 15px;
@@ -63,9 +64,18 @@
 	}
 }
 
-.header__link--active {
+.header__nav-link--active {
 	background: var(--accent-clr);
 	color: #000 !important;
+}
+
+.header__nav-link--new {
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform: translate(100%, -25%);
+	font-size: 0.8rem;
+	color: #fff !important;
 }
 
 .header-top__number {

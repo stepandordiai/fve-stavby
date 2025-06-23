@@ -12,8 +12,9 @@ const Header = () => {
 
 	const { pathname, hash } = useLocation();
 
-	const inactiveHeaderLink = "header__link";
-	const activeHeaderLink = "header__link header__link--active bg--acent";
+	const inactiveHeaderLink = "header__nav-link";
+	const activeHeaderLink =
+		"header__nav-link header__nav-link--active bg--acent";
 
 	useEffect(() => {
 		const elements = [
@@ -110,7 +111,7 @@ const Header = () => {
 					<LngSelect />
 					<BurgerBtn />
 				</div>
-				<div className="header-bottom">
+				<nav className="header-bottom">
 					<NavLink
 						to={"/"}
 						className={({ isActive }) =>
@@ -143,6 +144,15 @@ const Header = () => {
 					>
 						{t("commercial_installation_title")}
 					</NavLink>
+					<NavLink
+						to={"/svj"}
+						className={({ isActive }) =>
+							isActive ? activeHeaderLink : inactiveHeaderLink
+						}
+					>
+						<span>SVJ</span>
+						<span className="header__nav-link--new">New</span>
+					</NavLink>
 					<div className="header-bottom-dd">
 						<NavLink
 							to={"/components"}
@@ -171,7 +181,7 @@ const Header = () => {
 					>
 						{t("contacts_title")}
 					</NavLink>
-				</div>
+				</nav>
 			</header>
 			<div className="header-card">
 				<HashLink

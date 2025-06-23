@@ -41,6 +41,7 @@
 }
 
 .menu__nav-link {
+	position: relative;
 	color: #000;
 	font-size: clamp(1.5rem, 3vw, 3rem);
 	font-weight: 500;
@@ -59,6 +60,14 @@
 
 .menu__nav-link--active {
 	background: var(--accent-clr);
+}
+
+.menu__nav-link--new {
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform: translateX(100%);
+	font-size: 0.8rem;
 }
 
 .menu__contacts-details {

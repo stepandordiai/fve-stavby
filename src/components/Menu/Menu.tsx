@@ -67,6 +67,13 @@ const Menu = () => {
 					</NavLink>
 					<NavLink
 						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
+						to="/svj"
+					>
+						<span>SVJ</span>
+						<span className="menu__nav-link--new">New</span>
+					</NavLink>
+					<NavLink
+						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
 						to="/components"
 					>
 						{t("components_title")}
