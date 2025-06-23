@@ -17,7 +17,6 @@ import "./scss/App.scss";
 function App() {
 	return (
 		<Router>
-			<ScrollToTop />
 			<Header />
 			<Menu />
 			<Routes>
@@ -34,6 +33,7 @@ function App() {
 				<Route path="/manuals" element={<Manuals />} />
 			</Routes>
 			<Footer />
+			<ScrollToTop />
 		</Router>
 	);
 }

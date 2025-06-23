@@ -1,8 +1,4 @@
-// import { useTranslation } from "react-i18next";
-
-// const { t } = useTranslation();
-
-const handleCopy = (e, className, copiedTxt) => {
+const handleCopy = (e: any, className: string, copiedTxt: string) => {
 	navigator.clipboard
 		.writeText(e.target.innerText)
 		.then(() => {
@@ -21,7 +17,9 @@ const handleCopy = (e, className, copiedTxt) => {
 				color: "#000",
 			});
 
-			document.querySelector(className).append(copyBanner);
+			const element = document.querySelector(className) as HTMLElement | null;
+
+			element?.append(copyBanner);
 
 			setTimeout(() => {
 				copyBanner.remove();
