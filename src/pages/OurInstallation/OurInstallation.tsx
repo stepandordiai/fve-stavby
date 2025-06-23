@@ -15,7 +15,12 @@ import "./OurInstallation.scss";
 const OurInstallation = () => {
 	const { t } = useTranslation();
 
-	const installationsData = [
+	interface InstallationData {
+		id: number;
+		img: string;
+	}
+
+	const installationsData: InstallationData[] = [
 		{
 			id: 1,
 			img: "/installations/01.jpeg",
@@ -69,7 +74,7 @@ const OurInstallation = () => {
 				img.addEventListener("click", () => {
 					if (index + 1 === installationsData[index].id) {
 						// Create elements
-						const fullScreen = document.createElement("div");
+						const fullScreen = document.createElement("div") as HTMLElement;
 						const fullScreenLeftArrow = document.createElement("button");
 						const fullScreenRightArrow = document.createElement("button");
 						const fullScreenHeader = document.createElement("header");
@@ -100,17 +105,17 @@ const OurInstallation = () => {
 
 						let slideIndex = 1;
 
-						function currentSlide(n) {
+						function currentSlide(n: number) {
 							handleSlider((slideIndex = n));
 						}
 
 						currentSlide(index);
 
-						function increaseSlider(n) {
+						function increaseSlider(n: number) {
 							handleSlider((slideIndex += n));
 						}
 
-						function handleSlider(n) {
+						function handleSlider(n: number) {
 							if (slideIndex == installationsData.length) {
 								slideIndex = 0;
 							}
@@ -133,13 +138,13 @@ const OurInstallation = () => {
 						});
 
 						fullScreenBtn.addEventListener("click", () => {
-							if (fullScreenBtn.querySelector("img").src.includes("expand")) {
-								if (fullScreen.requestFullScreen) {
-									fullScreen.requestFullScreen();
-								} else if (fullScreen.mozRequestFullScreen) {
-									fullScreen.mozRequestFullScreen();
-								} else if (fullScreen.webkitRequestFullScreen) {
-									fullScreen.webkitRequestFullScreen();
+							if (fullScreenBtn.querySelector("img")?.src.includes("expand")) {
+								if ((fullScreen as any).requestFullScreen) {
+									(fullScreen as any).requestFullScreen();
+								} else if ((fullScreen as any).mozRequestFullScreen) {
+									(fullScreen as any).mozRequestFullScreen();
+								} else if ((fullScreen as any).webkitRequestFullScreen) {
+									(fullScreen as any).webkitRequestFullScreen();
 								}
 								fullScreenBtn.innerHTML = `<img title="Shrink" src="${shrinkIcon}" alt="Shrink icon" loading="lazy" />`;
 							} else {
