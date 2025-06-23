@@ -35,16 +35,30 @@
 	transition: all 0.5s 1s;
 }
 
-.nav {
+.menu__nav {
 	display: flex;
 	flex-direction: column;
 }
 
-.link {
+.menu__nav-link {
 	color: #000;
 	font-size: clamp(1.5rem, 3vw, 3rem);
 	font-weight: 500;
 	align-self: flex-start;
+	height: 40px;
+	border-radius: 20px;
+	display: grid;
+	place-content: center;
+	padding: 0 10px;
+	transition: background-color 0.3s;
+
+	&:hover {
+		background: var(--accent-clr);
+	}
+}
+
+.menu__nav-link--active {
+	background: var(--accent-clr);
 }
 
 .menu__contacts-details {

@@ -35,13 +35,13 @@ const Menu = () => {
 		};
 	}, []);
 
-	const inactiveLink = "link js-link link-effect";
-	const activeLink = "link js-link link-effect link-effect--active";
+	const inactiveLink = "menu__nav-link js-link";
+	const activeLink = "menu__nav-link menu__nav-link--active js-link";
 
 	return (
 		<div className="menu">
 			<div className="menu-wrapper">
-				<nav className="nav">
+				<nav className="menu__nav">
 					<NavLink
 						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
 						to="/"
