@@ -118,10 +118,9 @@ const Components = () => {
 								>
 									<SwiperSlide>
 										<img
-											style={{ padding: 100 }}
 											width={500}
 											src={
-												"https://www.solaxpower.com/uploads/image/20230620/15/energy-storage-inverter-x3-hybrid-g4-1.webp"
+												"https://cdn.myshoptet.com/usr/www.mobler.cz/user/shop/big/255303_menic-solax.png?630f66ad"
 											}
 											loading="lazy"
 											alt=""
@@ -130,9 +129,8 @@ const Components = () => {
 									<SwiperSlide>
 										<img
 											width={500}
-											style={{ padding: 100 }}
 											src={
-												"https://www.solaxpower.com/uploads/image/20230620/15/energy-storage-inverter-x3-hybrid-g4-2.webp"
+												"https://cdn.myshoptet.com/usr/www.mobler.cz/user/shop/big/255303_mateboxadvanced.jpg?640f8f02"
 											}
 											loading="lazy"
 											alt=""
@@ -141,9 +139,8 @@ const Components = () => {
 									<SwiperSlide>
 										<img
 											width={500}
-											style={{ padding: 100 }}
 											src={
-												"https://www.solaxpower.com/uploads/image/20230620/15/energy-storage-inverter-x3-hybrid-g4-3.webp"
+												"https://cdn.myshoptet.com/usr/www.mobler.cz/user/shop/big/255303-1_mateboxbasic.jpg?640f8f02"
 											}
 											loading="lazy"
 											alt=""
