@@ -11,7 +11,13 @@ import styles from "./AboutUs.module.scss";
 const AboutUs = () => {
 	const { t } = useTranslation();
 
-	const membersData = [
+	interface MembersData {
+		name: string;
+		position: string;
+		linkedInUrl?: string;
+	}
+
+	const membersData: MembersData[] = [
 		{
 			name: "Kristián",
 			position: t("our_team.member1"),
@@ -56,7 +62,7 @@ const AboutUs = () => {
 			`.${styles["guarantees__grid-item"]}`
 		);
 
-		portfolio.forEach((creatorLink, index) => {
+		portfolio.forEach((creatorLink) => {
 			const bgElement = document.createElement("div");
 
 			creatorLink.appendChild(bgElement);
@@ -69,9 +75,13 @@ const AboutUs = () => {
 			creatorLink.addEventListener("mousemove", (e) => {
 				const rect = creatorLink.getBoundingClientRect();
 				mouseX =
-					(!isTouchDevice() ? e.clientX : e.touches[0].clientX) - rect.left;
+					(!isTouchDevice()
+						? (e as MouseEvent).clientX
+						: (e as TouchEvent).touches[0].clientX) - rect.left;
 				mouseY =
-					(!isTouchDevice() ? e.clientY : e.touches[0].clientY) - rect.top;
+					(!isTouchDevice()
+						? (e as MouseEvent).clientY
+						: (e as TouchEvent).touches[0].clientY) - rect.top;
 				bgElement.style.top = mouseY + "px";
 				bgElement.style.left = mouseX + "px";
 				bgElement.classList.add("bg-element--active");
@@ -80,9 +90,13 @@ const AboutUs = () => {
 			creatorLink.addEventListener("touchmove", (e) => {
 				const rect = creatorLink.getBoundingClientRect();
 				mouseX =
-					(!isTouchDevice() ? e.clientX : e.touches[0].clientX) - rect.left;
+					(!isTouchDevice()
+						? (e as MouseEvent).clientX
+						: (e as TouchEvent).touches[0].clientX) - rect.left;
 				mouseY =
-					(!isTouchDevice() ? e.clientY : e.touches[0].clientY) - rect.top;
+					(!isTouchDevice()
+						? (e as MouseEvent).clientY
+						: (e as TouchEvent).touches[0].clientY) - rect.top;
 				bgElement.style.top = mouseY + "px";
 				bgElement.style.left = mouseX + "px";
 				bgElement.classList.add("bg-element--active");

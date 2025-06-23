@@ -6,7 +6,7 @@ import "./PageTitle.scss";
 type PageTitleProps = {
 	title: string;
 	img: string;
-	linkPath: string;
+	linkPath?: string;
 };
 
 const PageTitle = ({ title, img, linkPath }: PageTitleProps) => {

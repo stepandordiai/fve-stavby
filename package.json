@@ -25,6 +25,7 @@
         "@types/node": "^24.0.0",
         "@types/react": "^19.1.7",
         "@types/react-dom": "^19.1.6",
+        "@types/react-helmet": "^6.1.11",
         "@types/react-router-hash-link": "^2.4.9",
         "@types/sass": "^1.43.1",
         "@vitejs/plugin-react": "^4.3.4",
