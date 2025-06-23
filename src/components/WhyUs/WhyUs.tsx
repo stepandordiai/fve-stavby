@@ -3,16 +3,24 @@ import { useEffect } from "react";
 import plusIcon from "/icons/plus-black.png";
 import "./WhyUs.scss";
 
-const Advantages = () => {
+const WhyUs = () => {
 	const { t } = useTranslation();
 
 	useEffect(() => {
-		document.querySelectorAll(".advantages-btn").forEach((btn, index) => {
-			const ddWrapper = document.querySelectorAll(".dd-wrapper");
-			const btnIcon = document.querySelectorAll(".advantages-btn-icon");
+		const advantagesBtn = document.querySelectorAll(
+			".advantages-btn"
+		) as NodeListOf<HTMLButtonElement>;
+
+		advantagesBtn.forEach((btn, index) => {
+			const ddWrapper = document.querySelectorAll(
+				".dd-wrapper"
+			) as NodeListOf<HTMLDivElement>;
+			const btnIcon = document.querySelectorAll(
+				".advantages-btn-icon"
+			) as NodeListOf<HTMLImageElement>;
 			const btnIconContainer = document.querySelectorAll(
 				".advantages-btn-icon-container"
-			);
+			) as NodeListOf<HTMLDivElement>;
 
 			btn.addEventListener("click", () => {
 				ddWrapper[index].classList.toggle("dd-wrapper--active");
@@ -115,4 +123,4 @@ const Advantages = () => {
 	);
 };
 
-export default Advantages;
+export default WhyUs;
