@@ -57,7 +57,13 @@ const WhyUs = () => {
 								{t("why_us.option1")}
 							</span>
 							<div className="advantages-btn-icon-container">
-								<img className="advantages-btn-icon" src={plusIcon} alt="" />
+								<img
+									className="advantages-btn-icon"
+									width={20}
+									height={20}
+									src={plusIcon}
+									alt=""
+								/>
 							</div>
 						</button>
 						<div className="dd-wrapper">
@@ -70,7 +76,13 @@ const WhyUs = () => {
 								{t("why_us.option2")}
 							</span>
 							<div className="advantages-btn-icon-container">
-								<img className="advantages-btn-icon" src={plusIcon} alt="" />
+								<img
+									className="advantages-btn-icon"
+									width={20}
+									height={20}
+									src={plusIcon}
+									alt=""
+								/>
 							</div>
 						</button>
 						<div className="dd-wrapper">
@@ -83,7 +95,13 @@ const WhyUs = () => {
 								{t("why_us.option3")}
 							</span>
 							<div className="advantages-btn-icon-container">
-								<img className="advantages-btn-icon" src={plusIcon} alt="" />
+								<img
+									className="advantages-btn-icon"
+									width={20}
+									height={20}
+									src={plusIcon}
+									alt=""
+								/>
 							</div>
 						</button>
 						<div className="dd-wrapper">
@@ -96,7 +114,13 @@ const WhyUs = () => {
 								{t("why_us.option4")}
 							</span>
 							<div className="advantages-btn-icon-container">
-								<img className="advantages-btn-icon" src={plusIcon} alt="" />
+								<img
+									className="advantages-btn-icon"
+									width={20}
+									height={20}
+									src={plusIcon}
+									alt=""
+								/>
 							</div>
 						</button>
 						<div className="dd-wrapper">
@@ -110,7 +134,13 @@ const WhyUs = () => {
 								{t("why_us.option5")}
 							</span>
 							<div className="advantages-btn-icon-container">
-								<img className="advantages-btn-icon" src={plusIcon} alt="" />
+								<img
+									className="advantages-btn-icon"
+									width={20}
+									height={20}
+									src={plusIcon}
+									alt=""
+								/>
 							</div>
 						</button>
 						<div className="dd-wrapper">

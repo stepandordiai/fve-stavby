@@ -36,7 +36,8 @@
 	aspect-ratio: 1/1;
 	border-radius: 50%;
 	@include grid-center;
-	transition: left 0.2s ease-out, top 0.2s ease-out, transform 0.2s ease-out;
+	transition: left 0.4s ease-out, top 0.4s ease-out, transform 0.4s ease-out;
+	transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 @media screen and (max-width: 896px) {

@@ -62,8 +62,8 @@ const SVJ = () => {
 						<span className="svj__link-icon-container">
 							<img
 								className="svj__link-icon"
-								width={30}
-								height={30}
+								width={25}
+								height={25}
 								src={arrowIcon}
 								alt=""
 							/>

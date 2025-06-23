@@ -48,9 +48,9 @@
 	background-color: var(--bg-light-clr);
 	width: 40px;
 	aspect-ratio: 1/1;
-	padding: 10px;
+	@include grid-center;
 	border-radius: 20px;
-	transition: background-color 0.3s;
+	transition: all 0.6s ease-in-out;
 
 	&:hover {
 		background-color: var(--bg-light-darker-clr);
@@ -62,7 +62,6 @@
 }
 
 .advantages-btn-icon {
-	width: 100%;
 	transition: all 0.6s ease-in-out;
 }
 
