@@ -101,6 +101,7 @@
 	min-height: 50px;
 	border-radius: 25px;
 	@include flex-between-center;
+	column-gap: 25px;
 	white-space: nowrap;
 	//
 	padding: 0 10px;
