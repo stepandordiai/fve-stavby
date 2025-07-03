@@ -5,7 +5,6 @@ const handleCopy = (e: any, className: string, copiedTxt: string) => {
 			const copyBanner = document.createElement("span");
 			copyBanner.innerText = copiedTxt;
 
-			// For multiple styles
 			Object.assign(copyBanner.style, {
 				position: "absolute",
 				top: "0",
