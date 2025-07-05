@@ -1,41 +1,41 @@
 {
-    "name": "fve-stavby",
-    "private": true,
-    "version": "0.0.0",
-    "type": "module",
-    "scripts": {
-        "dev": "vite",
-        "build": "vite build",
-        "lint": "eslint .",
-        "preview": "vite preview"
-    },
-    "dependencies": {
-        "i18next": "^25.0.1",
-        "i18next-browser-languagedetector": "^8.0.5",
-        "react": "^19.1.0",
-        "react-dom": "^19.1.0",
-        "react-helmet": "^6.1.0",
-        "react-i18next": "^15.5.1",
-        "react-router-dom": "^7.6.1",
-        "react-router-hash-link": "^2.4.3",
-        "swiper": "^11.2.6"
-    },
-    "devDependencies": {
-        "@eslint/js": "^9.21.0",
-        "@types/node": "^24.0.0",
-        "@types/react": "^19.1.7",
-        "@types/react-dom": "^19.1.6",
-        "@types/react-helmet": "^6.1.11",
-        "@types/react-router-hash-link": "^2.4.9",
-        "@types/sass": "^1.43.1",
-        "@vitejs/plugin-react": "^4.3.4",
-        "eslint": "^9.21.0",
-        "eslint-plugin-react-hooks": "^5.1.0",
-        "eslint-plugin-react-refresh": "^0.4.19",
-        "globals": "^15.15.0",
-        "sass": "^1.89.2",
-        "sass-embedded": "^1.85.1",
-        "typescript": "^5.8.3",
-        "vite": "^6.3.5"
-    }
+	"name": "fve-stavby",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite --host",
+		"build": "vite build",
+		"lint": "eslint .",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"i18next": "^25.0.1",
+		"i18next-browser-languagedetector": "^8.0.5",
+		"react": "^19.1.0",
+		"react-dom": "^19.1.0",
+		"react-helmet": "^6.1.0",
+		"react-i18next": "^15.5.1",
+		"react-router-dom": "^7.6.1",
+		"react-router-hash-link": "^2.4.3",
+		"swiper": "^11.2.6"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.21.0",
+		"@types/node": "^24.0.0",
+		"@types/react": "^19.1.7",
+		"@types/react-dom": "^19.1.6",
+		"@types/react-helmet": "^6.1.11",
+		"@types/react-router-hash-link": "^2.4.9",
+		"@types/sass": "^1.43.1",
+		"@vitejs/plugin-react": "^4.3.4",
+		"eslint": "^9.21.0",
+		"eslint-plugin-react-hooks": "^5.1.0",
+		"eslint-plugin-react-refresh": "^0.4.19",
+		"globals": "^15.15.0",
+		"sass": "^1.89.2",
+		"sass-embedded": "^1.85.1",
+		"typescript": "^5.8.3",
+		"vite": "^6.3.5"
+	}
 }

@@ -20,6 +20,8 @@
 	padding: 15px 0;
 	@include flex-center;
 	cursor: pointer;
+	opacity: 0;
+	pointer-events: none;
 }
 
 .burger-btn::before {

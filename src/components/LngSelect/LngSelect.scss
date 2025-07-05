@@ -6,9 +6,11 @@
 	@include grid-center;
 	border-radius: 25px;
 	font-weight: 500;
-	transition: background-color 0.5s;
 	position: relative;
 	z-index: 4;
+	opacity: 0;
+	pointer-events: none;
+	transition: background-color 0.5s;
 }
 
 .lng-select__btn--active {
@@ -30,6 +32,8 @@
 	min-height: 50px;
 	background: var(--bg-light-clr);
 	border-radius: 25px;
+	opacity: 0;
+	pointer-events: none;
 	transition: padding 0.5s, grid-template 0.5s;
 }
 

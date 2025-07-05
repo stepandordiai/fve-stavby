@@ -20,6 +20,7 @@
 	position: relative;
 	z-index: 5;
 	height: 50px;
+	min-width: 50px;
 	@include flex-center;
 	color: #fff;
 	column-gap: 5px;
@@ -27,6 +28,8 @@
 	background: var(--bg-dark-clr);
 	padding: 0 12.5px;
 	@include glass-effect(20px);
+	opacity: 0;
+	pointer-events: none;
 	transition: background-color 0.3s;
 
 	&:hover {
@@ -89,6 +92,8 @@
 	margin-left: auto;
 	margin-right: 10px;
 	color: #fff;
+	opacity: 0;
+	pointer-events: none;
 	transition: background-color 0.3s;
 
 	&:hover {
@@ -107,8 +112,11 @@
 	padding: 0 10px;
 	//
 	background: var(--bg-dark-clr);
+	-webkit-backdrop-filter: blur(10px);
 	backdrop-filter: blur(10px);
 	overflow-x: scroll;
+	opacity: 0;
+	pointer-events: none;
 
 	&::-webkit-scrollbar {
 		display: none;
@@ -225,6 +233,12 @@
 
 @media screen and (max-width: 600px) {
 	.header-top__number {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 370px) {
+	.header-top__logo-txt {
 		display: none;
 	}
 }

@@ -27,22 +27,26 @@ const Header = () => {
 			".menu",
 		];
 
+		const revealHeader = (withDelay: boolean) => {
+			elements.forEach((selector) => {
+				const el = document.querySelector<HTMLElement>(selector);
+				if (el) {
+					// TODO:
+					// Clear previous animation if any
+					el.style.animation = "none";
+					el.offsetHeight; // Force reflow to reset animation
+
+					el.style.animation = withDelay
+						? `revealHeader 1s 2s forwards` // staggered delay
+						: `revealHeader 0s 0s forwards`;
+				}
+			});
+		};
+
 		if (pathname === "/" && !hash) {
-			elements.forEach((selector) => {
-				const el = document.querySelector(selector);
-
-				if (el) {
-					el?.classList.add("header--active");
-				}
-			});
+			revealHeader(true); // delayed animation on home page
 		} else {
-			elements.forEach((selector) => {
-				const el = document.querySelector(selector);
-
-				if (el) {
-					el?.classList.remove("header--active");
-				}
-			});
+			revealHeader(false); // instant animation or no delay
 		}
 	}, [pathname, hash]);
 
@@ -103,7 +107,7 @@ const Header = () => {
 				<div className="header-top">
 					<NavLink to={"/"} className="header-top__logo">
 						<img src={logo} alt="FVE STAVBY Logo" />
-						<span>FVE STAVBY</span>
+						<span className="header-top__logo-txt">FVE STAVBY</span>
 					</NavLink>
 					<a href="tel:+420777957290" className="header-top__number">
 						+420 777 957 290
