@@ -43,7 +43,7 @@ const Contacts = () => {
 					name="description"
 					content="Kontaktujte nás – FVE – stavby s.r.o. vám rádi zodpoví dotazy k fotovoltaice. Najdete zde telefon, e-mail, adresu sídla i kontaktní formulář pro rychlou zprávu."
 				/>
-				<title>FVE STAVBY | {t("contacts_title")}</title>
+				<title>{t("contacts_title")} | FVE STAVBY</title>
 				<link rel="canonical" href="https://fvestavby.cz/contacts" />
 			</Helmet>
 			<main>
@@ -107,8 +107,8 @@ const Contacts = () => {
 						<div className="contact-details-container">
 							<div className="contact-details">
 								<p className="contact-details__title">{t("tel")}</p>
-								<a className="contact-details__link" href="tel:+420777957290">
-									+420 777 957 290
+								<a className="contact-details__link" href="tel:+420728803703">
+									+420 728 803 703
 								</a>
 							</div>
 							<div className="contact-details">

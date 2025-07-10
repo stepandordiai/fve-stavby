@@ -47,16 +47,16 @@ const SVJ = () => {
 			<Helmet>
 				{/* TODO: */}
 				<meta name="description" content="" />
-				<title>FVE STAVBY | SVJ</title>
+				<title>SVJ | FVE STAVBY</title>
 				<link rel="canonical" href="https://fvestavby.cz/svj" />
 			</Helmet>
 			<main className="svj">
-				<PageTitle title="SVJ" className="bg-max-flow" />
+				<PageTitle title={t("svj_title")} className="bg-max-flow" />
 				<div className="svj__inner">
-					<h2 className="svj__title">{t("svj_title")}</h2>
+					<h2 className="svj__title">{t("svj_sec_title")}</h2>
 					<a
 						className="svj__link"
-						href="https://max-flow.netlify.app/"
+						href="https://maxflow.netlify.app/"
 						target="_blank"
 					>
 						<span className="svj__link-icon-container">

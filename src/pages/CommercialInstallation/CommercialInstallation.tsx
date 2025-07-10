@@ -16,7 +16,7 @@ const CommercialInstallation = () => {
 					name="description"
 					content="Specializujeme se na instalaci fotovoltaických systémů pro firmy. FVE – stavby s.r.o. nabízí úsporná a efektivní řešení solární energie pro komerční objekty po celé ČR."
 				/>
-				<title>FVE STAVBY | {t("commercial_installation_title")}</title>
+				<title>{t("commercial_installation_title")} | FVE STAVBY</title>
 				<link
 					rel="canonical"
 					href="https://fvestavby.cz/commercial-installation"

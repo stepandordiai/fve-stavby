@@ -4,15 +4,6 @@ import "./LngSelect.scss";
 
 const LngSelect = () => {
 	const lngSelect = useRef<HTMLDivElement | null>(null);
-	const lngSelectBtn = document.querySelector(
-		".lng-select__btn"
-	) as HTMLButtonElement | null;
-	const lngSelectDd = document.querySelector(
-		".lng-select__dd"
-	) as HTMLUListElement;
-	const lngSelectOptions = document.querySelectorAll(
-		".lng-select__option"
-	) as NodeListOf<HTMLLIElement>;
 
 	function getStorage() {
 		return localStorage.getItem("i18nextLng") || "cs";
@@ -90,14 +81,11 @@ const LngSelect = () => {
 		if (!lngSelectBtn) return;
 
 		switch (getStorage()) {
-			case "uk":
-				lngSelectBtn.innerHTML = handleLngSelectBtn("UA");
+			case "cs":
+				lngSelectBtn.innerHTML = handleLngSelectBtn("CZ");
 				break;
 			case "en":
 				lngSelectBtn.innerHTML = handleLngSelectBtn("EN");
-				break;
-			case "cs":
-				lngSelectBtn.innerHTML = handleLngSelectBtn("CZ");
 				break;
 		}
 	}, []);
@@ -111,7 +99,7 @@ const LngSelect = () => {
 				<ul className="lng-select__dd">
 					<li
 						className={
-							getStorage() == "cs"
+							getStorage() === "cs"
 								? "lng-select__option lng-select__option--active"
 								: "lng-select__option"
 						}
@@ -121,17 +109,7 @@ const LngSelect = () => {
 					</li>
 					<li
 						className={
-							getStorage() == "uk"
-								? "lng-select__option lng-select__option--active"
-								: "lng-select__option"
-						}
-						data-value="uk"
-					>
-						UA - Українська
-					</li>
-					<li
-						className={
-							getStorage() == "en"
+							getStorage() === "en"
 								? "lng-select__option lng-select__option--active"
 								: "lng-select__option"
 						}

@@ -119,7 +119,7 @@ const AboutUs = () => {
 					name="description"
 					content="Poznejte tým FVE – stavby s.r.o., specialisty na fotovoltaiku. Máme zkušenosti, technické know-how a osobní přístup k řešení solárních systémů na míru."
 				/>
-				<title>FVE STAVBY | {t("about_us_title")}</title>
+				<title>{t("about_us_title")} | FVE STAVBY</title>
 				<link rel="canonical" href="https://fvestavby.cz/about-us" />
 			</Helmet>
 			<main>

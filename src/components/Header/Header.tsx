@@ -109,8 +109,8 @@ const Header = () => {
 						<img src={logo} alt="FVE STAVBY Logo" />
 						<span className="header-top__logo-txt">FVE STAVBY</span>
 					</NavLink>
-					<a href="tel:+420777957290" className="header-top__number">
-						+420 777 957 290
+					<a href="tel:+420728803703" className="header-top__number">
+						+420 728 803 703
 					</a>
 					<LngSelect />
 					<BurgerBtn />

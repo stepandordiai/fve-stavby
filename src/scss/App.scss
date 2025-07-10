@@ -2,8 +2,8 @@
 @use "fonts";
 @use "variables";
 
+// TODO:
 // Prevent scaling size when rotating on mobile
-
 html {
 	-webkit-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
@@ -11,8 +11,8 @@ html {
 }
 
 body {
+	font-family: "Quicksand", sans-serif;
 	padding: 25px;
-	font-family: "Quicksand", "Montserrat", sans-serif;
 }
 
 ::-webkit-scrollbar {

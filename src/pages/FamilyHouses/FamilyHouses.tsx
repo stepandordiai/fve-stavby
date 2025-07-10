@@ -16,7 +16,7 @@ const FamilyHouses = () => {
 					name="description"
 					content="Instalujeme fotovoltaické elektrárny pro rodinné domy na klíč. Snižte své náklady na energie s FVE – stavby s.r.o. a využijte dotace z programu Nová zelená úsporám."
 				/>
-				<title>FVE STAVBY | {t("family_houses_title")}</title>
+				<title>{t("family_houses_title")} | FVE STAVBY</title>
 				<link rel="canonical" href="https://fvestavby.cz/family-houses" />
 			</Helmet>
 			<main>

@@ -26,7 +26,7 @@ const Components = () => {
 					name="description"
 					content="Používáme kvalitní a prověřené komponenty pro fotovoltaické systémy – solární panely, střídače, baterie a další technologie od ověřených výrobců."
 				/>
-				<title>FVE STAVBY | {t("components_title")}</title>
+				<title>{t("components_title")} | FVE STAVBY</title>
 				<link rel="canonical" href="https://fvestavby.cz/components" />
 			</Helmet>
 			<main>

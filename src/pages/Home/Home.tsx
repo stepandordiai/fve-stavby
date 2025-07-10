@@ -19,7 +19,7 @@ const Home = () => {
 					name="description"
 					content="Specializujeme se na instalaci fotovoltaických elektráren na klíč. FVE – stavby s.r.o. nabízí efektivní solární řešení pro rodinné domy i firmy po celé ČR."
 				/>
-				<title>FVE STAVBY | {t("logo_title")}</title>
+				<title>{t("logo_title")} | FVE STAVBY</title>
 				<link rel="canonical" href="https://fvestavby.cz/" />
 			</Helmet>
 			<main>
