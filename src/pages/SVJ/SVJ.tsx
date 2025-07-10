@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import arrowIcon from "/icons/arrow-upper-right-white.png";
@@ -46,7 +46,7 @@ const SVJ = () => {
 		<>
 			<Helmet>
 				{/* TODO: */}
-				<meta name="description" content="" />
+				{/* <meta name="description" content="" /> */}
 				<title>SVJ | FVE STAVBY</title>
 				<link rel="canonical" href="https://fvestavby.cz/svj" />
 			</Helmet>
