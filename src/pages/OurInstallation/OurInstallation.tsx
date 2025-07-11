@@ -176,7 +176,7 @@ const OurInstallation = () => {
 			cards.forEach((card, index) => {
 				if (!card) return;
 				const cardRect = card.getBoundingClientRect();
-				const isInView = cardRect.top < window.innerHeight;
+				const isInView = cardRect.top < window.innerHeight - 125;
 
 				if (isInView) {
 					innerCards[index].classList.add("inner-card--active");

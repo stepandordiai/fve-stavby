@@ -29,7 +29,7 @@ const Process = () => {
 		<>
 			<h2 className="process__title">{t("process.title")}</h2>
 			<div className="process-grid">
-				<div className="process-card process-card--active">
+				<div className="process-card">
 					<div className="process-card__step">
 						<span className="step" data-step-value="1"></span>
 						<span></span>

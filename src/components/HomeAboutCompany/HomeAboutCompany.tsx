@@ -22,12 +22,12 @@ const HomeAboutCompany = () => {
 
 		function handleDisplay() {
 			valueDisplays.forEach((display, index) => {
-				const displayRect = display.getBoundingClientRect().top;
+				const displayRect = display.getBoundingClientRect();
 				const valueText = valueWrappers[index].offsetWidth;
 				const targetValue = Number(display.getAttribute("data-val"));
 
 				if (
-					displayRect < window.innerHeight - 25 &&
+					displayRect.top < window.innerHeight &&
 					!activatedDisplays.has(index)
 				) {
 					let startValue: number = 0;

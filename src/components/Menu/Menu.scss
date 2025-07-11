@@ -32,6 +32,7 @@
 	flex-direction: column;
 	row-gap: 10px;
 	height: max-content;
+	min-height: 100%;
 	opacity: 0;
 	transition: all 0.5s;
 }
