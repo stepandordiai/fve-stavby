@@ -94,8 +94,8 @@ const Menu = () => {
 				<ul className="menu__contacts-details">
 					<li>
 						<p>{t("tel")}</p>
-						<a className="menu-link" href="tel:+420777957290">
-							+420 777 957 290
+						<a className="menu-link" href="tel:+420728803703">
+							+420 728 803 703
 						</a>
 					</li>
 					<li>

@@ -3,31 +3,35 @@
 .menu {
 	display: none;
 	position: fixed;
-	top: 50px;
-	right: 50px;
+	top: 20px;
+	right: 20px;
 	z-index: 11;
-	padding: 25px;
-	justify-content: start;
-	align-items: center;
 	width: 50px;
 	height: 50px;
 	background: var(--bg-light-clr);
 	@include glass-effect(20px);
 	border-radius: 25px;
-	overflow: hidden;
+	scrollbar-width: none;
+	overflow: scroll;
 	opacity: 0;
 	pointer-events: none;
-	transition: top 1s, right 1s, width 1s, height 1s;
+	transition: top 1s, right 1s, width 1s, height 1s, padding 1s;
 }
 
 .menu--active {
-	top: 25px;
-	right: 25px;
-	width: calc(100% - 50px);
-	height: calc(100% - 50px);
+	top: 10px;
+	right: 10px;
+	width: calc(100% - 20px);
+	height: calc(100% - 20px);
+	padding: 70px 10px 10px 10px;
 }
 
 .menu-wrapper {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	row-gap: 10px;
+	height: max-content;
 	opacity: 0;
 	transition: all 0.5s;
 }
@@ -72,10 +76,6 @@
 }
 
 .menu__contacts-details {
-	position: absolute;
-	right: 25px;
-	bottom: 25px;
-	left: 25px;
 	display: flex;
 	justify-content: space-between;
 
@@ -98,23 +98,7 @@
 
 @media screen and (max-width: 896px) {
 	.menu {
-		display: flex;
-		top: 20px;
-		right: 20px;
-		padding: 10px;
-	}
-
-	.menu--active {
-		top: 10px;
-		right: 10px;
-		width: calc(100% - 20px);
-		height: calc(100% - 20px);
-	}
-
-	.menu__contacts-details {
-		right: 10px;
-		bottom: 10px;
-		left: 10px;
+		display: initial;
 	}
 }
 
