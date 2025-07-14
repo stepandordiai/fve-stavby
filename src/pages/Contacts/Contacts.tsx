@@ -54,7 +54,7 @@ const Contacts = () => {
 							{t("contacts.contact_us")}
 						</h2>
 						<form
-							action="https://formsubmit.co/info@fvestavby.cz"
+							action="https://formspree.io/f/mqalzwov"
 							method="post"
 							autoComplete="on"
 						>
