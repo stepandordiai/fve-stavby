@@ -14,6 +14,7 @@ const handleCopy = (e: any, className: string, copiedTxt: string) => {
 				borderRadius: "15px",
 				background: "var(--accent-clr)",
 				color: "#000",
+				pointerEvents: "none",
 			});
 
 			const element = document.querySelector(className) as HTMLElement | null;
