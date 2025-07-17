@@ -172,6 +172,16 @@
 		"section4": "Optimizéry"
 	},
 
+	"benefits": {
+		"title": "Výhody fotovoltaiky pro rodinný dům",
+		"card_title_1": "Soběstačnost",
+		"card_desc_1": "Díky baterii pro ukládání přebytečné energie je zajištěno, že za špatného počasí nebo při výpadku elektřiny ze sítě máte k energii stále přístup",
+		"card_title_2": "Energetická nezávislost",
+		"card_desc_2": "Investicí do solárního systému, který vyrábí vlastní ekologickou energii, se vás neustálé zdražování od dodavatelů ze sítě nijak nedotkne, protože vámi vyrobenou elektrickou energii vám nikdo nezdraží",
+		"card_title_3": "Čistá energie",
+		"card_desc_3": "Fotovoltaika umožňuje přeměnu sluneční energie na elektrickou energii bez emisí skleníkových plynů a přispívá k udržitelnější budoucnosti"
+	},
+
 	"contacts": {
 		"contact_us": "Kontaktujte nás",
 		"first_name": "Jméno",

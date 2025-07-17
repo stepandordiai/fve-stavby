@@ -1,8 +1,10 @@
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import PageTitle from "../../components/PageTitle/PageTitle";
-import WhySolar from "../../components/WhySolar/WhySolar";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
+import Partners from "../../components/Partners/Partners";
+import Benefits from "../../components/Benefits/Benefits";
+import Process from "../../components/Process/Process";
 import img from "/img/3-c.jpg";
 import "./FamilyHouses.scss";
 
@@ -22,7 +24,10 @@ const FamilyHouses = () => {
 			<main>
 				<PageTitle title={t("family_houses_title")} img={img} />
 				<div className="family-houses">
-					<WhySolar />
+					{/* <WhySolar /> */}
+					<Benefits />
+					<Process />
+					<Partners />
 					<GetInTouch />
 				</div>
 			</main>

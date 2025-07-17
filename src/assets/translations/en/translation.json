@@ -172,6 +172,16 @@
 		"section4": "Optimizers"
 	},
 
+	"benefits": {
+		"title": "Benefits of photovoltaics for a family home",
+		"card_title_1": "Self-sufficiency",
+		"card_desc_1": "A battery for storing excess energy ensures that you still have access to energy in bad weather or during a power outage",
+		"card_title_2": "Energy independence",
+		"card_desc_2": "By investing in a solar system that produces its own ecological energy, you will not be affected by the constant price increases from grid suppliers, because no one will increase the price of the electricity you produce",
+		"card_title_3": "Clean energy",
+		"card_desc_3": "Photovoltaics enables the conversion of solar energy into electricity without greenhouse gas emissions and contributes to a more sustainable future"
+	},
+
 	"contacts": {
 		"contact_us": "Contact us",
 		"first_name": "First name",

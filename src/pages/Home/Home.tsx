@@ -7,6 +7,7 @@ import Stats from "../../components/Stats/Stats";
 import HomeTitle from "../../components/HomeTitle/HomeTitle";
 import HomeAboutCompany from "../../components/HomeAboutCompany/HomeAboutCompany";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
+import WhySolar from "../../components/WhySolar/WhySolar";
 import "./Home.scss";
 
 const Home = () => {
@@ -27,6 +28,7 @@ const Home = () => {
 				<div className="home">
 					<HomeAboutCompany />
 					<WhyUs />
+					<WhySolar />
 					<Process />
 					<Stats />
 					<Partners />

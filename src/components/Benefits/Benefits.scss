@@ -1,0 +1,76 @@
+@use "./../../scss/mixins" as *;
+
+.benefits__title {
+	font: {
+		size: 1.5rem;
+		weight: 500;
+	}
+
+	text-transform: uppercase;
+}
+
+.benefits {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 25px;
+	margin: 25px 0;
+}
+
+.benefits__card {
+	height: 250px;
+	background: var(--bg-light-clr);
+	border-radius: 25px;
+	@include flex-between-start;
+	flex-direction: column;
+	padding: 12.5px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+
+	&:hover {
+		background: var(--bg-light-darker-clr);
+	}
+}
+
+.benefits__card-icon-container {
+	align-self: flex-end;
+	width: 75px;
+	aspect-ratio: 1/1;
+	border-radius: 20px;
+	@include grid-center;
+	background: var(--accent-clr);
+}
+
+.benefits__card-title {
+	font: {
+		size: 1.5rem;
+		weight: 500;
+	}
+}
+
+.benefits__card-dd {
+	display: grid;
+	grid-template-rows: 0fr;
+	overflow: hidden;
+	transition: grid-template-rows 0.3s;
+
+	span {
+		overflow: hidden;
+	}
+}
+
+.benefits__card:hover .benefits__card-dd {
+	grid-template-rows: 1fr;
+}
+
+@media screen and (max-width: 896px) {
+	.benefits {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 25px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.benefits {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
