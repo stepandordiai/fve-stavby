@@ -4,9 +4,9 @@ import Menu from "./components/Menu/Menu";
 import Home from "./pages/Home/Home";
 import Footer from "./components/Footer/Footer";
 import ScrollToTop from "./utils/ScrollToTop";
-import FamilyHouses from "./pages/FamilyHouses/FamilyHouses";
+import PhotovoltaicsForSingleFamilyHomes from "./pages/PhotovoltaicsForSingleFamilyHomes/PhotovoltaicsForSingleFamilyHomes";
 import AboutUs from "./pages/AboutUs/AboutUs";
-import CommercialInstallation from "./pages/CommercialInstallation/CommercialInstallation";
+import PhotovoltaicsForCompanies from "./pages/PhotovoltaicsForCompanies/PhotovoltaicsForCompanies";
 import SVJ from "./pages/SVJ/SVJ";
 import Manuals from "./pages/Manuals/Manuals";
 import OurInstallation from "./pages/OurInstallation/OurInstallation";
@@ -23,10 +23,13 @@ function App() {
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/about-us" element={<AboutUs />} />
-				<Route path="/family-houses" element={<FamilyHouses />} />
 				<Route
-					path="/commercial-installation"
-					element={<CommercialInstallation />}
+					path="/photovoltaics-for-single-family-homes"
+					element={<PhotovoltaicsForSingleFamilyHomes />}
+				/>
+				<Route
+					path="/photovoltaics-for-companies"
+					element={<PhotovoltaicsForCompanies />}
 				/>
 				<Route path="/svj" element={<SVJ />} />
 				<Route path="/components" element={<Components />} />

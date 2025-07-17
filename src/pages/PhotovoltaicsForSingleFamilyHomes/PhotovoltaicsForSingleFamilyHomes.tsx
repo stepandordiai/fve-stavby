@@ -6,9 +6,9 @@ import Partners from "../../components/Partners/Partners";
 import Benefits from "../../components/Benefits/Benefits";
 import Process from "../../components/Process/Process";
 import img from "/img/3-c.jpg";
-import "./FamilyHouses.scss";
+import "./PhotovoltaicsForSingleFamilyHomes.scss";
 
-const FamilyHouses = () => {
+const PhotovoltaicsForSingleFamilyHomes = () => {
 	const { t } = useTranslation();
 
 	return (
@@ -18,13 +18,20 @@ const FamilyHouses = () => {
 					name="description"
 					content="Instalujeme fotovoltaické elektrárny pro rodinné domy na klíč. Snižte své náklady na energie s FVE – stavby s.r.o. a využijte dotace z programu Nová zelená úsporám."
 				/>
-				<title>{t("family_houses_title")} | FVE STAVBY</title>
-				<link rel="canonical" href="https://fvestavby.cz/family-houses" />
+				<title>
+					{t("photovoltaics_for_single_family_homes_title")} | FVE STAVBY
+				</title>
+				<link
+					rel="canonical"
+					href="https://fvestavby.cz/photovoltaics-for-single-family-homes"
+				/>
 			</Helmet>
 			<main>
-				<PageTitle title={t("family_houses_title")} img={img} />
-				<div className="family-houses">
-					{/* <WhySolar /> */}
+				<PageTitle
+					title={t("photovoltaics_for_single_family_homes_title")}
+					img={img}
+				/>
+				<div className="photovoltaics-for-single-family-homes">
 					<Benefits />
 					<Process />
 					<Partners />
@@ -35,4 +42,4 @@ const FamilyHouses = () => {
 	);
 };
 
-export default FamilyHouses;
+export default PhotovoltaicsForSingleFamilyHomes;

@@ -55,15 +55,15 @@ const Menu = () => {
 					</NavLink>
 					<NavLink
 						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
-						to="/family-houses"
+						to="/photovoltaics-for-single-family-homes"
 					>
-						{t("family_houses_title")}
+						{t("photovoltaics_for_single_family_homes_title")}
 					</NavLink>
 					<NavLink
 						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
-						to="/commercial-installation"
+						to="/photovoltaics-for-companies"
 					>
-						{t("commercial_installation_title")}
+						{t("photovoltaics_for_companies_title")}
 					</NavLink>
 					<NavLink
 						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}

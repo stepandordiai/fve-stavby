@@ -133,20 +133,20 @@ const Footer = () => {
 								{t("about_us_title")}
 							</NavLink>
 							<NavLink
-								to={"/family-houses"}
+								to={"/photovoltaics-for-single-family-homes"}
 								className={({ isActive }) =>
 									isActive ? activeFooterLink : inactiveFooterLink
 								}
 							>
-								{t("family_houses_title")}
+								{t("photovoltaics_for_single_family_homes_title")}
 							</NavLink>
 							<NavLink
-								to={"/commercial-installation"}
+								to={"/photovoltaics-for-companies"}
 								className={({ isActive }) =>
 									isActive ? activeFooterLink : inactiveFooterLink
 								}
 							>
-								{t("commercial_installation_title")}
+								{t("photovoltaics_for_companies_title")}
 							</NavLink>
 							<NavLink
 								to={"/svj"}

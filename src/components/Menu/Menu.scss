@@ -53,7 +53,7 @@
 	font-size: clamp(1.5rem, 3vw, 3rem);
 	font-weight: 500;
 	align-self: flex-start;
-	height: 40px;
+	min-height: 40px;
 	border-radius: 20px;
 	display: grid;
 	place-content: center;
