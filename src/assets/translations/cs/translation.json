@@ -21,9 +21,10 @@
 	"our_installation_desc": "Na spokojenosti našich zákazníků nám záleží. Zde si můžete prohlédnout některé z našich instalací fotovoltaických elektráren. Pokud vás nějaká ze zhotovených instalací zaujala, neváhejte nás kontaktovat",
 	"navigation": "Navigace",
 	"download": "Stáhnout",
-	"all_rights_reserved": "Všechna práva vyhrazena",
 	"copy": "Kliknutím zkopírujete",
 	"copied": "Zkopírováno",
+	"required": "Požadovaný",
+	"all_rights_reserved": "Všechna práva vyhrazena",
 
 	"home": {
 		"title": "Rozsviťte svůj domov, nebo firmu se solární energií",

@@ -80,13 +80,15 @@ const Contacts = () => {
 									name="email"
 									autoComplete="email"
 									type="email"
-									placeholder="E-mail"
+									placeholder={`E-mail (${t("required")})`}
+									required
 								/>
 								<input
 									name="tel"
 									autoComplete="tel"
 									type="tel"
-									placeholder={t("tel")}
+									placeholder={`${t("tel")} (${t("required")})`}
+									required
 								/>
 							</div>
 							<textarea
