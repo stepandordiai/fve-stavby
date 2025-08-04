@@ -1,7 +1,7 @@
 {
 	"home_title": "Home",
 	"about_us_title": "About us",
-	"family_houses_title": "Photovoltaics for single-family homes",
+	"photovoltaics_for_single_family_homes_title": "Photovoltaics for single-family homes",
 	"commercial_installation_title": "Photovoltaics for companies",
 	"svj_title": "Unit owners association",
 	"svj_sec_title": "Find out more about SVJ",
@@ -156,7 +156,7 @@
 	},
 
 	"advantages": {
-		"title": "Advantages",
+		"title": "Benefits of photovoltaics for the company",
 		"option1": "Energy cost control",
 		"desc1": "With solar energy, you can ensure predictable electricity costs for years to come",
 		"option2": "Helping the environment",

@@ -32,7 +32,11 @@
 	border-radius: 0.75px;
 	background: #000;
 	transform: translateY(-7.5px);
-	transition: all 0.3s;
+	transition: transform 0.5s;
+}
+
+.burger-btn--active::before {
+	transform: translateY(0) rotate(-135deg);
 }
 
 .burger-btn__center-line {
@@ -41,7 +45,12 @@
 	height: 1.5px;
 	border-radius: 0.75px;
 	background: #000;
-	transition: all 0.3s;
+	transition: transform 0.5s, opacity 0.5s;
+}
+
+.burger-btn__center-line--active {
+	transform: rotate(-180deg);
+	opacity: 0;
 }
 
 .burger-btn::after {
@@ -52,22 +61,11 @@
 	border-radius: 0.75px;
 	background: #000;
 	transform: translateY(7.5px);
-	transition: all 0.3s;
-}
-
-.burger-btn--active::before {
-	transform: translateY(0);
-	rotate: -135deg;
-}
-
-.burger-btn__center-line--active {
-	rotate: -180deg;
-	opacity: 0;
+	transition: transform 0.5s;
 }
 
 .burger-btn--active::after {
-	transform: translateY(0);
-	rotate: -225deg;
+	transform: translateY(0) rotate(-225deg);
 }
 
 @media screen and (max-width: 896px) {

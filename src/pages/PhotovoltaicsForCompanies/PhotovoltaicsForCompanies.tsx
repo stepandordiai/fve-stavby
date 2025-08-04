@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
 import Advantages from "../../components/Advantages/Advantages";
+import Partners from "../../components/Partners/Partners";
 import img from "/img/1-c.jpg";
 import "./PhotovoltaicsForCompanies.scss";
 
@@ -29,6 +30,7 @@ const PhotovoltaicsForCompanies = () => {
 						{t("photovoltaics_for_companies_desc")}.
 					</p>
 					<Advantages />
+					<Partners />
 					<GetInTouch />
 				</div>
 			</main>
