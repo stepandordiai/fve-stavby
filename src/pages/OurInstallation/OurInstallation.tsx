@@ -1,5 +1,5 @@
-import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
 import { useEffect } from "react";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
@@ -23,47 +23,47 @@ const OurInstallation = () => {
 	const installationsData: InstallationData[] = [
 		{
 			id: 1,
-			img: "/installations/01.jpeg",
+			img: "/installations/01-c.jpeg",
 		},
 		{
 			id: 2,
-			img: "/installations/02.jpeg",
+			img: "/installations/02-c.jpeg",
 		},
 		{
 			id: 3,
-			img: "/installations/03.jpeg",
+			img: "/installations/03-c.jpeg",
 		},
 		{
 			id: 4,
-			img: "/installations/04.jpeg",
+			img: "/installations/04-c.jpeg",
 		},
 		{
 			id: 5,
-			img: "/installations/05.jpeg",
+			img: "/installations/05-c.jpeg",
 		},
 		{
 			id: 6,
-			img: "/installations/06.jpeg",
+			img: "/installations/06-c.jpeg",
 		},
 		{
 			id: 7,
-			img: "/installations/07.jpeg",
+			img: "/installations/07-c.jpeg",
 		},
 		{
 			id: 8,
-			img: "/installations/08.jpeg",
+			img: "/installations/08-c.jpeg",
 		},
 		{
 			id: 9,
-			img: "/installations/09.jpeg",
+			img: "/installations/09-c.jpeg",
 		},
 		{
 			id: 10,
-			img: "/installations/10.jpeg",
+			img: "/installations/10-c.jpeg",
 		},
 		{
 			id: 11,
-			img: "/installations/11.jpeg",
+			img: "/installations/11-c.jpeg",
 		},
 	];
 

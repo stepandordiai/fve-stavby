@@ -1,12 +1,12 @@
-import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
 import { useEffect } from "react";
 import isTouchDevice from "../../utils/isTouchDevice";
 import img from "/img/7.jpg";
 import userIcon from "/icons/user.png";
-import styles from "./AboutUs.module.scss";
+import "./AboutUs.scss";
 
 const AboutUs = () => {
 	const { t } = useTranslation();
@@ -58,9 +58,7 @@ const AboutUs = () => {
 	];
 
 	useEffect(() => {
-		const portfolio = document.querySelectorAll(
-			`.${styles["guarantees__grid-item"]}`
-		);
+		const portfolio = document.querySelectorAll(".guarantees__grid-item");
 
 		portfolio.forEach((creatorLink) => {
 			const bgElement = document.createElement("div");
@@ -124,8 +122,8 @@ const AboutUs = () => {
 			</Helmet>
 			<main>
 				<PageTitle title={t("about_us_title")} img={img} />
-				<div className={styles["about-us"]}>
-					<p className={styles["about-us__desc"]}>
+				<div className="about-us">
+					<p className="about-us__desc">
 						{t("about_us_p1")}.
 						<br />
 						<br />
@@ -137,21 +135,19 @@ const AboutUs = () => {
 						<br />
 						{t("about_us_p4")}.
 					</p>
-					<h2 className={styles["our-team__title"]}>{t("our_team.title")}</h2>
-					<div className={styles["our-team__grid"]}>
+					<h2 className="our-team__title">{t("our_team.title")}</h2>
+					<div className="our-team__grid">
 						{membersData.map(({ name, position, linkedInUrl }, index) => {
 							return (
-								<div key={index} className={styles["our-team__grid-item"]}>
-									<div className={styles["img-wrapper"]}>
+								<div key={index} className="our-team__grid-item">
+									<div className="img-wrapper">
 										<img src={userIcon} alt="" loading="lazy" />
 									</div>
-									<p className={styles["our-team__grid-item-name"]}>{name}</p>
-									<p className={styles["our-team__grid-item-position"]}>
-										{position}
-									</p>
+									<p className="our-team__grid-item-name">{name}</p>
+									<p className="our-team__grid-item-position">{position}</p>
 									{linkedInUrl && (
 										<a
-											className={styles["our-team__grid-item-link"]}
+											className="our-team__grid-item-link"
 											href={linkedInUrl}
 											target="_blank"
 										>
@@ -162,37 +158,39 @@ const AboutUs = () => {
 							);
 						})}
 					</div>
-					<h2 className={styles["guarantees__title"]}>
-						{t("guarantees.title")} FVE - stavby s.r.o.
-					</h2>
-					<div className={styles["guarantees__grid"]}>
-						<div className={styles["guarantees__grid-item"]}>
-							<p>10</p>
-							<p>{t("guarantees.guarantee1")}</p>
+					<h2 className="guarantees__title">{t("guarantees.title")}</h2>
+					<div className="guarantees__grid">
+						<div className="guarantees__grid-item">
+							<p>12</p>
+							<p>let na Střídač</p>
 						</div>
-						<div className={styles["guarantees__grid-item"]}>
-							<p>až 8000</p>
-							<p>{t("guarantees.guarantee2")}</p>
-						</div>
-						<div className={styles["guarantees__grid-item"]}>
+						<div className="guarantees__grid-item">
 							<p>15</p>
-							<p>{t("guarantees.guarantee3")}</p>
+							<p>let na Fotovoltaické panely</p>
 						</div>
-						<div className={styles["guarantees__grid-item"]}>
+						<div className="guarantees__grid-item">
 							<p>25</p>
-							<p>{t("guarantees.guarantee4")}</p>
+							<p>let Záruka na výkon panelů</p>
 						</div>
-						<div className={styles["guarantees__grid-item"]}>
+						<div className="guarantees__grid-item">
+							<p>5</p>
+							<p>let na Montáž</p>
+						</div>
+						<div className="guarantees__grid-item">
 							<p>10</p>
-							<p>{t("guarantees.guarantee5")}</p>
+							<p>let na Montážní systém</p>
 						</div>
-						<div className={styles["guarantees__grid-item"]}>
+						<div className="guarantees__grid-item">
 							<p>2</p>
-							<p>{t("guarantees.guarantee6")}</p>
+							<p>roky na Kabeláž</p>
 						</div>
-						<div className={styles["guarantees__grid-item"]}>
+						<div className="guarantees__grid-item">
 							<p>2</p>
-							<p>{t("guarantees.guarantee7")}</p>
+							<p>roky na Zabezpečení AC/DC </p>
+						</div>
+						<div className="guarantees__grid-item">
+							<p>6000</p>
+							<p>cyklů na baterie</p>
 						</div>
 					</div>
 					<GetInTouch />
