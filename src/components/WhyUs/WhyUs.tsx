@@ -45,111 +45,99 @@ const WhyUs = () => {
 	}, []);
 
 	return (
-		<>
-			<section className="advantages">
-				<div className="advantages-title-container">
-					<h2>{t("why_us.title")}?</h2>
-				</div>
-				<ul className="advantages-list">
-					<li className="advantages-item">
-						<button className="advantages-btn">
-							<span className="advantages-btn-title">
-								{t("why_us.option1")}
-							</span>
-							<div className="advantages-btn-icon-container">
-								<img
-									className="advantages-btn-icon"
-									width={20}
-									height={20}
-									src={plusIcon}
-									alt=""
-								/>
-							</div>
-						</button>
-						<div className="dd-wrapper">
-							<p className="dd-details">{t("why_us.desc1")}.</p>
+		<div className="advantages">
+			<div className="advantages-title-container">
+				<h2>{t("why_us.title")}?</h2>
+			</div>
+			<ul className="advantages-list">
+				<li className="advantages-item">
+					<button className="advantages-btn">
+						<span className="advantages-btn-title">{t("why_us.option1")}</span>
+						<div className="advantages-btn-icon-container">
+							<img
+								className="advantages-btn-icon"
+								width={20}
+								height={20}
+								src={plusIcon}
+								alt=""
+							/>
 						</div>
-					</li>
-					<li className="advantages-item">
-						<button className="advantages-btn">
-							<span className="advantages-btn-title">
-								{t("why_us.option2")}
-							</span>
-							<div className="advantages-btn-icon-container">
-								<img
-									className="advantages-btn-icon"
-									width={20}
-									height={20}
-									src={plusIcon}
-									alt=""
-								/>
-							</div>
-						</button>
-						<div className="dd-wrapper">
-							<p className="dd-details">{t("why_us.desc2")}.</p>
+					</button>
+					<div className="dd-wrapper">
+						<p className="dd-details">{t("why_us.desc1")}.</p>
+					</div>
+				</li>
+				<li className="advantages-item">
+					<button className="advantages-btn">
+						<span className="advantages-btn-title">{t("why_us.option2")}</span>
+						<div className="advantages-btn-icon-container">
+							<img
+								className="advantages-btn-icon"
+								width={20}
+								height={20}
+								src={plusIcon}
+								alt=""
+							/>
 						</div>
-					</li>
-					<li className="advantages-item">
-						<button className="advantages-btn">
-							<span className="advantages-btn-title">
-								{t("why_us.option3")}
-							</span>
-							<div className="advantages-btn-icon-container">
-								<img
-									className="advantages-btn-icon"
-									width={20}
-									height={20}
-									src={plusIcon}
-									alt=""
-								/>
-							</div>
-						</button>
-						<div className="dd-wrapper">
-							<p className="dd-details">{t("why_us.desc3")}.</p>
+					</button>
+					<div className="dd-wrapper">
+						<p className="dd-details">{t("why_us.desc2")}.</p>
+					</div>
+				</li>
+				<li className="advantages-item">
+					<button className="advantages-btn">
+						<span className="advantages-btn-title">{t("why_us.option3")}</span>
+						<div className="advantages-btn-icon-container">
+							<img
+								className="advantages-btn-icon"
+								width={20}
+								height={20}
+								src={plusIcon}
+								alt=""
+							/>
 						</div>
-					</li>
-					<li className="advantages-item">
-						<button className="advantages-btn">
-							<span className="advantages-btn-title">
-								{t("why_us.option4")}
-							</span>
-							<div className="advantages-btn-icon-container">
-								<img
-									className="advantages-btn-icon"
-									width={20}
-									height={20}
-									src={plusIcon}
-									alt=""
-								/>
-							</div>
-						</button>
-						<div className="dd-wrapper">
-							<p className="dd-details">{t("why_us.desc4")}.</p>
+					</button>
+					<div className="dd-wrapper">
+						<p className="dd-details">{t("why_us.desc3")}.</p>
+					</div>
+				</li>
+				<li className="advantages-item">
+					<button className="advantages-btn">
+						<span className="advantages-btn-title">{t("why_us.option4")}</span>
+						<div className="advantages-btn-icon-container">
+							<img
+								className="advantages-btn-icon"
+								width={20}
+								height={20}
+								src={plusIcon}
+								alt=""
+							/>
 						</div>
-					</li>
+					</button>
+					<div className="dd-wrapper">
+						<p className="dd-details">{t("why_us.desc4")}.</p>
+					</div>
+				</li>
 
-					<li className="advantages-item">
-						<button className="advantages-btn">
-							<span className="advantages-btn-title">
-								{t("why_us.option5")}
-							</span>
-							<div className="advantages-btn-icon-container">
-								<img
-									className="advantages-btn-icon"
-									width={20}
-									height={20}
-									src={plusIcon}
-									alt=""
-								/>
-							</div>
-						</button>
-						<div className="dd-wrapper">
-							<p className="dd-details">{t("why_us.desc5")}.</p>
+				<li className="advantages-item">
+					<button className="advantages-btn">
+						<span className="advantages-btn-title">{t("why_us.option5")}</span>
+						<div className="advantages-btn-icon-container">
+							<img
+								className="advantages-btn-icon"
+								width={20}
+								height={20}
+								src={plusIcon}
+								alt=""
+							/>
 						</div>
-					</li>
-				</ul>
-			</section>
-		</>
+					</button>
+					<div className="dd-wrapper">
+						<p className="dd-details">{t("why_us.desc5")}.</p>
+					</div>
+				</li>
+			</ul>
+		</div>
 	);
 };
 
