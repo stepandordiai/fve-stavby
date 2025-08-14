@@ -105,7 +105,7 @@ const Header = () => {
 		<>
 			<header className="header">
 				<div className="header-top">
-					<NavLink to={"/"} className="header-top__logo">
+					<NavLink to="/" className="header-top__logo">
 						<img src={logo} alt="FVE STAVBY Logo" />
 						<span className="header-top__logo-txt">FVE STAVBY</span>
 					</NavLink>
@@ -117,7 +117,7 @@ const Header = () => {
 				</div>
 				<nav className="header-bottom">
 					<NavLink
-						to={"/"}
+						to="/"
 						className={({ isActive }) =>
 							isActive ? activeHeaderLink : inactiveHeaderLink
 						}
@@ -125,7 +125,7 @@ const Header = () => {
 						{t("home_title")}
 					</NavLink>
 					<NavLink
-						to={"/about-us"}
+						to="/about-us"
 						className={({ isActive }) =>
 							isActive ? activeHeaderLink : inactiveHeaderLink
 						}
@@ -133,7 +133,7 @@ const Header = () => {
 						{t("about_us_title")}
 					</NavLink>
 					<NavLink
-						to={"/photovoltaics-for-single-family-homes"}
+						to="/photovoltaics-for-single-family-homes"
 						className={({ isActive }) =>
 							isActive ? activeHeaderLink : inactiveHeaderLink
 						}
@@ -141,7 +141,7 @@ const Header = () => {
 						{t("photovoltaics_for_single_family_homes_title")}
 					</NavLink>
 					<NavLink
-						to={"/photovoltaics-for-companies"}
+						to="/photovoltaics-for-companies"
 						className={({ isActive }) =>
 							isActive ? activeHeaderLink : inactiveHeaderLink
 						}
@@ -149,7 +149,7 @@ const Header = () => {
 						{t("photovoltaics_for_companies_title")}
 					</NavLink>
 					<NavLink
-						to={"/svj"}
+						to="/svj"
 						className={({ isActive }) =>
 							isActive ? activeHeaderLink : inactiveHeaderLink
 						}
@@ -159,7 +159,7 @@ const Header = () => {
 					</NavLink>
 					<div className="header-bottom-dd">
 						<NavLink
-							to={"/components"}
+							to="/components"
 							className={({ isActive }) =>
 								isActive
 									? activeHeaderLink + " products"
@@ -170,7 +170,7 @@ const Header = () => {
 						</NavLink>
 					</div>
 					<NavLink
-						to={"/our-installation"}
+						to="/our-installation"
 						className={({ isActive }) =>
 							isActive ? activeHeaderLink : inactiveHeaderLink
 						}
@@ -178,7 +178,7 @@ const Header = () => {
 						{t("our_installation_title")}
 					</NavLink>
 					<NavLink
-						to={"/contacts"}
+						to="/contacts"
 						className={({ isActive }) =>
 							isActive ? activeHeaderLink : inactiveHeaderLink
 						}
@@ -189,29 +189,25 @@ const Header = () => {
 			</header>
 			<div className="header-card">
 				<HashLink
-					className={"header-card__link"}
-					to={"/components#invertors"}
+					className="header-card__link"
+					to="/components#invertors"
 					smooth
 				>
 					{t("components.section1")} (Deye, Solax Power, Chisage ESS)
 				</HashLink>
 				<HashLink
-					className={"header-card__link"}
-					to={"/components#connectors"}
+					className="header-card__link"
+					to="/components#connectors"
 					smooth
 				>
 					{t("components.section2")} (Deye, Solax, Chisage ESS)
 				</HashLink>
-				<HashLink
-					className={"header-card__link"}
-					to={"/components#panels"}
-					smooth
-				>
+				<HashLink className="header-card__link" to="/components#panels" smooth>
 					{t("components.section3")} (Jinko, Aiko)
 				</HashLink>
 				<HashLink
-					className={"header-card__link"}
-					to={"/components#optimizers"}
+					className="header-card__link"
+					to="/components#optimizers"
 					smooth
 				>
 					{t("components.section4")} (Tigo)

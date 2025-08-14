@@ -12,6 +12,7 @@ import Manuals from "./pages/Manuals/Manuals";
 import OurInstallation from "./pages/OurInstallation/OurInstallation";
 import Components from "./pages/Components/Components";
 import Contacts from "./pages/Contacts/Contacts";
+import NotFound from "./pages/NotFound/NotFound";
 import "./i18next";
 import "./scss/App.scss";
 
@@ -36,6 +37,7 @@ function App() {
 				<Route path="/our-installation" element={<OurInstallation />} />
 				<Route path="/contacts" element={<Contacts />} />
 				<Route path="/manuals" element={<Manuals />} />
+				<Route path="*" element={<NotFound />} />
 			</Routes>
 			<Footer />
 			<ScrollToTop />

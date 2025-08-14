@@ -1,5 +1,5 @@
-import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
 import titleImg from "/img/6.jpg";
@@ -33,7 +33,8 @@ const Components = () => {
 				<PageTitle
 					title={t("components_title")}
 					img={titleImg}
-					linkPath={"/manuals"}
+					linkPath="/manuals"
+					linkName={t("manuals_title")}
 				/>
 				<div className="components">
 					<div className="components-container" id="invertors">

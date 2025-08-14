@@ -3,21 +3,27 @@
 .page-title {
 	position: relative;
 	width: 100%;
-	height: 250px;
+	min-height: 250px;
 	overflow: hidden;
 	border-radius: 25px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	flex-wrap: wrap;
+	padding: 25px;
 }
 
 .page-title__title {
-	position: absolute;
-	bottom: 25px;
-	left: 25px;
 	color: #fff;
 	font-size: clamp(1.5rem, 4vw, 3rem);
 	font-weight: 500;
 }
 
 .page-title__img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -1;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
@@ -25,19 +31,15 @@
 }
 
 .page-title__link {
-	position: absolute;
-	right: 25px;
-	bottom: 25px;
 	@include flex-center;
 	column-gap: 5px;
 	background: var(--bg-light-clr);
 	color: #fff;
 	@include glass-effect(20px);
-	white-space: nowrap;
+	flex-shrink: 0;
 	border-radius: 25px;
 	padding: 12.5px;
 	height: 50px;
-	cursor: pointer;
 	transition: background-color 0.3s;
 
 	&:hover {
@@ -59,14 +61,12 @@
 	background: #619fd6;
 }
 
-@media screen and (max-width: 896px) {
-	.page-title__title {
-		bottom: 10px;
-		left: 10px;
-	}
+.bg-404 {
+	background: red;
+}
 
-	.page-title__link {
-		right: 10px;
-		bottom: 10px;
+@media screen and (max-width: 896px) {
+	.page-title {
+		padding: 10px;
 	}
 }
