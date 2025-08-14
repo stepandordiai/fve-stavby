@@ -1,5 +1,9 @@
 @use "./../../scss/mixins" as *;
 
+.why-solar__title-container {
+	padding: 25px 0;
+}
+
 .why-solar__title {
 	font: {
 		size: 1.5rem;
@@ -13,7 +17,6 @@
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 25px;
-	margin: 25px 0;
 }
 
 .why-solar__card {

@@ -10,8 +10,10 @@ const WhySolar = () => {
 
 	return (
 		<>
-			<h2 className="why-solar__title">{t("why_solar.title")}</h2>
-			<p>{t("why_solar.sec_title")}</p>
+			<div className="why-solar__title-container">
+				<h2 className="why-solar__title">{t("why_solar.title")}</h2>
+				<p>{t("why_solar.sec_title")}</p>
+			</div>
 			<div className="why-solar">
 				<div className="why-solar__card">
 					<div className="why-solar__card-icon-container">
