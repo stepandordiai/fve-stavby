@@ -48,13 +48,13 @@
 	opacity: 0;
 	pointer-events: none;
 	overflow: hidden;
-	font-weight: 500;
 	white-space: nowrap;
 	transition: all 0s;
 
 	li {
 		padding: 0 12.5px;
 		height: 40px;
+		font-weight: 500;
 		@include grid-center;
 		border-radius: 20px;
 		cursor: pointer;
@@ -77,11 +77,11 @@
 
 @media screen and (max-width: 896px) {
 	.lng-select__btn {
-		margin-right: 12.5px;
+		margin-right: 10px;
 	}
 
 	.lng-select {
-		right: 82.5px;
+		right: 80px;
 	}
 }
 

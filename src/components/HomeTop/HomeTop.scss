@@ -1,8 +1,8 @@
 @use "./../../scss/mixins" as *;
 
-.home-title {
+.home-top {
 	position: relative;
-	height: calc(100svh - 50px);
+	height: calc(100svh - 20px);
 	border-radius: 25px;
 	overflow: hidden;
 	scale: 0.25;
@@ -16,7 +16,7 @@
 	}
 }
 
-.home-title__img {
+.home-top__img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
@@ -58,56 +58,65 @@
 	}
 }
 
-.home-title__details-container {
+.home-top__details-container {
 	position: absolute;
-	right: 25px;
-	bottom: 25px;
-	left: 25px;
+	right: 10px;
+	bottom: 10px;
+	left: 10px;
 	@include flex-between-end;
 	gap: 10px;
 }
 
-.home-title__details {
+.home-top__details {
 	display: flex;
 	align-items: flex-start;
 	flex-direction: column;
 	row-gap: 10px;
 }
 
-.home-title__title {
+.home-top__title {
 	border-radius: 25px;
-	padding: 12.5px;
+	min-height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 12.5px;
 	background: var(--bg-light-clr);
 	@include glass-effect(20px);
 	justify-self: flex-start;
 	color: #fff;
-	font-size: 1.5rem;
+	font-size: clamp(1.25rem, 2vw, 1.5rem);
 	font-weight: 500;
 	opacity: 0;
 	animation: animateTitle 1s 2s forwards;
 }
 
-.home-title__sec-title {
+.home-top__sec-title {
+	min-height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 500;
 	border-radius: 25px;
-	padding: 12.5px;
+	padding: 0 12.5px;
 	background: var(--bg-light-clr);
 	@include glass-effect(20px);
 	justify-self: flex-start;
 	color: #fff;
-	font-size: 1.5rem;
+	font-size: clamp(1.25rem, 2vw, 1.5rem);
 	opacity: 0;
 	animation: animateTitle 1s 2s forwards;
 }
 
-.home-title__info {
+.home-top__info {
 	color: #fff;
-	font-size: clamp(1.5rem, 4vw, 4rem);
-	font-weight: 500;
+	font-size: clamp(2rem, 4vw, 4rem);
+	font-weight: 600;
 	opacity: 0;
 	animation: animateTitle 1s 2s forwards;
 }
 
-.home-title__link-container {
+.home-top__link-container {
 	flex-shrink: 0;
 	display: flex;
 	align-items: flex-end;
@@ -115,7 +124,7 @@
 	row-gap: 10px;
 }
 
-.home-title__link {
+.home-top__link {
 	@include flex-center;
 	column-gap: 5px;
 	background: var(--bg-light-clr);
@@ -125,7 +134,6 @@
 	border-radius: 25px;
 	padding: 12.5px;
 	height: 50px;
-	cursor: pointer;
 	opacity: 0;
 	animation: animateTitle 1s 2s forwards;
 	transition: background-color 0.3s;
@@ -135,13 +143,13 @@
 	}
 }
 
-.home-title__link-icon {
+.home-top__link-icon {
 	height: 100%;
 	flex-shrink: 0;
 	transition: all 0.3s;
 }
 
-.home-title__link:hover .home-title__link-icon {
+.home-top__link:hover .home-top__link-icon {
 	transform: rotate(45deg);
 }
 
@@ -151,26 +159,14 @@
 	}
 }
 
-@media screen and (max-width: 896px) {
-	.home-title {
-		height: calc(100svh - 20px);
-	}
-
-	.home-title__details-container {
-		right: 10px;
-		bottom: 10px;
-		left: 10px;
-	}
-}
-
 @media screen and (max-width: 800px) {
-	.home-title__details-container {
+	.home-top__details-container {
 		display: flex;
 		align-items: flex-start;
 		flex-direction: column-reverse;
 	}
 
-	.home-title__link-container {
+	.home-top__link-container {
 		align-items: flex-start;
 	}
 }

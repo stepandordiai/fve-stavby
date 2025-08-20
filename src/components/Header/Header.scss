@@ -13,13 +13,12 @@
 
 .header-top {
 	display: flex;
-	align-items: flex-start;
 }
 
 .header-top__logo {
 	position: relative;
 	z-index: 5;
-	height: 50px;
+	// height: 50px;
 	min-width: 50px;
 	@include flex-center;
 	color: #fff;
@@ -92,6 +91,7 @@
 	margin-left: auto;
 	margin-right: 10px;
 	color: #fff;
+	// font-weight: 500;
 	opacity: 0;
 	pointer-events: none;
 	transition: background-color 0.3s;
@@ -121,25 +121,11 @@
 	&::-webkit-scrollbar {
 		display: none;
 	}
+}
 
-	ul {
-		@include flex-between-center;
-		gap: 12.5px;
-		padding: 0 12.5px;
-		border-radius: 25px;
-		width: 100%;
-		height: 50px;
-		background: var(--bg-dark-clr);
-		backdrop-filter: blur(10px);
-		white-space: nowrap;
-
-		li {
-			position: relative;
-			color: #fff;
-			height: 100%;
-			@include grid-center;
-		}
-	}
+.header-bottom--hide {
+	opacity: 0 !important;
+	pointer-events: none !important;
 }
 
 .header--active {

@@ -23,11 +23,6 @@
 	overflow: hidden;
 	min-height: 100px;
 	cursor: pointer;
-	transition: all 0.3s;
-
-	&:hover {
-		background: var(--bg-light-darker-clr);
-	}
 }
 
 .process-card__title {
@@ -43,12 +38,11 @@
 
 	span {
 		position: relative;
-		height: 15px;
+		height: 30px;
 		width: 100%;
 		background: white;
-		border-radius: 7.5px;
+		border-radius: 15px;
 		overflow: hidden;
-		transition: all 0.3s;
 	}
 }
 
@@ -68,10 +62,6 @@
 
 .step--active::before {
 	transform: scaleX(1);
-}
-
-.process-card:hover .process-card__step > span {
-	height: 30px;
 }
 
 .process-card:hover .process-card__step > .step--active::before {

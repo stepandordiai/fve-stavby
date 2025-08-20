@@ -33,7 +33,7 @@ function App() {
 					element={<PhotovoltaicsForCompanies />}
 				/>
 				<Route path="/svj" element={<SVJ />} />
-				<Route path="/components" element={<Components />} />
+				{/* <Route path="/components" element={<Components />} /> */}
 				<Route path="/our-installation" element={<OurInstallation />} />
 				<Route path="/contacts" element={<Contacts />} />
 				<Route path="/manuals" element={<Manuals />} />

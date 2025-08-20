@@ -14,12 +14,12 @@ const Process = () => {
 		) as NodeListOf<HTMLSpanElement>;
 
 		processCard.forEach((card, index) => {
-			document.addEventListener("scroll", () => {
+			window.addEventListener("scroll", () => {
 				const cardRect = card.getBoundingClientRect();
 				if (cardRect.bottom < window.innerHeight) {
-					if (card.contains(steps[index])) {
-						steps[index].classList.add("step--active");
-					}
+					steps[index].classList.add("step--active");
+				} else {
+					steps[index].classList.remove("step--active");
 				}
 			});
 		});
