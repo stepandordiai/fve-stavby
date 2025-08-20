@@ -19,8 +19,8 @@
 
 .lng-select {
 	position: fixed;
-	top: 50px;
-	right: 50px;
+	right: 20px;
+	top: 20px;
 	z-index: 3;
 	border-radius: 25px;
 	@include glass-effect(20px);
@@ -81,7 +81,6 @@
 	}
 
 	.lng-select {
-		top: 20px;
 		right: 82.5px;
 	}
 }
