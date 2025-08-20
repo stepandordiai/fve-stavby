@@ -24,15 +24,17 @@ const Home = () => {
 				<link rel="canonical" href="https://fvestavby.cz/" />
 			</Helmet>
 			<main>
-				<HomeTop />
-				<div className="home">
-					<HomeAboutCompany />
-					<WhyUs />
-					<WhySolar />
-					<Process />
-					<Stats />
-					<Partners />
-					<GetInTouch />
+				<div className="home-inner">
+					<HomeTop />
+					<div className="home">
+						<HomeAboutCompany />
+						<WhyUs />
+						<WhySolar />
+						<Process />
+						<Stats />
+						<Partners />
+						<GetInTouch />
+					</div>
 				</div>
 			</main>
 		</>

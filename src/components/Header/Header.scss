@@ -2,10 +2,17 @@
 
 .header {
 	position: fixed;
-	top: 20px;
-	right: 20px;
-	left: 20px;
+	top: 0;
+	right: 10px;
+	left: 10px;
 	z-index: 100;
+}
+
+.header-inner {
+	position: relative;
+	padding: 20px 10px;
+	max-width: 1920px;
+	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
 	row-gap: 10px;

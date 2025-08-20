@@ -6,6 +6,7 @@ import LngSelect from "../LngSelect/LngSelect";
 import { useEffect } from "react";
 import logo from "/logo/solar-panel.png";
 import "./Header.scss";
+import Menu from "../Menu/Menu";
 
 const Header = () => {
 	const { t } = useTranslation();
@@ -119,61 +120,62 @@ const Header = () => {
 	return (
 		<>
 			<header className="header">
-				<div className="header-top">
-					<NavLink to="/" className="header-top__logo">
-						<img src={logo} alt="FVE STAVBY Logo" />
-						<span className="header-top__logo-txt">FVE STAVBY</span>
-					</NavLink>
-					<a href="tel:+420728803703" className="header-top__number">
-						+420 728 803 703
-					</a>
-					<LngSelect />
-					<BurgerBtn />
-				</div>
-				<div className="header-bottom-wrapper">
-					<nav className="header-bottom">
-						<NavLink
-							to="/"
-							className={({ isActive }) =>
-								isActive ? activeHeaderLink : inactiveHeaderLink
-							}
-						>
-							{t("home_title")}
+				<div className="header-inner">
+					<div className="header-top">
+						<NavLink to="/" className="header-top__logo">
+							<img src={logo} alt="FVE STAVBY Logo" />
+							<span className="header-top__logo-txt">FVE STAVBY</span>
 						</NavLink>
-						<NavLink
-							to="/about-us"
-							className={({ isActive }) =>
-								isActive ? activeHeaderLink : inactiveHeaderLink
-							}
-						>
-							{t("about_us_title")}
-						</NavLink>
-						<NavLink
-							to="/photovoltaics-for-single-family-homes"
-							className={({ isActive }) =>
-								isActive ? activeHeaderLink : inactiveHeaderLink
-							}
-						>
-							{t("photovoltaics_for_single_family_homes_title")}
-						</NavLink>
-						<NavLink
-							to="/photovoltaics-for-companies"
-							className={({ isActive }) =>
-								isActive ? activeHeaderLink : inactiveHeaderLink
-							}
-						>
-							{t("photovoltaics_for_companies_title")}
-						</NavLink>
-						<NavLink
-							to="/svj"
-							className={({ isActive }) =>
-								isActive ? activeHeaderLink : inactiveHeaderLink
-							}
-						>
-							<span>SVJ</span>
-							<span className="header__nav-link--new">New</span>
-						</NavLink>
-						{/* <div className="header-bottom-dd">
+						<a href="tel:+420728803703" className="header-top__number">
+							+420 728 803 703
+						</a>
+						<LngSelect />
+						<BurgerBtn />
+					</div>
+					<div className="header-bottom-wrapper">
+						<nav className="header-bottom">
+							<NavLink
+								to="/"
+								className={({ isActive }) =>
+									isActive ? activeHeaderLink : inactiveHeaderLink
+								}
+							>
+								{t("home_title")}
+							</NavLink>
+							<NavLink
+								to="/about-us"
+								className={({ isActive }) =>
+									isActive ? activeHeaderLink : inactiveHeaderLink
+								}
+							>
+								{t("about_us_title")}
+							</NavLink>
+							<NavLink
+								to="/photovoltaics-for-single-family-homes"
+								className={({ isActive }) =>
+									isActive ? activeHeaderLink : inactiveHeaderLink
+								}
+							>
+								{t("photovoltaics_for_single_family_homes_title")}
+							</NavLink>
+							<NavLink
+								to="/photovoltaics-for-companies"
+								className={({ isActive }) =>
+									isActive ? activeHeaderLink : inactiveHeaderLink
+								}
+							>
+								{t("photovoltaics_for_companies_title")}
+							</NavLink>
+							<NavLink
+								to="/svj"
+								className={({ isActive }) =>
+									isActive ? activeHeaderLink : inactiveHeaderLink
+								}
+							>
+								<span>SVJ</span>
+								<span className="header__nav-link--new">New</span>
+							</NavLink>
+							{/* <div className="header-bottom-dd">
 							<NavLink
 								to="/components"
 								className={({ isActive }) =>
@@ -185,23 +187,25 @@ const Header = () => {
 								{t("components_title")}
 							</NavLink>
 						</div> */}
-						<NavLink
-							to="/our-installation"
-							className={({ isActive }) =>
-								isActive ? activeHeaderLink : inactiveHeaderLink
-							}
-						>
-							{t("our_installation_title")}
-						</NavLink>
-						<NavLink
-							to="/contacts"
-							className={({ isActive }) =>
-								isActive ? activeHeaderLink : inactiveHeaderLink
-							}
-						>
-							{t("contacts_title")}
-						</NavLink>
-					</nav>
+							<NavLink
+								to="/our-installation"
+								className={({ isActive }) =>
+									isActive ? activeHeaderLink : inactiveHeaderLink
+								}
+							>
+								{t("our_installation_title")}
+							</NavLink>
+							<NavLink
+								to="/contacts"
+								className={({ isActive }) =>
+									isActive ? activeHeaderLink : inactiveHeaderLink
+								}
+							>
+								{t("contacts_title")}
+							</NavLink>
+						</nav>
+					</div>
+					{/* <Menu /> */}
 				</div>
 			</header>
 			{/* <div className="header-card">
