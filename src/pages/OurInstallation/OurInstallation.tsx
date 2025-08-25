@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
 import isTouchDevice from "../../utils/isTouchDevice";
+import Container from "../../components/Container/Container";
 import img from "/img/5.jpg";
 import closeIcon from "/icons/close-white.png";
 import expandIcon from "/icons/expand-white.png";
@@ -206,28 +207,30 @@ const OurInstallation = () => {
 				<link rel="canonical" href="https://fvestavby.cz/our-installation" />
 			</Helmet>
 			<main>
-				<PageTitle title={t("our_installation_title")} img={img} />
-				<div className="our-installation">
-					<p className="our-installation__title">
-						{t("our_installation_desc")}
-					</p>
-					<div className="our-installation__grid">
-						{installationsData.map(({ id, img }) => {
-							return (
-								<div key={id} className="our-installation__card-wrapper">
-									<div className="our-installation__card">
-										<img
-											src={img}
-											alt="FVE STAVBY Installation"
-											loading="lazy"
-										/>
+				<Container>
+					<PageTitle title={t("our_installation_title")} img={img} />
+					<div className="our-installation">
+						<p className="our-installation__title">
+							{t("our_installation_desc")}
+						</p>
+						<div className="our-installation__grid">
+							{installationsData.map(({ id, img }) => {
+								return (
+									<div key={id} className="our-installation__card-wrapper">
+										<div className="our-installation__card">
+											<img
+												src={img}
+												alt="FVE STAVBY Installation"
+												loading="lazy"
+											/>
+										</div>
 									</div>
-								</div>
-							);
-						})}
+								);
+							})}
+						</div>
+						<GetInTouch />
 					</div>
-					<GetInTouch />
-				</div>
+				</Container>
 			</main>
 		</>
 	);

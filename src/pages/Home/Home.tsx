@@ -8,6 +8,7 @@ import HomeTop from "../../components/HomeTop/HomeTop";
 import HomeAboutCompany from "../../components/HomeAboutCompany/HomeAboutCompany";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
 import WhySolar from "../../components/WhySolar/WhySolar";
+import Container from "../../components/Container/Container";
 import "./Home.scss";
 
 const Home = () => {
@@ -24,7 +25,7 @@ const Home = () => {
 				<link rel="canonical" href="https://fvestavby.cz/" />
 			</Helmet>
 			<main>
-				<div className="home-inner">
+				<Container>
 					<HomeTop />
 					<div className="home">
 						<HomeAboutCompany />
@@ -35,7 +36,7 @@ const Home = () => {
 						<Partners />
 						<GetInTouch />
 					</div>
-				</div>
+				</Container>
 			</main>
 		</>
 	);

@@ -1,9 +1,10 @@
-import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
 import Advantages from "../../components/Advantages/Advantages";
 import Partners from "../../components/Partners/Partners";
+import Container from "../../components/Container/Container";
 import img from "/img/1-c.jpg";
 import "./PhotovoltaicsForCompanies.scss";
 
@@ -24,15 +25,17 @@ const PhotovoltaicsForCompanies = () => {
 				/>
 			</Helmet>
 			<main>
-				<PageTitle title={t("photovoltaics_for_companies_title")} img={img} />
-				<div className="photovoltaics-for-companies">
-					<p style={{ marginBottom: 25 }}>
-						{t("photovoltaics_for_companies_desc")}.
-					</p>
-					<Advantages />
-					<Partners />
-					<GetInTouch />
-				</div>
+				<Container>
+					<PageTitle title={t("photovoltaics_for_companies_title")} img={img} />
+					<div className="photovoltaics-for-companies">
+						<p style={{ marginBottom: 25 }}>
+							{t("photovoltaics_for_companies_desc")}.
+						</p>
+						<Advantages />
+						<Partners />
+						<GetInTouch />
+					</div>
+				</Container>
 			</main>
 		</>
 	);

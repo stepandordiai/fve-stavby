@@ -4,6 +4,7 @@ import PageTitle from "../../components/PageTitle/PageTitle";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
 import { useEffect } from "react";
 import isTouchDevice from "../../utils/isTouchDevice";
+import Container from "../../components/Container/Container";
 import img from "/img/7.jpg";
 import userIcon from "/icons/user.png";
 import "./AboutUs.scss";
@@ -121,80 +122,82 @@ const AboutUs = () => {
 				<link rel="canonical" href="https://fvestavby.cz/about-us" />
 			</Helmet>
 			<main>
-				<PageTitle title={t("about_us_title")} img={img} />
-				<div className="about-us">
-					<p className="about-us__desc">
-						{t("about_us_p1")}.
-						<br />
-						<br />
-						{t("about_us_p2")}.
-						<br />
-						<br />
-						{t("about_us_p3")}.
-						<br />
-						<br />
-						{t("about_us_p4")}.
-					</p>
-					<h2 className="our-team__title">{t("our_team.title")}</h2>
-					<div className="our-team__grid">
-						{membersData.map(({ name, position, linkedInUrl }, index) => {
-							return (
-								<div key={index} className="our-team__grid-item">
-									<div className="img-wrapper">
-										<img src={userIcon} alt="" loading="lazy" />
+				<Container>
+					<PageTitle title={t("about_us_title")} img={img} />
+					<div className="about-us">
+						<p className="about-us__desc">
+							{t("about_us_p1")}.
+							<br />
+							<br />
+							{t("about_us_p2")}.
+							<br />
+							<br />
+							{t("about_us_p3")}.
+							<br />
+							<br />
+							{t("about_us_p4")}.
+						</p>
+						<h2 className="our-team__title">{t("our_team.title")}</h2>
+						<div className="our-team__grid">
+							{membersData.map(({ name, position, linkedInUrl }, index) => {
+								return (
+									<div key={index} className="our-team__grid-item">
+										<div className="img-wrapper">
+											<img src={userIcon} alt="" loading="lazy" />
+										</div>
+										<p className="our-team__grid-item-name">{name}</p>
+										<p className="our-team__grid-item-position">{position}</p>
+										{linkedInUrl && (
+											<a
+												className="our-team__grid-item-link"
+												href={linkedInUrl}
+												target="_blank"
+											>
+												LinkedIn
+											</a>
+										)}
 									</div>
-									<p className="our-team__grid-item-name">{name}</p>
-									<p className="our-team__grid-item-position">{position}</p>
-									{linkedInUrl && (
-										<a
-											className="our-team__grid-item-link"
-											href={linkedInUrl}
-											target="_blank"
-										>
-											LinkedIn
-										</a>
-									)}
-								</div>
-							);
-						})}
+								);
+							})}
+						</div>
+						<h2 className="guarantees__title">{t("guarantees.title")}</h2>
+						<div className="guarantees__grid">
+							<div className="guarantees__grid-item">
+								<p>12</p>
+								<p>let na Střídač</p>
+							</div>
+							<div className="guarantees__grid-item">
+								<p>15</p>
+								<p>let na Fotovoltaické panely</p>
+							</div>
+							<div className="guarantees__grid-item">
+								<p>25</p>
+								<p>let Záruka na výkon panelů</p>
+							</div>
+							<div className="guarantees__grid-item">
+								<p>5</p>
+								<p>let na Montáž</p>
+							</div>
+							<div className="guarantees__grid-item">
+								<p>10</p>
+								<p>let na Montážní systém</p>
+							</div>
+							<div className="guarantees__grid-item">
+								<p>2</p>
+								<p>roky na Kabeláž</p>
+							</div>
+							<div className="guarantees__grid-item">
+								<p>2</p>
+								<p>roky na Zabezpečení AC/DC </p>
+							</div>
+							<div className="guarantees__grid-item">
+								<p>6000</p>
+								<p>cyklů na baterie</p>
+							</div>
+						</div>
+						<GetInTouch />
 					</div>
-					<h2 className="guarantees__title">{t("guarantees.title")}</h2>
-					<div className="guarantees__grid">
-						<div className="guarantees__grid-item">
-							<p>12</p>
-							<p>let na Střídač</p>
-						</div>
-						<div className="guarantees__grid-item">
-							<p>15</p>
-							<p>let na Fotovoltaické panely</p>
-						</div>
-						<div className="guarantees__grid-item">
-							<p>25</p>
-							<p>let Záruka na výkon panelů</p>
-						</div>
-						<div className="guarantees__grid-item">
-							<p>5</p>
-							<p>let na Montáž</p>
-						</div>
-						<div className="guarantees__grid-item">
-							<p>10</p>
-							<p>let na Montážní systém</p>
-						</div>
-						<div className="guarantees__grid-item">
-							<p>2</p>
-							<p>roky na Kabeláž</p>
-						</div>
-						<div className="guarantees__grid-item">
-							<p>2</p>
-							<p>roky na Zabezpečení AC/DC </p>
-						</div>
-						<div className="guarantees__grid-item">
-							<p>6000</p>
-							<p>cyklů na baterie</p>
-						</div>
-					</div>
-					<GetInTouch />
-				</div>
+				</Container>
 			</main>
 		</>
 	);

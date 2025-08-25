@@ -1,10 +1,11 @@
-import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
 import React from "react";
+import Container from "../../components/Container/Container";
 import img from "/img/16.jpg";
-import styles from "./Manuals.module.scss";
+import "./Manuals.scss";
 
 const Manuals = () => {
 	const { t } = useTranslation();
@@ -57,27 +58,25 @@ const Manuals = () => {
 				<link rel="canonical" href="https://fvestavby.cz/manuals" />
 			</Helmet>
 			<main>
-				<PageTitle title={t("manuals_title")} img={img} />
-				<div className={styles["manuals"]}>
-					{manualsData.map(({ info, link }, index) => {
-						return (
-							<React.Fragment key={index}>
-								<div className={styles["manuals-container"]}>
-									<p>{info + " (pdf)"}</p>
-									<a
-										className={styles["manuals__link"]}
-										href={link}
-										target="_blank"
-									>
-										{t("download")}
-									</a>
-								</div>
-								<div className={styles["manuals-divider"]}></div>
-							</React.Fragment>
-						);
-					})}
-					<GetInTouch />
-				</div>
+				<Container>
+					<PageTitle title={t("manuals_title")} img={img} />
+					<div className="manuals">
+						{manualsData.map(({ info, link }, index) => {
+							return (
+								<React.Fragment key={index}>
+									<div className="manuals-container">
+										<p>{info + " (pdf)"}</p>
+										<a className="manuals__link" href={link} target="_blank">
+											{t("download")}
+										</a>
+									</div>
+									<div className="manuals-divider"></div>
+								</React.Fragment>
+							);
+						})}
+						<GetInTouch />
+					</div>
+				</Container>
 			</main>
 		</>
 	);

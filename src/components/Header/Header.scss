@@ -25,7 +25,6 @@
 .header-top__logo {
 	position: relative;
 	z-index: 5;
-	// height: 50px;
 	min-width: 50px;
 	@include flex-center;
 	color: #fff;
@@ -98,7 +97,7 @@
 	margin-left: auto;
 	margin-right: 10px;
 	color: #fff;
-	// font-weight: 500;
+	font-weight: 500;
 	opacity: 0;
 	pointer-events: none;
 	transition: background-color 0.3s;

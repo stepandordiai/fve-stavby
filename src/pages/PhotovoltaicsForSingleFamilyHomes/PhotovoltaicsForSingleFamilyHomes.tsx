@@ -1,10 +1,11 @@
-import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
 import Partners from "../../components/Partners/Partners";
 import Benefits from "../../components/Benefits/Benefits";
 import Process from "../../components/Process/Process";
+import Container from "../../components/Container/Container";
 import img from "/img/3-c.jpg";
 import "./PhotovoltaicsForSingleFamilyHomes.scss";
 
@@ -27,16 +28,18 @@ const PhotovoltaicsForSingleFamilyHomes = () => {
 				/>
 			</Helmet>
 			<main>
-				<PageTitle
-					title={t("photovoltaics_for_single_family_homes_title")}
-					img={img}
-				/>
-				<div className="photovoltaics-for-single-family-homes">
-					<Benefits />
-					<Process />
-					<Partners />
-					<GetInTouch />
-				</div>
+				<Container>
+					<PageTitle
+						title={t("photovoltaics_for_single_family_homes_title")}
+						img={img}
+					/>
+					<div className="photovoltaics-for-single-family-homes">
+						<Benefits />
+						<Process />
+						<Partners />
+						<GetInTouch />
+					</div>
+				</Container>
 			</main>
 		</>
 	);
