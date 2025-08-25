@@ -13,8 +13,8 @@ const Process = () => {
 			".step"
 		) as NodeListOf<HTMLSpanElement>;
 
-		processCard.forEach((card, index) => {
-			window.addEventListener("scroll", () => {
+		const handleProcessCard = () => {
+			processCard.forEach((card, index) => {
 				const cardRect = card.getBoundingClientRect();
 				if (cardRect.bottom < window.innerHeight) {
 					steps[index].classList.add("step--active");
@@ -22,7 +22,15 @@ const Process = () => {
 					steps[index].classList.remove("step--active");
 				}
 			});
-		});
+		};
+
+		handleProcessCard();
+
+		window.addEventListener("scroll", handleProcessCard);
+
+		return () => {
+			window.removeEventListener("scroll", handleProcessCard);
+		};
 	}, []);
 
 	return (
