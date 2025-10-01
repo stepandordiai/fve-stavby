@@ -243,7 +243,7 @@ const Footer = () => {
 						<p>&copy; 2025 FVE - stavby s.r.o.</p>
 						<p>{t("all_rights_reserved")}.</p>
 						<div className="creator">
-							<span>Site by</span>
+							<span>Website created by</span>
 							<a
 								className="creator-link"
 								href="https://heeeyooo.studio/"
