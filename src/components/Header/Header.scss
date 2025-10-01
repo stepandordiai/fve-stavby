@@ -195,6 +195,82 @@
 	@include grid-center;
 }
 
+// burger-btn
+
+.burger-btn-wrapper {
+	display: none;
+	place-content: center;
+	width: 50px;
+	aspect-ratio: 1/1;
+	border-radius: 25px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+
+	&:hover {
+		background: var(--bg-light-darker-clr);
+	}
+}
+
+.burger-btn {
+	position: relative;
+	width: 30px;
+	padding: 15px 0;
+	@include flex-center;
+	cursor: pointer;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.burger-btn::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 1.5px;
+	border-radius: 0.75px;
+	background: #000;
+	transform: translateY(-7.5px);
+	transition: transform 0.5s;
+}
+
+.burger-btn--active::before {
+	transform: translateY(0) rotate(-135deg);
+}
+
+.burger-btn__center-line {
+	position: absolute;
+	width: 100%;
+	height: 1.5px;
+	border-radius: 0.75px;
+	background: #000;
+	transition: transform 0.5s, opacity 0.5s;
+}
+
+.burger-btn__center-line--active {
+	transform: rotate(-180deg);
+	opacity: 0;
+}
+
+.burger-btn::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 1.5px;
+	border-radius: 0.75px;
+	background: #000;
+	transform: translateY(7.5px);
+	transition: transform 0.5s;
+}
+
+.burger-btn--active::after {
+	transform: translateY(0) rotate(-225deg);
+}
+
+@media screen and (max-width: 896px) {
+	.burger-btn-wrapper {
+		display: grid;
+	}
+}
+
 @media screen and (max-width: 896px) {
 	.header--hide {
 		top: -50px;
