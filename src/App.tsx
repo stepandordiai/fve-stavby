@@ -10,7 +10,6 @@ import PhotovoltaicsForCompanies from "./pages/PhotovoltaicsForCompanies/Photovo
 import SVJ from "./pages/SVJ/SVJ";
 import Manuals from "./pages/Manuals/Manuals";
 import OurInstallation from "./pages/OurInstallation/OurInstallation";
-import Components from "./pages/Components/Components";
 import Contacts from "./pages/Contacts/Contacts";
 import NotFound from "./pages/NotFound/NotFound";
 import "./i18next";
@@ -33,7 +32,6 @@ function App() {
 					element={<PhotovoltaicsForCompanies />}
 				/>
 				<Route path="/svj" element={<SVJ />} />
-				{/* <Route path="/components" element={<Components />} /> */}
 				<Route path="/our-installation" element={<OurInstallation />} />
 				<Route path="/contacts" element={<Contacts />} />
 				<Route path="/manuals" element={<Manuals />} />

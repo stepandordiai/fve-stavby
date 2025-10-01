@@ -1,12 +1,10 @@
 import { useTranslation } from "react-i18next";
 import BurgerBtn from "../BurgerBtn/BurgerBtn";
 import { NavLink, useLocation } from "react-router-dom";
-// import { HashLink } from "react-router-hash-link";
 import LngSelect from "../LngSelect/LngSelect";
 import { useEffect } from "react";
 import logo from "/logo/solar-panel.png";
 import "./Header.scss";
-import Menu from "../Menu/Menu";
 
 const Header = () => {
 	const { t } = useTranslation();
@@ -54,6 +52,7 @@ const Header = () => {
 
 	useEffect(() => {
 		const headerBottom = document.querySelector(".header-bottom");
+		const headerInner = document.querySelector(".header-inner");
 
 		let initScroll = 0;
 
@@ -61,8 +60,10 @@ const Header = () => {
 			const scrollTop = document.documentElement.scrollTop;
 			if (scrollTop > initScroll && initScroll > window.innerHeight / 2) {
 				headerBottom?.classList.add("header-bottom--hide");
+				headerInner?.classList.add("header-inner--hide");
 			} else {
 				headerBottom?.classList.remove("header-bottom--hide");
+				headerInner?.classList.remove("header-inner--hide");
 			}
 			initScroll = scrollTop;
 		});
@@ -175,18 +176,6 @@ const Header = () => {
 								<span>SVJ</span>
 								<span className="header__nav-link--new">New</span>
 							</NavLink>
-							{/* <div className="header-bottom-dd">
-							<NavLink
-								to="/components"
-								className={({ isActive }) =>
-									isActive
-										? activeHeaderLink + " products"
-										: inactiveHeaderLink + " products"
-								}
-							>
-								{t("components_title")}
-							</NavLink>
-						</div> */}
 							<NavLink
 								to="/our-installation"
 								className={({ isActive }) =>
@@ -205,35 +194,8 @@ const Header = () => {
 							</NavLink>
 						</nav>
 					</div>
-					{/* <Menu /> */}
 				</div>
 			</header>
-			{/* <div className="header-card">
-				<HashLink
-					className="header-card__link"
-					to="/components#invertors"
-					smooth
-				>
-					{t("components.section1")} (Deye, Solax Power, Chisage ESS)
-				</HashLink>
-				<HashLink
-					className="header-card__link"
-					to="/components#connectors"
-					smooth
-				>
-					{t("components.section2")} (Deye, Solax, Chisage ESS)
-				</HashLink>
-				<HashLink className="header-card__link" to="/components#panels" smooth>
-					{t("components.section3")} (Jinko, Aiko)
-				</HashLink>
-				<HashLink
-					className="header-card__link"
-					to="/components#optimizers"
-					smooth
-				>
-					{t("components.section4")} (Tigo)
-				</HashLink>
-			</div> */}
 		</>
 	);
 };

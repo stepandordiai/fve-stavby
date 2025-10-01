@@ -1,30 +1,27 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-	<loc>https://fvestavby.cz/</loc>
+	<loc>https://www.fvestavby.cz/</loc>
 </url>
 <url>
-	<loc>https://fvestavby.cz/about-us</loc>
+	<loc>https://www.fvestavby.cz/about-us</loc>
 </url>
 <url>
-	<loc>https://fvestavby.cz/photovoltaics-for-single-family-homes</loc>
+	<loc>https://www.fvestavby.cz/photovoltaics-for-single-family-homes</loc>
 </url>
 <url>
-	<loc>https://fvestavby.cz/photovoltaics-for-companies</loc>
+	<loc>https://www.fvestavby.cz/photovoltaics-for-companies</loc>
 </url>
 <url>
-	<loc>https://fvestavby.cz/svj</loc>
-</url>
-<!-- <url>
-	<loc>https://fvestavby.cz/components</loc>
-</url> -->
-<url>
-	<loc>https://fvestavby.cz/our-installation</loc>
+	<loc>https://www.fvestavby.cz/svj</loc>
 </url>
 <url>
-	<loc>https://fvestavby.cz/contacts</loc>
+	<loc>https://www.fvestavby.cz/our-installation</loc>
 </url>
 <url>
-	<loc>https://fvestavby.cz/manuals</loc>
+	<loc>https://www.fvestavby.cz/contacts</loc>
+</url>
+<url>
+	<loc>https://www.fvestavby.cz/manuals</loc>
 </url>
 </urlset>

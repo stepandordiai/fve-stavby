@@ -55,7 +55,7 @@ const Manuals = () => {
 					content="Stáhněte si návody a manuály k fotovoltaickým systémům. FVE – stavby s.r.o. poskytuje přehledné dokumentace k obsluze a údržbě solárních technologií."
 				/>
 				<title>{t("manuals_title")} | FVE STAVBY</title>
-				<link rel="canonical" href="https://fvestavby.cz/manuals" />
+				<link rel="canonical" href="https://www.fvestavby.cz/manuals" />
 			</Helmet>
 			<main>
 				<Container>

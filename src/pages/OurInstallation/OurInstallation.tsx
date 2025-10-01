@@ -204,7 +204,10 @@ const OurInstallation = () => {
 					content="Podívejte se na naše realizované fotovoltaické instalace. FVE – stavby s.r.o. poskytuje profesionální instalace solárních systémů pro domácnosti i firmy po celé ČR."
 				/>
 				<title>{t("our_installation_title")} | FVE STAVBY</title>
-				<link rel="canonical" href="https://fvestavby.cz/our-installation" />
+				<link
+					rel="canonical"
+					href="https://www.fvestavby.cz/our-installation"
+				/>
 			</Helmet>
 			<main>
 				<Container>

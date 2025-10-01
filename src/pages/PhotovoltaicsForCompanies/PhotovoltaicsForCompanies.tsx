@@ -21,7 +21,7 @@ const PhotovoltaicsForCompanies = () => {
 				<title>{t("photovoltaics_for_companies_title")} | FVE STAVBY</title>
 				<link
 					rel="canonical"
-					href="https://fvestavby.cz/photovoltaics-for-companies"
+					href="https://www.fvestavby.cz/photovoltaics-for-companies"
 				/>
 			</Helmet>
 			<main>

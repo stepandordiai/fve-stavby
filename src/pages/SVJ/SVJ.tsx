@@ -49,7 +49,7 @@ const SVJ = () => {
 				{/* TODO: */}
 				{/* <meta name="description" content="" /> */}
 				<title>SVJ | FVE STAVBY</title>
-				<link rel="canonical" href="https://fvestavby.cz/svj" />
+				<link rel="canonical" href="https://www.fvestavby.cz/svj" />
 			</Helmet>
 			<main className="svj">
 				<Container>

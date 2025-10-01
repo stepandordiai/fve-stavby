@@ -24,7 +24,7 @@ const PhotovoltaicsForSingleFamilyHomes = () => {
 				</title>
 				<link
 					rel="canonical"
-					href="https://fvestavby.cz/photovoltaics-for-single-family-homes"
+					href="https://www.fvestavby.cz/photovoltaics-for-single-family-homes"
 				/>
 			</Helmet>
 			<main>

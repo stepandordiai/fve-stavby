@@ -159,14 +159,6 @@ const Footer = () => {
 									<span className="footer__nav-link--new">New</span>
 								</NavLink>
 								<NavLink
-									to={"/components"}
-									className={({ isActive }) =>
-										isActive ? activeFooterLink : inactiveFooterLink
-									}
-								>
-									{t("components_title")}
-								</NavLink>
-								<NavLink
 									to={"/our-installation"}
 									className={({ isActive }) =>
 										isActive ? activeFooterLink : inactiveFooterLink

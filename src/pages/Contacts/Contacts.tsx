@@ -45,7 +45,7 @@ const Contacts = () => {
 					content="Kontaktujte nás – FVE – stavby s.r.o. vám rádi zodpoví dotazy k fotovoltaice. Najdete zde telefon, e-mail, adresu sídla i kontaktní formulář pro rychlou zprávu."
 				/>
 				<title>{t("contacts_title")} | FVE STAVBY</title>
-				<link rel="canonical" href="https://fvestavby.cz/contacts" />
+				<link rel="canonical" href="https://www.fvestavby.cz/contacts" />
 			</Helmet>
 			<main>
 				<Container>

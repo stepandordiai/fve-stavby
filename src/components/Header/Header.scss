@@ -10,12 +10,16 @@
 
 .header-inner {
 	position: relative;
-	padding: 20px 10px;
+	padding: 20px 10px 0 10px;
 	max-width: 1920px;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
 	row-gap: 10px;
+}
+
+.header-inner--hide {
+	row-gap: 0 !important;
 }
 
 .header-top {
@@ -132,6 +136,7 @@
 .header-bottom--hide {
 	opacity: 0 !important;
 	pointer-events: none !important;
+	height: 0 !important;
 }
 
 .header--active {
