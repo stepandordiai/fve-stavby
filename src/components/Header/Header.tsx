@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { NavLink, useLocation } from "react-router-dom";
 import LngSelect from "../LngSelect/LngSelect";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import logo from "/logo/solar-panel.png";
 import "./Header.scss";
 
@@ -9,6 +9,8 @@ const Header = () => {
 	const { t } = useTranslation();
 
 	const { pathname, hash } = useLocation();
+
+	const [isMenuActive, setIsMenuActive] = useState(false);
 
 	const inactiveHeaderLink = "header__nav-link";
 	const activeHeaderLink =
@@ -66,85 +68,44 @@ const Header = () => {
 			}
 			initScroll = scrollTop;
 		});
-
-		// const headerCard = document.querySelector(
-		// 	".header-card"
-		// ) as HTMLDivElement | null;
-		// const headerBottomDd = document.querySelector(
-		// 	".header-bottom-dd"
-		// ) as HTMLDivElement | null;
-
-		// // FIXME:
-		// const headerDd = document.querySelector(".products");
-		// const headerCardLinks = document.querySelectorAll(".header-card__link");
-
-		// const handleHeaderBottom = (e: MouseEvent | TouchEvent): void => {
-		// 	if (
-		// 		e.target == headerCard ||
-		// 		e.target == headerDd ||
-		// 		e.target == headerCardLinks[0] ||
-		// 		e.target == headerCardLinks[1] ||
-		// 		e.target == headerCardLinks[2] ||
-		// 		e.target == headerCardLinks[3] ||
-		// 		e.target == headerBottomDd
-		// 	) {
-		// 		headerCard?.classList.add("header-card--active");
-		// 	} else {
-		// 		headerCard?.classList.remove("header-card--active");
-		// 	}
-		// };
-
-		// document.addEventListener("mouseover", handleHeaderBottom);
-
-		// document.addEventListener("touchstart", handleHeaderBottom);
-
-		// headerCardLinks.forEach((link) => {
-		// 	link.addEventListener("click", () => {
-		// 		headerCard?.classList.remove("header-card--active");
-		// 	});
-		// });
-
-		// return () => {
-		// 	document.removeEventListener("mouseover", handleHeaderBottom);
-
-		// 	document.removeEventListener("touchstart", handleHeaderBottom);
-
-		// 	headerCardLinks.forEach((link) => {
-		// 		link.removeEventListener("click", () => {
-		// 			headerCard?.classList.remove("header-card--active");
-		// 		});
-		// 	});
-		// };
 	}, []);
 
 	function toggleBurgerBtn(): void {
-		const burgerBtn = document.querySelector(
-			".burger-btn"
-		) as HTMLDivElement | null;
-		const burgerBtnCenterLine = document.querySelector(
-			".burger-btn__center-line"
-		) as HTMLSpanElement | null;
-		const menu = document.querySelector(".menu") as HTMLDivElement | null;
-		const menuWrapper = document.querySelector(
-			".menu-wrapper"
-		) as HTMLDivElement | null;
-		const headerBottom = document.querySelector(
-			".header-bottom"
-		) as HTMLDivElement | null;
-
-		burgerBtn?.classList.toggle("burger-btn--active");
-		burgerBtnCenterLine?.classList.toggle("burger-btn__center-line--active");
-		menu?.classList.toggle("menu--active");
-		menuWrapper?.classList.toggle("menu-wrapper--active");
-		headerBottom?.classList.toggle("header-bottom--active");
+		setIsMenuActive((prev) => !prev);
 	}
+
+	useEffect(() => {
+		setIsMenuActive(false);
+	}, [pathname]);
+
+	// TODO:
+	useEffect(() => {
+		const closeMenuOnEsc = (e: KeyboardEvent) => {
+			if (e.key === "Escape") {
+				setIsMenuActive(false);
+			}
+		};
+
+		document.addEventListener("keydown", closeMenuOnEsc);
+
+		return () => {
+			document.removeEventListener("keydown", closeMenuOnEsc);
+		};
+	}, []);
+
+	const inactiveLink = "menu__nav-link";
+	const activeLink = "menu__nav-link menu__nav-link--active";
 
 	return (
 		<>
 			<header className="header">
 				<div className="header-inner">
 					<div className="header-top">
-						<NavLink to="/" className="header-top__logo">
+						<NavLink
+							onClick={() => setIsMenuActive(false)}
+							to="/"
+							className="header-top__logo"
+						>
 							<img src={logo} alt="FVE STAVBY Logo" />
 							<span className="header-top__logo-txt">FVE STAVBY</span>
 						</NavLink>
@@ -153,13 +114,29 @@ const Header = () => {
 						</a>
 						<LngSelect />
 						<div onClick={toggleBurgerBtn} className="burger-btn-wrapper">
-							<div className="burger-btn">
-								<span className="burger-btn__center-line"></span>
+							<div
+								className={
+									isMenuActive ? "burger-btn burger-btn--active" : "burger-btn"
+								}
+							>
+								<span
+									className={
+										isMenuActive
+											? "burger-btn__center-line burger-btn__center-line--active"
+											: "burger-btn__center-line"
+									}
+								></span>
 							</div>
 						</div>
 					</div>
 					<div className="header-bottom-wrapper">
-						<nav className="header-bottom">
+						<nav
+							className={
+								isMenuActive
+									? "header-bottom header-bottom--active"
+									: "header-bottom"
+							}
+						>
 							<NavLink
 								to="/"
 								className={({ isActive }) =>
@@ -221,6 +198,97 @@ const Header = () => {
 					</div>
 				</div>
 			</header>
+
+			{/* menu */}
+
+			<div className={isMenuActive ? "menu menu--active" : "menu"}>
+				<div
+					className={
+						isMenuActive ? "menu-wrapper menu-wrapper--active" : "menu-wrapper"
+					}
+				>
+					<nav className="menu__nav">
+						<NavLink
+							onClick={() => setIsMenuActive(false)}
+							className={({ isActive }) =>
+								isActive ? activeLink : inactiveLink
+							}
+							to="/"
+						>
+							{t("home_title")}
+						</NavLink>
+						<NavLink
+							onClick={() => setIsMenuActive(false)}
+							className={({ isActive }) =>
+								isActive ? activeLink : inactiveLink
+							}
+							to="/about-us"
+						>
+							{t("about_us_title")}
+						</NavLink>
+						<NavLink
+							onClick={() => setIsMenuActive(false)}
+							className={({ isActive }) =>
+								isActive ? activeLink : inactiveLink
+							}
+							to="/photovoltaics-for-single-family-homes"
+						>
+							{t("photovoltaics_for_single_family_homes_title")}
+						</NavLink>
+						<NavLink
+							onClick={() => setIsMenuActive(false)}
+							className={({ isActive }) =>
+								isActive ? activeLink : inactiveLink
+							}
+							to="/photovoltaics-for-companies"
+						>
+							{t("photovoltaics_for_companies_title")}
+						</NavLink>
+						<NavLink
+							onClick={() => setIsMenuActive(false)}
+							className={({ isActive }) =>
+								isActive ? activeLink : inactiveLink
+							}
+							to="/svj"
+						>
+							<span>SVJ</span>
+							<span className="menu__nav-link--new">New</span>
+						</NavLink>
+						<NavLink
+							onClick={() => setIsMenuActive(false)}
+							className={({ isActive }) =>
+								isActive ? activeLink : inactiveLink
+							}
+							to="/our-installation"
+						>
+							{t("our_installation_title")}
+						</NavLink>
+						<NavLink
+							onClick={() => setIsMenuActive(false)}
+							className={({ isActive }) =>
+								isActive ? activeLink : inactiveLink
+							}
+							to="/contacts"
+						>
+							{t("contacts_title")}
+						</NavLink>
+					</nav>
+					<ul className="menu__contacts-details">
+						<li>
+							<p>{t("tel")}</p>
+							<a className="menu-link" href="tel:+420728803703">
+								+420 728 803 703
+							</a>
+						</li>
+						<li>
+							<p>E-mail</p>
+							<a className="menu-link" href="mailto:info@fvestavby.cz">
+								info@fvestavby.cz
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</>
 	);
 };

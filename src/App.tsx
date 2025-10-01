@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
-import Menu from "./components/Menu/Menu";
 import Home from "./pages/Home/Home";
 import Footer from "./components/Footer/Footer";
 import ScrollToTop from "./utils/ScrollToTop";
@@ -18,8 +17,8 @@ import "./scss/App.scss";
 function App() {
 	return (
 		<Router>
+			<ScrollToTop />
 			<Header />
-			<Menu />
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/about-us" element={<AboutUs />} />
@@ -38,7 +37,6 @@ function App() {
 				<Route path="*" element={<NotFound />} />
 			</Routes>
 			<Footer />
-			<ScrollToTop />
 		</Router>
 	);
 }
