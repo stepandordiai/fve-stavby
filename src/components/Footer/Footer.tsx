@@ -238,7 +238,7 @@ const Footer = () => {
 							<span>Website created by</span>
 							<a
 								className="creator-link"
-								href="https://heeeyooo.studio/"
+								href="https://www.heeeyooo.studio/"
 								target="_blank"
 							>
 								heeeyooo studio
