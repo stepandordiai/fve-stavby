@@ -74,7 +74,8 @@
 	},
 
 	"stats": {
-		"title": "Estimated energy per month",
+		"title": "Long-term production graph typical for the conditions of the Czech Republic/Central Europe",
+		"desc": "PV production by month (installed capacity 10 kWp)",
 		"jan_s": "J",
 		"feb_s": "F",
 		"mar_s": "M",

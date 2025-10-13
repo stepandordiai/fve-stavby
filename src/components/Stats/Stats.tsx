@@ -19,7 +19,7 @@ const Stats = () => {
 				let isActivated = false;
 				document.addEventListener("scroll", () => {
 					const candlesWrapperRect = candlesWrapper.getBoundingClientRect();
-					if (candlesWrapperRect.top < window.innerHeight - 250) {
+					if (candlesWrapperRect.top < window.innerHeight) {
 						el.style.animation = "animateCandle 4s ease-in-out forwards";
 						if (!isActivated) {
 							let startValue = 0;
@@ -47,7 +47,10 @@ const Stats = () => {
 
 	return (
 		<>
-			<h2 className="stats__title">{t("stats.title")}</h2>
+			<div style={{ margin: "25px 0" }}>
+				<h2 className="stats__title">{t("stats.title")}</h2>
+				<p>{t("stats.desc")}</p>
+			</div>
 			<div className="stats">
 				<div className="candles-wrapper">
 					<div

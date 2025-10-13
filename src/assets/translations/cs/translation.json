@@ -74,7 +74,8 @@
 	},
 
 	"stats": {
-		"title": "Odhadovaná energie za měsíc",
+		"title": "Dlouhodobý graf výroby typický pro podmínky čr/střední evropy",
+		"desc": "Výroba FVE po měsících (instalovaný výkon 10 kWp)",
 		"jan_s": "L",
 		"feb_s": "Ú",
 		"mar_s": "B",
