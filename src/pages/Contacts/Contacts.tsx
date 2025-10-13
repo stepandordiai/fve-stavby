@@ -82,8 +82,7 @@ const Contacts = () => {
 										name="email"
 										autoComplete="email"
 										type="email"
-										placeholder={`E-mail (${t("required")})`}
-										required
+										placeholder="E-mail"
 									/>
 									<input
 										name="tel"
