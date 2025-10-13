@@ -1,32 +1,27 @@
+import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
-import arrow from "/icons/arrow-upper-right-white.png";
 import "./PageTitle.scss";
 
 type PageTitleProps = {
 	title: string;
 	img?: string;
-	linkPath?: string;
-	linkName?: string;
 	className?: string;
 };
 
-const PageTitle = ({
-	title,
-	img,
-	linkPath,
-	linkName,
-	className,
-}: PageTitleProps) => {
+const PageTitle = ({ title, img, className }: PageTitleProps) => {
+	const { t } = useTranslation();
+
 	return (
 		<div className={`page-title ${className}`}>
-			<h1 className="page-title__title">{title}</h1>
 			{img && <img className="page-title__img" src={img} alt="" />}
-			{linkPath && (
-				<NavLink className="page-title__link" to={linkPath}>
-					<span>{linkName}</span>
-					<img className="page-title__link-icon" src={arrow} alt="" />
-				</NavLink>
-			)}
+			<nav>
+				<NavLink className="page-nav__link" to="/">
+					{t("home_title")}
+				</NavLink>{" "}
+				<span>|</span>{" "}
+				<span style={{ color: "rgba(255, 255, 255, 0.5)" }}>{title}</span>
+			</nav>
+			<h1 className="page-title__title">{title}</h1>
 		</div>
 	);
 };
