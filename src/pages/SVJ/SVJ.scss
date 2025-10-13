@@ -14,7 +14,7 @@
 	position: relative;
 	display: inline-block;
 	width: 100%;
-	height: 300px;
+	height: 375px;
 	background: var(--bg-light-clr);
 	border-radius: 25px;
 	transition: background-color 0.3s;
@@ -23,6 +23,14 @@
 
 	&:hover {
 		background: var(--bg-light-darker-clr);
+	}
+
+	.svj__video {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
 	}
 }
 
@@ -36,8 +44,21 @@
 	aspect-ratio: 1/1;
 	border-radius: 50%;
 	@include grid-center;
-	transition: left 0.4s ease-out, top 0.4s ease-out, transform 0.4s ease-out;
+	transition: left 0.4s ease-out, top 0.4s ease-out, transform 0.4s ease-out,
+		background-color 0.3s;
 	transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.svj__link-icon-container:hover {
+	background: var(--bg-dark-darker-clr);
+
+	.svj__link-icon {
+		transform: rotate(45deg);
+	}
+}
+
+.svj__link-icon {
+	transition: transform 0.3s;
 }
 
 @media screen and (max-width: 896px) {

@@ -1,9 +1,10 @@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import PageTitle from "../../components/PageTitle/PageTitle";
-import arrowIcon from "/icons/arrow-upper-right-white.png";
 import { useEffect } from "react";
 import Container from "../../components/Container/Container";
+import arrowIcon from "/icons/arrow-upper-right-white.png";
+import video from "/video.mp4";
 import "./SVJ.scss";
 
 const SVJ = () => {
@@ -61,6 +62,10 @@ const SVJ = () => {
 							href="https://maxflow.netlify.app/"
 							target="_blank"
 						>
+							<video className="svj__video" muted loop playsInline autoPlay>
+								<source src={video} type="video/mp4" />
+								Your browser does not support the video tag.
+							</video>
 							<span className="svj__link-icon-container">
 								<img
 									className="svj__link-icon"
