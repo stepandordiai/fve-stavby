@@ -12,16 +12,18 @@ import "./AboutUs.scss";
 const AboutUs = () => {
 	const { t } = useTranslation();
 
-	interface MembersData {
+	interface Member {
 		name: string;
 		position: string;
 		linkedInUrl?: string;
+		email?: string;
 	}
 
-	const membersData: MembersData[] = [
+	const membersData: Member[] = [
 		{
 			name: "Kristián",
 			position: t("our_team.member1"),
+			email: "kristian.janko@email.cz",
 		},
 		{
 			name: "Veronika",
@@ -30,11 +32,13 @@ const AboutUs = () => {
 		{
 			name: "Rostislav",
 			position: t("our_team.member3"),
+			email: "rostislav@fvestavby.cz",
 		},
 		{
 			name: "Štěpán",
 			position: t("our_team.member4"),
 			linkedInUrl: "https://linkedin.com/in/stepandordiai",
+			email: "stepandordiai@gmail.com",
 		},
 		{
 			name: "Alexandr",
@@ -55,6 +59,7 @@ const AboutUs = () => {
 		{
 			name: "Tomáš",
 			position: t("our_team.member9"),
+			email: "tomas@fvestavby.cz",
 		},
 	];
 
@@ -139,26 +144,47 @@ const AboutUs = () => {
 						</p>
 						<h2 className="our-team__title">{t("our_team.title")}</h2>
 						<div className="our-team__grid">
-							{membersData.map(({ name, position, linkedInUrl }, index) => {
-								return (
-									<div key={index} className="our-team__grid-item">
-										<div className="img-wrapper">
-											<img src={userIcon} alt="" loading="lazy" />
-										</div>
-										<p className="our-team__grid-item-name">{name}</p>
-										<p className="our-team__grid-item-position">{position}</p>
-										{linkedInUrl && (
-											<a
-												className="our-team__grid-item-link"
-												href={linkedInUrl}
-												target="_blank"
+							{membersData.map(
+								({ name, position, linkedInUrl, email }, index) => {
+									return (
+										<div key={index} className="our-team__grid-item">
+											<div className="img-wrapper">
+												<img src={userIcon} alt="" loading="lazy" />
+											</div>
+											<p className="our-team__grid-item-name">{name}</p>
+											<p className="our-team__grid-item-position">{position}</p>
+											<div
+												style={{
+													display: "flex",
+													justifyContent: "flex-start",
+													alignItems: "flex-start",
+													flexDirection: "column",
+													rowGap: 5,
+												}}
 											>
-												LinkedIn
-											</a>
-										)}
-									</div>
-								);
-							})}
+												{email && (
+													<a
+														className="our-team__grid-item-link"
+														href={`mailto: ${email}`}
+														target="_blank"
+													>
+														{email}
+													</a>
+												)}
+												{linkedInUrl && (
+													<a
+														className="our-team__grid-item-link"
+														href={linkedInUrl}
+														target="_blank"
+													>
+														LinkedIn
+													</a>
+												)}
+											</div>
+										</div>
+									);
+								}
+							)}
 						</div>
 						<h2 className="guarantees__title">{t("guarantees.title")}</h2>
 						<div className="guarantees__grid">
