@@ -28,7 +28,7 @@ const PhotovoltaicsForCompanies = () => {
 				<Container>
 					<PageTitle title={t("photovoltaics_for_companies_title")} img={img} />
 					<div className="photovoltaics-for-companies">
-						<p style={{ marginBottom: 25 }}>
+						<p style={{ marginBottom: 25, textAlign: "justify" }}>
 							{t("photovoltaics_for_companies_desc")}.
 						</p>
 						<Advantages />
