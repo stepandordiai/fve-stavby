@@ -15,54 +15,54 @@ const Partners = () => {
 			siteUrl: "https://aikosolar.com/cz/",
 			imgUrl:
 				"https://www.memodo.cz/m/fileadmin/shopware_products/manufacturer_images/400x200px_Aiko-Logo.png",
-			alt: "Aiko Logo",
+			alt: "Aiko",
 		},
 		{
 			siteUrl: "https://www.canadiansolar.com/",
 			imgUrl:
 				"https://www.canadiansolar.com/wp-content/uploads/2024/06/CS-LOGO-RED-RGB-NEW-2024-W-TAG-2.png",
-			alt: "Canadian Solar Logo",
+			alt: "Canadian Solar",
 		},
 		{
 			siteUrl: "https://deye.com/cs/",
 			imgUrl: "https://www.deyeinverter.com/template/en/images/logo.png",
-			alt: "Deye Logo",
+			alt: "Deye",
 		},
 		{
 			siteUrl: "https://www.jinkosolar.com/en/#index1",
 			imgUrl:
 				"https://jinkosolarcdn.shwebspace.com/themes/basicen/skin/images/logony.png",
-			alt: "Jinko Solar Logo",
+			alt: "Jinko Solar",
 		},
 		{
 			siteUrl: "https://www.solaxpower.com/",
 			imgUrl:
 				"https://emberpulse.com/wp-content/uploads/2020/10/solax-power-logo.jpg",
-			alt: "Solax Power Logo",
+			alt: "Solax Power",
 		},
 		{
 			siteUrl: "https://cs.tigoenergy.com/",
 			imgUrl:
 				"https://cdn.prod.website-files.com/5fa5ee97e1eb253b5efc0385/5fad42bc7dee3e2002385080_Tigo-logo.svg",
-			alt: "Tigo Logo",
+			alt: "Tigo",
 		},
 		{
 			siteUrl: "https://www.solaredge.com/en",
 			imgUrl:
 				"https://www.solaredge.com/sites/master/files/SolarEdge_logo_header_new_0.svg",
-			alt: "Solar Edge Logo",
+			alt: "Solar Edge",
 		},
 		{
 			siteUrl: "http://cz.zjbeny-german.com/",
 			imgUrl:
-				"https://lh4.googleusercontent.com/proxy/341zOYGIOFlOW5xf7XYn1CNQqGaKaOOXc9uAKv9aqbU-PX_0ameieUdtYshiwsEjcMGtbEMWv96le1WXvbtR65quSuLbJ--cyZkI7d6I8rjZOI5qriUi8jowokGgPw",
-			alt: "Zjbeny Logo",
+				"https://www.solfinity.pl/media/94/9d/1a/1730367752/zbeny-logo.png",
+			alt: "Zjbeny",
 		},
 		{
 			siteUrl: "https://www.skoda-auto.cz/",
 			imgUrl:
 				"https://upload.wikimedia.org/wikipedia/commons/0/09/%C5%A0koda_nieuw.png",
-			alt: "Skoda Logo",
+			alt: "Skoda",
 		},
 	];
 
@@ -72,7 +72,7 @@ const Partners = () => {
 			<div
 				className="slider"
 				// reverse="true"
-				// FIXME:
+				// TODO:
 				style={
 					{
 						"--width": "100px",
@@ -87,7 +87,7 @@ const Partners = () => {
 							<div
 								key={index}
 								className="item"
-								// FIXME:
+								// TODO:
 								style={{ "--position": index + 1 } as React.CSSProperties}
 							>
 								<a href={siteUrl} target="_blank">

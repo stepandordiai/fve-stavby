@@ -31,10 +31,10 @@
 	position: absolute;
 	left: 100%;
 	@include grid-center;
-	animation: autoRun 10s linear infinite;
+	animation: autoRun 20s linear infinite;
 	//
 	animation-delay: calc(
-		(10s / var(--quantity)) * (var(--position) - 1)
+		(20s / var(--quantity)) * (var(--position) - 10)
 	) !important;
 	//
 
@@ -59,7 +59,7 @@
 		left: 100%;
 	}
 	to {
-		left: calc(var(--width) * -1);
+		left: calc(var(--width) * -5);
 	}
 }
 
