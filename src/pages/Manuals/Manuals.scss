@@ -22,11 +22,7 @@
 	padding: 5px 7.5px;
 	border-radius: 15px;
 	align-self: center;
-	transition: all 0.3s;
-
-	&:hover {
-		background: var(--accent-clr);
-	}
+	background: var(--accent-clr);
 }
 
 .manuals-divider {

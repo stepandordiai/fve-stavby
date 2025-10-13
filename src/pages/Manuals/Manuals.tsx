@@ -10,12 +10,12 @@ import "./Manuals.scss";
 const Manuals = () => {
 	const { t } = useTranslation();
 
-	interface ManualsData {
+	interface Manual {
 		info: string;
 		link: string;
 	}
 
-	const manualsData: ManualsData[] = [
+	const manualsData: Manual[] = [
 		{
 			info: "Deye SUN-5/6/8/10/12K-SG04LP3-EU",
 			link: "https://www.deyeinverter.com/deyeinverter/2024/08/13/instructions_sun-5-12k-sg04lp3-eu_240813_en.pdf",
