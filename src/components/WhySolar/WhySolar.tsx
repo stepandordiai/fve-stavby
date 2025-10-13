@@ -17,46 +17,38 @@ const WhySolar = () => {
 			<div className="why-solar">
 				<div className="why-solar__card">
 					<div className="why-solar__card-icon-container">
-						<img width={25} src={moneyIcon} alt="" />
+						<img width={25} height={25} src={moneyIcon} alt="" />
 					</div>
 					<div>
-						<span className="why-solar__card-title">{t("why_us.option1")}</span>
-						<div className="why-solar__card-dd">
-							<span>{t("why_us.desc1")}.</span>
-						</div>
+						<p className="why-solar__card-title">{t("why_us.option1")}</p>
+						<span>{t("why_us.desc1")}.</span>
 					</div>
 				</div>
 				<div className="why-solar__card">
 					<div className="why-solar__card-icon-container">
-						<img width={25} src={flashIcon} alt="" />
+						<img width={25} height={25} src={flashIcon} alt="" />
 					</div>
 					<div>
-						<span className="why-solar__card-title">{t("why_us.option2")}</span>
-						<div className="why-solar__card-dd">
-							<span>{t("why_us.desc2")}.</span>
-						</div>
+						<p className="why-solar__card-title">{t("why_us.option2")}</p>
+						<span>{t("why_us.desc2")}.</span>
 					</div>
 				</div>
 				<div className="why-solar__card">
 					<div className="why-solar__card-icon-container">
-						<img width={25} src={shieldIcon} alt="" />
+						<img width={25} height={25} src={shieldIcon} alt="" />
 					</div>
 					<div>
-						<span className="why-solar__card-title">{t("why_us.option3")}</span>
-						<div className="why-solar__card-dd">
-							<span>{t("why_us.desc3")}.</span>
-						</div>
+						<p className="why-solar__card-title">{t("why_us.option3")}</p>
+						<span>{t("why_us.desc3")}.</span>
 					</div>
 				</div>
 				<div className="why-solar__card">
 					<div className="why-solar__card-icon-container">
-						<img width={25} src={leafIcon} alt="" />
+						<img width={25} height={25} src={leafIcon} alt="" />
 					</div>
 					<div>
-						<span className="why-solar__card-title">{t("why_us.option4")}</span>
-						<div className="why-solar__card-dd">
-							<span>{t("why_us.desc4")}.</span>
-						</div>
+						<p className="why-solar__card-title">{t("why_us.option4")}</p>
+						<span>{t("why_us.desc4")}.</span>
 					</div>
 				</div>
 			</div>

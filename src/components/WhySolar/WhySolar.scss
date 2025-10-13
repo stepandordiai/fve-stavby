@@ -28,10 +28,6 @@
 	padding: 12.5px;
 	cursor: pointer;
 	transition: background-color 0.3s;
-
-	&:hover {
-		background: var(--bg-light-darker-clr);
-	}
 }
 
 .why-solar__card-icon-container {
@@ -39,6 +35,11 @@
 	aspect-ratio: 1/1;
 	border-radius: 20px;
 	@include grid-center;
+	background: #fff;
+	transition: background-color 0.3s;
+}
+
+.why-solar__card:hover .why-solar__card-icon-container {
 	background: var(--accent-clr);
 }
 
@@ -47,21 +48,6 @@
 		size: 1.5rem;
 		weight: 500;
 	}
-}
-
-.why-solar__card-dd {
-	display: grid;
-	grid-template-rows: 0fr;
-	overflow: hidden;
-	transition: grid-template-rows 0.3s;
-
-	span {
-		overflow: hidden;
-	}
-}
-
-.why-solar__card:hover .why-solar__card-dd {
-	grid-template-rows: 1fr;
 }
 
 @media screen and (max-width: 1200px) {
