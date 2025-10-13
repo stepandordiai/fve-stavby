@@ -4,7 +4,7 @@ import PageTitle from "../../components/PageTitle/PageTitle";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
 import React from "react";
 import Container from "../../components/Container/Container";
-import img from "/img/16.jpg";
+import img from "/img/10-c.jpg";
 import "./Manuals.scss";
 
 const Manuals = () => {

@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import handleCopy from "../../utils/handleCopy";
 import Container from "../../components/Container/Container";
 import arrow from "/icons/arrow-upper-right-white.png";
-import img from "/img/14.jpg";
+import img from "/img/09-c.jpg";
 import "./Contacts.scss";
 
 const Contacts = () => {

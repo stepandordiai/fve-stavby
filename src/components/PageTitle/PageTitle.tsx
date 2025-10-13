@@ -20,9 +20,7 @@ const PageTitle = ({
 	return (
 		<div className={`page-title ${className}`}>
 			<h1 className="page-title__title">{title}</h1>
-			{img && (
-				<img className="page-title__img" src={img} alt="" loading="lazy" />
-			)}
+			{img && <img className="page-title__img" src={img} alt="" />}
 			{linkPath && (
 				<NavLink className="page-title__link" to={linkPath}>
 					<span>{linkName}</span>

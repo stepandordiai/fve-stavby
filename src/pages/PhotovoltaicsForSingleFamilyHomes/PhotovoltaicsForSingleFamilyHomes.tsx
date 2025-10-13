@@ -6,7 +6,7 @@ import Partners from "../../components/Partners/Partners";
 import Benefits from "../../components/Benefits/Benefits";
 import Process from "../../components/Process/Process";
 import Container from "../../components/Container/Container";
-import img from "/img/3-c.jpg";
+import img from "/img/04-c.jpg";
 import "./PhotovoltaicsForSingleFamilyHomes.scss";
 
 const PhotovoltaicsForSingleFamilyHomes = () => {

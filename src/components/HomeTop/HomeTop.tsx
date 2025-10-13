@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import arrow from "/icons/arrow-upper-right-white.png";
-import img from "/img/4.jpg";
+import img from "/img/01-c.jpg";
 import "./HomeTop.scss";
 
 const HomeTop = () => {

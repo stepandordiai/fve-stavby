@@ -5,7 +5,7 @@ import GetInTouch from "../../components/GetInTouch/GetInTouch";
 import { useEffect } from "react";
 import isTouchDevice from "../../utils/isTouchDevice";
 import Container from "../../components/Container/Container";
-import img from "/img/7.jpg";
+import img from "/img/07-c.jpg";
 import userIcon from "/icons/user.png";
 import "./AboutUs.scss";
 

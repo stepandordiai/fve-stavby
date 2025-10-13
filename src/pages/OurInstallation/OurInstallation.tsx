@@ -5,7 +5,7 @@ import PageTitle from "../../components/PageTitle/PageTitle";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
 import isTouchDevice from "../../utils/isTouchDevice";
 import Container from "../../components/Container/Container";
-import img from "/img/5.jpg";
+import img from "/img/08-c.jpg";
 import closeIcon from "/icons/close-white.png";
 import expandIcon from "/icons/expand-white.png";
 import shrinkIcon from "/icons/shrink-white.png";
