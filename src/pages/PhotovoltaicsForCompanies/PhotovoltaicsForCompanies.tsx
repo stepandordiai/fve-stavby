@@ -7,6 +7,7 @@ import Partners from "../../components/Partners/Partners";
 import Container from "../../components/Container/Container";
 import img from "/img/05-c.jpg";
 import "./PhotovoltaicsForCompanies.scss";
+import Process from "../../components/Process/Process";
 
 const PhotovoltaicsForCompanies = () => {
 	const { t } = useTranslation();
@@ -32,6 +33,7 @@ const PhotovoltaicsForCompanies = () => {
 							{t("photovoltaics_for_companies_desc")}.
 						</p>
 						<Advantages />
+						<Process />
 						<Partners />
 						<GetInTouch />
 					</div>
