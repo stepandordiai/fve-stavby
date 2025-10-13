@@ -170,29 +170,27 @@ const OurInstallation = () => {
 			});
 
 		const cards = document.querySelectorAll(".our-installation__card-wrapper");
-		const innerCards = document.querySelectorAll(".our-installation__card");
-		const cardImgs = document.querySelectorAll(".our-installation__card img");
 
-		const handleScroll = () => {
-			cards.forEach((card, index) => {
-				if (!card) return;
-				const cardRect = card.getBoundingClientRect();
-				const isInView = cardRect.top < window.innerHeight - 125;
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						const card = entry.target;
+						const innerCard = card.querySelector(".our-installation__card");
+						const img = card.querySelector(".our-installation__card img");
 
-				if (isInView) {
-					innerCards[index].classList.add("inner-card--active");
-					cardImgs[index].classList.add("card-img--active");
-				}
-			});
-		};
+						if (innerCard) innerCard.classList.add("inner-card--active");
+						if (img) img.classList.add("card-img--active");
+					}
+				});
+			},
+			{ threshold: 0 }
+		);
 
-		// Initial check
-		handleScroll();
-
-		document.addEventListener("scroll", handleScroll);
+		cards.forEach((card) => observer.observe(card));
 
 		return () => {
-			document.removeEventListener("scroll", handleScroll);
+			cards.forEach((card) => observer.unobserve(card));
 		};
 	}, []);
 
