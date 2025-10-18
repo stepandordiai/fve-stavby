@@ -119,10 +119,7 @@ const AboutUs = () => {
 	return (
 		<>
 			<Helmet>
-				<meta
-					name="description"
-					content="Poznejte tým FVE – stavby s.r.o., specialisty na fotovoltaiku. Máme zkušenosti, technické know-how a osobní přístup k řešení solárních systémů na míru."
-				/>
+				<meta name="description" content={t("about_us_seo_desc")} />
 				<title>{t("about_us_title")} | FVE STAVBY</title>
 				<link rel="canonical" href="https://www.fvestavby.cz/about-us" />
 			</Helmet>

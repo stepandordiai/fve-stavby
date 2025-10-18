@@ -17,7 +17,7 @@ const PhotovoltaicsForSingleFamilyHomes = () => {
 			<Helmet>
 				<meta
 					name="description"
-					content="Instalujeme fotovoltaické elektrárny pro rodinné domy na klíč. Snižte své náklady na energie s FVE – stavby s.r.o. a využijte dotace z programu Nová zelená úsporám."
+					content={t("photovoltaics_for_single_family_homes_seo_desc")}
 				/>
 				<title>
 					{t("photovoltaics_for_single_family_homes_title")} | FVE STAVBY

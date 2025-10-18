@@ -17,10 +17,7 @@ const Home = () => {
 	return (
 		<>
 			<Helmet>
-				<meta
-					name="description"
-					content="Specializujeme se na instalaci fotovoltaických elektráren na klíč. FVE – stavby s.r.o. nabízí efektivní solární řešení pro rodinné domy i firmy po celé ČR."
-				/>
+				<meta name="description" content={t("home_seo_desc")} />
 				<title>{t("logo_title")} | FVE STAVBY</title>
 				<link rel="canonical" href="https://www.fvestavby.cz/" />
 			</Helmet>

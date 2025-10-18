@@ -6,8 +6,8 @@ import Advantages from "../../components/Advantages/Advantages";
 import Partners from "../../components/Partners/Partners";
 import Container from "../../components/Container/Container";
 import img from "/img/05-c.jpg";
-import "./PhotovoltaicsForCompanies.scss";
 import Process from "../../components/Process/Process";
+import "./PhotovoltaicsForCompanies.scss";
 
 const PhotovoltaicsForCompanies = () => {
 	const { t } = useTranslation();
@@ -17,7 +17,7 @@ const PhotovoltaicsForCompanies = () => {
 			<Helmet>
 				<meta
 					name="description"
-					content="Specializujeme se na instalaci fotovoltaických systémů pro firmy. FVE – stavby s.r.o. nabízí úsporná a efektivní řešení solární energie pro komerční objekty po celé ČR."
+					content={t("photovoltaics_for_companies_seo_desc")}
 				/>
 				<title>{t("photovoltaics_for_companies_title")} | FVE STAVBY</title>
 				<link

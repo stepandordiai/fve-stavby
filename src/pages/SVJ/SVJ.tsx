@@ -47,8 +47,7 @@ const SVJ = () => {
 	return (
 		<>
 			<Helmet>
-				{/* TODO: */}
-				{/* <meta name="description" content="" /> */}
+				<meta name="description" content={t("svj_seo_desc")} />
 				<title>SVJ | FVE STAVBY</title>
 				<link rel="canonical" href="https://www.fvestavby.cz/svj" />
 			</Helmet>

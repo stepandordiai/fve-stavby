@@ -197,10 +197,7 @@ const OurInstallation = () => {
 	return (
 		<>
 			<Helmet>
-				<meta
-					name="description"
-					content="Podívejte se na naše realizované fotovoltaické instalace. FVE – stavby s.r.o. poskytuje profesionální instalace solárních systémů pro domácnosti i firmy po celé ČR."
-				/>
+				<meta name="description" content={t("our_installation_seo_desc")} />
 				<title>{t("our_installation_title")} | FVE STAVBY</title>
 				<link
 					rel="canonical"
