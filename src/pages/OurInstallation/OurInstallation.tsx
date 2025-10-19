@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
-import { useEffect } from "react";
+import { useEffect, useState, useRef } from "react";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
 import isTouchDevice from "../../utils/isTouchDevice";
@@ -15,6 +15,9 @@ import "./OurInstallation.scss";
 
 const OurInstallation = () => {
 	const { t } = useTranslation();
+
+	// TODO:
+	const imgCardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
 	interface InstallationData {
 		id: number;
@@ -67,6 +70,11 @@ const OurInstallation = () => {
 			img: "/installations/11-c.jpeg",
 		},
 	];
+
+	// TODO:
+	const [isInView, setIsInView] = useState(() =>
+		new Array(installationsData.length).fill(false)
+	);
 
 	useEffect(() => {
 		document
@@ -169,29 +177,34 @@ const OurInstallation = () => {
 				});
 			});
 
-		const cards = document.querySelectorAll(".our-installation__card-wrapper");
+		// TODO: FIX
+		if (!imgCardRefs.current.length) return;
 
 		const observer = new IntersectionObserver(
 			(entries) => {
 				entries.forEach((entry) => {
-					if (entry.isIntersecting) {
-						const card = entry.target;
-						const innerCard = card.querySelector(".our-installation__card");
-						const img = card.querySelector(".our-installation__card img");
-
-						if (innerCard) innerCard.classList.add("inner-card--active");
-						if (img) img.classList.add("card-img--active");
+					const index = imgCardRefs.current.indexOf(
+						entry.target as HTMLDivElement
+					);
+					if (index !== -1 && entry.isIntersecting) {
+						setIsInView((prev) => {
+							if (prev[index]) return prev; // already visible, skip re-render
+							const updated = [...prev];
+							updated[index] = true;
+							return updated;
+						});
 					}
 				});
 			},
 			{ threshold: 0 }
 		);
 
-		cards.forEach((card) => observer.observe(card));
+		imgCardRefs.current.forEach((card) => {
+			if (card) observer.observe(card);
+		});
 
-		return () => {
-			cards.forEach((card) => observer.unobserve(card));
-		};
+		// TODO:
+		return () => observer.disconnect();
 	}, []);
 
 	return (
@@ -212,11 +225,23 @@ const OurInstallation = () => {
 							{t("our_installation_desc")}
 						</p>
 						<div className="our-installation__grid">
-							{installationsData.map(({ id, img }) => {
+							{installationsData.map(({ id, img }, index) => {
 								return (
-									<div key={id} className="our-installation__card-wrapper">
-										<div className="our-installation__card">
+									<div
+										// TODO:
+										ref={(el) => {
+											imgCardRefs.current[index] = el;
+										}}
+										key={id}
+										className="our-installation__card-wrapper"
+									>
+										<div
+											className={`our-installation__card ${
+												isInView[index] ? "inner-card--active" : ""
+											}`}
+										>
 											<img
+												className={isInView[index] ? "card-img--active" : ""}
 												src={img}
 												alt="FVE STAVBY Installation"
 												loading="lazy"
