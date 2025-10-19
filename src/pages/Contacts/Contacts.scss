@@ -139,24 +139,21 @@ textarea {
 	}
 }
 
-.business-hours__list {
+.working-hours__list {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	row-gap: 6.25px;
-
-	li {
-		display: flex;
-		justify-content: space-between;
-	}
 }
 
-.business-hours__item {
+.working-hours__item {
+	display: flex;
+	justify-content: space-between;
 	padding: 5px 7.5px;
 	border-radius: 15px;
 }
 
-.business-hours__item--active {
+.working-hours__item--active {
 	background: var(--accent-clr);
 }
 

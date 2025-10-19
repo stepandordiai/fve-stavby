@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import PageTitle from "../../components/PageTitle/PageTitle";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import handleCopy from "../../utils/handleCopy";
 import Container from "../../components/Container/Container";
 import arrow from "/icons/arrow-upper-right-white.png";
@@ -11,31 +11,21 @@ import "./Contacts.scss";
 const Contacts = () => {
 	const { t } = useTranslation();
 
-	const dateNow = new Date();
-	const dayNow = dateNow.getDay();
-
-	const inactiveDay = "business-hours__item";
-	const activeDay = "business-hours__item business-hours__item--active";
-
 	const [email, setEmail] = useState("");
 
-	useEffect(() => {
-		const emailInput = document.querySelector(
-			".email"
-		) as HTMLInputElement | null;
+	const dayNow = new Date().getDay();
 
-		if (email.length === 0) {
-			emailInput?.classList.remove("email--correct");
-			emailInput?.classList.remove("email--incorrect");
-		}
-		if (email.includes("@")) {
-			emailInput?.classList.remove("email--incorrect");
-			emailInput?.classList.add("email--correct");
-		} else if (!email.includes("@") && email.length > 0) {
-			emailInput?.classList.remove("email--correct");
-			emailInput?.classList.add("email--incorrect");
-		}
-	}, [email]);
+	const dayCorrectIndex = dayNow === 0 ? 6 : dayNow - 1;
+
+	const workingHoursData = [
+		{ name: "contacts.mon", hours: "8:00 - 17:00" },
+		{ name: "contacts.tue", hours: "8:00 - 17:00" },
+		{ name: "contacts.wed", hours: "8:00 - 17:00" },
+		{ name: "contacts.thu", hours: "8:00 - 17:00" },
+		{ name: "contacts.fri", hours: "8:00 - 17:00" },
+		{ name: "contacts.sat", hours: "8:00 - 17:00" },
+		{ name: "contacts.sun", hours: "contacts.closed" },
+	];
 
 	return (
 		<>
@@ -73,7 +63,13 @@ const Contacts = () => {
 								</div>
 								<div className="input-container">
 									<input
-										className="email"
+										className={`email ${
+											email.includes("@")
+												? "email--correct"
+												: email.length > 0
+												? "email--incorrect"
+												: ""
+										}`}
 										value={email}
 										onChange={(e) => setEmail(e.target.value)}
 										name="email"
@@ -160,35 +156,22 @@ const Contacts = () => {
 									<p className="contact-details__title">
 										{t("contacts.working_hours")}
 									</p>
-									<ul className="business-hours__list">
-										<li className={dayNow === 1 ? activeDay : inactiveDay}>
-											<span>{t("contacts.mon")}:</span>
-											<span>8:00 - 17:00</span>
-										</li>
-										<li className={dayNow === 2 ? activeDay : inactiveDay}>
-											<span>{t("contacts.tue")}:</span>
-											<span>8:00 - 17:00</span>
-										</li>
-										<li className={dayNow === 3 ? activeDay : inactiveDay}>
-											<span>{t("contacts.wed")}:</span>
-											<span>8:00 - 17:00</span>
-										</li>
-										<li className={dayNow === 4 ? activeDay : inactiveDay}>
-											<span>{t("contacts.thu")}:</span>
-											<span>8:00 - 17:00</span>
-										</li>
-										<li className={dayNow === 5 ? activeDay : inactiveDay}>
-											<span>{t("contacts.fri")}:</span>
-											<span>8:00 - 17:00</span>
-										</li>
-										<li className={dayNow === 6 ? activeDay : inactiveDay}>
-											<span>{t("contacts.sat")}:</span>
-											<span>{t("contacts.closed")}</span>
-										</li>
-										<li className={dayNow === 0 ? activeDay : inactiveDay}>
-											<span>{t("contacts.sun")}:</span>
-											<span>{t("contacts.closed")}</span>
-										</li>
+									<ul className="working-hours__list">
+										{workingHoursData.map((day, index) => {
+											return (
+												<li
+													key={index}
+													className={`working-hours__item ${
+														dayCorrectIndex === index
+															? "working-hours__item--active"
+															: ""
+													}`}
+												>
+													<span>{t(day.name)}:</span>
+													<span>{t(day.hours)}</span>
+												</li>
+											);
+										})}
 									</ul>
 								</div>
 							</div>
