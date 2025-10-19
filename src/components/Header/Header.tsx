@@ -12,10 +12,6 @@ const Header = () => {
 
 	const [isMenuActive, setIsMenuActive] = useState(false);
 
-	const inactiveHeaderLink = "header__nav-link";
-	const activeHeaderLink =
-		"header__nav-link header__nav-link--active bg--acent";
-
 	useEffect(() => {
 		const elements = [
 			".header-top__logo",
@@ -51,6 +47,7 @@ const Header = () => {
 		}
 	}, [pathname, hash]);
 
+	// TODO: FIX
 	useEffect(() => {
 		const headerBottom = document.querySelector(".header-bottom");
 		const headerInner = document.querySelector(".header-inner");
@@ -93,9 +90,6 @@ const Header = () => {
 		};
 	}, []);
 
-	const inactiveLink = "menu__nav-link";
-	const activeLink = "menu__nav-link menu__nav-link--active";
-
 	return (
 		<>
 			<header className="header">
@@ -106,7 +100,7 @@ const Header = () => {
 							to="/"
 							className="header-top__logo"
 						>
-							<img src={logo} alt="FVE STAVBY Logo" />
+							<img src={logo} alt="FVE STAVBY logo" />
 							<span className="header-top__logo-txt">FVE STAVBY</span>
 						</NavLink>
 						<a href="tel:+420728803703" className="header-top__number">
@@ -115,32 +109,26 @@ const Header = () => {
 						<LngSelect />
 						<div onClick={toggleBurgerBtn} className="burger-btn-wrapper">
 							<div
-								className={
-									isMenuActive ? "burger-btn burger-btn--active" : "burger-btn"
-								}
+								className={`burger-btn ${
+									isMenuActive ? "burger-btn--active" : ""
+								}`}
 							>
 								<span
-									className={
-										isMenuActive
-											? "burger-btn__center-line burger-btn__center-line--active"
-											: "burger-btn__center-line"
-									}
+									className={`burger-btn__center-line ${
+										isMenuActive ? "burger-btn__center-line--active" : ""
+									}`}
 								></span>
 							</div>
 						</div>
 					</div>
 					<div className="header-bottom-wrapper">
-						<nav
-							className={
-								isMenuActive
-									? "header-bottom header-bottom--active"
-									: "header-bottom"
-							}
-						>
+						<nav className="header-bottom">
 							<NavLink
 								to="/"
 								className={({ isActive }) =>
-									isActive ? activeHeaderLink : inactiveHeaderLink
+									`header__nav-link ${
+										isActive ? "header__nav-link--active" : ""
+									}`
 								}
 							>
 								{t("home_title")}
@@ -148,7 +136,9 @@ const Header = () => {
 							<NavLink
 								to="/about-us"
 								className={({ isActive }) =>
-									isActive ? activeHeaderLink : inactiveHeaderLink
+									`header__nav-link ${
+										isActive ? "header__nav-link--active" : ""
+									}`
 								}
 							>
 								{t("about_us_title")}
@@ -156,7 +146,9 @@ const Header = () => {
 							<NavLink
 								to="/photovoltaics-for-single-family-homes"
 								className={({ isActive }) =>
-									isActive ? activeHeaderLink : inactiveHeaderLink
+									`header__nav-link ${
+										isActive ? "header__nav-link--active" : ""
+									}`
 								}
 							>
 								{t("photovoltaics_for_single_family_homes_title")}
@@ -164,7 +156,9 @@ const Header = () => {
 							<NavLink
 								to="/photovoltaics-for-companies"
 								className={({ isActive }) =>
-									isActive ? activeHeaderLink : inactiveHeaderLink
+									`header__nav-link ${
+										isActive ? "header__nav-link--active" : ""
+									}`
 								}
 							>
 								{t("photovoltaics_for_companies_title")}
@@ -172,7 +166,9 @@ const Header = () => {
 							<NavLink
 								to="/svj"
 								className={({ isActive }) =>
-									isActive ? activeHeaderLink : inactiveHeaderLink
+									`header__nav-link ${
+										isActive ? "header__nav-link--active" : ""
+									}`
 								}
 							>
 								<span>SVJ</span>
@@ -181,7 +177,9 @@ const Header = () => {
 							<NavLink
 								to="/our-installation"
 								className={({ isActive }) =>
-									isActive ? activeHeaderLink : inactiveHeaderLink
+									`header__nav-link ${
+										isActive ? "header__nav-link--active" : ""
+									}`
 								}
 							>
 								{t("our_installation_title")}
@@ -189,7 +187,9 @@ const Header = () => {
 							<NavLink
 								to="/contacts"
 								className={({ isActive }) =>
-									isActive ? activeHeaderLink : inactiveHeaderLink
+									`header__nav-link ${
+										isActive ? "header__nav-link--active" : ""
+									}`
 								}
 							>
 								{t("contacts_title")}
@@ -201,17 +201,17 @@ const Header = () => {
 
 			{/* menu */}
 
-			<div className={isMenuActive ? "menu menu--active" : "menu"}>
+			<div className={`menu ${isMenuActive ? "menu--active" : ""}`}>
 				<div
-					className={
-						isMenuActive ? "menu-wrapper menu-wrapper--active" : "menu-wrapper"
-					}
+					className={`menu-wrapper ${
+						isMenuActive ? "menu-wrapper--active" : ""
+					}`}
 				>
 					<nav className="menu__nav">
 						<NavLink
 							onClick={() => setIsMenuActive(false)}
 							className={({ isActive }) =>
-								isActive ? activeLink : inactiveLink
+								`menu__nav-link ${isActive ? "menu__nav-link--active" : ""}`
 							}
 							to="/"
 						>
@@ -220,7 +220,7 @@ const Header = () => {
 						<NavLink
 							onClick={() => setIsMenuActive(false)}
 							className={({ isActive }) =>
-								isActive ? activeLink : inactiveLink
+								`menu__nav-link ${isActive ? "menu__nav-link--active" : ""}`
 							}
 							to="/about-us"
 						>
@@ -229,7 +229,7 @@ const Header = () => {
 						<NavLink
 							onClick={() => setIsMenuActive(false)}
 							className={({ isActive }) =>
-								isActive ? activeLink : inactiveLink
+								`menu__nav-link ${isActive ? "menu__nav-link--active" : ""}`
 							}
 							to="/photovoltaics-for-single-family-homes"
 						>
@@ -238,7 +238,7 @@ const Header = () => {
 						<NavLink
 							onClick={() => setIsMenuActive(false)}
 							className={({ isActive }) =>
-								isActive ? activeLink : inactiveLink
+								`menu__nav-link ${isActive ? "menu__nav-link--active" : ""}`
 							}
 							to="/photovoltaics-for-companies"
 						>
@@ -247,7 +247,7 @@ const Header = () => {
 						<NavLink
 							onClick={() => setIsMenuActive(false)}
 							className={({ isActive }) =>
-								isActive ? activeLink : inactiveLink
+								`menu__nav-link ${isActive ? "menu__nav-link--active" : ""}`
 							}
 							to="/svj"
 						>
@@ -257,7 +257,7 @@ const Header = () => {
 						<NavLink
 							onClick={() => setIsMenuActive(false)}
 							className={({ isActive }) =>
-								isActive ? activeLink : inactiveLink
+								`menu__nav-link ${isActive ? "menu__nav-link--active" : ""}`
 							}
 							to="/our-installation"
 						>
@@ -266,7 +266,7 @@ const Header = () => {
 						<NavLink
 							onClick={() => setIsMenuActive(false)}
 							className={({ isActive }) =>
-								isActive ? activeLink : inactiveLink
+								`menu__nav-link ${isActive ? "menu__nav-link--active" : ""}`
 							}
 							to="/contacts"
 						>
