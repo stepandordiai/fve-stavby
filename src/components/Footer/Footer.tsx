@@ -13,9 +13,7 @@ import "./Footer.scss";
 const Footer = () => {
 	const { t } = useTranslation();
 
-	const inactiveFooterLink = "footer__nav-link";
-	const activeFooterLink = "footer__nav-link footer__nav-link--active";
-
+	// TODO: FIX
 	// TODO: I learned new nice animation with position and scale
 	useEffect(() => {
 		const creatorLink = document.querySelector(
@@ -75,8 +73,8 @@ const Footer = () => {
 					<div className="footer-divider"></div>
 					<div className="footer-top">
 						<div>
-							<NavLink className={"footer-top__logo"} to={"/"}>
-								<img src={logo} alt="FVE STAVBY Logo" />
+							<NavLink className="footer-top__logo" to="/">
+								<img src={logo} alt="FVE STAVBY logo" />
 								<span>FVE STAVBY</span>
 							</NavLink>
 							<p>{t("logo_title")}</p>
@@ -118,66 +116,82 @@ const Footer = () => {
 							<p>{t("navigation")}</p>
 							<nav className="footer-top__nav-list">
 								<NavLink
-									to={"/"}
+									to="/"
 									className={({ isActive }) =>
-										isActive ? activeFooterLink : inactiveFooterLink
+										`footer__nav-link ${
+											isActive ? "footer__nav-link--active" : ""
+										}`
 									}
 								>
 									{t("home_title")}
 								</NavLink>
 								<NavLink
-									to={"/about-us"}
+									to="/about-us"
 									className={({ isActive }) =>
-										isActive ? activeFooterLink : inactiveFooterLink
+										`footer__nav-link ${
+											isActive ? "footer__nav-link--active" : ""
+										}`
 									}
 								>
 									{t("about_us_title")}
 								</NavLink>
 								<NavLink
-									to={"/photovoltaics-for-single-family-homes"}
+									to="/photovoltaics-for-single-family-homes"
 									className={({ isActive }) =>
-										isActive ? activeFooterLink : inactiveFooterLink
+										`footer__nav-link ${
+											isActive ? "footer__nav-link--active" : ""
+										}`
 									}
 								>
 									{t("photovoltaics_for_single_family_homes_title")}
 								</NavLink>
 								<NavLink
-									to={"/photovoltaics-for-companies"}
+									to="/photovoltaics-for-companies"
 									className={({ isActive }) =>
-										isActive ? activeFooterLink : inactiveFooterLink
+										`footer__nav-link ${
+											isActive ? "footer__nav-link--active" : ""
+										}`
 									}
 								>
 									{t("photovoltaics_for_companies_title")}
 								</NavLink>
 								<NavLink
-									to={"/svj"}
+									to="/svj"
 									className={({ isActive }) =>
-										isActive ? activeFooterLink : inactiveFooterLink
+										`footer__nav-link ${
+											isActive ? "footer__nav-link--active" : ""
+										}`
 									}
 								>
 									<span>SVJ</span>
 									<span className="footer__nav-link--new">New</span>
 								</NavLink>
 								<NavLink
-									to={"/our-installation"}
+									to="/our-installation"
 									className={({ isActive }) =>
-										isActive ? activeFooterLink : inactiveFooterLink
+										`footer__nav-link ${
+											isActive ? "footer__nav-link--active" : ""
+										}`
 									}
 								>
 									{t("our_installation_title")}
 								</NavLink>
 								<NavLink
-									to={"/contacts"}
+									to="/contacts"
 									className={({ isActive }) =>
-										isActive ? activeFooterLink : inactiveFooterLink
+										`footer__nav-link ${
+											isActive ? "footer__nav-link--active" : ""
+										}`
 									}
 								>
 									{t("contacts_title")}
 								</NavLink>
 								<NavLink
-									to={"/manuals"}
+									to="/manuals"
 									className={({ isActive }) =>
-										isActive ? activeFooterLink : inactiveFooterLink
+										`footer__nav-link ${
+											isActive ? "footer__nav-link--active" : ""
+										}`
 									}
 								>
 									{t("manuals_title")}
@@ -249,7 +263,7 @@ const Footer = () => {
 					<img
 						className="footer-bottom__logo-img"
 						src={footerBottomLogo}
-						alt="FVE STAVBY Logo"
+						alt="FVE STAVBY logo"
 					/>
 				</div>
 			</footer>
