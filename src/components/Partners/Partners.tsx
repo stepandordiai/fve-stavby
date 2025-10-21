@@ -4,13 +4,13 @@ import "./Partners.scss";
 const Partners = () => {
 	const { t } = useTranslation();
 
-	interface PartnersData {
+	interface Partner {
 		siteUrl: string;
 		imgUrl: string;
 		alt: string;
 	}
 
-	const partnersData: PartnersData[] = [
+	const partnersData: Partner[] = [
 		{
 			siteUrl: "https://aikosolar.com/cz/",
 			imgUrl:

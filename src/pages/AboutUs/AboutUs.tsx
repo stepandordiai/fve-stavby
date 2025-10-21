@@ -1,10 +1,10 @@
 import { useTranslation } from "react-i18next";
-import { Helmet } from "react-helmet-async";
-import PageTitle from "../../components/PageTitle/PageTitle";
-import GetInTouch from "../../components/GetInTouch/GetInTouch";
 import { useEffect } from "react";
 import isTouchDevice from "../../utils/isTouchDevice";
+import { Helmet } from "react-helmet-async";
 import Container from "../../components/Container/Container";
+import PageTitle from "../../components/PageTitle/PageTitle";
+import GetInTouch from "../../components/GetInTouch/GetInTouch";
 import img from "/img/07-c.jpg";
 import userIcon from "/icons/user.png";
 import "./AboutUs.scss";
@@ -61,6 +61,22 @@ const AboutUs = () => {
 			position: t("our_team.member9"),
 			email: "tomas@fvestavby.cz",
 		},
+	];
+
+	interface Guarantee {
+		years: number;
+		desc: string;
+	}
+
+	const guaranteesData: Guarantee[] = [
+		{ years: 12, desc: "let na Střídač" },
+		{ years: 15, desc: "let na Fotovoltaické panely" },
+		{ years: 25, desc: "let Záruka na výkon panelů" },
+		{ years: 5, desc: "let na Montáž" },
+		{ years: 10, desc: "let na Montážní systém" },
+		{ years: 2, desc: "roky na Kabeláž" },
+		{ years: 2, desc: "roky na Zabezpečení AC/DC" },
+		{ years: 6000, desc: "cyklů na baterie" },
 	];
 
 	useEffect(() => {
@@ -185,38 +201,14 @@ const AboutUs = () => {
 						</div>
 						<h2 className="guarantees__title">{t("guarantees.title")}</h2>
 						<div className="guarantees__grid">
-							<div className="guarantees__grid-item">
-								<p>12</p>
-								<p>let na Střídač</p>
-							</div>
-							<div className="guarantees__grid-item">
-								<p>15</p>
-								<p>let na Fotovoltaické panely</p>
-							</div>
-							<div className="guarantees__grid-item">
-								<p>25</p>
-								<p>let Záruka na výkon panelů</p>
-							</div>
-							<div className="guarantees__grid-item">
-								<p>5</p>
-								<p>let na Montáž</p>
-							</div>
-							<div className="guarantees__grid-item">
-								<p>10</p>
-								<p>let na Montážní systém</p>
-							</div>
-							<div className="guarantees__grid-item">
-								<p>2</p>
-								<p>roky na Kabeláž</p>
-							</div>
-							<div className="guarantees__grid-item">
-								<p>2</p>
-								<p>roky na Zabezpečení AC/DC </p>
-							</div>
-							<div className="guarantees__grid-item">
-								<p>6000</p>
-								<p>cyklů na baterie</p>
-							</div>
+							{guaranteesData.map((guarantee) => {
+								return (
+									<div className="guarantees__grid-item">
+										<span>{guarantee.years}</span>
+										<span>{guarantee.desc}</span>
+									</div>
+								);
+							})}
 						</div>
 						<GetInTouch />
 					</div>

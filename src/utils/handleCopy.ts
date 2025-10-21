@@ -1,6 +1,12 @@
-const handleCopy = (e: any, className: string, copiedTxt: string) => {
+const handleCopy = (
+	e: React.MouseEvent<HTMLElement>,
+	className: string,
+	copiedTxt: string
+) => {
+	const element = e.currentTarget as HTMLElement;
+	const textToCopy = element.innerText;
 	navigator.clipboard
-		.writeText(e.target.innerText)
+		.writeText(textToCopy)
 		.then(() => {
 			const copyBanner = document.createElement("span");
 			copyBanner.innerText = copiedTxt;

@@ -2,7 +2,6 @@ import { useTranslation } from "react-i18next";
 import icon1 from "/icons/liberty.png";
 import icon2 from "/icons/off-grid.png";
 import icon3 from "/icons/renewable-energy.png";
-
 import "./Benefits.scss";
 
 const Benefits = () => {

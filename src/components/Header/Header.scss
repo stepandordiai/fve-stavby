@@ -64,7 +64,6 @@
 
 // When i apply animation for header blur dissapears so i apply it to children
 .header__nav-link {
-	position: relative;
 	color: #fff;
 	padding: 5px 7.5px;
 	border-radius: 15px;
@@ -78,15 +77,6 @@
 .header__nav-link--active {
 	background: var(--accent-clr);
 	color: #000 !important;
-}
-
-.header__nav-link--new {
-	position: absolute;
-	top: 0;
-	right: 0;
-	transform: translate(100%, -25%);
-	font-size: 0.8rem;
-	color: #fff !important;
 }
 
 .header-top__number {
@@ -315,7 +305,6 @@
 }
 
 .menu__nav-link {
-	position: relative;
 	color: #000;
 	font-size: clamp(1.5rem, 3vw, 3rem);
 	font-weight: 500;
@@ -333,14 +322,6 @@
 
 .menu__nav-link--active {
 	background: var(--accent-clr);
-}
-
-.menu__nav-link--new {
-	position: absolute;
-	top: 0;
-	right: 0;
-	transform: translateX(100%);
-	font-size: 0.8rem;
 }
 
 .menu__contacts-details {

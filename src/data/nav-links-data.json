@@ -1,0 +1,17 @@
+[
+	{ "id": 1, "name": "home_title", "path": "/" },
+	{ "id": 2, "name": "about_us_title", "path": "/about-us" },
+	{
+		"id": 3,
+		"name": "photovoltaics_for_single_family_homes_title",
+		"path": "/photovoltaics-for-single-family-homes"
+	},
+	{
+		"id": 4,
+		"name": "photovoltaics_for_companies_title",
+		"path": "/photovoltaics-for-companies"
+	},
+	{ "id": 5, "name": "SVJ", "path": "/svj" },
+	{ "id": 6, "name": "our_installation_title", "path": "/our-installation" },
+	{ "id": 7, "name": "contacts_title", "path": "/contacts" }
+]

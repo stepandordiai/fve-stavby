@@ -1,156 +1,111 @@
 import { useTranslation } from "react-i18next";
-import { useEffect } from "react";
+import { useEffect, useState, useRef } from "react";
 import "./Process.scss";
 
 const Process = () => {
 	const { t } = useTranslation();
 
+	const processData = [
+		{ id: 1, title: t("process.option1"), desc: t("process.desc1") },
+		{ id: 2, title: t("process.option2"), desc: t("process.desc2") },
+		{ id: 3, title: t("process.option3"), desc: t("process.desc3") },
+		{
+			id: 4,
+			title: t("process.option4"),
+			desc: t("process.desc4"),
+			price: t("process.free"),
+		},
+		{ id: 5, title: t("process.option5"), desc: t("process.desc5") },
+		{ id: 6, title: t("process.option6"), desc: t("process.desc6") },
+		{ id: 7, title: t("process.option7"), desc: t("process.desc7") },
+		{ id: 8, title: t("process.option8"), desc: t("process.desc8") },
+	];
+
+	const processRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+	const [processInView, setProcessInView] = useState(
+		new Array(processData.length).fill(false)
+	);
+
+	const handleProcessInView = (index: number) => {
+		setProcessInView((prev) => {
+			// TODO:
+			if (prev[index]) return prev;
+			const updated = [...prev];
+			updated[index] = true;
+			return updated;
+		});
+	};
+
 	useEffect(() => {
-		const processCard = document.querySelectorAll(
-			".process-card"
-		) as NodeListOf<HTMLDivElement>;
-		const steps = document.querySelectorAll(
-			".step"
-		) as NodeListOf<HTMLSpanElement>;
+		// TODO:
+		if (!processRefs.current.length) return;
 
-		const handleProcessCard = () => {
-			processCard.forEach((card, index) => {
-				const cardRect = card.getBoundingClientRect();
-				if (cardRect.bottom < window.innerHeight) {
-					steps[index].classList.add("step--active");
-				} else {
-					steps[index].classList.remove("step--active");
-				}
-			});
-		};
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					const entryIndex = processRefs.current.indexOf(
+						entry.target as HTMLDivElement
+					);
+					if (entryIndex !== -1 && entry.isIntersecting) {
+						handleProcessInView(entryIndex);
+					}
+				});
+			},
+			{ threshold: 1 }
+		);
 
-		handleProcessCard();
+		processRefs.current.forEach((process) => {
+			if (process) observer.observe(process);
+		});
 
-		window.addEventListener("scroll", handleProcessCard);
-
-		return () => {
-			window.removeEventListener("scroll", handleProcessCard);
-		};
+		return () => observer.disconnect();
 	}, []);
 
 	return (
 		<>
 			<h2 className="process__title">{t("process.title")}</h2>
 			<div className="process-grid">
-				<div className="process-card">
-					<div className="process-card__step">
-						<span className="step" data-step-value="1"></span>
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
-					<p className="process-card__title">{t("process.option1")}</p>
-					<p className="process-card__details">{t("process.desc1")}.</p>
-				</div>
-				<div className="process-card">
-					<div className="process-card__step">
-						<span></span>
-						<span className="step" data-step-value="2"></span>
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
-					<p className="process-card__title">{t("process.option2")}</p>
-					<p className="process-card__details">{t("process.desc2")}.</p>
-				</div>
-				<div className="process-card">
-					<div className="process-card__step">
-						<span></span>
-						<span></span>
-						<span className="step" data-step-value="3"></span>
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
-					<p className="process-card__title">{t("process.option3")}</p>
-					<p className="process-card__details">{t("process.desc3")}.</p>
-				</div>
-				<div className="process-card">
-					<div className="process-card__step">
-						<span></span>
-						<span></span>
-						<span></span>
-						<span className="step" data-step-value="4"></span>
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
-					<p className="process-card__title">{t("process.option4")}</p>
-					<p className="process-card__details">{t("process.desc4")}.</p>
-					<div className="process-card__price">{t("process.free")}</div>
-				</div>
-
-				<div className="process-card">
-					<div className="process-card__step">
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
-						<span className="step" data-step-value="5"></span>
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
-					<p className="process-card__title">{t("process.option5")}</p>
-					<p className="process-card__details">{t("process.desc5")}.</p>
-				</div>
-				<div className="process-card">
-					<div className="process-card__step">
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
-						<span className="step" data-step-value="6"></span>
-						<span></span>
-						<span></span>
-					</div>
-					<p className="process-card__title">{t("process.option6")}</p>
-					<p className="process-card__details">{t("process.desc6")}.</p>
-				</div>
-				<div className="process-card">
-					<div className="process-card__step">
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
-						<span className="step" data-step-value="7"></span>
-						<span></span>
-					</div>
-					<p className="process-card__title">{t("process.option7")}</p>
-					<p className="process-card__details">{t("process.desc7")}.</p>
-				</div>
-				<div className="process-card">
-					<div className="process-card__step">
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
-						<span className="step" data-step-value="8"></span>
-					</div>
-					<p className="process-card__title">{t("process.option8")}</p>
-					<p className="process-card__details">{t("process.desc8")}.</p>
-				</div>
+				{processData.map((process, index) => {
+					return (
+						<div
+							// TODO:
+							ref={(el) => {
+								processRefs.current[index] = el;
+							}}
+							key={process.id}
+							className="process-card"
+						>
+							<div className="process-card__step">
+								{/* TODO: */}
+								{new Array(processData.length)
+									.fill(undefined)
+									.map((_, index) => {
+										return (
+											<span
+												key={index}
+												className={
+													index + 1 === process.id
+														? `step ${
+																processInView[index] ? "step--active" : ""
+														  }`
+														: ""
+												}
+												data-step-value={
+													index + 1 === process.id ? process.id : undefined
+												}
+											></span>
+										);
+									})}
+							</div>
+							<p className="process-card__title">{process.title}</p>
+							<p className="process-card__details">{process.desc}.</p>
+							{process.price && (
+								<div className="process-card__price">{process.price}</div>
+							)}
+						</div>
+					);
+				})}
 			</div>
 		</>
 	);

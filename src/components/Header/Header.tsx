@@ -1,7 +1,8 @@
 import { useTranslation } from "react-i18next";
-import { NavLink, useLocation } from "react-router-dom";
-import LngSelect from "../LngSelect/LngSelect";
 import { useEffect, useState } from "react";
+import { NavLink, useLocation } from "react-router-dom";
+import navLinksData from "./../../data/nav-links-data.json";
+import LngSelect from "../LngSelect/LngSelect";
 import logo from "/logo/solar-panel.png";
 import "./Header.scss";
 
@@ -75,7 +76,6 @@ const Header = () => {
 		setIsMenuActive(false);
 	}, [pathname]);
 
-	// TODO:
 	useEffect(() => {
 		const closeMenuOnEsc = (e: KeyboardEvent) => {
 			if (e.key === "Escape") {
@@ -85,9 +85,7 @@ const Header = () => {
 
 		document.addEventListener("keydown", closeMenuOnEsc);
 
-		return () => {
-			document.removeEventListener("keydown", closeMenuOnEsc);
-		};
+		return () => document.removeEventListener("keydown", closeMenuOnEsc);
 	}, []);
 
 	return (
@@ -123,77 +121,21 @@ const Header = () => {
 					</div>
 					<div className="header-bottom-wrapper">
 						<nav className="header-bottom">
-							<NavLink
-								to="/"
-								className={({ isActive }) =>
-									`header__nav-link ${
-										isActive ? "header__nav-link--active" : ""
-									}`
-								}
-							>
-								{t("home_title")}
-							</NavLink>
-							<NavLink
-								to="/about-us"
-								className={({ isActive }) =>
-									`header__nav-link ${
-										isActive ? "header__nav-link--active" : ""
-									}`
-								}
-							>
-								{t("about_us_title")}
-							</NavLink>
-							<NavLink
-								to="/photovoltaics-for-single-family-homes"
-								className={({ isActive }) =>
-									`header__nav-link ${
-										isActive ? "header__nav-link--active" : ""
-									}`
-								}
-							>
-								{t("photovoltaics_for_single_family_homes_title")}
-							</NavLink>
-							<NavLink
-								to="/photovoltaics-for-companies"
-								className={({ isActive }) =>
-									`header__nav-link ${
-										isActive ? "header__nav-link--active" : ""
-									}`
-								}
-							>
-								{t("photovoltaics_for_companies_title")}
-							</NavLink>
-							<NavLink
-								to="/svj"
-								className={({ isActive }) =>
-									`header__nav-link ${
-										isActive ? "header__nav-link--active" : ""
-									}`
-								}
-							>
-								<span>SVJ</span>
-								<span className="header__nav-link--new">New</span>
-							</NavLink>
-							<NavLink
-								to="/our-installation"
-								className={({ isActive }) =>
-									`header__nav-link ${
-										isActive ? "header__nav-link--active" : ""
-									}`
-								}
-							>
-								{t("our_installation_title")}
-							</NavLink>
-							<NavLink
-								to="/contacts"
-								className={({ isActive }) =>
-									`header__nav-link ${
-										isActive ? "header__nav-link--active" : ""
-									}`
-								}
-							>
-								{t("contacts_title")}
-							</NavLink>
+							{navLinksData.map((link) => {
+								return (
+									<NavLink
+										key={link.id}
+										to={link.path}
+										className={({ isActive }) =>
+											`header__nav-link ${
+												isActive ? "header__nav-link--active" : ""
+											}`
+										}
+									>
+										{t(link.name)}
+									</NavLink>
+								);
+							})}
 						</nav>
 					</div>
 				</div>
@@ -208,70 +150,20 @@ const Header = () => {
 					}`}
 				>
 					<nav className="menu__nav">
-						<NavLink
-							onClick={() => setIsMenuActive(false)}
-							className={({ isActive }) =>
-								`menu__nav-link ${isActive ? "menu__nav-link--active" : ""}`
-							}
-							to="/"
-						>
-							{t("home_title")}
-						</NavLink>
-						<NavLink
-							onClick={() => setIsMenuActive(false)}
-							className={({ isActive }) =>
-								`menu__nav-link ${isActive ? "menu__nav-link--active" : ""}`
-							}
-							to="/about-us"
-						>
-							{t("about_us_title")}
-						</NavLink>
-						<NavLink
-							onClick={() => setIsMenuActive(false)}
-							className={({ isActive }) =>
-								`menu__nav-link ${isActive ? "menu__nav-link--active" : ""}`
-							}
-							to="/photovoltaics-for-single-family-homes"
-						>
-							{t("photovoltaics_for_single_family_homes_title")}
-						</NavLink>
-						<NavLink
-							onClick={() => setIsMenuActive(false)}
-							className={({ isActive }) =>
-								`menu__nav-link ${isActive ? "menu__nav-link--active" : ""}`
-							}
-							to="/photovoltaics-for-companies"
-						>
-							{t("photovoltaics_for_companies_title")}
-						</NavLink>
-						<NavLink
-							onClick={() => setIsMenuActive(false)}
-							className={({ isActive }) =>
-								`menu__nav-link ${isActive ? "menu__nav-link--active" : ""}`
-							}
-							to="/svj"
-						>
-							<span>SVJ</span>
-							<span className="menu__nav-link--new">New</span>
-						</NavLink>
-						<NavLink
-							onClick={() => setIsMenuActive(false)}
-							className={({ isActive }) =>
-								`menu__nav-link ${isActive ? "menu__nav-link--active" : ""}`
-							}
-							to="/our-installation"
-						>
-							{t("our_installation_title")}
-						</NavLink>
-						<NavLink
-							onClick={() => setIsMenuActive(false)}
-							className={({ isActive }) =>
-								`menu__nav-link ${isActive ? "menu__nav-link--active" : ""}`
-							}
-							to="/contacts"
-						>
-							{t("contacts_title")}
-						</NavLink>
+						{navLinksData.map((link) => {
+							return (
+								<NavLink
+									key={link.id}
+									onClick={() => setIsMenuActive(false)}
+									className={({ isActive }) =>
+										`menu__nav-link ${isActive ? "menu__nav-link--active" : ""}`
+									}
+									to={link.path}
+								>
+									{t(link.name)}
+								</NavLink>
+							);
+						})}
 					</nav>
 					<ul className="menu__contacts-details">
 						<li>

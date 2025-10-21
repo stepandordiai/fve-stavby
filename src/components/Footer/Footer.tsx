@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
 import isTouchDevice from "../../utils/isTouchDevice";
+import navLinksData from "./../../data/nav-links-data.json";
 import handleCopy from "../../utils/handleCopy";
 import footerBottomLogo from "/fve-stavby-footer-logo.svg";
 import logo from "/logo/solar-panel.png";
@@ -115,77 +116,21 @@ const Footer = () => {
 						<div className="footer-top__nav">
 							<p>{t("navigation")}</p>
 							<nav className="footer-top__nav-list">
-								<NavLink
-									to="/"
-									className={({ isActive }) =>
-										`footer__nav-link ${
-											isActive ? "footer__nav-link--active" : ""
-										}`
-									}
-								>
-									{t("home_title")}
-								</NavLink>
-								<NavLink
-									to="/about-us"
-									className={({ isActive }) =>
-										`footer__nav-link ${
-											isActive ? "footer__nav-link--active" : ""
-										}`
-									}
-								>
-									{t("about_us_title")}
-								</NavLink>
-								<NavLink
-									to="/photovoltaics-for-single-family-homes"
-									className={({ isActive }) =>
-										`footer__nav-link ${
-											isActive ? "footer__nav-link--active" : ""
-										}`
-									}
-								>
-									{t("photovoltaics_for_single_family_homes_title")}
-								</NavLink>
-								<NavLink
-									to="/photovoltaics-for-companies"
-									className={({ isActive }) =>
-										`footer__nav-link ${
-											isActive ? "footer__nav-link--active" : ""
-										}`
-									}
-								>
-									{t("photovoltaics_for_companies_title")}
-								</NavLink>
-								<NavLink
-									to="/svj"
-									className={({ isActive }) =>
-										`footer__nav-link ${
-											isActive ? "footer__nav-link--active" : ""
-										}`
-									}
-								>
-									<span>SVJ</span>
-									<span className="footer__nav-link--new">New</span>
-								</NavLink>
-								<NavLink
-									to="/our-installation"
-									className={({ isActive }) =>
-										`footer__nav-link ${
-											isActive ? "footer__nav-link--active" : ""
-										}`
-									}
-								>
-									{t("our_installation_title")}
-								</NavLink>
-								<NavLink
-									to="/contacts"
-									className={({ isActive }) =>
-										`footer__nav-link ${
-											isActive ? "footer__nav-link--active" : ""
-										}`
-									}
-								>
-									{t("contacts_title")}
-								</NavLink>
+								{navLinksData.map((link) => {
+									return (
+										<NavLink
+											key={link.id}
+											to={link.path}
+											className={({ isActive }) =>
+												`footer__nav-link ${
+													isActive ? "footer__nav-link--active" : ""
+												}`
+											}
+										>
+											{t(link.name)}
+										</NavLink>
+									);
+								})}
 								<NavLink
 									to="/manuals"
 									className={({ isActive }) =>
