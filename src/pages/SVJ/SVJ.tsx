@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import PageTitle from "../../components/PageTitle/PageTitle";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Container from "../../components/Container/Container";
 import arrowIcon from "/icons/arrow-upper-right-white.png";
 import video from "/video.mp4";
@@ -10,20 +10,19 @@ import "./SVJ.scss";
 const SVJ = () => {
 	const { t } = useTranslation();
 
-	useEffect(() => {
-		const linkIcon = document.querySelector(
-			".svj__link-icon-container"
-		) as HTMLDivElement | null;
-		const link = document.querySelector(
-			".svj__link"
-		) as HTMLAnchorElement | null;
+	const linkRef = useRef<HTMLAnchorElement | null>(null);
+	const linkIconRef = useRef<HTMLSpanElement | null>(null);
 
-		// TODO:
-		link?.addEventListener("mousemove", (e) => {
+	useEffect(() => {
+		const link = linkRef.current;
+		const linkIcon = linkIconRef.current;
+
+		const handleLinkOnMouseMove = (e: MouseEvent) => {
+			if (!link) return;
 			const linkRect = link.getBoundingClientRect();
 
-			let mouseX = (e as MouseEvent).clientX - linkRect.left;
-			let mouseY = (e as MouseEvent).clientY - linkRect.top;
+			let mouseX = e.clientX - linkRect.left;
+			let mouseY = e.clientY - linkRect.top;
 
 			const offset = 25;
 
@@ -34,15 +33,23 @@ const SVJ = () => {
 
 			linkIcon.style.left = mouseX + "px";
 			linkIcon.style.top = mouseY + "px";
-		});
+		};
 
-		link?.addEventListener("mouseleave", (e) => {
+		const handleLinkOnMouseLeave = () => {
 			if (!linkIcon) return;
 
 			linkIcon.style.left = 50 + "%";
 			linkIcon.style.top = 50 + "%";
-		});
-	});
+		};
+
+		link?.addEventListener("mousemove", handleLinkOnMouseMove);
+		link?.addEventListener("mouseleave", handleLinkOnMouseLeave);
+
+		return () => {
+			link?.removeEventListener("mousemove", handleLinkOnMouseMove);
+			link?.removeEventListener("mouseleave", handleLinkOnMouseLeave);
+		};
+	}, []);
 
 	return (
 		<>
@@ -57,6 +64,7 @@ const SVJ = () => {
 					<div className="svj__inner">
 						<h2 className="svj__title">{t("svj_sec_title")}</h2>
 						<a
+							ref={linkRef}
 							className="svj__link"
 							href="https://maxflow.netlify.app/"
 							target="_blank"
@@ -65,7 +73,7 @@ const SVJ = () => {
 								<source src={video} type="video/mp4" />
 								Your browser does not support the video tag.
 							</video>
-							<span className="svj__link-icon-container">
+							<span ref={linkIconRef} className="svj__link-icon-container">
 								<img
 									className="svj__link-icon"
 									width={25}
