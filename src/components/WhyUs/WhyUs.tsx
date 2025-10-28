@@ -3,31 +3,31 @@ import { useState } from "react";
 import plusIcon from "/icons/plus-black.png";
 import "./WhyUs.scss";
 
+const advantagesData = [
+	{
+		title: "why_us.option1",
+		desc: "why_us.desc1",
+	},
+	{
+		title: "why_us.option2",
+		desc: "why_us.desc2",
+	},
+	{
+		title: "why_us.option3",
+		desc: "why_us.desc3",
+	},
+	{
+		title: "why_us.option4",
+		desc: "why_us.desc4",
+	},
+	{
+		title: "why_us.option5",
+		desc: "why_us.desc5",
+	},
+];
+
 const WhyUs = () => {
 	const { t } = useTranslation();
-
-	const advantagesData = [
-		{
-			title: t("why_us.option1"),
-			desc: t("why_us.desc1"),
-		},
-		{
-			title: t("why_us.option2"),
-			desc: t("why_us.desc2"),
-		},
-		{
-			title: t("why_us.option3"),
-			desc: t("why_us.desc3"),
-		},
-		{
-			title: t("why_us.option4"),
-			desc: t("why_us.desc4"),
-		},
-		{
-			title: t("why_us.option5"),
-			desc: t("why_us.desc5"),
-		},
-	];
 
 	const [advantageActive, setAdvantageActive] = useState(
 		new Array(advantagesData.length).fill(false)
@@ -54,7 +54,9 @@ const WhyUs = () => {
 								onClick={() => handleAdvantageOnClick(index)}
 								className="advantages-btn"
 							>
-								<span className="advantages-btn-title">{advantage.title}</span>
+								<span className="advantages-btn-title">
+									{t(advantage.title)}
+								</span>
 								<div
 									className={`advantages-btn-icon-container ${
 										advantageActive[index]
@@ -80,7 +82,7 @@ const WhyUs = () => {
 									advantageActive[index] ? "dd-wrapper--active" : ""
 								}`}
 							>
-								<p className="dd-details">{advantage.desc}.</p>
+								<p className="dd-details">{t(advantage.desc)}.</p>
 							</div>
 						</li>
 					);
