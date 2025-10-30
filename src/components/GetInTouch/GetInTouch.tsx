@@ -13,12 +13,7 @@ const GetInTouch = () => {
 			<p className="get-in-touch__title">{t("get_in_touch_title")}</p>
 			<NavLink to={"/contacts"} className="get-in-touch__link">
 				<span>{t("get_in_touch_link")}</span>
-				<img
-					className="get-in-touch__link-icon"
-					src={arrowIcon}
-					alt=""
-					loading="lazy"
-				/>
+				<img className="get-in-touch__link-icon" src={arrowIcon} alt="" />
 			</NavLink>
 		</div>
 	);

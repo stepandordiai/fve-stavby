@@ -19,23 +19,13 @@ const HomeTop = () => {
 						<h2 className="home-top__info">{t("home.title")}</h2>
 					</div>
 					<div className="home-top__link-container">
-						<NavLink className="home-top__link" to={"/manuals"}>
+						<NavLink className="home-top__link" to="/manuals">
 							<span>{t("manuals_title")}</span>
-							<img
-								className="home-top__link-icon"
-								src={arrow}
-								alt=""
-								loading="lazy"
-							/>
+							<img className="home-top__link-icon" src={arrow} alt="" />
 						</NavLink>
-						<NavLink className="home-top__link" to={"/contacts"}>
+						<NavLink className="home-top__link" to="/contacts">
 							<span>{t("home.contacts_link")}</span>
-							<img
-								className="home-top__link-icon"
-								src={arrow}
-								alt=""
-								loading="lazy"
-							/>
+							<img className="home-top__link-icon" src={arrow} alt="" />
 						</NavLink>
 					</div>
 				</div>

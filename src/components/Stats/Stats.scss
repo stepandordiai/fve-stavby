@@ -51,12 +51,6 @@
 	font-size: clamp(0.8rem, 2vw, 1rem);
 }
 
-@keyframes animateCandle {
-	100% {
-		height: var(--candle-height);
-	}
-}
-
 .candle-month {
 	position: absolute;
 	bottom: -20px;

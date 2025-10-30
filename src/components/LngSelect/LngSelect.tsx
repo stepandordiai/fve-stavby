@@ -1,122 +1,94 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import i18next from "i18next";
 import "./LngSelect.scss";
 
+const lngData = [
+	{ code: "cs", name: "CZ", fullName: "Čeština" },
+	{ code: "en", name: "EN", fullName: "English" },
+];
+
+function getStorage() {
+	return localStorage.getItem("i18nextLng") || "cs";
+}
+
 const LngSelect = () => {
 	const lngSelect = useRef<HTMLDivElement | null>(null);
+	const lngSelectBtn = useRef<HTMLButtonElement | null>(null);
 
-	function getStorage() {
-		return localStorage.getItem("i18nextLng") || "cs";
-	}
+	const [lngSelectActive, setLngSelectActive] = useState(false);
+	const [lngSelectOption, setLngSelectOption] = useState(getStorage());
+	const [lngSelectName, setLngSelectName] = useState(lngData[0].name);
 
-	const handleLanguage = (lng: string) => {
-		i18next.changeLanguage(lng);
+	const toggleLngSelectBtn = () => setLngSelectActive((prev) => !prev);
 
-		// FIXME:
-		getStorage();
+	const handleLngSelectOption = (code: string) => {
+		i18next.changeLanguage(code);
+		setLngSelectOption(code);
+		setLngSelectActive(false);
 	};
 
-	function toogleLngSelect() {
-		const lngSelectBtn = document.querySelector(
-			".lng-select__btn"
-		) as HTMLButtonElement | null;
-		const lngSelectDd = document.querySelector(
-			".lng-select__dd"
-		) as HTMLUListElement;
-		if (!lngSelect.current || !lngSelectBtn || !lngSelectDd) return;
-		lngSelect.current.classList.toggle("lng-select--active");
-		lngSelectBtn?.classList.toggle("lng-select__btn--active");
-		lngSelectDd?.classList.toggle("lng-select__dd--active");
-	}
+	useEffect(() => {
+		const storedLng = getStorage();
+		const foundLng = lngData.find((lng) => lng.code === storedLng);
+
+		setLngSelectName(foundLng ? foundLng.name : lngData[0].name);
+	}, [getStorage()]);
 
 	useEffect(() => {
-		const lngSelectBtn = document.querySelector(
-			".lng-select__btn"
-		) as HTMLButtonElement | null;
-		const lngSelectDd = document.querySelector(
-			".lng-select__dd"
-		) as HTMLUListElement;
-		const lngSelectOptions = document.querySelectorAll(
-			".lng-select__option"
-		) as NodeListOf<HTMLLIElement>;
-		lngSelectOptions.forEach((option: HTMLLIElement) => {
-			option.addEventListener("click", () => {
-				handleLanguage(option.dataset?.value || "cs");
-				for (let i = 0; i < lngSelectOptions.length; i++) {
-					lngSelectOptions[i].classList.remove("lng-select__option--active");
-				}
-				if (!lngSelectBtn || !lngSelect.current) return;
-				lngSelectBtn.innerHTML = option.innerHTML.slice(0, 2);
-				lngSelect.current?.classList.remove("lng-select--active");
+		const handleClickNotOnLngSelect = (e: MouseEvent | TouchEvent) => {
+			const targetElement = e.target as Node;
 
-				lngSelectBtn.classList.remove("lng-select__btn--active");
-				lngSelectDd?.classList.remove("lng-select__dd--active");
-				if (option.dataset.value === getStorage()) {
-					option.classList.add("lng-select__option--active");
-				}
-			});
-		});
-
-		const lngOptions = document.querySelectorAll(".lng-select__option");
-
-		document.addEventListener("click", (e) => {
 			if (
-				e.target != document.querySelector(".lng-select__dd") &&
-				e.target != document.querySelector(".lng-select") &&
-				e.target != document.querySelector(".lng-select__btn") &&
-				e.target != lngOptions[0] &&
-				e.target != lngOptions[1] &&
-				e.target != lngOptions[2]
+				lngSelect.current &&
+				!lngSelect.current.contains(targetElement) &&
+				lngSelectBtn.current &&
+				!lngSelectBtn.current.contains(targetElement)
 			) {
-				lngSelect.current?.classList.remove("lng-select--active");
-				lngSelectBtn?.classList.remove("lng-select__btn--active");
-				lngSelectDd?.classList.remove("lng-select__dd--active");
+				setLngSelectActive(false);
 			}
-		});
-
-		const handleLngSelectBtn = (code = "CZ") => {
-			return code;
 		};
 
-		if (!lngSelectBtn) return;
+		document.addEventListener("click", handleClickNotOnLngSelect);
 
-		switch (getStorage()) {
-			case "cs":
-				lngSelectBtn.innerHTML = handleLngSelectBtn("CZ");
-				break;
-			case "en":
-				lngSelectBtn.innerHTML = handleLngSelectBtn("EN");
-				break;
-		}
+		return () =>
+			document.removeEventListener("click", handleClickNotOnLngSelect);
 	}, []);
 
 	return (
 		<>
-			<button onClick={toogleLngSelect} className="lng-select__btn">
-				CZ
+			<button
+				ref={lngSelectBtn}
+				onClick={toggleLngSelectBtn}
+				className={`lng-select__btn ${
+					lngSelectActive ? "lng-select__btn--active" : ""
+				}`}
+			>
+				{lngSelectName}
 			</button>
-			<div ref={lngSelect} className="lng-select">
-				<ul className="lng-select__dd">
-					<li
-						className={
-							getStorage() === "cs"
-								? "lng-select__option lng-select__option--active"
-								: "lng-select__option"
-						}
-						data-value="cs"
-					>
-						CZ - Čeština
-					</li>
-					<li
-						className={
-							getStorage() === "en"
-								? "lng-select__option lng-select__option--active"
-								: "lng-select__option"
-						}
-						data-value="en"
-					>
-						EN - English
-					</li>
+			<div
+				ref={lngSelect}
+				className={`lng-select ${lngSelectActive ? "lng-select--active" : ""}`}
+			>
+				<ul
+					className={`lng-select__dd ${
+						lngSelectActive ? "lng-select__dd--active" : ""
+					}`}
+				>
+					{lngData.map((lng) => {
+						return (
+							<li
+								onClick={() => handleLngSelectOption(lng.code)}
+								key={lng.code}
+								className={`lng-select__option ${
+									lngSelectOption === lng.code
+										? " lng-select__option--active"
+										: ""
+								}`}
+							>
+								{`${lng.name} - ${lng.fullName}`}
+							</li>
+						);
+					})}
 				</ul>
 			</div>
 		</>

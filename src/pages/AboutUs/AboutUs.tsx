@@ -9,76 +9,77 @@ import img from "/img/07-c.jpg";
 import userIcon from "/icons/user.png";
 import "./AboutUs.scss";
 
+interface Member {
+	name: string;
+	position: string;
+	linkedInUrl?: string;
+	email?: string;
+}
+
+const membersData: Member[] = [
+	{
+		name: "Kristián",
+		position: "our_team.member1",
+		email: "kristian.janko@email.cz",
+	},
+	{
+		name: "Veronika",
+		position: "our_team.member2",
+	},
+	{
+		name: "Rostislav",
+		position: "our_team.member3",
+		email: "rostislav@fvestavby.cz",
+	},
+	{
+		name: "Štěpán",
+		position: "our_team.member4",
+		linkedInUrl: "https://linkedin.com/in/stepandordiai",
+		email: "stepandordiai@gmail.com",
+	},
+	{
+		name: "Alexandr",
+		position: "our_team.member5",
+	},
+	{
+		name: "Aneta",
+		position: "our_team.member6",
+	},
+	{
+		name: "Zuzana",
+		position: "our_team.member7",
+	},
+	{
+		name: "René",
+		position: "our_team.member8",
+	},
+	{
+		name: "Tomáš",
+		position: "our_team.member9",
+		email: "tomas@fvestavby.cz",
+	},
+];
+
+interface Guarantee {
+	years: number;
+	desc: string;
+}
+
+const guaranteesData: Guarantee[] = [
+	{ years: 12, desc: "let na Střídač" },
+	{ years: 15, desc: "let na Fotovoltaické panely" },
+	{ years: 25, desc: "let Záruka na výkon panelů" },
+	{ years: 5, desc: "let na Montáž" },
+	{ years: 10, desc: "let na Montážní systém" },
+	{ years: 2, desc: "roky na Kabeláž" },
+	{ years: 2, desc: "roky na Zabezpečení AC/DC" },
+	{ years: 6000, desc: "cyklů na baterie" },
+];
+
 const AboutUs = () => {
 	const { t } = useTranslation();
 
-	interface Member {
-		name: string;
-		position: string;
-		linkedInUrl?: string;
-		email?: string;
-	}
-
-	const membersData: Member[] = [
-		{
-			name: "Kristián",
-			position: t("our_team.member1"),
-			email: "kristian.janko@email.cz",
-		},
-		{
-			name: "Veronika",
-			position: t("our_team.member2"),
-		},
-		{
-			name: "Rostislav",
-			position: t("our_team.member3"),
-			email: "rostislav@fvestavby.cz",
-		},
-		{
-			name: "Štěpán",
-			position: t("our_team.member4"),
-			linkedInUrl: "https://linkedin.com/in/stepandordiai",
-			email: "stepandordiai@gmail.com",
-		},
-		{
-			name: "Alexandr",
-			position: t("our_team.member5"),
-		},
-		{
-			name: "Aneta",
-			position: t("our_team.member6"),
-		},
-		{
-			name: "Zuzana",
-			position: t("our_team.member7"),
-		},
-		{
-			name: "René",
-			position: t("our_team.member8"),
-		},
-		{
-			name: "Tomáš",
-			position: t("our_team.member9"),
-			email: "tomas@fvestavby.cz",
-		},
-	];
-
-	interface Guarantee {
-		years: number;
-		desc: string;
-	}
-
-	const guaranteesData: Guarantee[] = [
-		{ years: 12, desc: "let na Střídač" },
-		{ years: 15, desc: "let na Fotovoltaické panely" },
-		{ years: 25, desc: "let Záruka na výkon panelů" },
-		{ years: 5, desc: "let na Montáž" },
-		{ years: 10, desc: "let na Montážní systém" },
-		{ years: 2, desc: "roky na Kabeláž" },
-		{ years: 2, desc: "roky na Zabezpečení AC/DC" },
-		{ years: 6000, desc: "cyklů na baterie" },
-	];
-
+	// FIXME:
 	useEffect(() => {
 		const portfolio = document.querySelectorAll(".guarantees__grid-item");
 
@@ -165,7 +166,9 @@ const AboutUs = () => {
 												<img src={userIcon} alt="" loading="lazy" />
 											</div>
 											<p className="our-team__grid-item-name">{name}</p>
-											<p className="our-team__grid-item-position">{position}</p>
+											<p className="our-team__grid-item-position">
+												{t(position)}
+											</p>
 											<div
 												style={{
 													display: "flex",

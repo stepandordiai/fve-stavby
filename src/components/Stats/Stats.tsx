@@ -2,33 +2,111 @@ import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import "./Stats.scss";
 
+const statsData = [
+	{
+		value: 420,
+		month_l: "stats.jan_l",
+		month_m: "stats.jan_m",
+		month_s: "stats.jan_s",
+	},
+	{
+		value: 610,
+		month_l: "stats.feb_l",
+		month_m: "stats.feb_m",
+		month_s: "stats.feb_s",
+	},
+	{
+		value: 980,
+		month_l: "stats.mar_l",
+		month_m: "stats.mar_m",
+		month_s: "stats.mar_s",
+	},
+	{
+		value: 1220,
+		month_l: "stats.apr_l",
+		month_m: "stats.apr_m",
+		month_s: "stats.apr_s",
+	},
+	{
+		value: 1480,
+		month_l: "stats.may_l",
+		month_m: "stats.may_m",
+		month_s: "stats.may_s",
+	},
+	{
+		value: 1380,
+		month_l: "stats.jun_l",
+		month_m: "stats.jun_m",
+		month_s: "stats.jun_s",
+	},
+	{
+		value: 1570,
+		month_l: "stats.jul_l",
+		month_m: "stats.jul_m",
+		month_s: "stats.jul_s",
+	},
+	{
+		value: 1440,
+		month_l: "stats.aug_l",
+		month_m: "stats.aug_m",
+		month_s: "stats.aug_s",
+	},
+	{
+		value: 1080,
+		month_l: "stats.sep_l",
+		month_m: "stats.sep_m",
+		month_s: "stats.sep_s",
+	},
+	{
+		value: 890,
+		month_l: "stats.oct_l",
+		month_m: "stats.oct_m",
+		month_s: "stats.oct_s",
+	},
+	{
+		value: 390,
+		month_l: "stats.nov_l",
+		month_m: "stats.nov_m",
+		month_s: "stats.nov_s",
+	},
+	{
+		value: 310,
+		month_l: "stats.dec_l",
+		month_m: "stats.dec_m",
+		month_s: "stats.dec_s",
+	},
+];
+
 const Stats = () => {
 	const { t } = useTranslation();
 
+	// FIXME:
 	useEffect(() => {
-		let interval = 1000;
 		const candlesWrapper = document.querySelector(
 			".candles-wrapper"
 		) as HTMLDivElement | null;
+
+		const maxCandleHeight = 500;
 
 		if (candlesWrapper) {
 			const candles = document.querySelectorAll(
 				".candle"
 			) as NodeListOf<HTMLDivElement>;
 			candles.forEach((el) => {
+				let interval = 10000;
 				let isActivated = false;
 				document.addEventListener("scroll", () => {
 					const candlesWrapperRect = candlesWrapper.getBoundingClientRect();
 					if (candlesWrapperRect.top < window.innerHeight) {
-						el.style.animation = "animateCandle 4s ease-in-out forwards";
 						if (!isActivated) {
 							let startValue = 0;
 							const dataFinalValue = Number(el.dataset.finalValue);
-							let duration = Math.floor(interval / dataFinalValue);
 							function start() {
+								let duration = Math.floor(interval / dataFinalValue);
 								let counter = setTimeout(() => {
 									startValue += 1;
 									el.dataset.initValue = startValue + "kW";
+									el.style.height = (startValue / maxCandleHeight) * 100 + "px";
 									if (startValue == dataFinalValue) {
 										clearTimeout(counter);
 									} else {
@@ -53,162 +131,18 @@ const Stats = () => {
 			</div>
 			<div className="stats">
 				<div className="candles-wrapper">
-					<div
-						className="candle"
-						data-month-l={t("stats.jan_l")}
-						data-month-m={t("stats.jan_m")}
-						data-month-s={t("stats.jan_s")}
-						style={
-							{
-								"--candle-height": "50px",
-							} as React.CSSProperties
-						}
-						data-init-value="0kW"
-						data-final-value="420"
-					></div>
-					<div
-						className="candle"
-						data-month-l={t("stats.feb_l")}
-						data-month-m={t("stats.feb_m")}
-						data-month-s={t("stats.feb_s")}
-						style={
-							{
-								"--candle-height": "100px",
-							} as React.CSSProperties
-						}
-						data-init-value="0kW"
-						data-final-value="610"
-					></div>
-					<div
-						className="candle"
-						data-month-l={t("stats.mar_l")}
-						data-month-m={t("stats.mar_m")}
-						data-month-s={t("stats.mar_s")}
-						style={
-							{
-								"--candle-height": "150px",
-							} as React.CSSProperties
-						}
-						data-init-value="0kW"
-						data-final-value="980"
-					></div>
-					<div
-						className="candle"
-						data-month-l={t("stats.apr_l")}
-						data-month-m={t("stats.apr_m")}
-						data-month-s={t("stats.apr_s")}
-						style={
-							{
-								"--candle-height": "200px",
-							} as React.CSSProperties
-						}
-						data-init-value="0kW"
-						data-final-value="1220"
-					></div>
-					<div
-						className="candle"
-						data-month-l={t("stats.may_l")}
-						data-month-m={t("stats.may_m")}
-						data-month-s={t("stats.may_s")}
-						style={
-							{
-								"--candle-height": "300px",
-							} as React.CSSProperties
-						}
-						data-init-value="0kW"
-						data-final-value="1480"
-					></div>
-					<div
-						className="candle"
-						data-month-l={t("stats.jun_l")}
-						data-month-m={t("stats.jun_m")}
-						data-month-s={t("stats.jun_s")}
-						style={
-							{
-								"--candle-height": "325px",
-							} as React.CSSProperties
-						}
-						data-init-value="0kW"
-						data-final-value="1380"
-					></div>
-					<div
-						className="candle"
-						data-month-l={t("stats.jul_l")}
-						data-month-m={t("stats.jul_m")}
-						data-month-s={t("stats.jul_s")}
-						style={
-							{
-								"--candle-height": "225px",
-							} as React.CSSProperties
-						}
-						data-init-value="0kW"
-						data-final-value="1570"
-					></div>
-					<div
-						className="candle"
-						data-month-l={t("stats.aug_l")}
-						data-month-m={t("stats.aug_m")}
-						data-month-s={t("stats.aug_s")}
-						style={
-							{
-								"--candle-height": "150px",
-							} as React.CSSProperties
-						}
-						data-init-value="0kW"
-						data-final-value="1440"
-					></div>
-					<div
-						className="candle"
-						data-month-l={t("stats.sep_l")}
-						data-month-m={t("stats.sep_m")}
-						data-month-s={t("stats.sep_s")}
-						style={
-							{
-								"--candle-height": "125px",
-							} as React.CSSProperties
-						}
-						data-init-value="0kW"
-						data-final-value="1080"
-					></div>
-					<div
-						className="candle"
-						data-month-l={t("stats.oct_l")}
-						data-month-m={t("stats.oct_m")}
-						data-month-s={t("stats.oct_s")}
-						style={
-							{
-								"--candle-height": "100px",
-							} as React.CSSProperties
-						}
-						data-init-value="0kW"
-						data-final-value="890"
-					></div>
-					<div
-						className="candle"
-						data-month-l={t("stats.nov_l")}
-						data-month-m={t("stats.nov_m")}
-						data-month-s={t("stats.nov_s")}
-						style={
-							{
-								"--candle-height": "50px",
-							} as React.CSSProperties
-						}
-						data-init-value="0kW"
-						data-final-value="390"
-					></div>
-					<div
-						className="candle"
-						data-month-l={t("stats.dec_l")}
-						data-month-m={t("stats.dec_m")}
-						data-month-s={t("stats.dec_s")}
-						style={
-							{
-								"--candle-height": "25px",
-							} as React.CSSProperties
-						}
-						data-init-value="0kW"
-						data-final-value="310"
-					></div>
+					{statsData.map((stat) => {
+						return (
+							<div
+								className="candle"
+								data-month-l={t(stat.month_l)}
+								data-month-m={t(stat.month_m)}
+								data-month-s={t(stat.month_s)}
+								data-init-value="0kW"
+								data-final-value={stat.value}
+							></div>
+						);
+					})}
 				</div>
 			</div>
 		</>

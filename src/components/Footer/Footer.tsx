@@ -14,8 +14,7 @@ import "./Footer.scss";
 const Footer = () => {
 	const { t } = useTranslation();
 
-	// TODO: FIX
-	// TODO: I learned new nice animation with position and scale
+	// FIXME:
 	useEffect(() => {
 		const creatorLink = document.querySelector(
 			".creator-link"

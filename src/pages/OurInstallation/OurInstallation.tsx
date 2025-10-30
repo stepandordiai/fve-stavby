@@ -68,15 +68,12 @@ const installationsData: Installation[] = [
 const OurInstallation = () => {
 	const { t } = useTranslation();
 
-	// TODO:
 	const imgCardRefs = useRef<(HTMLDivElement | null)[]>([]);
 	const fullScreenRef = useRef<HTMLDivElement | null>(null);
 
-	// TODO:
 	const [isInView, setIsInView] = useState(() =>
 		new Array(installationsData.length).fill(false)
 	);
-
 	const [slider, setSlider] = useState(false);
 	const [imageIndex, setImageIndex] = useState(0);
 	const [fullScreenActive, setFullScreenActive] = useState(false);
@@ -102,6 +99,7 @@ const OurInstallation = () => {
 		document.body.style.overflow = "auto";
 	};
 
+	// TODO:
 	const toggleFullScreenBtn = () => {
 		const fullScreen = fullScreenRef.current;
 
@@ -164,7 +162,6 @@ const OurInstallation = () => {
 							{installationsData.map(({ id, img }, index) => {
 								return (
 									<div
-										// TODO:
 										ref={(el) => {
 											imgCardRefs.current[index] = el;
 										}}

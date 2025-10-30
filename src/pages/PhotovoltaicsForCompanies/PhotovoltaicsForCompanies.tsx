@@ -5,8 +5,8 @@ import GetInTouch from "../../components/GetInTouch/GetInTouch";
 import Advantages from "../../components/Advantages/Advantages";
 import Partners from "../../components/Partners/Partners";
 import Container from "../../components/Container/Container";
-import img from "/img/05-c.jpg";
 import Process from "../../components/Process/Process";
+import img from "/img/05-c.jpg";
 import "./PhotovoltaicsForCompanies.scss";
 
 const PhotovoltaicsForCompanies = () => {

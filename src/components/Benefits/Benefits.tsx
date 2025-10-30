@@ -4,6 +4,12 @@ import icon2 from "/icons/off-grid.png";
 import icon3 from "/icons/renewable-energy.png";
 import "./Benefits.scss";
 
+const benefitsData = [
+	{ img: icon1, title: "benefits.card_title_1", desc: "benefits.card_desc_1" },
+	{ img: icon2, title: "benefits.card_title_2", desc: "benefits.card_desc_2" },
+	{ img: icon3, title: "benefits.card_title_3", desc: "benefits.card_desc_3" },
+];
+
 const Benefits = () => {
 	const { t } = useTranslation();
 
@@ -11,45 +17,21 @@ const Benefits = () => {
 		<>
 			<h2 className="benefits__title">{t("benefits.title")}</h2>
 			<div className="benefits">
-				<div className="benefits__card">
-					<div className="benefits__card-icon-container">
-						<img width={50} height={50} src={icon1} alt="" />
-					</div>
-					<div>
-						<span className="benefits__card-title">
-							{t("benefits.card_title_1")}
-						</span>
-						<div className="benefits__card-dd">
-							<span>{t("benefits.card_desc_1")}.</span>
+				{benefitsData.map((benefit, index) => {
+					return (
+						<div key={index} className="benefits__card">
+							<div className="benefits__card-icon-container">
+								<img width={50} height={50} src={benefit.img} alt="" />
+							</div>
+							<div>
+								<span className="benefits__card-title">{t(benefit.title)}</span>
+								<div className="benefits__card-dd">
+									<span>{t(benefit.desc)}.</span>
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
-				<div className="benefits__card">
-					<div className="benefits__card-icon-container">
-						<img width={50} height={50} src={icon2} alt="" />
-					</div>
-					<div>
-						<span className="benefits__card-title">
-							{t("benefits.card_title_2")}
-						</span>
-						<div className="benefits__card-dd">
-							<span>{t("benefits.card_desc_2")}.</span>
-						</div>
-					</div>
-				</div>
-				<div className="benefits__card">
-					<div className="benefits__card-icon-container">
-						<img width={50} height={50} src={icon3} alt="" />
-					</div>
-					<div>
-						<span className="benefits__card-title">
-							{t("benefits.card_title_3")}
-						</span>
-						<div className="benefits__card-dd">
-							<span>{t("benefits.card_desc_3")}.</span>
-						</div>
-					</div>
-				</div>
+					);
+				})}
 			</div>
 		</>
 	);

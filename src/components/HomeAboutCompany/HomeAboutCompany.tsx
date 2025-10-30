@@ -9,6 +9,7 @@ import "./HomeAboutCompany.scss";
 const HomeAboutCompany = () => {
 	const { t } = useTranslation();
 
+	// FIXME:
 	useEffect(() => {
 		const valueDisplays = document.querySelectorAll(
 			".counter-wrapper"
@@ -54,9 +55,7 @@ const HomeAboutCompany = () => {
 
 		document.addEventListener("scroll", handleDisplay);
 
-		return () => {
-			document.removeEventListener("scroll", handleDisplay);
-		};
+		return () => document.removeEventListener("scroll", handleDisplay);
 	}, []);
 
 	return (
@@ -111,7 +110,7 @@ const HomeAboutCompany = () => {
 			</div>
 			<NavLink to={"/about-us"} className="about-company__link">
 				<span>{t("home.about_us_link")}</span>
-				<img className="about-company__link-icon" src={arrow} alt="Arrow" />
+				<img className="about-company__link-icon" src={arrow} alt="" />
 			</NavLink>
 			<h2 className="we-work-with__title">{t("home.we_work_with_title")}</h2>
 			<div className="cards-container">
@@ -124,12 +123,7 @@ const HomeAboutCompany = () => {
 						to={"/photovoltaics-for-single-family-homes"}
 						className="card__link"
 					>
-						<img
-							className="card__link-icon"
-							src={arrow}
-							alt=""
-							loading="lazy"
-						/>
+						<img className="card__link-icon" src={arrow} alt="" />
 					</NavLink>
 					<div className="card__white-element"></div>
 				</div>
@@ -139,12 +133,7 @@ const HomeAboutCompany = () => {
 					</p>
 					<img className="card__img" src={img2} alt="" loading="lazy" />
 					<NavLink to={"/photovoltaics-for-companies"} className="card__link">
-						<img
-							className="card__link-icon"
-							src={arrow}
-							alt=""
-							loading="lazy"
-						/>
+						<img className="card__link-icon" src={arrow} alt="" />
 					</NavLink>
 					<div className="card__white-element"></div>
 				</div>

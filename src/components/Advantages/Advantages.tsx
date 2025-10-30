@@ -4,6 +4,12 @@ import batteryIcon from "/icons/battery-charge-fve-stavby.png";
 import thunderIcon from "/icons/thunder-fve-stavby.png";
 import styles from "./Advantages.module.scss";
 
+const advantagesData = [
+	{ title: "advantages.option1", desc: "advantages.desc1", img: thunderIcon },
+	{ title: "advantages.option2", desc: "advantages.desc2", img: leafIcon },
+	{ title: "advantages.option3", desc: "advantages.desc3", img: batteryIcon },
+];
+
 const Advantages = () => {
 	const { t } = useTranslation();
 
@@ -11,35 +17,21 @@ const Advantages = () => {
 		<div>
 			<h2 className={styles["advantages__title"]}>{t("advantages.title")}</h2>
 			<div className={styles["advantages"]}>
-				<div className={styles["advantages-card"]}>
-					<div className={styles["advantages-card__wrapper"]}>
-						<p className={styles["advantages-card__title"]}>
-							{t("advantages.option1")}
-						</p>
-						<p className={styles["advantages__desc"]}>
-							{t("advantages.desc1")}.
-						</p>
-					</div>
-					<img src={thunderIcon} alt="" />
-				</div>
-				<div className={styles["advantages-card"]}>
-					<p className={styles["advantages-card__title"]}>
-						{t("advantages.option2")}
-					</p>
-					<p className={styles["advantages-card__desc"]}>
-						{t("advantages.desc2")}.
-					</p>
-					<img src={leafIcon} alt="" />
-				</div>
-				<div className={styles["advantages-card"]}>
-					<p className={styles["advantages-card__title"]}>
-						{t("advantages.option3")}
-					</p>
-					<p className={styles["advantages-card__desc"]}>
-						{t("advantages.desc3")}.
-					</p>
-					<img src={batteryIcon} alt="" />
-				</div>
+				{advantagesData.map((advantage, index) => {
+					return (
+						<div key={index} className={styles["advantages-card"]}>
+							<div className={styles["advantages-card__wrapper"]}>
+								<p className={styles["advantages-card__title"]}>
+									{t(advantage.title)}
+								</p>
+								<p className={styles["advantages__desc"]}>
+									{t(advantage.desc)}.
+								</p>
+							</div>
+							<img src={advantage.img} alt="" />
+						</div>
+					);
+				})}
 			</div>
 		</div>
 	);

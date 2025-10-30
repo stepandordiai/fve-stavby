@@ -2,28 +2,28 @@ import { useTranslation } from "react-i18next";
 import { useEffect, useState, useRef } from "react";
 import "./Process.scss";
 
+const processData = [
+	{ id: 1, title: "process.option1", desc: "process.desc1" },
+	{ id: 2, title: "process.option2", desc: "process.desc2" },
+	{ id: 3, title: "process.option3", desc: "process.desc3" },
+	{
+		id: 4,
+		title: "process.option4",
+		desc: "process.desc4",
+		price: "process.free",
+	},
+	{ id: 5, title: "process.option5", desc: "process.desc5" },
+	{ id: 6, title: "process.option6", desc: "process.desc6" },
+	{ id: 7, title: "process.option7", desc: "process.desc7" },
+	{ id: 8, title: "process.option8", desc: "process.desc8" },
+];
+
 const Process = () => {
 	const { t } = useTranslation();
 
-	const processData = [
-		{ id: 1, title: t("process.option1"), desc: t("process.desc1") },
-		{ id: 2, title: t("process.option2"), desc: t("process.desc2") },
-		{ id: 3, title: t("process.option3"), desc: t("process.desc3") },
-		{
-			id: 4,
-			title: t("process.option4"),
-			desc: t("process.desc4"),
-			price: t("process.free"),
-		},
-		{ id: 5, title: t("process.option5"), desc: t("process.desc5") },
-		{ id: 6, title: t("process.option6"), desc: t("process.desc6") },
-		{ id: 7, title: t("process.option7"), desc: t("process.desc7") },
-		{ id: 8, title: t("process.option8"), desc: t("process.desc8") },
-	];
-
 	const processRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-	const [processInView, setProcessInView] = useState(
+	const [processInView, setProcessInView] = useState<boolean[]>(
 		new Array(processData.length).fill(false)
 	);
 
@@ -38,7 +38,6 @@ const Process = () => {
 	};
 
 	useEffect(() => {
-		// TODO:
 		if (!processRefs.current.length) return;
 
 		const observer = new IntersectionObserver(
@@ -59,6 +58,7 @@ const Process = () => {
 			if (process) observer.observe(process);
 		});
 
+		// TODO:
 		return () => observer.disconnect();
 	}, []);
 
@@ -98,10 +98,10 @@ const Process = () => {
 										);
 									})}
 							</div>
-							<p className="process-card__title">{process.title}</p>
-							<p className="process-card__details">{process.desc}.</p>
+							<p className="process-card__title">{t(process.title)}</p>
+							<p className="process-card__details">{t(process.desc)}.</p>
 							{process.price && (
-								<div className="process-card__price">{process.price}</div>
+								<div className="process-card__price">{t(process.price)}</div>
 							)}
 						</div>
 					);

@@ -8,11 +8,13 @@ import "./Header.scss";
 
 const Header = () => {
 	const { t } = useTranslation();
-
 	const { pathname, hash } = useLocation();
 
 	const [isMenuActive, setIsMenuActive] = useState(false);
+	const [headerBottom, setHeaderBottom] = useState(true);
+	const [headerInner, setHeaderInner] = useState(true);
 
+	// FIXME:
 	useEffect(() => {
 		const elements = [
 			".header-top__logo",
@@ -48,24 +50,24 @@ const Header = () => {
 		}
 	}, [pathname, hash]);
 
-	// TODO: FIX
 	useEffect(() => {
-		const headerBottom = document.querySelector(".header-bottom");
-		const headerInner = document.querySelector(".header-inner");
-
-		let initScroll = 0;
-
-		window.addEventListener("scroll", () => {
+		let prevScrollTop = 0;
+		const handleHeaderBottomOnScroll = () => {
 			const scrollTop = document.documentElement.scrollTop;
-			if (scrollTop > initScroll && initScroll > window.innerHeight / 2) {
-				headerBottom?.classList.add("header-bottom--hide");
-				headerInner?.classList.add("header-inner--hide");
+			if (scrollTop > prevScrollTop && prevScrollTop > window.innerHeight / 2) {
+				setHeaderInner(false);
+				setHeaderBottom(false);
 			} else {
-				headerBottom?.classList.remove("header-bottom--hide");
-				headerInner?.classList.remove("header-inner--hide");
+				setHeaderInner(true);
+				setHeaderBottom(true);
 			}
-			initScroll = scrollTop;
-		});
+			prevScrollTop = scrollTop;
+		};
+
+		window.addEventListener("scroll", handleHeaderBottomOnScroll);
+
+		return () =>
+			window.removeEventListener("scroll", handleHeaderBottomOnScroll);
 	}, []);
 
 	function toggleBurgerBtn(): void {
@@ -76,6 +78,7 @@ const Header = () => {
 		setIsMenuActive(false);
 	}, [pathname]);
 
+	// Close menu on Esc
 	useEffect(() => {
 		const closeMenuOnEsc = (e: KeyboardEvent) => {
 			if (e.key === "Escape") {
@@ -91,7 +94,9 @@ const Header = () => {
 	return (
 		<>
 			<header className="header">
-				<div className="header-inner">
+				<div
+					className={`header-inner ${headerInner ? "" : "header-inner--hide"}`}
+				>
 					<div className="header-top">
 						<NavLink
 							onClick={() => setIsMenuActive(false)}
@@ -120,7 +125,11 @@ const Header = () => {
 						</div>
 					</div>
 					<div className="header-bottom-wrapper">
-						<nav className="header-bottom">
+						<nav
+							className={`header-bottom ${
+								headerBottom ? "" : "header-bottom--hide"
+							}`}
+						>
 							{navLinksData.map((link) => {
 								return (
 									<NavLink

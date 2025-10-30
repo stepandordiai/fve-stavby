@@ -1,12 +1,22 @@
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import PageTitle from "../../components/PageTitle/PageTitle";
-import { useState } from "react";
 import handleCopy from "../../utils/handleCopy";
 import Container from "../../components/Container/Container";
 import arrow from "/icons/arrow-upper-right-white.png";
 import img from "/img/09-c.jpg";
 import "./Contacts.scss";
+
+const workingHoursData = [
+	{ name: "contacts.mon", hours: "8:00 - 17:00" },
+	{ name: "contacts.tue", hours: "8:00 - 17:00" },
+	{ name: "contacts.wed", hours: "8:00 - 17:00" },
+	{ name: "contacts.thu", hours: "8:00 - 17:00" },
+	{ name: "contacts.fri", hours: "8:00 - 17:00" },
+	{ name: "contacts.sat", hours: "8:00 - 17:00" },
+	{ name: "contacts.sun", hours: "contacts.closed" },
+];
 
 const Contacts = () => {
 	const { t } = useTranslation();
@@ -14,18 +24,7 @@ const Contacts = () => {
 	const [email, setEmail] = useState("");
 
 	const dayNow = new Date().getDay();
-
 	const dayCorrectIndex = dayNow === 0 ? 6 : dayNow - 1;
-
-	const workingHoursData = [
-		{ name: "contacts.mon", hours: "8:00 - 17:00" },
-		{ name: "contacts.tue", hours: "8:00 - 17:00" },
-		{ name: "contacts.wed", hours: "8:00 - 17:00" },
-		{ name: "contacts.thu", hours: "8:00 - 17:00" },
-		{ name: "contacts.fri", hours: "8:00 - 17:00" },
-		{ name: "contacts.sat", hours: "8:00 - 17:00" },
-		{ name: "contacts.sun", hours: "contacts.closed" },
-	];
 
 	return (
 		<>

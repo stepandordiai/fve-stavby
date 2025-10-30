@@ -1,9 +1,16 @@
 import { useTranslation } from "react-i18next";
-import leafIcon from "/icons/leaf.png";
 import moneyIcon from "/icons/money.png";
 import flashIcon from "/icons/flash.png";
 import shieldIcon from "/icons/shield.png";
+import leafIcon from "/icons/leaf.png";
 import "./WhySolar.scss";
+
+const whySolarData = [
+	{ img: moneyIcon, title: "why_us.option1", desc: "why_us.desc1" },
+	{ img: flashIcon, title: "why_us.option2", desc: "why_us.desc2" },
+	{ img: shieldIcon, title: "why_us.option3", desc: "why_us.desc3" },
+	{ img: leafIcon, title: "why_us.option4", desc: "why_us.desc4" },
+];
 
 const WhySolar = () => {
 	const { t } = useTranslation();
@@ -15,42 +22,19 @@ const WhySolar = () => {
 				<p>{t("why_solar.sec_title")}</p>
 			</div>
 			<div className="why-solar">
-				<div className="why-solar__card">
-					<div className="why-solar__card-icon-container">
-						<img width={25} height={25} src={moneyIcon} alt="" />
-					</div>
-					<div>
-						<p className="why-solar__card-title">{t("why_us.option1")}</p>
-						<span>{t("why_us.desc1")}.</span>
-					</div>
-				</div>
-				<div className="why-solar__card">
-					<div className="why-solar__card-icon-container">
-						<img width={25} height={25} src={flashIcon} alt="" />
-					</div>
-					<div>
-						<p className="why-solar__card-title">{t("why_us.option2")}</p>
-						<span>{t("why_us.desc2")}.</span>
-					</div>
-				</div>
-				<div className="why-solar__card">
-					<div className="why-solar__card-icon-container">
-						<img width={25} height={25} src={shieldIcon} alt="" />
-					</div>
-					<div>
-						<p className="why-solar__card-title">{t("why_us.option3")}</p>
-						<span>{t("why_us.desc3")}.</span>
-					</div>
-				</div>
-				<div className="why-solar__card">
-					<div className="why-solar__card-icon-container">
-						<img width={25} height={25} src={leafIcon} alt="" />
-					</div>
-					<div>
-						<p className="why-solar__card-title">{t("why_us.option4")}</p>
-						<span>{t("why_us.desc4")}.</span>
-					</div>
-				</div>
+				{whySolarData.map((card) => {
+					return (
+						<div className="why-solar__card">
+							<div className="why-solar__card-icon-container">
+								<img width={25} height={25} src={card.img} alt="" />
+							</div>
+							<div>
+								<p className="why-solar__card-title">{t(card.title)}</p>
+								<span>{t(card.desc)}.</span>
+							</div>
+						</div>
+					);
+				})}
 			</div>
 		</>
 	);
