@@ -11,11 +11,12 @@ const NotFound = () => {
 		<>
 			<Helmet>
 				<title>404</title>
+				<meta name="robots" content="noindex, nofollow" />
 			</Helmet>
 			<main>
 				<Container>
 					<PageTitle
-						title="404 - Page Not Found"
+						title={`404 - ${t("pageNotFound")}`}
 						className="bg-404"
 						linkPath="/"
 						linkName={t("home_title")}
