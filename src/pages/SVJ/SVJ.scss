@@ -40,6 +40,7 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	background: var(--bg-dark-clr);
+	color: #fff;
 	width: 50px;
 	aspect-ratio: 1/1;
 	border-radius: 50%;
@@ -47,18 +48,18 @@
 	transition: left 0.4s ease-out, top 0.4s ease-out, transform 0.4s ease-out,
 		background-color 0.3s;
 	transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
 
-.svj__link-icon-container:hover {
-	background: var(--bg-dark-darker-clr);
-
-	.svj__link-icon {
-		transform: rotate(45deg);
+	svg {
+		transition: transform 0.3s;
 	}
-}
 
-.svj__link-icon {
-	transition: transform 0.3s;
+	&:hover {
+		background: var(--bg-dark-darker-clr);
+
+		svg {
+			transform: rotate(45deg);
+		}
+	}
 }
 
 @media screen and (max-width: 896px) {
