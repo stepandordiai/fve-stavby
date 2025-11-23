@@ -72,7 +72,6 @@ textarea {
 
 .form-btn {
 	@include flex-center;
-	column-gap: 6.25px;
 	background: var(--bg-dark-clr);
 	color: #fff;
 	height: 50px;
@@ -84,18 +83,17 @@ textarea {
 	font-weight: inherit;
 	transition: background-color 0.3s;
 
+	svg {
+		transition: transform 0.3s;
+	}
+
 	&:hover {
 		background: var(--bg-dark-darker-clr);
+
+		svg {
+			transform: rotate(45deg);
+		}
 	}
-}
-
-.form-btn__icon {
-	height: 100%;
-	transition: all 0.3s;
-}
-
-.form-btn:hover .form-btn__icon {
-	transform: rotate(45deg);
 }
 
 .contact-details-container {
