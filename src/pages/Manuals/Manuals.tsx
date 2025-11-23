@@ -62,7 +62,7 @@ const Manuals = () => {
 							return (
 								<React.Fragment key={index}>
 									<div className="manuals-container">
-										<p>{info}</p>
+										<span style={{ wordBreak: "break-all" }}>{info}</span>
 										<a className="manuals__link" href={link} target="_blank">
 											<span>{t("download")}</span>
 											<svg
