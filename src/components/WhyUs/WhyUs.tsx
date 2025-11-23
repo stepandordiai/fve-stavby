@@ -1,6 +1,5 @@
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-import plusIcon from "/icons/plus-black.png";
 import "./WhyUs.scss";
 
 const advantagesData = [
@@ -64,17 +63,21 @@ const WhyUs = () => {
 											: ""
 									}`}
 								>
-									<img
-										className={`advantages-btn-icon ${
-											advantageActive[index]
-												? "advantages-btn-icon--active"
-												: ""
-										}`}
-										width={20}
-										height={20}
-										src={plusIcon}
-										alt=""
-									/>
+									<svg
+										width="24px"
+										height="24px"
+										viewBox="0 0 24 24"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M4 12H20M12 4V20"
+											stroke="currentColor"
+											stroke-width="1.5"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										/>
+									</svg>
 								</div>
 							</button>
 							<div
