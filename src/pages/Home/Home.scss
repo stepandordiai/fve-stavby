@@ -130,7 +130,6 @@
 
 .home-top__link {
 	@include flex-center;
-	column-gap: 5px;
 	background: var(--bg-light-clr);
 	color: #fff;
 	@include glass-effect(20px);
@@ -142,19 +141,17 @@
 	animation: animateTitle 1s 2s forwards;
 	transition: background-color 0.3s;
 
+	svg {
+		transition: transform 0.3s;
+	}
+
 	&:hover {
 		background: var(--bg-light-lighter-clr);
+
+		& svg {
+			transform: rotate(45deg);
+		}
 	}
-}
-
-.home-top__link-icon {
-	height: 100%;
-	flex-shrink: 0;
-	transition: all 0.3s;
-}
-
-.home-top__link:hover .home-top__link-icon {
-	transform: rotate(45deg);
 }
 
 @keyframes animateTitle {

@@ -9,7 +9,6 @@ import HomeAboutCompany from "../../components/HomeAboutCompany/HomeAboutCompany
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
 import WhySolar from "../../components/WhySolar/WhySolar";
 import Container from "../../components/Container/Container";
-import arrow from "/icons/arrow-upper-right-white.png";
 import img from "/img/01-c.jpg";
 import "./Home.scss";
 
@@ -38,11 +37,39 @@ const Home = () => {
 								<div className="home-top__link-container">
 									<NavLink className="home-top__link" to="/manuals">
 										<span>{t("manuals_title")}</span>
-										<img className="home-top__link-icon" src={arrow} alt="" />
+										<svg
+											width="32px"
+											height="32px"
+											viewBox="0 0 24 24"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												d="M7 17L17 7M17 7H8M17 7V16"
+												stroke="currentColor"
+												stroke-width="1"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											/>
+										</svg>
 									</NavLink>
 									<NavLink className="home-top__link" to="/contacts">
 										<span>{t("home.contacts_link")}</span>
-										<img className="home-top__link-icon" src={arrow} alt="" />
+										<svg
+											width="32px"
+											height="32px"
+											viewBox="0 0 24 24"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												d="M7 17L17 7M17 7H8M17 7V16"
+												stroke="currentColor"
+												stroke-width="1"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											/>
+										</svg>
 									</NavLink>
 								</div>
 							</div>
