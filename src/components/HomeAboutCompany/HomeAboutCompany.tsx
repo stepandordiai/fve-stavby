@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import img1 from "/img/02-c.webp";
 import img2 from "/img/03-c.jpg";
-import arrow from "/icons/arrow-upper-right-white.png";
 import "./HomeAboutCompany.scss";
 
 const HomeAboutCompany = () => {
@@ -108,9 +107,23 @@ const HomeAboutCompany = () => {
 					<span className="counter-info">{t("home.installated")}</span>
 				</div>
 			</div>
-			<NavLink to={"/about-us"} className="about-company__link">
+			<NavLink to="/about-us" className="about-company__link">
 				<span>{t("home.about_us_link")}</span>
-				<img className="about-company__link-icon" src={arrow} alt="" />
+				<svg
+					width="32px"
+					height="32px"
+					viewBox="0 0 24 24"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M7 17L17 7M17 7H8M17 7V16"
+						stroke="currentColor"
+						stroke-width="1"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					/>
+				</svg>
 			</NavLink>
 			<h2 className="we-work-with__title">{t("home.we_work_with_title")}</h2>
 			<div className="cards-container">
@@ -123,7 +136,21 @@ const HomeAboutCompany = () => {
 						to={"/photovoltaics-for-single-family-homes"}
 						className="card__link"
 					>
-						<img className="card__link-icon" src={arrow} alt="" />
+						<svg
+							width="50%"
+							height="auto"
+							viewBox="0 0 24 24"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M7 17L17 7M17 7H8M17 7V16"
+								stroke="currentColor"
+								stroke-width="1"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+						</svg>
 					</NavLink>
 					<div className="card__white-element"></div>
 				</div>
@@ -133,7 +160,21 @@ const HomeAboutCompany = () => {
 					</p>
 					<img className="card__img" src={img2} alt="" loading="lazy" />
 					<NavLink to={"/photovoltaics-for-companies"} className="card__link">
-						<img className="card__link-icon" src={arrow} alt="" />
+						<svg
+							width="50%"
+							height="auto"
+							viewBox="0 0 24 24"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M7 17L17 7M17 7H8M17 7V16"
+								stroke="currentColor"
+								stroke-width="1"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+						</svg>
 					</NavLink>
 					<div className="card__white-element"></div>
 				</div>

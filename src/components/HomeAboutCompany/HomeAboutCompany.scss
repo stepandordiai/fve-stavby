@@ -41,7 +41,6 @@
 	align-self: flex-end;
 	position: relative;
 	@include flex-center;
-	column-gap: 5px;
 	background: var(--bg-dark-clr);
 	color: #fff;
 	@include glass-effect(20px);
@@ -50,18 +49,17 @@
 	height: 50px;
 	transition: background-color 0.3s;
 
+	svg {
+		transition: transform 0.3s;
+	}
+
 	&:hover {
 		background: var(--bg-dark-darker-clr);
+
+		& svg {
+			transform: rotate(45deg);
+		}
 	}
-}
-
-.about-company__link-icon {
-	width: 25px;
-	transition: all 0.3s;
-}
-
-.about-company__link:hover .about-company__link-icon {
-	transform: rotate(45deg);
 }
 
 .we-work-with__title {
@@ -139,25 +137,24 @@
 	bottom: 0;
 	@include flex-center;
 	background: var(--bg-dark-clr);
+	color: #fff;
 	@include glass-effect(20px);
 	border-radius: 25px;
 	width: 90px;
 	aspect-ratio: 1/1;
 	transition: background-color 0.3s;
 
+	svg {
+		transition: transform 0.3s;
+	}
+
 	&:hover {
 		background: var(--bg-dark-darker-clr);
+
+		svg {
+			transform: rotate(45deg);
+		}
 	}
-}
-
-.card__link-icon {
-	width: 50%;
-	flex-shrink: 0;
-	transition: transform 0.3s;
-}
-
-.card__link:hover .card__link-icon {
-	transform: rotate(45deg);
 }
 
 .card__white-element {
