@@ -22,9 +22,9 @@ const WhySolar = () => {
 				<p>{t("why_solar.sec_title")}</p>
 			</div>
 			<div className="why-solar">
-				{whySolarData.map((card) => {
+				{whySolarData.map((card, i) => {
 					return (
-						<div className="why-solar__card">
+						<div key={i} className="why-solar__card">
 							<div className="why-solar__card-icon-container">
 								<img width={25} height={25} src={card.img} alt="" />
 							</div>

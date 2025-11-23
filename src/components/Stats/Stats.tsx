@@ -131,9 +131,10 @@ const Stats = () => {
 			</div>
 			<div className="stats">
 				<div className="candles-wrapper">
-					{statsData.map((stat) => {
+					{statsData.map((stat, i) => {
 						return (
 							<div
+								key={i}
 								className="candle"
 								data-month-l={t(stat.month_l)}
 								data-month-m={t(stat.month_m)}

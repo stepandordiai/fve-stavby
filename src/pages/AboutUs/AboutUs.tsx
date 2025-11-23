@@ -204,9 +204,9 @@ const AboutUs = () => {
 						</div>
 						<h2 className="guarantees__title">{t("guarantees.title")}</h2>
 						<div className="guarantees__grid">
-							{guaranteesData.map((guarantee) => {
+							{guaranteesData.map((guarantee, i) => {
 								return (
-									<div className="guarantees__grid-item">
+									<div key={i} className="guarantees__grid-item">
 										<span>{guarantee.years}</span>
 										<span>{guarantee.desc}</span>
 									</div>

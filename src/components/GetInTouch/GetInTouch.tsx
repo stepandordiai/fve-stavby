@@ -22,9 +22,9 @@ const GetInTouch = () => {
 					<path
 						d="M7 17L17 7M17 7H8M17 7V16"
 						stroke="currentColor"
-						stroke-width="1"
-						stroke-linecap="round"
-						stroke-linejoin="round"
+						strokeWidth="1"
+						strokeLinecap="round"
+						strokeLinejoin="round"
 					/>
 				</svg>
 			</NavLink>

@@ -48,7 +48,7 @@ const WhyUs = () => {
 			<ul className="advantages-list">
 				{advantagesData.map((advantage, index) => {
 					return (
-						<li className="advantages-item">
+						<li key={index} className="advantages-item">
 							<button
 								onClick={() => handleAdvantageOnClick(index)}
 								className="advantages-btn"
@@ -73,9 +73,9 @@ const WhyUs = () => {
 										<path
 											d="M4 12H20M12 4V20"
 											stroke="currentColor"
-											stroke-width="1.5"
-											stroke-linecap="round"
-											stroke-linejoin="round"
+											strokeWidth="1.5"
+											strokeLinecap="round"
+											strokeLinejoin="round"
 										/>
 									</svg>
 								</div>

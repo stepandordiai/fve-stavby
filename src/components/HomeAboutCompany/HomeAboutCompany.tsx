@@ -119,9 +119,9 @@ const HomeAboutCompany = () => {
 					<path
 						d="M7 17L17 7M17 7H8M17 7V16"
 						stroke="currentColor"
-						stroke-width="1"
-						stroke-linecap="round"
-						stroke-linejoin="round"
+						strokeWidth="1"
+						strokeLinecap="round"
+						strokeLinejoin="round"
 					/>
 				</svg>
 			</NavLink>
@@ -138,7 +138,7 @@ const HomeAboutCompany = () => {
 					>
 						<svg
 							width="50%"
-							height="auto"
+							height="50%"
 							viewBox="0 0 24 24"
 							fill="none"
 							xmlns="http://www.w3.org/2000/svg"
@@ -146,9 +146,9 @@ const HomeAboutCompany = () => {
 							<path
 								d="M7 17L17 7M17 7H8M17 7V16"
 								stroke="currentColor"
-								stroke-width="1"
-								stroke-linecap="round"
-								stroke-linejoin="round"
+								strokeWidth="1"
+								strokeLinecap="round"
+								strokeLinejoin="round"
 							/>
 						</svg>
 					</NavLink>
@@ -162,7 +162,7 @@ const HomeAboutCompany = () => {
 					<NavLink to={"/photovoltaics-for-companies"} className="card__link">
 						<svg
 							width="50%"
-							height="auto"
+							height="50%"
 							viewBox="0 0 24 24"
 							fill="none"
 							xmlns="http://www.w3.org/2000/svg"
@@ -170,9 +170,9 @@ const HomeAboutCompany = () => {
 							<path
 								d="M7 17L17 7M17 7H8M17 7V16"
 								stroke="currentColor"
-								stroke-width="1"
-								stroke-linecap="round"
-								stroke-linejoin="round"
+								strokeWidth="1"
+								strokeLinecap="round"
+								strokeLinejoin="round"
 							/>
 						</svg>
 					</NavLink>
