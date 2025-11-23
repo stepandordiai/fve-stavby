@@ -62,6 +62,7 @@
 	@include flex-between-center;
 	flex-direction: column;
 	background: rgba(0, 0, 0, 0.5);
+	color: #fff;
 	@include glass-effect(20px);
 }
 

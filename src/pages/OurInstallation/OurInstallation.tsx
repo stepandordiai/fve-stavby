@@ -6,11 +6,6 @@ import PageTitle from "../../components/PageTitle/PageTitle";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
 import Container from "../../components/Container/Container";
 import img from "/img/08-c.jpg";
-import closeIcon from "/icons/close-white.png";
-import expandIcon from "/icons/expand-white.png";
-import shrinkIcon from "/icons/shrink-white.png";
-import leftArrowIcon from "/icons/left-arrow.png";
-import rightArrowIcon from "/icons/right-arrow.png";
 import "./OurInstallation.scss";
 
 interface Installation {
@@ -196,13 +191,17 @@ const OurInstallation = () => {
 			>
 				<div className="img-slider-header">
 					<button onClick={hideSlider} className="img-slider__close-btn">
-						<img
-							title="Close"
-							src={closeIcon}
-							width={25}
-							height={25}
-							alt="Close icon"
-						/>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							fill="currentColor"
+							className="bi bi-x-lg"
+							viewBox="0 0 16 16"
+						>
+							<title>Close</title>
+							<path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+						</svg>
 					</button>
 				</div>
 				<img
@@ -217,13 +216,39 @@ const OurInstallation = () => {
 					onClick={() => handleSlider(-1)}
 					className="img-slider__left-btn"
 				>
-					<img title="Previous" src={leftArrowIcon} width={25} height={25} />
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="32"
+						height="32"
+						fill="currentColor"
+						className="bi bi-chevron-left"
+						viewBox="0 0 16 16"
+					>
+						<title>Previous</title>
+						<path
+							fill-rule="evenodd"
+							d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"
+						/>
+					</svg>
 				</button>
 				<button
 					onClick={() => handleSlider(1)}
 					className="img-slider__right-btn"
 				>
-					<img title="Next" src={rightArrowIcon} width={25} height={25} />
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="32"
+						height="32"
+						fill="currentColor"
+						className="bi bi-chevron-right"
+						viewBox="0 0 16 16"
+					>
+						<title>Next</title>
+						<path
+							fill-rule="evenodd"
+							d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"
+						/>
+					</svg>
 				</button>
 				<div className="img-slider-footer">
 					<button
@@ -233,21 +258,29 @@ const OurInstallation = () => {
 						}`}
 					>
 						{fullScreenActive ? (
-							<img
-								title="Shrink"
-								src={shrinkIcon}
-								width={25}
-								height={25}
-								alt="Shrink"
-							/>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								fill="currentColor"
+								className="bi bi-fullscreen-exit"
+								viewBox="0 0 16 16"
+							>
+								<title>Exit full screen</title>
+								<path d="M5.5 0a.5.5 0 0 1 .5.5v4A1.5 1.5 0 0 1 4.5 6h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5m5 0a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 10 4.5v-4a.5.5 0 0 1 .5-.5M0 10.5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 6 11.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5m10 1a1.5 1.5 0 0 1 1.5-1.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0z" />
+							</svg>
 						) : (
-							<img
-								title="Expand"
-								src={expandIcon}
-								width={25}
-								height={25}
-								alt="Expand"
-							/>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								fill="currentColor"
+								className="bi bi-fullscreen"
+								viewBox="0 0 16 16"
+							>
+								<title>Full screen</title>
+								<path d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5M.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5m15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5" />
+							</svg>
 						)}
 					</button>
 				</div>
