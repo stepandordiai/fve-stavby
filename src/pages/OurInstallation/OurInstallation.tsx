@@ -136,6 +136,25 @@ const OurInstallation = () => {
 		return () => observer.disconnect();
 	}, []);
 
+	// TODO: LEARN THIS
+	useEffect(() => {
+		const handleFullScreenOnChange = () => {
+			if (document.fullscreenElement) {
+				setFullScreenActive(true);
+			} else {
+				setFullScreenActive(false);
+			}
+		};
+
+		document.addEventListener("fullscreenchange", handleFullScreenOnChange);
+
+		return () =>
+			document.removeEventListener(
+				"fullscreenchange",
+				handleFullScreenOnChange
+			);
+	}, []);
+
 	return (
 		<>
 			<Helmet>
