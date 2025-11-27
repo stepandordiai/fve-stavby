@@ -35,6 +35,11 @@
 	"manuals_seo_desc": "Návody a manuály k fotovoltaice ke stažení. FVE – stavby s.r.o. poskytuje přehlednou dokumentaci k obsluze a údržbě solárních systémů.",
 	"pageNotFound": "Stránka nebyla nalezena",
 
+	"header": {
+		"openMenu": "Otevřít menu",
+		"closeMenu": "Zavřít menu"
+	},
+
 	"home": {
 		"title": "Rozsviťte svůj domov, nebo firmu se solární energií",
 		"contacts_link": "Domluvte si nezávaznou schůzku",

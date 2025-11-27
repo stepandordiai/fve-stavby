@@ -35,6 +35,11 @@
 	"manuals_seo_desc": "Download guides and manuals for photovoltaics. FVE – stavby s.r.o. provides clear documentation for operating and maintaining solar systems.",
 	"pageNotFound": "Page not found",
 
+	"header": {
+		"openMenu": "Open menu",
+		"closeMenu": "Close menu"
+	},
+
 	"home": {
 		"title": "Light up your home or business with solar energy",
 		"contacts_link": "Arrange a non-binding meeting",

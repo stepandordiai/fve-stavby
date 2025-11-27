@@ -110,8 +110,15 @@ const Header = () => {
 							+420 728 803 703
 						</a>
 						<LngSelect />
-						<div onClick={toggleBurgerBtn} className="burger-btn-wrapper">
-							<div
+						{/* menu-btn */}
+						<button
+							onClick={toggleBurgerBtn}
+							className="burger-btn-wrapper"
+							aria-label={
+								isMenuActive ? t("header.closeMenu") : t("header.openMenu")
+							}
+						>
+							<span
 								className={`burger-btn ${
 									isMenuActive ? "burger-btn--active" : ""
 								}`}
@@ -121,8 +128,8 @@ const Header = () => {
 										isMenuActive ? "burger-btn__center-line--active" : ""
 									}`}
 								></span>
-							</div>
-						</div>
+							</span>
+						</button>
 					</div>
 					<div className="header-bottom-wrapper">
 						<nav
