@@ -81,7 +81,7 @@ const Header = () => {
 	// Close menu on Esc
 	useEffect(() => {
 		const closeMenuOnEsc = (e: KeyboardEvent) => {
-			if (e.key === "Escape") {
+			if (e.code === "Escape") {
 				setIsMenuActive(false);
 			}
 		};
