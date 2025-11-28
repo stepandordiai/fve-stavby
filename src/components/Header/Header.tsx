@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import navLinksData from "./../../data/nav-links-data.json";
 import LngSelect from "../LngSelect/LngSelect";
+import contactsData from "./../../data/contacts-data.json";
 import logo from "/logo/solar-panel.png";
 import "./Header.scss";
 
@@ -106,8 +107,11 @@ const Header = () => {
 							<img src={logo} alt="FVE STAVBY logo" />
 							<span className="header-top__logo-txt">FVE STAVBY</span>
 						</NavLink>
-						<a href="tel:+420728803703" className="header-top__number">
-							+420 728 803 703
+						<a
+							href={`tel:${contactsData.tel.replaceAll(" ", "")}`}
+							className="header-top__number"
+						>
+							{contactsData.tel}
 						</a>
 						<LngSelect />
 						{/* menu-btn */}
@@ -184,14 +188,17 @@ const Header = () => {
 					<ul className="menu__contacts-details">
 						<li>
 							<p>{t("tel")}</p>
-							<a className="menu-link" href="tel:+420728803703">
-								+420 728 803 703
+							<a
+								className="menu-link"
+								href={`tel:${contactsData.tel.replaceAll(" ", "")}`}
+							>
+								{contactsData.tel}
 							</a>
 						</li>
 						<li>
 							<p>E-mail</p>
-							<a className="menu-link" href="mailto:info@fvestavby.cz">
-								info@fvestavby.cz
+							<a className="menu-link" href={`mailto:${contactsData.email}`}>
+								{contactsData.email}
 							</a>
 						</li>
 					</ul>

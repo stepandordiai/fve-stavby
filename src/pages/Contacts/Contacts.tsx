@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet-async";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import handleCopy from "../../utils/handleCopy";
 import Container from "../../components/Container/Container";
+import contactsData from "./../../data/contacts-data.json";
 import img from "/img/09-c.jpg";
 import "./Contacts.scss";
 
@@ -115,17 +116,20 @@ const Contacts = () => {
 							<div className="contact-details-container">
 								<div className="contact-details">
 									<p className="contact-details__title">{t("tel")}</p>
-									<a className="contact-details__link" href="tel:+420728803703">
-										+420 728 803 703
+									<a
+										className="contact-details__link"
+										href={`tel:${contactsData.tel.replaceAll(" ", "")}`}
+									>
+										{contactsData.tel}
 									</a>
 								</div>
 								<div className="contact-details">
 									<p className="contact-details__title">E-mail</p>
 									<a
 										className="contact-details__link"
-										href="mailto:info@fvestavby.cz"
+										href={`mailto:${contactsData.email}`}
 									>
-										info@fvestavby.cz
+										{contactsData.email}
 									</a>
 								</div>
 								<div className="contact-details">
@@ -134,10 +138,10 @@ const Contacts = () => {
 									</p>
 									<a
 										className="contact-details__link"
-										href="https://maps.app.goo.gl/UBXCPbrrCNxUSXNY8"
+										href={contactsData.officeAddressUrl}
 										target="_blank"
 									>
-										Pod Hroby 271 Kolín IV
+										{contactsData.officeAddress}
 									</a>
 								</div>
 								<div className="contact-details">
@@ -146,10 +150,10 @@ const Contacts = () => {
 									</p>
 									<a
 										className="contact-details__link"
-										href="https://maps.app.goo.gl/56b3G1KEn5RwGfdW7"
+										href={contactsData.companyAddressUrl}
 										target="_blank"
 									>
-										Krocínova 333/3, Staré Město, 110 00 Praha 1
+										{contactsData.companyAddress}
 									</a>
 								</div>
 								<div className="contact-details">
@@ -161,7 +165,7 @@ const Contacts = () => {
 										}
 										title={t("copy")}
 									>
-										23287179
+										{contactsData.companyNumber}
 									</button>
 								</div>
 								<div className="contact-details">
