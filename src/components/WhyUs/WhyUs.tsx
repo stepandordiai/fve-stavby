@@ -28,9 +28,11 @@ const advantagesData = [
 const WhyUs = () => {
 	const { t } = useTranslation();
 
-	const [advantageActive, setAdvantageActive] = useState(
-		new Array(advantagesData.length).fill(false)
-	);
+	// TODO: LEARN THIS
+	const [advantageActive, setAdvantageActive] = useState(() => [
+		true,
+		...new Array(advantagesData.length - 1).fill(false),
+	]);
 
 	const handleAdvantageOnClick = (index: number) => {
 		setAdvantageActive((prev) => {
