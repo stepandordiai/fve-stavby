@@ -5,6 +5,7 @@ import isTouchDevice from "../../utils/isTouchDevice";
 import navLinksData from "./../../data/nav-links-data.json";
 import handleCopy from "../../utils/handleCopy";
 import contactsData from "./../../data/contacts-data.json";
+import classNames from "classnames";
 import InstagramIcon from "../../Icons/InstagramIcon";
 import FacebookIcon from "../../Icons/FacebookIcon";
 import TiktokIcon from "../../Icons/TiktokIcon";
@@ -100,10 +101,15 @@ const Footer = () => {
 					<div>
 						<p className="footer__socials-title">Sledujte nás</p>
 						<div className="footer__socials-list">
-							{socialsData.map((social) => {
+							{socialsData.map((social, i) => {
 								const Icon = social.icon;
 								return (
-									<a href={social.url} title={social.title} target="_blank">
+									<a
+										key={i}
+										href={social.url}
+										title={social.title}
+										target="_blank"
+									>
 										<Icon />
 									</a>
 								);
@@ -119,9 +125,9 @@ const Footer = () => {
 										key={link.id}
 										to={link.path}
 										className={({ isActive }) =>
-											`footer__nav-link ${
-												isActive ? "footer__nav-link--active" : ""
-											}`
+											classNames("footer__nav-link", {
+												"footer__nav-link--active": isActive,
+											})
 										}
 									>
 										{t(link.name)}
@@ -131,9 +137,9 @@ const Footer = () => {
 							<NavLink
 								to="/manuals"
 								className={({ isActive }) =>
-									`footer__nav-link ${
-										isActive ? "footer__nav-link--active" : ""
-									}`
+									classNames("footer__nav-link", {
+										"footer__nav-link--active": isActive,
+									})
 								}
 							>
 								{t("manuals_title")}

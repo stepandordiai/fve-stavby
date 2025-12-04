@@ -52,9 +52,9 @@ const HomeAboutCompany = () => {
 
 		handleDisplay();
 
-		document.addEventListener("scroll", handleDisplay);
+		window.addEventListener("scroll", handleDisplay);
 
-		return () => document.removeEventListener("scroll", handleDisplay);
+		return () => window.removeEventListener("scroll", handleDisplay);
 	}, []);
 
 	return (
@@ -133,7 +133,7 @@ const HomeAboutCompany = () => {
 					</p>
 					<img className="card__img" src={img1} alt="" loading="lazy" />
 					<NavLink
-						to={"/photovoltaics-for-single-family-homes"}
+						to="/photovoltaics-for-single-family-homes"
 						className="card__link"
 					>
 						<svg
@@ -159,7 +159,7 @@ const HomeAboutCompany = () => {
 						{t("photovoltaics_for_companies_title")}
 					</p>
 					<img className="card__img" src={img2} alt="" loading="lazy" />
-					<NavLink to={"/photovoltaics-for-companies"} className="card__link">
+					<NavLink to="/photovoltaics-for-companies" className="card__link">
 						<svg
 							width="50%"
 							height="50%"

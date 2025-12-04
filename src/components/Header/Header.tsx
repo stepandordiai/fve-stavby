@@ -4,6 +4,7 @@ import { NavLink, useLocation } from "react-router-dom";
 import navLinksData from "./../../data/nav-links-data.json";
 import LngSelect from "../LngSelect/LngSelect";
 import contactsData from "./../../data/contacts-data.json";
+import classNames from "classnames";
 import logo from "/logo/solar-panel.png";
 import "./Header.scss";
 
@@ -96,7 +97,9 @@ const Header = () => {
 		<>
 			<header className="header">
 				<div
-					className={`header-inner ${headerInner ? "" : "header-inner--hide"}`}
+					className={classNames("header-inner", {
+						"header-inner--hide": !headerInner,
+					})}
 				>
 					<div className="header-top">
 						<NavLink
@@ -123,23 +126,23 @@ const Header = () => {
 							}
 						>
 							<span
-								className={`burger-btn ${
-									isMenuActive ? "burger-btn--active" : ""
-								}`}
+								className={classNames("burger-btn", {
+									"burger-btn--active": isMenuActive,
+								})}
 							>
 								<span
-									className={`burger-btn__center-line ${
-										isMenuActive ? "burger-btn__center-line--active" : ""
-									}`}
+									className={classNames("burger-btn__center-line", {
+										"burger-btn__center-line--active": isMenuActive,
+									})}
 								></span>
 							</span>
 						</button>
 					</div>
 					<div className="header-bottom-wrapper">
 						<nav
-							className={`header-bottom ${
-								headerBottom ? "" : "header-bottom--hide"
-							}`}
+							className={classNames("header-bottom", {
+								"header-bottom--hide": headerBottom,
+							})}
 						>
 							{navLinksData.map((link) => {
 								return (
@@ -147,9 +150,9 @@ const Header = () => {
 										key={link.id}
 										to={link.path}
 										className={({ isActive }) =>
-											`header__nav-link ${
-												isActive ? "header__nav-link--active" : ""
-											}`
+											classNames("header__nav-link", {
+												"header__nav-link--active": isActive,
+											})
 										}
 									>
 										{t(link.name)}
@@ -163,11 +166,15 @@ const Header = () => {
 
 			{/* menu */}
 
-			<div className={`menu ${isMenuActive ? "menu--active" : ""}`}>
+			<div
+				className={classNames("menu", {
+					"menu--active": isMenuActive,
+				})}
+			>
 				<div
-					className={`menu-wrapper ${
-						isMenuActive ? "menu-wrapper--active" : ""
-					}`}
+					className={classNames("menu-wrapper", {
+						"menu-wrapper--active": isMenuActive,
+					})}
 				>
 					<nav className="menu__nav">
 						{navLinksData.map((link) => {
@@ -176,7 +183,9 @@ const Header = () => {
 									key={link.id}
 									onClick={() => setIsMenuActive(false)}
 									className={({ isActive }) =>
-										`menu__nav-link ${isActive ? "menu__nav-link--active" : ""}`
+										classNames("menu__nav-link", {
+											"menu__nav-link--active": isActive,
+										})
 									}
 									to={link.path}
 								>

@@ -7,6 +7,7 @@ import GetInTouch from "../../components/GetInTouch/GetInTouch";
 import Container from "../../components/Container/Container";
 import img from "/img/08-c.jpg";
 import "./OurInstallation.scss";
+import classNames from "classnames";
 
 interface Installation {
 	id: number;
@@ -183,13 +184,15 @@ const OurInstallation = () => {
 										className="our-installation__card-wrapper"
 									>
 										<div
-											className={`our-installation__card ${
-												isInView[index] ? "inner-card--active" : ""
-											}`}
+											className={classNames("our-installation__card", {
+												"inner-card--active": isInView[index],
+											})}
 										>
 											<img
 												onClick={() => showSlider(index)}
-												className={isInView[index] ? "card-img--active" : ""}
+												className={classNames("card-img", {
+													"card-img--active": isInView[index],
+												})}
 												src={img}
 												alt="FVE STAVBY Installation"
 												loading="lazy"

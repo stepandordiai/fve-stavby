@@ -5,6 +5,7 @@ import PageTitle from "../../components/PageTitle/PageTitle";
 import handleCopy from "../../utils/handleCopy";
 import Container from "../../components/Container/Container";
 import contactsData from "./../../data/contacts-data.json";
+import classNames from "classnames";
 import img from "/img/09-c.jpg";
 import "./Contacts.scss";
 
@@ -62,13 +63,11 @@ const Contacts = () => {
 								</div>
 								<div className="input-container">
 									<input
-										className={`email ${
-											email.includes("@")
-												? "email--correct"
-												: email.length > 0
-												? "email--incorrect"
-												: ""
-										}`}
+										className={classNames("email", {
+											"email--correct": email.includes("@"),
+											"email--incorrect":
+												email.length > 0 && !email.includes("@"),
+										})}
 										value={email}
 										onChange={(e) => setEmail(e.target.value)}
 										name="email"
@@ -177,11 +176,10 @@ const Contacts = () => {
 											return (
 												<li
 													key={index}
-													className={`working-hours__item ${
-														dayCorrectIndex === index
-															? "working-hours__item--active"
-															: ""
-													}`}
+													className={classNames("working-hours__item", {
+														"working-hours__item--active":
+															dayCorrectIndex === index,
+													})}
 												>
 													<span>{t(day.name)}:</span>
 													<span>{t(day.hours)}</span>

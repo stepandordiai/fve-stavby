@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useEffect, useState, useRef } from "react";
+import classNames from "classnames";
 import "./Process.scss";
 
 const processData = [
@@ -84,13 +85,10 @@ const Process = () => {
 										return (
 											<span
 												key={index}
-												className={
-													index + 1 === process.id
-														? `step ${
-																processInView[index] ? "step--active" : ""
-														  }`
-														: ""
-												}
+												className={classNames("step", {
+													"step--active":
+														processInView[index] && index + 1 === process.id,
+												})}
 												data-step-value={
 													index + 1 === process.id ? process.id : undefined
 												}

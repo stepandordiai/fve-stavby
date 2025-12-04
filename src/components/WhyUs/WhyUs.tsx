@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
+import classNames from "classnames";
 import "./WhyUs.scss";
 
 const advantagesData = [
@@ -59,11 +60,10 @@ const WhyUs = () => {
 									{t(advantage.title)}
 								</span>
 								<div
-									className={`advantages-btn-icon-container ${
-										advantageActive[index]
-											? "advantages-btn-icon-container--active"
-											: ""
-									}`}
+									className={classNames("advantages-btn-icon-container", {
+										"advantages-btn-icon-container--active":
+											advantageActive[index],
+									})}
 								>
 									<svg
 										width="24px"
@@ -83,9 +83,9 @@ const WhyUs = () => {
 								</div>
 							</button>
 							<div
-								className={`dd-wrapper ${
-									advantageActive[index] ? "dd-wrapper--active" : ""
-								}`}
+								className={classNames("dd-wrapper", {
+									"dd-wrapper--active": advantageActive[index],
+								})}
 							>
 								<p className="dd-details">{t(advantage.desc)}.</p>
 							</div>

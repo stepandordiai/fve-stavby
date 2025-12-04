@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import i18next from "i18next";
+import classNames from "classnames";
 import "./LngSelect.scss";
 
 const lngData = [
@@ -59,31 +60,31 @@ const LngSelect = () => {
 			<button
 				ref={lngSelectBtn}
 				onClick={toggleLngSelectBtn}
-				className={`lng-select__btn ${
-					lngSelectActive ? "lng-select__btn--active" : ""
-				}`}
+				className={classNames("lng-select__btn", {
+					"lng-select__btn--active": lngSelectActive,
+				})}
 			>
 				{lngSelectName}
 			</button>
 			<div
 				ref={lngSelect}
-				className={`lng-select ${lngSelectActive ? "lng-select--active" : ""}`}
+				className={classNames("lng-select", {
+					"lng-select--active": lngSelectActive,
+				})}
 			>
 				<ul
-					className={`lng-select__dd ${
-						lngSelectActive ? "lng-select__dd--active" : ""
-					}`}
+					className={classNames("lng-select__dd", {
+						"lng-select__dd--active": lngSelectActive,
+					})}
 				>
 					{lngData.map((lng) => {
 						return (
 							<li
 								onClick={() => handleLngSelectOption(lng.code)}
 								key={lng.code}
-								className={`lng-select__option ${
-									lngSelectOption === lng.code
-										? " lng-select__option--active"
-										: ""
-								}`}
+								className={classNames("lng-select__option", {
+									"lng-select__option--active": lngSelectOption === lng.code,
+								})}
 							>
 								{`${lng.name} - ${lng.fullName}`}
 							</li>

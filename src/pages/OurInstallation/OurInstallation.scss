@@ -21,23 +21,23 @@
 	scale: 0;
 	border-radius: 25px;
 	overflow: hidden;
-
-	img {
-		position: relative;
-		z-index: 0;
-		width: 100%;
-		height: 250px;
-		object-fit: cover;
-		object-position: center;
-		border-radius: 25px;
-		cursor: pointer;
-		scale: 2;
-	}
 }
 
 .inner-card--active {
 	animation: animateImg1 2s forwards;
 	animation-timing-function: cubic-bezier(0.75, 0.5, 0.25, 1);
+}
+
+.card-img {
+	position: relative;
+	z-index: 0;
+	width: 100%;
+	height: 250px;
+	object-fit: cover;
+	object-position: center;
+	border-radius: 25px;
+	cursor: pointer;
+	scale: 2;
 }
 
 .card-img--active {
