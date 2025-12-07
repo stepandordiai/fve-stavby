@@ -99,7 +99,7 @@ const Footer = () => {
 						<p>{t("logo_title")}</p>
 					</div>
 					<div>
-						<p className="footer__socials-title">Sledujte nás</p>
+						<p className="footer__socials-title">{t("followUs")}</p>
 						<div className="footer__socials-list">
 							{socialsData.map((social, i) => {
 								const Icon = social.icon;
