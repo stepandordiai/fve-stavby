@@ -12,7 +12,7 @@ const Header = () => {
 	const { t } = useTranslation();
 	const { pathname, hash } = useLocation();
 
-	const [isMenuActive, setIsMenuActive] = useState(false);
+	const [isMenuVisible, setIsMenuVisible] = useState(false);
 	const [headerBottom, setHeaderBottom] = useState(true);
 	const [headerInner, setHeaderInner] = useState(true);
 
@@ -45,24 +45,20 @@ const Header = () => {
 			});
 		};
 
-		if (pathname === "/" && !hash) {
-			revealHeader(true); // delayed animation on home page
-		} else {
-			revealHeader(false); // instant animation or no delay
-		}
+		revealHeader(pathname === "/" && !hash);
 	}, [pathname, hash]);
 
 	useEffect(() => {
 		let prevScrollTop = 0;
 		const handleHeaderBottomOnScroll = () => {
 			const scrollTop = document.documentElement.scrollTop;
-			if (scrollTop > prevScrollTop && prevScrollTop > window.innerHeight / 2) {
-				setHeaderInner(false);
-				setHeaderBottom(false);
-			} else {
-				setHeaderInner(true);
-				setHeaderBottom(true);
-			}
+			setHeaderInner(
+				!(scrollTop > prevScrollTop && prevScrollTop > window.innerHeight / 2)
+			);
+			setHeaderBottom(
+				!(scrollTop > prevScrollTop && prevScrollTop > window.innerHeight / 2)
+			);
+
 			prevScrollTop = scrollTop;
 		};
 
@@ -72,19 +68,17 @@ const Header = () => {
 			window.removeEventListener("scroll", handleHeaderBottomOnScroll);
 	}, []);
 
-	function toggleBurgerBtn(): void {
-		setIsMenuActive((prev) => !prev);
-	}
+	const toggleMenu = (): void => setIsMenuVisible((prev: boolean) => !prev);
 
 	useEffect(() => {
-		setIsMenuActive(false);
+		setIsMenuVisible(false);
 	}, [pathname]);
 
 	// Close menu on Esc
 	useEffect(() => {
 		const closeMenuOnEsc = (e: KeyboardEvent) => {
 			if (e.code === "Escape") {
-				setIsMenuActive(false);
+				setIsMenuVisible(false);
 			}
 		};
 
@@ -103,7 +97,7 @@ const Header = () => {
 				>
 					<div className="header-top">
 						<NavLink
-							onClick={() => setIsMenuActive(false)}
+							onClick={() => setIsMenuVisible(false)}
 							to="/"
 							className="header-top__logo"
 						>
@@ -119,20 +113,22 @@ const Header = () => {
 						<LngSelect />
 						{/* menu-btn */}
 						<button
-							onClick={toggleBurgerBtn}
+							onClick={toggleMenu}
 							className="burger-btn-wrapper"
 							aria-label={
-								isMenuActive ? t("header.closeMenu") : t("header.openMenu")
+								isMenuVisible ? t("header.closeMenu") : t("header.openMenu")
 							}
+							aria-expanded={isMenuVisible}
+							aria-controls="menu"
 						>
 							<span
 								className={classNames("burger-btn", {
-									"burger-btn--active": isMenuActive,
+									"burger-btn--active": isMenuVisible,
 								})}
 							>
 								<span
 									className={classNames("burger-btn__center-line", {
-										"burger-btn__center-line--active": isMenuActive,
+										"burger-btn__center-line--active": isMenuVisible,
 									})}
 								></span>
 							</span>
@@ -163,25 +159,25 @@ const Header = () => {
 					</div>
 				</div>
 			</header>
-
 			{/* menu */}
-
-			<div
+			<nav
 				className={classNames("menu", {
-					"menu--active": isMenuActive,
+					"menu--active": isMenuVisible,
 				})}
+				id="menu"
+				hidden={!isMenuVisible}
 			>
 				<div
 					className={classNames("menu-wrapper", {
-						"menu-wrapper--active": isMenuActive,
+						"menu-wrapper--active": isMenuVisible,
 					})}
 				>
-					<nav className="menu__nav">
+					<div className="menu__nav">
 						{navLinksData.map((link) => {
 							return (
 								<NavLink
 									key={link.id}
-									onClick={() => setIsMenuActive(false)}
+									onClick={() => setIsMenuVisible(false)}
 									className={({ isActive }) =>
 										classNames("menu__nav-link", {
 											"menu__nav-link--active": isActive,
@@ -193,7 +189,7 @@ const Header = () => {
 								</NavLink>
 							);
 						})}
-					</nav>
+					</div>
 					<ul className="menu__contacts-details">
 						<li>
 							<p>{t("tel")}</p>
@@ -212,7 +208,7 @@ const Header = () => {
 						</li>
 					</ul>
 				</div>
-			</div>
+			</nav>
 		</>
 	);
 };
