@@ -29,7 +29,7 @@ const advantagesData = [
 const WhyUs = () => {
 	const { t } = useTranslation();
 
-	// TODO: LEARN THIS
+	// TODO: learn this
 	const [advantageActive, setAdvantageActive] = useState(() => [
 		true,
 		...new Array(advantagesData.length - 1).fill(false),
@@ -52,40 +52,46 @@ const WhyUs = () => {
 				{advantagesData.map((advantage, index) => {
 					return (
 						<li key={index} className="advantages-item">
-							<button
-								onClick={() => handleAdvantageOnClick(index)}
-								className="advantages-btn"
-							>
-								<span className="advantages-btn-title">
-									{t(advantage.title)}
-								</span>
-								<div
-									className={classNames("advantages-btn-icon-container", {
-										"advantages-btn-icon-container--active":
-											advantageActive[index],
-									})}
+							<h3>
+								<button
+									onClick={() => handleAdvantageOnClick(index)}
+									className="advantages-btn"
+									aria-expanded={advantageActive[index]}
+									aria-controls={`advantages-item-${index}`}
 								>
-									<svg
-										width="24px"
-										height="24px"
-										viewBox="0 0 24 24"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg"
+									<span className="advantages-btn-title">
+										{t(advantage.title)}
+									</span>
+									<span
+										className={classNames("advantages-btn-icon-container", {
+											"advantages-btn-icon-container--active":
+												advantageActive[index],
+										})}
 									>
-										<path
-											d="M4 12H20M12 4V20"
-											stroke="currentColor"
-											strokeWidth="1.5"
-											strokeLinecap="round"
-											strokeLinejoin="round"
-										/>
-									</svg>
-								</div>
-							</button>
+										<svg
+											width="24px"
+											height="24px"
+											viewBox="0 0 24 24"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												d="M4 12H20M12 4V20"
+												stroke="currentColor"
+												strokeWidth="1.5"
+												strokeLinecap="round"
+												strokeLinejoin="round"
+											/>
+										</svg>
+									</span>
+								</button>
+							</h3>
 							<div
 								className={classNames("dd-wrapper", {
 									"dd-wrapper--active": advantageActive[index],
 								})}
+								id={`advantages-item-${index}`}
+								hidden={!advantageActive[index]}
 							>
 								<p className="dd-details">{t(advantage.desc)}.</p>
 							</div>
