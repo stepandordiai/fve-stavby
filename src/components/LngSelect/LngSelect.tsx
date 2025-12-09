@@ -63,6 +63,8 @@ const LngSelect = () => {
 				className={classNames("lng-select__btn", {
 					"lng-select__btn--active": lngSelectActive,
 				})}
+				aria-expanded={lngSelectActive}
+				aria-controls="lng-select"
 			>
 				{lngSelectName}
 			</button>
@@ -71,6 +73,8 @@ const LngSelect = () => {
 				className={classNames("lng-select", {
 					"lng-select--active": lngSelectActive,
 				})}
+				id="lng-select"
+				hidden={!lngSelectActive}
 			>
 				<ul
 					className={classNames("lng-select__dd", {
