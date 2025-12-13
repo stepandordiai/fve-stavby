@@ -46,7 +46,7 @@
 	}
 
 	img {
-		height: 25px;
+		height: 24px;
 	}
 
 	span {
@@ -394,7 +394,9 @@
 }
 
 @media screen and (max-width: 370px) {
-	.header-top__logo-txt {
-		display: none;
+	.header-top__logo {
+		span {
+			display: none;
+		}
 	}
 }

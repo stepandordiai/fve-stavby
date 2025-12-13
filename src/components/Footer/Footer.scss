@@ -30,7 +30,6 @@
 
 .footer-top__logo {
 	@include flex-center;
-	flex-direction: column;
 	column-gap: 5px;
 
 	img {

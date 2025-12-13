@@ -5,7 +5,7 @@ import navLinksData from "./../../data/nav-links-data.json";
 import LngSelect from "../LngSelect/LngSelect";
 import contactsData from "./../../data/contacts-data.json";
 import classNames from "classnames";
-import logo from "/logo/solar-panel.png";
+import logo from "/logo/fve-stavby-logo.svg";
 import "./Header.scss";
 
 const Header = () => {
@@ -102,7 +102,7 @@ const Header = () => {
 							className="header-top__logo"
 						>
 							<img src={logo} alt="FVE STAVBY logo" />
-							<span className="header-top__logo-txt">FVE STAVBY</span>
+							<span>FVE STAVBY</span>
 						</NavLink>
 						<a
 							href={`tel:${contactsData.tel.replaceAll(" ", "")}`}

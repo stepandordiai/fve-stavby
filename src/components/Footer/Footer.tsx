@@ -10,7 +10,7 @@ import InstagramIcon from "../../Icons/InstagramIcon";
 import FacebookIcon from "../../Icons/FacebookIcon";
 import TiktokIcon from "../../Icons/TiktokIcon";
 import footerBottomLogo from "/fve-stavby-footer-logo.svg";
-import logo from "/logo/solar-panel.png";
+import logo from "/logo/fve-stavby-logo.svg";
 import "./Footer.scss";
 
 const socialsData = [
