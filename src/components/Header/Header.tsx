@@ -12,9 +12,9 @@ const Header = () => {
 	const { t } = useTranslation();
 	const { pathname, hash } = useLocation();
 
-	const [isMenuVisible, setIsMenuVisible] = useState(false);
-	const [headerBottom, setHeaderBottom] = useState(true);
-	const [headerInner, setHeaderInner] = useState(true);
+	const [isMenuVisible, setIsMenuVisible] = useState<boolean>(false);
+	const [headerBottomHidden, setHeaderBottomHidden] = useState<boolean>(false);
+	const [headerInnerHidden, setHeaderInnerHidden] = useState<boolean>(false);
 
 	// FIXME:
 	useEffect(() => {
@@ -33,7 +33,6 @@ const Header = () => {
 				const el = document.querySelector<HTMLElement>(selector);
 
 				if (el) {
-					// TODO:
 					// Clear previous animation if any
 					el.style.animation = "none";
 					el.offsetHeight; // Force reflow to reset animation
@@ -48,27 +47,29 @@ const Header = () => {
 		revealHeader(pathname === "/" && !hash);
 	}, [pathname, hash]);
 
+	// FIXME:
 	useEffect(() => {
 		let prevScrollTop = 0;
-		const handleHeaderBottomOnScroll = () => {
-			const scrollTop = document.documentElement.scrollTop;
-			setHeaderInner(
-				!(scrollTop > prevScrollTop && prevScrollTop > window.innerHeight / 2)
+		const handleHeaderBottomHiddenOnScroll = () => {
+			const scrollTop = window.scrollY;
+
+			setHeaderInnerHidden(
+				scrollTop > prevScrollTop && prevScrollTop > window.innerHeight / 2
 			);
-			setHeaderBottom(
-				!(scrollTop > prevScrollTop && prevScrollTop > window.innerHeight / 2)
+			setHeaderBottomHidden(
+				scrollTop > prevScrollTop && prevScrollTop > window.innerHeight / 2
 			);
 
 			prevScrollTop = scrollTop;
 		};
 
-		window.addEventListener("scroll", handleHeaderBottomOnScroll);
+		window.addEventListener("scroll", handleHeaderBottomHiddenOnScroll);
 
 		return () =>
-			window.removeEventListener("scroll", handleHeaderBottomOnScroll);
+			window.removeEventListener("scroll", handleHeaderBottomHiddenOnScroll);
 	}, []);
 
-	const toggleMenu = (): void => setIsMenuVisible((prev: boolean) => !prev);
+	const toggleMenu = (): void => setIsMenuVisible((prev) => !prev);
 
 	useEffect(() => {
 		setIsMenuVisible(false);
@@ -77,7 +78,7 @@ const Header = () => {
 	// Close menu on Esc
 	useEffect(() => {
 		const closeMenuOnEsc = (e: KeyboardEvent) => {
-			if (e.code === "Escape") {
+			if (e.key === "Escape") {
 				setIsMenuVisible(false);
 			}
 		};
@@ -92,7 +93,7 @@ const Header = () => {
 			<header className="header">
 				<div
 					className={classNames("header-inner", {
-						"header-inner--hide": !headerInner,
+						"header-inner--hidden": headerInnerHidden,
 					})}
 				>
 					<div className="header-top">
@@ -137,7 +138,7 @@ const Header = () => {
 					<div className="header-bottom-wrapper">
 						<nav
 							className={classNames("header-bottom", {
-								"header-bottom--hide": headerBottom,
+								"header-bottom--hidden": headerBottomHidden,
 							})}
 						>
 							{navLinksData.map((link) => {
