@@ -195,7 +195,9 @@ const Footer = () => {
 					</ul>
 				</div>
 				<div className="footer-bottom">
-					<p>&copy; 2025 FVE - stavby s.r.o.</p>
+					<p>
+						&copy; 2025&ndash;{new Date().getFullYear()} FVE - stavby s.r.o.
+					</p>
 					<p>{t("all_rights_reserved")}.</p>
 					<div className="creator">
 						<span>Website created by</span>
