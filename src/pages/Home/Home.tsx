@@ -25,8 +25,8 @@ const Home = () => {
 			<main>
 				<Container>
 					<section className="home-hero">
-						<div className="home-top">
-							<img className="home-top__img" src={img} alt="" />
+						<div className="home-hero-inner">
+							<img className="home-hero-inner__bg-img" src={img} alt="" />
 							<p className="loading__title">FVE STAVBY</p>
 							<div className="home-top__details-container">
 								<div className="home-top__details">

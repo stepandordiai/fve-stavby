@@ -238,7 +238,8 @@
 	height: max-content;
 	min-height: 100%;
 	opacity: 0;
-	transition: all 0.5s;
+	// TODO: When deactivate make transition speed 2x
+	transition: all 0.25s;
 }
 
 .menu-wrapper--active {
