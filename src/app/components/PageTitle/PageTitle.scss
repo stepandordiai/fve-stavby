@@ -1,0 +1,48 @@
+@use "./../../scss/mixins" as *;
+
+.page-title {
+	position: relative;
+	width: 100%;
+	min-height: 250px;
+	overflow: hidden;
+	border-radius: 25px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding: 25px;
+	color: #fff;
+}
+
+.page-title__img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.page-title__title {
+	font-size: clamp(1.5rem, 4vw, 3rem);
+	font-weight: 500;
+}
+
+.page-nav__link {
+	color: #fff;
+}
+
+.bg-max-flow {
+	background: #619fd6;
+}
+
+.bg-404 {
+	background: #ff0000;
+}
+
+@media screen and (max-width: 896px) {
+	.page-title {
+		padding: 10px;
+	}
+}

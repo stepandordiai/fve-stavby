@@ -1,0 +1,339 @@
+@use "./../../scss/mixins" as *;
+
+.header {
+	position: fixed;
+	top: 0;
+	right: 10px;
+	left: 10px;
+	z-index: 100;
+}
+
+.header-inner {
+	position: relative;
+	padding: 20px 10px 0 10px;
+	max-width: 1920px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+}
+
+.header-inner--hidden {
+	row-gap: 0 !important;
+}
+
+.header-top {
+	display: flex;
+}
+
+.header-top__logo {
+	position: relative;
+	z-index: 5;
+	min-width: 50px;
+	@include flex-center;
+	color: #fff;
+	column-gap: 5px;
+	border-radius: 25px;
+	background: var(--bg-dark-clr);
+	padding: 0 12.5px;
+	@include glass-effect(20px);
+	opacity: 0;
+	pointer-events: none;
+	transition: background-color 0.3s;
+
+	&:hover {
+		background: var(--bg-dark-darker-clr);
+	}
+
+	img {
+		height: 24px;
+	}
+
+	span {
+		font-size: 1.5rem;
+		font-weight: 500;
+	}
+}
+
+@keyframes revealHeader {
+	100% {
+		pointer-events: auto;
+		opacity: 1;
+	}
+}
+
+// When i apply animation for header blur dissapears so i apply it to children
+.header__nav-link {
+	color: #fff;
+	padding: 5px 7.5px;
+	border-radius: 15px;
+
+	&:hover {
+		background: var(--accent-clr);
+		color: #000 !important;
+	}
+}
+
+.header__nav-link--active {
+	background: var(--accent-clr);
+	color: #000 !important;
+}
+
+.header-top__number {
+	position: relative;
+	z-index: 5;
+	height: 50px;
+	background: var(--bg-dark-clr);
+	@include grid-center;
+	@include glass-effect(20px);
+	padding: 0 12.5px;
+	border-radius: 25px;
+	margin-left: auto;
+	margin-right: 10px;
+	color: #fff;
+	font-weight: 500;
+	opacity: 0;
+	pointer-events: none;
+	transition: background-color 0.3s;
+
+	&:hover {
+		background: var(--bg-dark-darker-clr);
+	}
+}
+
+.header-bottom {
+	position: relative;
+	min-height: 50px;
+	border-radius: 25px;
+	@include flex-between-center;
+	column-gap: 25px;
+	white-space: nowrap;
+	//
+	padding: 0 10px;
+	//
+	background: var(--bg-dark-clr);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+	overflow-x: scroll;
+	opacity: 0;
+	pointer-events: none;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+.header-bottom--hidden {
+	opacity: 0 !important;
+	pointer-events: none !important;
+	height: 0 !important;
+}
+
+.header-bottom-dd {
+	height: 50px;
+	@include grid-center;
+}
+
+// menu-btn
+
+.burger-btn-wrapper {
+	display: none;
+	place-content: center;
+	width: 50px;
+	aspect-ratio: 1/1;
+	border-radius: 25px;
+	transition: background-color 0.3s;
+
+	&:hover {
+		background: var(--bg-light-darker-clr);
+	}
+}
+
+.burger-btn {
+	position: relative;
+	width: 30px;
+	padding: 15px 0;
+	@include flex-center;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.burger-btn::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 1.5px;
+	border-radius: 0.75px;
+	background: #000;
+	transform: translateY(-7.5px);
+	transition: transform 0.5s;
+}
+
+.burger-btn--active::before {
+	transform: translateY(0) rotate(-135deg);
+}
+
+.burger-btn__center-line {
+	position: absolute;
+	width: 100%;
+	height: 1.5px;
+	border-radius: 0.75px;
+	background: #000;
+	transition: transform 0.5s, opacity 0.5s;
+}
+
+.burger-btn__center-line--active {
+	transform: rotate(-180deg);
+	opacity: 0;
+}
+
+.burger-btn::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 1.5px;
+	border-radius: 0.75px;
+	background: #000;
+	transform: translateY(7.5px);
+	transition: transform 0.5s;
+}
+
+.burger-btn--active::after {
+	transform: translateY(0) rotate(-225deg);
+}
+
+// menu
+
+.menu {
+	display: none;
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	z-index: 11;
+	width: 50px;
+	height: 50px;
+	background: var(--bg-light-clr);
+	@include glass-effect(20px);
+	border-radius: 25px;
+	scrollbar-width: none;
+	overflow: scroll;
+	opacity: 0;
+	pointer-events: none;
+	transition: top 1s, right 1s, width 1s, height 1s, padding 1s;
+}
+
+.menu--active {
+	top: 10px;
+	right: 10px;
+	width: calc(100% - 20px);
+	height: calc(100% - 20px);
+	padding: 70px 10px 10px 10px;
+}
+
+.menu-wrapper {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	row-gap: 10px;
+	height: max-content;
+	min-height: 100%;
+	opacity: 0;
+	// TODO: When deactivate make transition speed 2x
+	transition: all 0.25s;
+}
+
+.menu-wrapper--active {
+	opacity: 1;
+	transition: all 0.5s 1s;
+}
+
+.menu__nav {
+	display: flex;
+	flex-direction: column;
+}
+
+.menu__nav-link {
+	color: #000;
+	font-size: clamp(1.5rem, 3vw, 3rem);
+	font-weight: 500;
+	align-self: flex-start;
+	min-height: 40px;
+	border-radius: 20px;
+	display: grid;
+	place-content: center;
+	padding: 0 10px;
+
+	&:hover {
+		background: var(--accent-clr);
+	}
+}
+
+.menu__nav-link--active {
+	background: var(--accent-clr);
+}
+
+.menu__contacts-details {
+	display: flex;
+	justify-content: space-between;
+
+	p {
+		color: var(--gray-clr);
+		margin-bottom: 6.25px;
+	}
+}
+
+.menu-link {
+	display: inline-block;
+	color: #000;
+	padding: 5px 7.5px;
+	border-radius: 15px;
+
+	&:hover {
+		background: var(--accent-clr);
+	}
+}
+
+@media screen and (max-width: 896px) {
+	.menu {
+		display: initial;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.menu__contacts-details {
+		flex-direction: column;
+		row-gap: 6.25px;
+	}
+}
+
+@media screen and (max-width: 896px) {
+	.burger-btn-wrapper {
+		display: grid;
+	}
+}
+
+@media screen and (max-width: 896px) {
+	.header-bottom {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.header-top__nav {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.header-top__number {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 370px) {
+	.header-top__logo {
+		span {
+			display: none;
+		}
+	}
+}

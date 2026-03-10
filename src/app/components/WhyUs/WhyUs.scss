@@ -1,0 +1,92 @@
+@use "./../../scss/mixins" as *;
+
+.advantages {
+	display: flex;
+	padding-top: 25px;
+}
+
+.advantages-title-container {
+	width: 100%;
+
+	h2 {
+		font: {
+			size: 1.5rem;
+			weight: 500;
+		}
+
+		text-transform: uppercase;
+	}
+}
+
+.advantages-list {
+	width: 100%;
+}
+
+.advantages-item {
+	border-bottom: 2.5px solid var(--bg-light-clr);
+	padding: 12.5px 0;
+
+	&:nth-last-child(1) {
+		border-bottom: none;
+	}
+}
+
+.advantages-btn {
+	width: 100%;
+	@include flex-between-center;
+	padding: 5px 0;
+}
+
+.advantages-btn-title {
+	font: {
+		size: 1.25rem;
+		weight: 500;
+	}
+
+	text-align: start;
+}
+
+.advantages-btn-icon-container {
+	background-color: var(--bg-light-clr);
+	width: 40px;
+	aspect-ratio: 1/1;
+	@include grid-center;
+	border-radius: 20px;
+	transition: all 0.5s ease-in-out;
+
+	&:hover {
+		background-color: var(--bg-light-darker-clr);
+	}
+}
+
+.advantages-btn-icon-container--active {
+	background-color: var(--accent-clr) !important;
+	transform: rotate(225deg);
+}
+
+.dd-wrapper {
+	display: grid;
+	grid-template-rows: 0fr;
+	overflow: hidden;
+	transition: all 0.5s ease-in-out;
+}
+
+.dd-wrapper--active {
+	grid-template-rows: 1fr;
+}
+
+.dd-details {
+	text-align: justify;
+	overflow: hidden;
+}
+
+@media screen and (max-width: 896px) {
+	.advantages {
+		flex-direction: column;
+	}
+
+	.advantages-title-container {
+		justify-content: flex-start;
+		margin: 10px 0;
+	}
+}

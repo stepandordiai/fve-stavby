@@ -1,0 +1,134 @@
+@use "./../../scss/mixins" as *;
+
+.our-installation {
+	padding: 25px 25px 0;
+}
+
+.our-installation__title {
+	padding-bottom: 25px;
+}
+
+.our-installation__grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 25px;
+	margin-bottom: 25px;
+}
+
+.our-installation__card {
+	position: relative;
+	flex-grow: 1;
+	scale: 0;
+	border-radius: 25px;
+	overflow: hidden;
+}
+
+.inner-card--active {
+	animation: animateImg1 2s forwards;
+	animation-timing-function: cubic-bezier(0.75, 0.5, 0.25, 1);
+}
+
+.card-img {
+	position: relative;
+	z-index: 0;
+	width: 100%;
+	height: 250px;
+	object-fit: cover;
+	object-position: center;
+	border-radius: 25px;
+	cursor: pointer;
+	scale: 2;
+}
+
+.card-img--active {
+	animation: animateImg1 2s forwards;
+	animation-timing-function: cubic-bezier(0.75, 0.5, 0.25, 1);
+}
+
+@keyframes animateImg1 {
+	to {
+		scale: 1;
+	}
+}
+
+// img-slider
+.img-slider {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100dvh;
+	z-index: 1000;
+	@include flex-between-center;
+	flex-direction: column;
+	background: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	@include glass-effect(20px);
+}
+
+.img-slider-header {
+	@include flex-end-center;
+	width: 100%;
+	height: 50px;
+	padding: 20px 20px 0;
+}
+
+.img-slider-footer {
+	@include flex-end-center;
+	width: 100%;
+	height: 50px;
+	padding: 0 20px 20px;
+}
+
+.img-slider__img {
+	max-height: calc(100% - 100px);
+	object-fit: contain;
+}
+
+.img-slider__left-btn {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 20px;
+}
+
+.img-slider__right-btn {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 20px;
+}
+
+.img-slider__expand-btn--hide {
+	display: none;
+}
+
+.img-slider__qty {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	color: #fff;
+}
+
+@media screen and (max-width: 1200px) {
+	.our-installation__grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (max-width: 896px) {
+	.our-installation {
+		padding: 25px 10px 0;
+	}
+
+	.our-installation__grid {
+		gap: 25px;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.our-installation__grid {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}

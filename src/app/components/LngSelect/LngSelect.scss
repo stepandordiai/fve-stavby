@@ -1,0 +1,92 @@
+@use "./../../scss/mixins" as *;
+
+.lng-select__btn {
+	width: 50px;
+	aspect-ratio: 1/1;
+	@include grid-center;
+	border-radius: 25px;
+	font-weight: 500;
+	position: relative;
+	z-index: 4;
+	opacity: 0;
+	pointer-events: none;
+	transition: background-color 0.5s;
+}
+
+.lng-select__btn--active {
+	background: var(--bg-light-darker-clr);
+}
+
+.lng-select {
+	position: absolute;
+	top: 20px;
+	right: 10px;
+	z-index: 3;
+	border-radius: 25px;
+	@include glass-effect(20px);
+	display: grid;
+	grid-template-columns: 0fr;
+	grid-template-rows: 0fr;
+	overflow: hidden;
+	min-width: 50px;
+	min-height: 50px;
+	background: var(--bg-light-clr);
+	border-radius: 25px;
+	opacity: 0;
+	pointer-events: none;
+	transition: padding 0.5s, grid-template 0.5s;
+}
+
+.lng-select--active {
+	padding: 62.5px 12.5px 12.5px;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+}
+
+.lng-select__dd {
+	row-gap: 5px;
+	opacity: 0;
+	pointer-events: none;
+	overflow: hidden;
+	white-space: nowrap;
+	transition: all 0s;
+
+	li {
+		padding: 0 12.5px;
+		height: 40px;
+		font-weight: 500;
+		@include grid-center;
+		border-radius: 20px;
+		cursor: pointer;
+
+		&:hover {
+			background: var(--accent-clr);
+		}
+	}
+}
+
+.lng-select__option--active {
+	background: var(--accent-clr);
+}
+
+.lng-select__dd--active {
+	opacity: 1 !important;
+	pointer-events: all;
+	transition: all 0.5s 0.5s;
+}
+
+@media screen and (max-width: 896px) {
+	.lng-select__btn {
+		margin-right: 10px;
+	}
+
+	.lng-select {
+		right: 70px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.lng-select__btn {
+		margin-left: auto;
+	}
+}

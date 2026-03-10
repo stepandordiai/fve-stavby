@@ -1,0 +1,49 @@
+@use "reset";
+@use "variables";
+
+// TODO:
+// Prevent scaling size when rotating on mobile
+html {
+	-webkit-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+body {
+	font-family: var(--font-quicksand);
+	padding: 10px;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	border: 2.5px solid transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--bg-dark-clr);
+	border-radius: 5px;
+	border: 2.5px solid transparent;
+	background-clip: content-box;
+
+	&:hover {
+		background: rgba(0, 0, 0, 0.5);
+		background-clip: content-box;
+	}
+}
+
+@media screen and (max-width: 896px) {
+	body {
+		padding: 10px;
+	}
+
+	.home-top {
+		height: calc(100svh - 20px);
+	}
+
+	.home-loading__title {
+		padding: 0 10px;
+	}
+}
