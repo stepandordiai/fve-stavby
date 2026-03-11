@@ -1,6 +1,6 @@
+import type { Metadata } from "next";
 import OurInstallationClient from "./OurInstallationClient";
 import { getTranslations } from "next-intl/server";
-import type { Metadata } from "next";
 
 export async function generateMetadata({
 	params,
@@ -12,7 +12,6 @@ export async function generateMetadata({
 	const t = await getTranslations({ locale });
 
 	return {
-		metadataBase: new URL("https://www.fvestavby.cz"),
 		title: `${t("our_installation_title")} | FVE STAVBY`,
 		description: t("our_installation_seo_desc"),
 		alternates: {

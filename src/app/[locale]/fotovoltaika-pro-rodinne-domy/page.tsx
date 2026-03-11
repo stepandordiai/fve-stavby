@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
@@ -5,7 +6,6 @@ import Partners from "../../components/Partners/Partners";
 import Benefits from "../../components/Benefits/Benefits";
 import Process from "../../components/Process/Process";
 import Container from "../../components/Container/Container";
-import type { Metadata } from "next";
 import "./styles.scss";
 
 export async function generateMetadata({
@@ -18,7 +18,6 @@ export async function generateMetadata({
 	const t = await getTranslations({ locale });
 
 	return {
-		metadataBase: new URL("https://www.fvestavby.cz"),
 		title: `${t("photovoltaics_for_single_family_homes_title")} | FVE STAVBY`,
 		description: t("photovoltaics_for_single_family_homes_seo_desc"),
 		alternates: {

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import Process from "../components/Process/Process";
 import WhyUs from "../components/WhyUs/WhyUs";
@@ -8,7 +9,6 @@ import HomeAboutCompany from "../components/HomeAboutCompany/HomeAboutCompany";
 import GetInTouch from "../components/GetInTouch/GetInTouch";
 import WhySolar from "../components/WhySolar/WhySolar";
 import Container from "../components/Container/Container";
-import type { Metadata } from "next";
 import "./styles.scss";
 
 export async function generateMetadata({
@@ -21,7 +21,6 @@ export async function generateMetadata({
 	const t = await getTranslations({ locale });
 
 	return {
-		metadataBase: new URL("https://www.fvestavby.cz"),
 		title: `${t("logo_title")} | FVE STAVBY`,
 		description: t("home_seo_desc"),
 		alternates: {

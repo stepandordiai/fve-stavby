@@ -1,5 +1,5 @@
-import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import Container from "../../components/Container/Container";
 import SVJClient from "./SVJClient";
@@ -15,7 +15,6 @@ export async function generateMetadata({
 	const t = await getTranslations({ locale });
 
 	return {
-		metadataBase: new URL("https://www.fvestavby.cz"),
 		title: "SVJ | FVE STAVBY",
 		description: t("svj_seo_desc"),
 		alternates: {

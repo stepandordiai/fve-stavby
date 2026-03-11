@@ -1,4 +1,5 @@
 import { Quicksand } from "next/font/google";
+import type { Metadata } from "next";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
@@ -12,6 +13,10 @@ const quicksand = Quicksand({
 	weight: ["400", "500", "600"],
 	subsets: ["latin"],
 });
+
+export const metadata: Metadata = {
+	metadataBase: new URL("https://www.fvestavby.cz"),
+};
 
 export default async function RootLayout({
 	children,

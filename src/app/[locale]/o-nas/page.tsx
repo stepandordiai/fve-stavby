@@ -1,5 +1,5 @@
-import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import Container from "../../components/Container/Container";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
@@ -13,7 +13,7 @@ interface Member {
 	email?: string;
 }
 
-const membersData: Member[] = [
+const members: Member[] = [
 	{
 		name: "Kristián",
 		position: "our_team.member1",
@@ -67,7 +67,6 @@ export async function generateMetadata({
 	const t = await getTranslations({ locale });
 
 	return {
-		metadataBase: new URL("https://www.fvestavby.cz"),
 		title: `${t("about_us_title")} | FVE STAVBY`,
 		description: t("about_us_seo_desc"),
 		alternates: {
@@ -103,49 +102,45 @@ export default async function AboutUs() {
 					</p>
 					<h2 className="our-team__title">{t("our_team.title")}</h2>
 					<div className="our-team__grid">
-						{membersData.map(
-							({ name, position, linkedInUrl, email }, index) => {
-								return (
-									<div key={index} className="our-team__grid-item">
-										<div className="img-wrapper">
-											<img src="/icons/user.png" alt="" loading="lazy" />
-										</div>
-										<p className="our-team__grid-item-name">{name}</p>
-										<p className="our-team__grid-item-position">
-											{t(position)}
-										</p>
-										<div
-											style={{
-												display: "flex",
-												justifyContent: "flex-start",
-												alignItems: "flex-start",
-												flexDirection: "column",
-												rowGap: 5,
-											}}
-										>
-											{email && (
-												<a
-													className="our-team__grid-item-link"
-													href={`mailto: ${email}`}
-													target="_blank"
-												>
-													{email}
-												</a>
-											)}
-											{linkedInUrl && (
-												<a
-													className="our-team__grid-item-link"
-													href={linkedInUrl}
-													target="_blank"
-												>
-													LinkedIn
-												</a>
-											)}
-										</div>
+						{members.map(({ name, position, linkedInUrl, email }, index) => {
+							return (
+								<div key={index} className="our-team__grid-item">
+									<div className="img-wrapper">
+										<img src="/icons/user.png" alt="" loading="lazy" />
 									</div>
-								);
-							},
-						)}
+									<p className="our-team__grid-item-name">{name}</p>
+									<p className="our-team__grid-item-position">{t(position)}</p>
+									<div
+										style={{
+											display: "flex",
+											justifyContent: "flex-start",
+											alignItems: "flex-start",
+											flexDirection: "column",
+											rowGap: 5,
+										}}
+									>
+										{email && (
+											<a
+												className="our-team__grid-item-link"
+												href={`mailto: ${email}`}
+												target="_blank"
+											>
+												{email}
+											</a>
+										)}
+										{linkedInUrl && (
+											<a
+												className="our-team__grid-item-link"
+												href={linkedInUrl}
+												target="_blank"
+											>
+												LinkedIn
+											</a>
+										)}
+									</div>
+								</div>
+							);
+						})}
 					</div>
 					<h2 className="guarantees__title">{t("guarantees.title")}</h2>
 					<AboutUsClient />

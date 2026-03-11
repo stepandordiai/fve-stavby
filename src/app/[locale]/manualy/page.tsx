@@ -1,9 +1,9 @@
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
 import React from "react";
 import Container from "../../components/Container/Container";
-import type { Metadata } from "next";
 import "./styles.scss";
 
 interface Manual {
@@ -11,7 +11,7 @@ interface Manual {
 	link: string;
 }
 
-const manualsData: Manual[] = [
+const manuals: Manual[] = [
 	{
 		info: "Deye SUN-5/6/8/10/12K-SG04LP3-EU",
 		link: "https://www.deyeinverter.com/deyeinverter/2024/08/13/instructions_sun-5-12k-sg04lp3-eu_240813_en.pdf",
@@ -53,7 +53,6 @@ export async function generateMetadata({
 	const t = await getTranslations({ locale });
 
 	return {
-		metadataBase: new URL("https://www.fvestavby.cz"),
 		title: `${t("manuals_title")} | FVE STAVBY`,
 		description: t("manuals_seo_desc"),
 		alternates: {
@@ -75,7 +74,7 @@ export default async function Manuals() {
 			<Container>
 				<PageTitle title={t("manuals_title")} img="/img/10-c.jpg" />
 				<div className="manuals">
-					{manualsData.map(({ info, link }, index) => {
+					{manuals.map(({ info, link }, index) => {
 						return (
 							<React.Fragment key={index}>
 								<div className="manuals-container">

@@ -1,11 +1,11 @@
 "use client";
 import { useState } from "react";
-import contactsData from "./../../data/contacts-data.json";
+import contacts from "./../../data/contacts.json";
 import handleCopy from "../../utils/handleCopy";
 import classNames from "classnames";
 import { useTranslations } from "next-intl";
 
-const workingHoursData = [
+const workingHours = [
 	{ name: "contacts.mon", hours: "8:00 - 17:00" },
 	{ name: "contacts.tue", hours: "8:00 - 17:00" },
 	{ name: "contacts.wed", hours: "8:00 - 17:00" },
@@ -102,18 +102,18 @@ export default function ContactsClient() {
 						<p className="contact-details__title">{t("tel")}</p>
 						<a
 							className="contact-details__link"
-							href={`tel:${contactsData.tel.replaceAll(" ", "")}`}
+							href={`tel:${contacts.tel.replaceAll(" ", "")}`}
 						>
-							{contactsData.tel}
+							{contacts.tel}
 						</a>
 					</div>
 					<div className="contact-details">
 						<p className="contact-details__title">E-mail</p>
 						<a
 							className="contact-details__link"
-							href={`mailto:${contactsData.email}`}
+							href={`mailto:${contacts.email}`}
 						>
-							{contactsData.email}
+							{contacts.email}
 						</a>
 					</div>
 					<div className="contact-details">
@@ -122,10 +122,10 @@ export default function ContactsClient() {
 						</p>
 						<a
 							className="contact-details__link"
-							href={contactsData.officeAddressUrl}
+							href={contacts.officeAddressUrl}
 							target="_blank"
 						>
-							{contactsData.officeAddress}
+							{contacts.officeAddress}
 						</a>
 					</div>
 					<div className="contact-details">
@@ -134,10 +134,10 @@ export default function ContactsClient() {
 						</p>
 						<a
 							className="contact-details__link"
-							href={contactsData.companyAddressUrl}
+							href={contacts.companyAddressUrl}
 							target="_blank"
 						>
-							{contactsData.companyAddress}
+							{contacts.companyAddress}
 						</a>
 					</div>
 					<div className="contact-details">
@@ -147,7 +147,7 @@ export default function ContactsClient() {
 							onClick={(e) => handleCopy(e, ".contacts__copy-btn", t("copied"))}
 							title={t("copy")}
 						>
-							{contactsData.companyNumber}
+							{contacts.companyNumber}
 						</button>
 					</div>
 					<div className="contact-details">
@@ -155,7 +155,7 @@ export default function ContactsClient() {
 							{t("contacts.working_hours")}
 						</p>
 						<ul className="working-hours__list">
-							{workingHoursData.map((day, index) => {
+							{workingHours.map((day, index) => {
 								return (
 									<li
 										key={index}

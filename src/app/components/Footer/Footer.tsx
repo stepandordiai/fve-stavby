@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import isTouchDevice from "../../utils/isTouchDevice";
 import navLinksData from "./../../data/nav-links-data.json";
 import handleCopy from "../../utils/handleCopy";
-import contactsData from "./../../data/contacts-data.json";
+import contacts from "./../../data/contacts.json";
 import classNames from "classnames";
 import { usePathname } from "@/i18n/navigation";
 import InstagramIcon from "../../Icons/InstagramIcon";
@@ -150,35 +150,35 @@ const Footer = () => {
 							<span>{t("tel")}</span>
 							<a
 								className="footer__link"
-								href={`tel:${contactsData.tel.replaceAll(" ", "")}`}
+								href={`tel:${contacts.tel.replaceAll(" ", "")}`}
 							>
-								{contactsData.tel}
+								{contacts.tel}
 							</a>
 						</li>
 						<li>
 							<span>E-mail</span>
-							<a className="footer__link" href={`mailto:${contactsData.email}`}>
-								{contactsData.email}
+							<a className="footer__link" href={`mailto:${contacts.email}`}>
+								{contacts.email}
 							</a>
 						</li>
 						<li>
 							<span>{t("contacts.address_office")}</span>
 							<a
 								className="footer__link"
-								href={contactsData.officeAddressUrl}
+								href={contacts.officeAddressUrl}
 								target="_blank"
 							>
-								{contactsData.officeAddress}
+								{contacts.officeAddress}
 							</a>
 						</li>
 						<li>
 							<span>{t("contacts.address_company")}</span>
 							<a
 								className="footer__link"
-								href={contactsData.companyAddressUrl}
+								href={contacts.companyAddressUrl}
 								target="_blank"
 							>
-								{contactsData.companyAddress}
+								{contacts.companyAddress}
 							</a>
 						</li>
 						<li>
@@ -188,7 +188,7 @@ const Footer = () => {
 								onClick={(e) => handleCopy(e, ".footer__copy-btn", t("copied"))}
 								title={t("copy")}
 							>
-								{contactsData.companyNumber}
+								{contacts.companyNumber}
 							</button>
 						</li>
 					</ul>

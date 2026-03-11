@@ -6,7 +6,7 @@ import { Link } from "@/i18n/navigation";
 import { usePathname } from "@/i18n/navigation";
 import navLinksData from "./../../data/nav-links-data.json";
 import LngSelect from "../LngSelect/LngSelect";
-import contactsData from "./../../data/contacts-data.json";
+import contacts from "./../../data/contacts.json";
 import classNames from "classnames";
 import "./Header.scss";
 
@@ -121,10 +121,10 @@ const Header = () => {
 							<span>FVE STAVBY</span>
 						</Link>
 						<a
-							href={`tel:${contactsData.tel.replaceAll(" ", "")}`}
+							href={`tel:${contacts.tel.replaceAll(" ", "")}`}
 							className="header-top__number"
 						>
-							{contactsData.tel}
+							{contacts.tel}
 						</a>
 						<LngSelect />
 						{/* menu-btn */}
@@ -207,15 +207,15 @@ const Header = () => {
 							<p>{t("tel")}</p>
 							<a
 								className="menu-link"
-								href={`tel:${contactsData.tel.replaceAll(" ", "")}`}
+								href={`tel:${contacts.tel.replaceAll(" ", "")}`}
 							>
-								{contactsData.tel}
+								{contacts.tel}
 							</a>
 						</li>
 						<li>
 							<p>E-mail</p>
-							<a className="menu-link" href={`mailto:${contactsData.email}`}>
-								{contactsData.email}
+							<a className="menu-link" href={`mailto:${contacts.email}`}>
+								{contacts.email}
 							</a>
 						</li>
 					</ul>

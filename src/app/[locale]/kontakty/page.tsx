@@ -1,7 +1,7 @@
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import Container from "../../components/Container/Container";
-import type { Metadata } from "next";
 import ContactsClient from "./ContactsClient";
 import "./styles.scss";
 
@@ -15,7 +15,6 @@ export async function generateMetadata({
 	const t = await getTranslations({ locale });
 
 	return {
-		metadataBase: new URL("https://www.fvestavby.cz"),
 		title: `${t("contacts_title")} | FVE STAVBY`,
 		description: t("contacts_seo_desc"),
 		alternates: {
