@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { routing } from "@/i18n/routing";
 import Container from "../../components/Container/Container";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
@@ -15,45 +16,20 @@ interface Member {
 
 const members: Member[] = [
 	{
+		name: "Jiří Faltin",
+		position: "our_team.member3",
+		email: "info@fvestavby.cz",
+	},
+	{
 		name: "Kristián",
 		position: "our_team.member1",
 		email: "kristian.janko@email.cz",
-	},
-	{
-		name: "Veronika",
-		position: "our_team.member2",
-	},
-	{
-		name: "Rostislav",
-		position: "our_team.member3",
-		email: "rostislav@fvestavby.cz",
 	},
 	{
 		name: "Štěpán",
 		position: "our_team.member4",
 		linkedInUrl: "https://linkedin.com/in/stepandordiai",
 		email: "stepandordiai@gmail.com",
-	},
-	{
-		name: "Alexandr",
-		position: "our_team.member5",
-	},
-	{
-		name: "Aneta",
-		position: "our_team.member6",
-	},
-	{
-		name: "Zuzana",
-		position: "our_team.member7",
-	},
-	{
-		name: "René",
-		position: "our_team.member8",
-	},
-	{
-		name: "Tomáš",
-		position: "our_team.member9",
-		email: "tomas@fvestavby.cz",
 	},
 ];
 
@@ -63,18 +39,20 @@ export async function generateMetadata({
 	params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
 	const { locale } = await params;
+	const t = await getTranslations({ locale, namespace: "aboutUs.meta" });
 
-	const t = await getTranslations({ locale });
+	const languages = Object.fromEntries(
+		routing.locales.map((l) => [l, `${l}/o-nas`]),
+	);
 
 	return {
-		title: `${t("about_us_title")} | FVE STAVBY`,
-		description: t("about_us_seo_desc"),
+		title: `${t("title")} | FVE STAVBY`,
+		description: t("description"),
 		alternates: {
 			canonical: `/${locale}/o-nas`,
 			languages: {
-				cs: `/cs/o-nas`,
-				en: `/en/o-nas`,
-				"x-default": `/cs/o-nas`,
+				...languages,
+				"x-default": `/${routing.defaultLocale}/o-nas`,
 			},
 		},
 	};
@@ -122,8 +100,7 @@ export default async function AboutUs() {
 										{email && (
 											<a
 												className="our-team__grid-item-link"
-												href={`mailto: ${email}`}
-												target="_blank"
+												href={`mailto:${email}`}
 											>
 												{email}
 											</a>

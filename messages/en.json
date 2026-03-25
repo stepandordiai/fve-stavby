@@ -26,7 +26,6 @@
 	"required": "Required",
 	"all_rights_reserved": "All rights reserved",
 	"home_seo_desc": "FVE - stavby s.r.o. offers top-tier solar energy solutions in the Czech Republic, promoting sustainable living and reducing energy costs. Harness the sun!",
-	"about_us_seo_desc": "FVE - stavby s.r.o. are Czech solar energy experts. We install custom photovoltaic systems for homes and companies to save energy and costs.",
 	"photovoltaics_for_single_family_homes_seo_desc": "Turnkey solar power systems for homes in the Czech Republic. Save on energy costs with FVE - stavby s.r.o. and get a New Green Savings subsidy.",
 	"photovoltaics_for_companies_seo_desc": "Photovoltaic systems (PV) for businesses in the Czech Republic. FVE - stavby s.r.o. offers cost-saving solar solutions for commercial buildings.",
 	"svj_seo_desc": "FVE - stavby s.r.o.: turnkey solar for SVJ (homeowners associations). Save energy; we handle New Green Savings subsidies and install across the Czech Republic.",
@@ -51,6 +50,13 @@
 		"installated": "installed capacity",
 		"about_us_link": "More about us",
 		"we_work_with_title": "What we offer"
+	},
+
+	"aboutUs": {
+		"meta": {
+			"title": "About Us | FVE STAVBY s.r.o. – Photovoltaic Specialists in the Czech Republic",
+			"description": "Get to know FVE STAVBY s.r.o. – an experienced team of photovoltaic specialists in the Czech Republic. We focus on the design and installation of customized solar panel systems for homes and businesses, with an emphasis on quality and reliability."
+		}
 	},
 
 	"why_us": {
@@ -136,14 +142,8 @@
 	"our_team": {
 		"title": "Our team",
 		"member1": "Designer",
-		"member2": "Office Manager",
 		"member3": "Sales Director",
-		"member4": "IT Specialist",
-		"member5": "Logistics",
-		"member6": "Front office",
-		"member7": "Back office",
-		"member8": "Installation Team Leader",
-		"member9": "Executive Director"
+		"member4": "IT Specialist"
 	},
 
 	"guarantees": {

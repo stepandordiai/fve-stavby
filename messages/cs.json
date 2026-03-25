@@ -26,7 +26,6 @@
 	"required": "Požadovaný",
 	"all_rights_reserved": "Všechna práva vyhrazena",
 	"home_seo_desc": "FVE - stavby s.r.o. nabízí špičková řešení solární energie v České republice, podporuje udržitelné bydlení a snižuje náklady na energii. Využijte sílu slunce!",
-	"about_us_seo_desc": "Poznejte FVE - stavby s.r.o., odborníky na fotovoltaiku v ČR. Nabízíme solární panely na míru, profesionální montáž a úsporu energie pro domov i firmu.",
 	"photovoltaics_for_single_family_homes_seo_desc": "Fotovoltaické elektrárny na klíč pro rodinné domy v ČR. Snižte náklady na energie s FVE - stavby s.r.o. a využijte dotaci Nová zelená úsporám.",
 	"photovoltaics_for_companies_seo_desc": "Specializujeme se na fotovoltaické systémy pro firmy. FVE - stavby s.r.o. nabízí úsporná solární řešení pro komerční objekty po celé ČR.",
 	"svj_seo_desc": "FVE - stavby s.r.o.: solární panely a fotovoltaika pro SVJ na klíč. Úspora energií, vyřízení dotací NZÚ, profi montáž po celé ČR.",
@@ -51,6 +50,13 @@
 		"installated": "instalovaneho vykony",
 		"about_us_link": "Více o nás",
 		"we_work_with_title": "Co nabízíme"
+	},
+
+	"aboutUs": {
+		"meta": {
+			"title": "O nás | FVE STAVBY s.r.o. – specialisté na fotovoltaiku v ČR",
+			"description": "Poznejte FVE STAVBY s.r.o. – zkušený tým specialistů na fotovoltaiku v ČR. Zaměřujeme se na návrh a instalaci solárních panelů na míru pro domy i firmy s důrazem na kvalitu a spolehlivost."
+		}
 	},
 
 	"why_us": {
@@ -136,14 +142,8 @@
 	"our_team": {
 		"title": "Náš tým",
 		"member1": "Projektant",
-		"member2": "Vedoucí kanceláře",
 		"member3": "Obchodní ředitel",
-		"member4": "IT Specialista",
-		"member5": "Logistika",
-		"member6": "Kancelář Frontoffice",
-		"member7": "Kancelář Backoffice",
-		"member8": "Vedoucí Instalačních týmů",
-		"member9": "Výkonný ředitel"
+		"member4": "IT Specialista"
 	},
 
 	"guarantees": {
