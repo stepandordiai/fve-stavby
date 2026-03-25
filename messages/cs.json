@@ -25,12 +25,8 @@
 	"copied": "Zkopírováno",
 	"required": "Požadovaný",
 	"all_rights_reserved": "Všechna práva vyhrazena",
-	"photovoltaics_for_single_family_homes_seo_desc": "Fotovoltaické elektrárny na klíč pro rodinné domy v ČR. Snižte náklady na energie s FVE - stavby s.r.o. a využijte dotaci Nová zelená úsporám.",
-	"photovoltaics_for_companies_seo_desc": "Specializujeme se na fotovoltaické systémy pro firmy. FVE - stavby s.r.o. nabízí úsporná solární řešení pro komerční objekty po celé ČR.",
-	"svj_seo_desc": "FVE - stavby s.r.o.: solární panely a fotovoltaika pro SVJ na klíč. Úspora energií, vyřízení dotací NZÚ, profi montáž po celé ČR.",
-	"our_installation_seo_desc": "Prohlédněte si naše realizace fotovoltaiky. FVE – stavby s.r.o. zajišťuje profesionální instalace solárních systémů pro domácnosti i firmy po celé ČR.",
-	"contacts_seo_desc": "",
-	"manuals_seo_desc": "Návody a manuály k fotovoltaice ke stažení. FVE – stavby s.r.o. poskytuje přehlednou dokumentaci k obsluze a údržbě solárních systémů.",
+	"svj_seo_desc": "",
+	"our_installation_seo_desc": "",
 	"pageNotFound": "Stránka nebyla nalezena",
 	"followUs": "Sledujte nás",
 
@@ -60,6 +56,41 @@
 		"meta": {
 			"title": "O nás | FVE STAVBY s.r.o. – specialisté na fotovoltaiku v ČR",
 			"description": "Poznejte FVE STAVBY s.r.o. – zkušený tým specialistů na fotovoltaiku v ČR. Zaměřujeme se na návrh a instalaci solárních panelů na míru pro domy i firmy s důrazem na kvalitu a spolehlivost."
+		}
+	},
+
+	"photovoltaicsForCompanies": {
+		"meta": {
+			"title": "Ušetřete firmě za elektřinu | Fotovoltaika pro firmy – FVE STAVBY",
+			"description": "Investujte do fotovoltaiky a snižte provozní náklady. Kompletní realizace, rychlá návratnost a vyřízení dotací. Nezávazná kalkulace zdarma."
+		}
+	},
+
+	"photovoltaicsForSingleFamilyHomes": {
+		"meta": {
+			"title": "Ušetřete za elektřinu | Fotovoltaika pro rodinné domy – FVE STAVBY",
+			"description": "Pořiďte si fotovoltaiku bez starostí. Kompletní realizace, dotace Nová zelená úsporám vyřídíme za vás. Nezávazná kalkulace zdarma."
+		}
+	},
+
+	"manuals": {
+		"meta": {
+			"title": "Manuály a návody k fotovoltaice | Ke stažení – FVE STAVBY",
+			"description": "Přehledné návody a manuály k fotovoltaice ke stažení zdarma. Obsluha, údržba i tipy pro maximální výkon vašeho solárního systému."
+		}
+	},
+
+	"ourInstallation": {
+		"meta": {
+			"title": "Reference fotovoltaiky | Podívejte se na naše instalace – FVE STAVBY",
+			"description": "Desítky úspěšných instalací fotovoltaiky. Inspirujte se našimi realizacemi a zjistěte, jak můžete ušetřit na energiích i vy."
+		}
+	},
+
+	"svj": {
+		"meta": {
+			"title": "Ušetřete SVJ za elektřinu | Fotovoltaika pro bytové domy – FVE STAVBY",
+			"description": "Solární řešení pro SVJ bez starostí. Kompletní instalace, dotace NZÚ vyřídíme za vás. Zvyšte hodnotu nemovitosti a snižte náklady."
 		}
 	},
 

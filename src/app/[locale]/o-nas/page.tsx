@@ -40,19 +40,19 @@ export async function generateMetadata({
 }): Promise<Metadata> {
 	const { locale } = await params;
 	const t = await getTranslations({ locale, namespace: "aboutUs.meta" });
-
+	const page = "o-nas";
 	const languages = Object.fromEntries(
-		routing.locales.map((l) => [l, `${l}/o-nas`]),
+		routing.locales.map((l) => [l, `${l}/${page}`]),
 	);
 
 	return {
 		title: `${t("title")}`,
 		description: t("description"),
 		alternates: {
-			canonical: `/${locale}/o-nas`,
+			canonical: `/${locale}/${page}`,
 			languages: {
 				...languages,
-				"x-default": `/${routing.defaultLocale}/o-nas`,
+				"x-default": `/${routing.defaultLocale}/${page}`,
 			},
 		},
 	};

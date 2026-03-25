@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import OurInstallationClient from "./OurInstallationClient";
 import { getTranslations } from "next-intl/server";
+import { routing } from "@/i18n/routing";
+import OurInstallationClient from "./OurInstallationClient";
 
 export async function generateMetadata({
 	params,
@@ -8,18 +9,23 @@ export async function generateMetadata({
 	params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
 	const { locale } = await params;
-
-	const t = await getTranslations({ locale });
+	const t = await getTranslations({
+		locale,
+		namespace: "ourInstallation.meta",
+	});
+	const page = "nase-instalace";
+	const languages = Object.fromEntries(
+		routing.locales.map((l) => [l, `/${l}/${page}`]),
+	);
 
 	return {
-		title: `${t("our_installation_title")} | FVE STAVBY`,
-		description: t("our_installation_seo_desc"),
+		title: `${t("title")}`,
+		description: t("description"),
 		alternates: {
-			canonical: `/${locale}/nase-instalace`,
+			canonical: `/${locale}/${page}`,
 			languages: {
-				cs: `/cs/nase-instalace`,
-				en: `/en/nase-instalace`,
-				"x-default": `/cs/nase-instalace`,
+				...languages,
+				"x-default": `/${routing.defaultLocale}/${page}`,
 			},
 		},
 	};

@@ -64,6 +64,41 @@
 		}
 	},
 
+	"photovoltaicsForCompanies": {
+		"meta": {
+			"title": "Solar Solutions for Businesses | Reduce Energy Costs – FVE STAVBY",
+			"description": "Lower your company’s energy expenses with professional solar installations. Complete turnkey solutions, fast return on investment, and subsidy handling."
+		}
+	},
+
+	"photovoltaicsForSingleFamilyHomes": {
+		"meta": {
+			"title": "Solar Panels for Homes | Turnkey Installation – FVE STAVBY",
+			"description": "Install solar panels for your home and cut energy costs. Full service including design, installation, and subsidy support. Free quote available."
+		}
+	},
+
+	"manuals": {
+		"meta": {
+			"title": "Solar Manuals & Guides | Free Downloads – FVE STAVBY",
+			"description": "Clear solar manuals and guides available for free download. Learn operation, maintenance, and tips to maximize your system’s performance."
+		}
+	},
+
+	"ourInstallation": {
+		"meta": {
+			"title": "Our Solar Installations | Project Gallery – FVE STAVBY",
+			"description": "Explore our completed solar projects for homes and businesses. Discover real results and start saving on energy today."
+		}
+	},
+
+	"svj": {
+		"meta": {
+			"title": "Solar for HOAs & Apartment Buildings | Energy Savings – FVE STAVBY",
+			"description": "Professional solar solutions for apartment buildings and HOAs. Full turnkey service, subsidy support, and long-term cost savings."
+		}
+	},
+
 	"why_us": {
 		"title": "Why choose our company",
 		"option1": "Tailor-made solutions",

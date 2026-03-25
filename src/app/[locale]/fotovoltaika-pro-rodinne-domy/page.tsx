@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { routing } from "@/i18n/routing";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
 import Partners from "../../components/Partners/Partners";
@@ -14,18 +15,23 @@ export async function generateMetadata({
 	params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
 	const { locale } = await params;
-
-	const t = await getTranslations({ locale });
+	const t = await getTranslations({
+		locale,
+		namespace: "photovoltaicsForSingleFamilyHomes.meta",
+	});
+	const page = "fotovoltaika-pro-rodinne-domy";
+	const languages = Object.fromEntries(
+		routing.locales.map((l) => [l, `/${l}/${page}`]),
+	);
 
 	return {
-		title: `${t("photovoltaics_for_single_family_homes_title")} | FVE STAVBY`,
-		description: t("photovoltaics_for_single_family_homes_seo_desc"),
+		title: `${t("title")}`,
+		description: t("description"),
 		alternates: {
-			canonical: `/${locale}/fotovoltaika-pro-rodinne-domy`,
+			canonical: `/${locale}/${page}`,
 			languages: {
-				cs: `/cs/fotovoltaika-pro-rodinne-domy`,
-				en: `/en/fotovoltaika-pro-rodinne-domy`,
-				"x-default": `/cs/fotovoltaika-pro-rodinne-domy`,
+				...languages,
+				"x-default": `/${routing.defaultLocale}/${page}`,
 			},
 		},
 	};

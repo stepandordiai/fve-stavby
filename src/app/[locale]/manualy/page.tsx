@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { routing } from "@/i18n/routing";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
 import React from "react";
@@ -49,18 +50,20 @@ export async function generateMetadata({
 	params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
 	const { locale } = await params;
-
-	const t = await getTranslations({ locale });
+	const t = await getTranslations({ locale, namespace: "manuals.meta" });
+	const page = "manualy";
+	const languages = Object.fromEntries(
+		routing.locales.map((l) => [l, `/${l}/${page}`]),
+	);
 
 	return {
-		title: `${t("manuals_title")} | FVE STAVBY`,
-		description: t("manuals_seo_desc"),
+		title: `${t("title")}`,
+		description: t("description"),
 		alternates: {
-			canonical: `/${locale}/manualy`,
+			canonical: `/${locale}/${page}`,
 			languages: {
-				cs: `/cs/manualy`,
-				en: `/en/manualy`,
-				"x-default": `/cs/manualy`,
+				...languages,
+				"x-default": `/${routing.defaultLocale}/${page}`,
 			},
 		},
 	};

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { routing } from "@/i18n/routing";
 import PageTitle from "../../components/PageTitle/PageTitle";
 import Container from "../../components/Container/Container";
 import SVJClient from "./SVJClient";
@@ -12,17 +13,20 @@ export async function generateMetadata({
 }): Promise<Metadata> {
 	const { locale } = await params;
 
-	const t = await getTranslations({ locale });
+	const t = await getTranslations({ locale, namespace: "svj.meta" });
+	const page = "spolecenstvi-vlastniku-jednotek";
+	const languages = Object.fromEntries(
+		routing.locales.map((l) => [l, `/${l}/${page}`]),
+	);
 
 	return {
-		title: "SVJ | FVE STAVBY",
-		description: t("svj_seo_desc"),
+		title: t("title"),
+		description: t("description"),
 		alternates: {
-			canonical: `/${locale}/spolecenstvi-vlastniku-jednotek`,
+			canonical: `/${locale}/${page}`,
 			languages: {
-				cs: `/cs/spolecenstvi-vlastniku-jednotek`,
-				en: `/en/spolecenstvi-vlastniku-jednotek`,
-				"x-default": `/cs/spolecenstvi-vlastniku-jednotek`,
+				...languages,
+				"x-default": `/${routing.defaultLocale}/${page}`,
 			},
 		},
 	};
