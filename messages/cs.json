@@ -25,7 +25,6 @@
 	"copied": "Zkopírováno",
 	"required": "Požadovaný",
 	"all_rights_reserved": "Všechna práva vyhrazena",
-	"home_seo_desc": "FVE - stavby s.r.o. nabízí špičková řešení solární energie v České republice, podporuje udržitelné bydlení a snižuje náklady na energii. Využijte sílu slunce!",
 	"photovoltaics_for_single_family_homes_seo_desc": "Fotovoltaické elektrárny na klíč pro rodinné domy v ČR. Snižte náklady na energie s FVE - stavby s.r.o. a využijte dotaci Nová zelená úsporám.",
 	"photovoltaics_for_companies_seo_desc": "Specializujeme se na fotovoltaické systémy pro firmy. FVE - stavby s.r.o. nabízí úsporná solární řešení pro komerční objekty po celé ČR.",
 	"svj_seo_desc": "FVE - stavby s.r.o.: solární panely a fotovoltaika pro SVJ na klíč. Úspora energií, vyřízení dotací NZÚ, profi montáž po celé ČR.",
@@ -41,6 +40,11 @@
 	},
 
 	"home": {
+		"meta": {
+			"title": "Fotovoltaika bez starostí | Úspora energie a dotace",
+			"description": "Pořiďte si fotovoltaiku s maximální úsporou. Kompletní realizace na klíč, rychlá instalace a vyřízení dotací. Snižte účty za elektřinu ještě letos."
+		},
+
 		"title": "Rozsviťte svůj domov, nebo firmu se solární energií",
 		"contacts_link": "Domluvte si nezávaznou schůzku",
 		"about_company_title": "O naší společnosti",

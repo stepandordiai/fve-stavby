@@ -46,7 +46,7 @@ export async function generateMetadata({
 	);
 
 	return {
-		title: `${t("title")} | FVE STAVBY`,
+		title: `${t("title")}`,
 		description: t("description"),
 		alternates: {
 			canonical: `/${locale}/o-nas`,
