@@ -29,7 +29,7 @@
 	"photovoltaics_for_companies_seo_desc": "Specializujeme se na fotovoltaické systémy pro firmy. FVE - stavby s.r.o. nabízí úsporná solární řešení pro komerční objekty po celé ČR.",
 	"svj_seo_desc": "FVE - stavby s.r.o.: solární panely a fotovoltaika pro SVJ na klíč. Úspora energií, vyřízení dotací NZÚ, profi montáž po celé ČR.",
 	"our_installation_seo_desc": "Prohlédněte si naše realizace fotovoltaiky. FVE – stavby s.r.o. zajišťuje profesionální instalace solárních systémů pro domácnosti i firmy po celé ČR.",
-	"contacts_seo_desc": "Kontaktujte FVE – stavby s.r.o. s dotazy k fotovoltaice. Telefon, e-mail, adresa sídla a kontaktní formulář pro rychlou zprávu po celé ČR.",
+	"contacts_seo_desc": "",
 	"manuals_seo_desc": "Návody a manuály k fotovoltaice ke stažení. FVE – stavby s.r.o. poskytuje přehlednou dokumentaci k obsluze a údržbě solárních systémů.",
 	"pageNotFound": "Stránka nebyla nalezena",
 	"followUs": "Sledujte nás",
@@ -203,6 +203,11 @@
 	},
 
 	"contacts": {
+		"meta": {
+			"title": "Kontakty | FVE STAVBY – Fotovoltaika na klíč, dotazy a kalkulace",
+			"description": "Kontaktujte FVE STAVBY pro nezávaznou konzultaci fotovoltaiky. Telefon, e-mail i kontaktní formulář. Působíme po celé ČR."
+		},
+
 		"contact_us": "Kontaktujte nás",
 		"first_name": "Jméno",
 		"last_name": "Příjmení",

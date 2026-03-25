@@ -204,6 +204,11 @@
 	},
 
 	"contacts": {
+		"meta": {
+			"title": "Get in Touch | FVE STAVBY – Solar Panels Made Easy",
+			"description": "Interested in solar panels? Contact us today for a free, no-obligation quote. Fast response and expert advice across the Czech Republic."
+		},
+
 		"contact_us": "Contact us",
 		"first_name": "First name",
 		"last_name": "Last name",
