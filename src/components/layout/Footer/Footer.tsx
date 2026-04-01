@@ -3,15 +3,15 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { useEffect } from "react";
-import isTouchDevice from "../../utils/isTouchDevice";
-import navLinksData from "./../../data/nav-links-data.json";
-import handleCopy from "../../utils/handleCopy";
-import contacts from "./../../data/contacts.json";
+import handleCopy from "@/utils/handleCopy";
+import isTouchDevice from "@/utils/isTouchDevice";
+import navLinks from "@/data/nav-links.json";
+import contacts from "@/data/contacts.json";
 import classNames from "classnames";
 import { usePathname } from "@/i18n/navigation";
-import InstagramIcon from "../../Icons/InstagramIcon";
-import FacebookIcon from "../../Icons/FacebookIcon";
-import TiktokIcon from "../../Icons/TiktokIcon";
+import InstagramIcon from "@/components/icons/InstagramIcon";
+import FacebookIcon from "@/components/icons/FacebookIcon";
+import TiktokIcon from "@/components/icons/TiktokIcon";
 import "./Footer.scss";
 
 const socialsData = [
@@ -122,7 +122,7 @@ const Footer = () => {
 					<div className="footer-top__nav">
 						<p>{t("navigation")}</p>
 						<nav className="footer-top__nav-list">
-							{navLinksData.map((link) => {
+							{navLinks.map((link) => {
 								return (
 									<Link
 										key={link.id}

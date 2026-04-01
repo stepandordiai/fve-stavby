@@ -2,12 +2,11 @@
 
 import { useTranslations } from "next-intl";
 import { useEffect, useState, useRef } from "react";
-import isTouchDevice from "../../utils/isTouchDevice";
-import PageTitle from "../../components/PageTitle/PageTitle";
-import GetInTouch from "../../components/GetInTouch/GetInTouch";
-import Container from "../../components/Container/Container";
+import isTouchDevice from "@/utils/isTouchDevice";
+import PageTitle from "@/components/PageTitle/PageTitle";
+import GetInTouch from "@/components/GetInTouch/GetInTouch";
+import Container from "@/components/Container/Container";
 import classNames from "classnames";
-import "./styles.scss";
 
 interface Installation {
 	id: number;

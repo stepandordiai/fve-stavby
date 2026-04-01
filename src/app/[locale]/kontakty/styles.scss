@@ -1,4 +1,4 @@
-@use "./../../scss/mixins" as *;
+@use "@/scss/mixins" as *;
 
 .contacts {
 	display: flex;
@@ -155,6 +155,10 @@ textarea {
 	background: var(--accent-clr);
 }
 
+.contacts-our-team-container {
+	padding: 0 25px;
+}
+
 @media screen and (max-width: 1000px) {
 	.contacts {
 		flex-direction: column-reverse;
@@ -177,6 +181,10 @@ textarea {
 
 	form {
 		padding: 12.5px;
+	}
+
+	.contacts-our-team-container {
+		padding: 0 10px;
 	}
 }
 

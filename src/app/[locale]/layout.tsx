@@ -3,10 +3,10 @@ import type { Metadata } from "next";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
-import ScrollToTop from "../utils/ScrollToTop";
-import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
-import "./../scss/globals.scss";
+import ScrollToTop from "@/utils/ScrollToTop";
+import Header from "@/components/layout/Header/Header";
+import Footer from "@/components/layout/Footer/Footer";
+import "@/scss/globals.scss";
 
 const quicksand = Quicksand({
 	variable: "--font-quicksand",

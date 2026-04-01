@@ -1,7 +1,8 @@
 "use client";
+
 import { useState } from "react";
-import contacts from "./../../data/contacts.json";
-import handleCopy from "../../utils/handleCopy";
+import contacts from "@/data/contacts.json";
+import handleCopy from "@/utils/handleCopy";
 import classNames from "classnames";
 import { useTranslations } from "next-intl";
 
@@ -12,7 +13,7 @@ const workingHours = [
 	{ name: "contacts.thu", hours: "8:00 - 17:00" },
 	{ name: "contacts.fri", hours: "8:00 - 17:00" },
 	{ name: "contacts.sat", hours: "8:00 - 17:00" },
-	{ name: "contacts.sun", hours: "contacts.closed" },
+	{ name: "contacts.sun" },
 ];
 
 export default function ContactsClient() {
@@ -164,7 +165,7 @@ export default function ContactsClient() {
 										})}
 									>
 										<span>{t(day.name)}:</span>
-										<span>{day.hours}</span>
+										<span>{day.hours ? day.hours : t("contacts.closed")}</span>
 									</li>
 								);
 							})}

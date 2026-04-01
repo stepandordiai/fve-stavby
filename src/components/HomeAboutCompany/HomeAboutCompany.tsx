@@ -107,7 +107,7 @@ const HomeAboutCompany = () => {
 					<span className="counter-info">{t("home.installated")}</span>
 				</div>
 			</div>
-			<Link href="/about-us" className="about-company__link">
+			<Link href="/o-nas" className="about-company__link">
 				<span>{t("home.about_us_link")}</span>
 				<svg
 					width="32px"

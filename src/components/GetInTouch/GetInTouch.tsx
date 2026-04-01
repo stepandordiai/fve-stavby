@@ -16,7 +16,7 @@ const GetInTouch = () => {
 				loading="lazy"
 			/>
 			<p className="get-in-touch__title">{t("get_in_touch_title")}</p>
-			<Link href="/contacts" className="get-in-touch__link">
+			<Link href="/kontakty" className="get-in-touch__link">
 				<span>{t("get_in_touch_link")}</span>
 				<svg
 					width="32"

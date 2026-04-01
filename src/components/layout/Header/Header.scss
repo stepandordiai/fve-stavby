@@ -1,4 +1,4 @@
-@use "./../../scss/mixins" as *;
+@use "@/scss/mixins" as *;
 
 .header {
 	position: fixed;
@@ -179,7 +179,9 @@
 	height: 1.5px;
 	border-radius: 0.75px;
 	background: #000;
-	transition: transform 0.5s, opacity 0.5s;
+	transition:
+		transform 0.5s,
+		opacity 0.5s;
 }
 
 .burger-btn__center-line--active {
@@ -219,7 +221,12 @@
 	overflow: scroll;
 	opacity: 0;
 	pointer-events: none;
-	transition: top 1s, right 1s, width 1s, height 1s, padding 1s;
+	transition:
+		top 1s,
+		right 1s,
+		width 1s,
+		height 1s,
+		padding 1s;
 }
 
 .menu--active {

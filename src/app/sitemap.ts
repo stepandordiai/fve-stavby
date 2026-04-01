@@ -1,3 +1,4 @@
+import { routing } from "@/i18n/routing";
 import { MetadataRoute } from "next";
 
 const pages = [
@@ -10,18 +11,16 @@ const pages = [
 	"kontakty",
 	"manualy",
 ];
-const locales = ["cs", "en"];
-
 const BASE_URL = "https://www.fvestavby.cz";
 
 const alternates = (path: string) => ({
 	...Object.fromEntries(
-		locales.map((locale) => [locale, `${BASE_URL}/${locale}${path}`]),
+		routing.locales.map((locale) => [locale, `${BASE_URL}/${locale}${path}`]),
 	),
 });
 
 export default function sitemap(): MetadataRoute.Sitemap {
-	return locales.flatMap((locale) =>
+	return routing.locales.flatMap((locale) =>
 		pages.map((page) => ({
 			// TODO: learn this
 			url: `${BASE_URL}/${locale}/${page}`.replace(/\/$/, ""),

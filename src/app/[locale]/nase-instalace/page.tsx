@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import OurInstallationClient from "./OurInstallationClient";
+import "./styles.scss";
 
 export async function generateMetadata({
 	params,

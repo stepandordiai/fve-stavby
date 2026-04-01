@@ -4,9 +4,9 @@ import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { Link } from "@/i18n/navigation";
 import { usePathname } from "@/i18n/navigation";
-import navLinksData from "./../../data/nav-links-data.json";
-import LngSelect from "../LngSelect/LngSelect";
-import contacts from "./../../data/contacts.json";
+import navLinksData from "@/data/nav-links.json";
+import LngSelect from "@/components/LngSelect/LngSelect";
+import contacts from "@/data/contacts.json";
 import classNames from "classnames";
 import "./Header.scss";
 

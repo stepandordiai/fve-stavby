@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import isTouchDevice from "../../utils/isTouchDevice";
+import isTouchDevice from "@/utils/isTouchDevice";
 
 interface Guarantee {
 	years: number;
