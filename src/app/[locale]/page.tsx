@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import Process from "@/components/Process/Process";
 import WhyUs from "@/components/WhyUs/WhyUs";
 import Partners from "@/components/Partners/Partners";
 import Stats from "@/components/Stats/Stats";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import HomeAboutCompany from "@/components/HomeAboutCompany/HomeAboutCompany";
 import GetInTouch from "@/components/GetInTouch/GetInTouch";
 import WhySolar from "@/components/WhySolar/WhySolar";
@@ -36,7 +36,13 @@ export async function generateMetadata({
 	};
 }
 
-export default async function Home() {
+export default async function Home({
+	params,
+}: {
+	params: Promise<{ locale: string }>;
+}) {
+	const { locale } = await params;
+	setRequestLocale(locale);
 	const t = await getTranslations();
 
 	return (

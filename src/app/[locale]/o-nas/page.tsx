@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import Container from "@/components/Container/Container";
 import PageTitle from "@/components/PageTitle/PageTitle";
@@ -8,6 +8,8 @@ import AboutUsClient from "./AboutUsClient";
 import OurTeam from "@/components/OurTeam/OurTeam";
 import "./styles.scss";
 
+const page = "o-nas";
+
 export async function generateMetadata({
 	params,
 }: {
@@ -15,9 +17,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
 	const { locale } = await params;
 	const t = await getTranslations({ locale, namespace: "aboutUs.meta" });
-	const page = "o-nas";
 	const languages = Object.fromEntries(
-		routing.locales.map((l) => [l, `${l}/${page}`]),
+		routing.locales.map((l) => [l, `/${l}/${page}`]),
 	);
 
 	return {
@@ -33,7 +34,13 @@ export async function generateMetadata({
 	};
 }
 
-export default async function AboutUs() {
+export default async function AboutUs({
+	params,
+}: {
+	params: Promise<{ locale: string }>;
+}) {
+	const { locale } = await params;
+	setRequestLocale(locale);
 	const t = await getTranslations();
 
 	return (
